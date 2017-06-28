@@ -1,0 +1,2 @@
+# eqcodex
+Everquest Codex Project
