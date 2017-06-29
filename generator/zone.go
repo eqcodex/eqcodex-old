@@ -69,7 +69,7 @@ func generateZoneList(instance *Instance) {
 	}
 
 	//Get zones.
-	query := "SELECT * FROM zone ORDER BY short_name LIMIT 1"
+	query := "SELECT * FROM zone ORDER BY short_name"
 	err = instance.db.Select(&page.Zones, query)
 	if err != nil {
 		log.Println("Failed to select zones", err.Error())

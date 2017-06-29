@@ -16,7 +16,7 @@ func generateItem(instance *Instance) {
 	items := []*item.Item{}
 
 	fmt.Println("Getting items...")
-	query := "SELECT * FROM items ORDER by id LIMIT 1"
+	query := "SELECT * FROM items ORDER by id"
 	err = instance.db.Select(&items, query)
 	if err != nil {
 		log.Println("Failed to select zones", err.Error())
