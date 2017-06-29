@@ -16,7 +16,7 @@ func generateItem(instance *Instance) {
 	items := []*item.Item{}
 
 	fmt.Println("Getting items...")
-	query := "SELECT * FROM items ORDER by id" // LIMIT 1"
+	query := "SELECT * FROM items ORDER by id LIMIT 1"
 	err = instance.db.Select(&items, query)
 	if err != nil {
 		log.Println("Failed to select zones", err.Error())
@@ -63,6 +63,12 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 		Is_quest_reward int `db:"is_quest_reward"`
 		Is_quest_item   int `db:"is_quest_item"`
 		Npc_count       int
+		Header_line     string
+		Class_line      string
+		Race_line       string
+		Slot_line       string
+		Size_line       string
+		Weight_line     string
 	}
 
 	type NPCData struct {
@@ -75,6 +81,7 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 		Npc_id          int
 		Zone_name       string
 		Zone_url        string
+		Zone_id         int
 	}
 
 	type PageData struct {
@@ -94,7 +101,7 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 		NPCs: []*NPCData{},
 	}
 
-	query := `SELECT npc.*, zone.long_name zone_name FROM zone_drops
+	query := `SELECT npc.*, zone.long_name zone_name, zone.Zoneidnumber zone_id FROM zone_drops
 	INNER JOIN zone on zone.zoneidnumber = zone_id
 	INNER JOIN npc_types npc ON npc_id = npc.id
 	WHERE item_id = ?
@@ -117,11 +124,30 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 		//log.Println(npcEntry.Name)
 		npcEntry.Name = cleanName(npcEntry.Name)
 		//log.Println(npcEntry.Name)
-		npcEntry.Zone_url = fmt.Sprintf("/zone/%s.html", cleanUrl(npcEntry.Zone_name))
+		npcEntry.Zone_url = fmt.Sprintf("/zone/%s-%d.html", cleanUrl(npcEntry.Zone_name), npcEntry.Zone_id)
 		//log.Println(npcEntry.Zone_url)
 	}
 
 	itemUrl := fmt.Sprintf("/item/%s-%d.html", cleanUrl(itemEntry.Name), itemEntry.Id)
+
+	if page.Item.Magic > 0 {
+		page.Item.Header_line = "Magic, "
+	}
+	if page.Item.Notransfer > 0 || page.Item.Nodrop > 0 {
+		page.Item.Header_line = "No Trade, "
+	}
+	if page.Item.Heirloom > 0 {
+		page.Item.Header_line = "Heirloom, "
+	}
+	if len(page.Item.Header_line) > 2 {
+		page.Item.Header_line = page.Item.Header_line[0 : len(page.Item.Header_line)-2]
+	}
+
+	page.Item.Class_line = getClasses(page.Item.Classes)
+	page.Item.Race_line = getRaces(page.Item.Races)
+	page.Item.Slot_line = getSlots(page.Item.Slots)
+	page.Item.Size_line = getSizes(page.Item.Size)
+	page.Item.Weight_line = fmt.Sprintf("%.1f", float64(page.Item.Weight/10))
 
 	page.Core.Site.Title = itemEntry.Name + " | EQCodex"
 	t := getCoreTemplate(instance)

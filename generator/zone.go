@@ -69,7 +69,7 @@ func generateZoneList(instance *Instance) {
 	}
 
 	//Get zones.
-	query := "SELECT * FROM zone ORDER BY short_name"
+	query := "SELECT * FROM zone ORDER BY short_name LIMIT 1"
 	err = instance.db.Select(&page.Zones, query)
 	if err != nil {
 		log.Println("Failed to select zones", err.Error())
@@ -82,7 +82,7 @@ func generateZoneList(instance *Instance) {
 	}
 
 	for _, zoneEntry := range page.Zones {
-		zoneEntry.Url = fmt.Sprintf("zone/%s.html", cleanUrl(zoneEntry.Long_name.String))
+		zoneEntry.Url = fmt.Sprintf("zone/%s-%d.html", cleanUrl(zoneEntry.Long_name.String), zoneEntry.Id.Int64)
 		fmt.Println(zoneEntry.Short_name.String)
 		generateZoneEntry(instance, zoneEntry)
 		//if zoneEntry.Short_name.String == "airplane" {
