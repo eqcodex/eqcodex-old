@@ -40,7 +40,7 @@ func watchForChanges(instance *Instance) {
 	if err = watcher.Watch(instance.yamlConfig.Templates); err != nil {
 		log.Fatal(err)
 	}
-	if err = watcher.Watch(instance.yamlConfig.Templates + "zone/"); err != nil {
+	if err = watcher.Watch(instance.yamlConfig.Templates + "item/"); err != nil {
 		log.Fatal(err)
 	}
 }

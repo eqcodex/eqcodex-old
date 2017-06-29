@@ -23,6 +23,7 @@ func generateIndex(instance *Instance) {
 			Name: "Rawr",
 		},
 	}
+	page.Core.Site.Title = "EQ Codex"
 
 	t := getCoreTemplate(instance)
 

@@ -29,13 +29,14 @@ func main() {
 func serveWebsite(instance *Instance) {
 	fs := http.FileServer(http.Dir(instance.yamlConfig.Www))
 	http.Handle("/", fs)
-	log.Println("Listening...")
+	log.Println("Listening on :3000...")
 	http.ListenAndServe(":3000", nil)
 }
 
 func generateTemplates(instance *Instance) {
 	var err error
 	startTime := time.Now()
+	fmt.Println("Staring up...")
 
 	//Load Config
 	instance.yamlConfig, err = loadYamlConfig()
@@ -55,6 +56,7 @@ func generateTemplates(instance *Instance) {
 		log.Fatalf("Database error: %s", err.Error())
 	}
 	generateZoneList(instance)
+	generateItem(instance)
 	generateIndex(instance)
 	fmt.Println("Completed in", time.Since(startTime).Seconds())
 }

@@ -14,9 +14,8 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-body"> 
-                            <h3>Zone Leveling Chart</h3>
-                            <p>Below is a list of zones based on level.</p>
-
+                            <p>This chart is automatically generated using the following formulas: if npc is not invul, if npc is a player class, if npc is equal to or less than 5 levels of given level, and if 20 or more total npcs spawn in given level range.</p>
+                            <input type="button" value="Filter" id="advanced">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover" id="zone-table">
                                     <thead>
@@ -70,8 +69,11 @@
             <!-- /.row -->
              <script>
     $(document).ready(function() {
-        $('#zone-table').DataTable({
-            responsive: true
+        $('#advanced').click(function() {
+            $('#zone-table').DataTable({
+                responsive: true
+            });
+            $('#advanced').hide();
         });
     });
     </script>
