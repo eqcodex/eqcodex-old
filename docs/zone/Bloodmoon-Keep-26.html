@@ -1,0 +1,3183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bloodmoon Keep | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Bloodmoon Keep</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p></p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                            <th>NPC</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Long-Sword-5350.html">Fine Steel Long Sword</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Mogan Delfin and 1801 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Tanto-6900.html">Bronze Tanto</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>The Widowmistress and 79 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Jutte-6911.html">Bronze Jutte</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Cyndreela and 48 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Tachi-6936.html">Fine Steel Tachi</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a highland kobold and 526 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Dagger-7350.html">Fine Steel Dagger</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Highpass citizen and 1489 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Peridot-10028.html">Peridot</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a hill giant and 6761 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sapphire-10034.html">Sapphire</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 18259 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 11150 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lupine-Runed-Armband-10315.html">Lupine Runed Armband</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Serpent-Insignia-Collar-10316.html">Serpent Insignia Collar</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spider-Legs-13417.html">Spider Legs</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a spiderling and 332 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spider-Venom-Sac-14018.html">Spider Venom Sac</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Merko Quetalis and 290 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Worg-Pelt-17456.html">Worg Pelt</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a wild worg</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Worg-Canine-17457.html">Worg Canine</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a wild worg</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Worg-Blood-17458.html">Worg Blood</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a wild worg</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Worg-Tail-17459.html">Worg Tail</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a wild worg</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wereorc-Blood-17460.html">Wereorc Blood</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon necromancer and 45 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wereorc-Canine-17461.html">Wereorc Canine</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon necromancer and 45 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wereorc-Mane-17462.html">Wereorc Mane</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon necromancer and 48 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wereorc-Claw-17463.html">Wereorc Claw</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon necromancer and 45 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Faceted-Crystal-17467.html">Faceted Crystal</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a doombug scavenger and 366 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Faydwer-Diamond-17468.html">Faydwer Diamond</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a doombug scavenger and 317 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brick-of-Crude-Iron-Ore-19630.html">Brick of Crude Iron Ore</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 23614 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Semi-Precious-Stone-Chunk-26675.html">Semi Precious Stone Chunk</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Enameled-Gargoyle-Eye-26676.html">Enameled Gargoyle Eye</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flake-of-Gold-Leaf-26677.html">Flake of Gold Leaf</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Potameid-Dagger-29369.html">Potameid Dagger</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Ekaterina and 120 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Silk-34222.html">Flawless Silk</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 4567 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Silk-34223.html">Exquisite Silk</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 4556 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Urticaceae-35086.html">Urticaceae</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elite gnoll guard and 6378 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Aderirse-Bur-35089.html">Aderirse Bur</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elite gnoll guard and 6428 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spiritvoid-Earring-35092.html">Spiritvoid Earring</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 16 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodmoon-Shackle-Key-36234.html">Bloodmoon Shackle Key</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon jailor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Binding-Powder-36287.html">Rune Binding Powder</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Refugee Splitpaw and 1506 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodfang-Spider-Egg-36595.html">Bloodfang Spider Egg</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a bloodfang spider</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dweric-Powder-37532.html">Dweric Powder</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Launch Engineer and 1331 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11105 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Combine-Star-37845.html">Uncut Combine Star</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10954 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Black-Sapphire-37846.html">Uncut Black Sapphire</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7577 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Mystik and 10997 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 8065 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Morganite-37849.html">Uncut Morganite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11162 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11143 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a furtive figure and 10808 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Rubellite-37852.html">Uncut Rubellite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a furtive figure and 10291 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10930 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Amber-Nihilite-37859.html">Raw Amber Nihilite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Rendolf Deathbringer and 10906 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Faycite-Crystal-37959.html">Raw Faycite Crystal</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Launch Engineer and 1245 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-A-Nigriventer-Venom-44759.html">Purified Grade A Nigriventer Venom</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elite gnoll guard and 1137 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scale-Ore-45891.html">Scale Ore</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Mystik and 7904 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Extruded-Underfoot-Diamond-47099.html">Extruded Underfoot Diamond</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 3624 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Bracer-50179.html">Elaborate Defiant Plate Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 1081 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Wristguard-50180.html">Elaborate Defiant Plate Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1259 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Gauntlets-50182.html">Elaborate Defiant Plate Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1689 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Boots-50183.html">Elaborate Defiant Plate Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1793 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Helm-50184.html">Elaborate Defiant Plate Helm</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1444 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Vambraces-50185.html">Elaborate Defiant Plate Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1436 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Plate-Greaves-50186.html">Elaborate Defiant Plate Greaves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1432 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Breastplate-50187.html">Elaborate Defiant Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1062 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Bracer-50188.html">Elaborate Defiant Chain Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 767 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Wristguard-50189.html">Elaborate Defiant Chain Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 788 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Gauntlets-50190.html">Elaborate Defiant Chain Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1489 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Boots-50191.html">Elaborate Defiant Chain Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1412 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Coif-50192.html">Elaborate Defiant Chain Coif</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1350 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Sleeves-50193.html">Elaborate Defiant Chain Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1104 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Leggings-50194.html">Elaborate Defiant Chain Leggings</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 873 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Chain-Tunic-50195.html">Elaborate Defiant Chain Tunic</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1083 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Bracer-50196.html">Elaborate Defiant Leather Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 662 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Wristguard-50197.html">Elaborate Defiant Leather Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 809 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Gloves-50198.html">Elaborate Defiant Leather Gloves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1220 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Boots-50199.html">Elaborate Defiant Leather Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1290 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Cap-50200.html">Elaborate Defiant Leather Cap</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 1353 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Sleeves-50201.html">Elaborate Defiant Leather Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1220 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Trousers-50202.html">Elaborate Defiant Leather Trousers</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental wavecrasher and 993 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Leather-Tunic-50203.html">Elaborate Defiant Leather Tunic</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 880 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Wristguard-50204.html">Elaborate Defiant Silk Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 748 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Wristband-50205.html">Elaborate Defiant Silk Wristband</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 752 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Gloves-50207.html">Elaborate Defiant Silk Gloves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1480 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Sandals-50208.html">Elaborate Defiant Silk Sandals</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1314 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Cap-50209.html">Elaborate Defiant Silk Cap</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1167 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Sleeves-50210.html">Elaborate Defiant Silk Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1170 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Pantaloons-50211.html">Elaborate Defiant Silk Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 818 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Silk-Robe-50212.html">Elaborate Defiant Silk Robe</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 1047 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Bracer-50213.html">Elegant Defiant Plate Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Stormer and 1975 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Wristguard-50214.html">Elegant Defiant Plate Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Feran Savageclaw and 1940 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Wristband-50215.html">Elegant Defiant Plate Wristband</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Fleshthreader Dashii and 1239 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Gauntlets-50216.html">Elegant Defiant Plate Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a veteran guard and 2211 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Boots-50217.html">Elegant Defiant Plate Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Dragorn Nightwalker and 2310 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Helm-50218.html">Elegant Defiant Plate Helm</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an ikaav mind render and 2060 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Vambraces-50219.html">Elegant Defiant Plate Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a lightning warrior ohm knight and 2178 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Greaves-50220.html">Elegant Defiant Plate Greaves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a corrupted protector and 1808 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Breastplate-50221.html">Elegant Defiant Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a weathered guard and 1842 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Bracer-50222.html">Elegant Defiant Chain Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Velitorkin and 1576 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Wristguard-50223.html">Elegant Defiant Chain Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Overlord Flargor and 1446 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Gauntlets-50224.html">Elegant Defiant Chain Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Miseryfiend Ghio and 2048 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Boots-50225.html">Elegant Defiant Chain Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Scorch and 1977 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Coif-50226.html">Elegant Defiant Chain Coif</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a girplan mason and 2048 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Sleeves-50227.html">Elegant Defiant Chain Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Keldovan the Harrier and 1784 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Leggings-50228.html">Elegant Defiant Chain Leggings</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elder mammoth and 1365 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Tunic-50229.html">Elegant Defiant Chain Tunic</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elder mammoth and 1200 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Bracer-50230.html">Elegant Defiant Leather Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elite guard and 1462 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Wristguard-50231.html">Elegant Defiant Leather Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a veteran guard and 1195 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Gloves-50232.html">Elegant Defiant Leather Gloves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Hulcror and 1928 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Boots-50233.html">Elegant Defiant Leather Boots</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Chimera Seether and 1868 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Cap-50234.html">Elegant Defiant Leather Cap</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a lightning warrior ohm knight and 2054 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Sleeves-50235.html">Elegant Defiant Leather Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a seasoned guard and 1761 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Trousers-50236.html">Elegant Defiant Leather Trousers</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an Icefall crawler and 1040 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Tunic-50237.html">Elegant Defiant Leather Tunic</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an Icefall crawler and 1081 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Wristguard-50238.html">Elegant Defiant Silk Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a veteran guard and 1304 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Wristband-50239.html">Elegant Defiant Silk Wristband</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a veteran guard and 1580 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Gloves-50241.html">Elegant Defiant Silk Gloves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Stormer and 1949 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Sandals-50242.html">Elegant Defiant Silk Sandals</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an ikaav mind render and 1948 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Cap-50243.html">Elegant Defiant Silk Cap</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a corrupted guardian and 1652 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Sleeves-50244.html">Elegant Defiant Silk Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Velitorkin and 1819 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Pantaloons-50245.html">Elegant Defiant Silk Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an Icefall crawler and 1195 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Robe-50246.html">Elegant Defiant Silk Robe</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Keldovan the Harrier and 1249 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Combatants-Shard-50449.html">Elegant Combatant&#39;s Shard</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a spectre and 1769 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Adepts-Shard-50459.html">Elegant Adept&#39;s Shard</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Keldovan the Harrier and 2028 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Spikemaul-50604.html">Elaborate Defiant Spikemaul</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1954 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Dragonrod-50605.html">Elaborate Defiant Dragonrod</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1347 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Kama-50606.html">Elaborate Defiant Kama</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1533 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Cutlass-50607.html">Elaborate Defiant Cutlass</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 2247 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Rapier-50608.html">Elaborate Defiant Rapier</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a water elemental invader and 1327 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Flint-Spear-50609.html">Elaborate Defiant Flint Spear</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1680 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Quickclaw-50610.html">Elaborate Defiant Quickclaw</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1736 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Minotaur-Staff-50611.html">Elaborate Defiant Minotaur Staff</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 1722 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Poleaxe-50612.html">Elaborate Defiant Poleaxe</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental infiltrator and 712 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Claymore-50613.html">Elaborate Defiant Claymore</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1551 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Defiant-Recurve-Bow-50614.html">Elaborate Defiant Recurve Bow</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1580 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Goshenite-50617.html">Elegant Defiant Goshenite</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Ture and 2748 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Nightstone-50618.html">Elegant Defiant Nightstone</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>First Lieutenant Minas and 2906 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Square-Hammer-50619.html">Elegant Defiant Square Hammer</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a frenzied Ragepaw and 2508 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Sceptre-50620.html">Elegant Defiant Sceptre</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an adolescent cave bear and 2175 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Shortsword-50621.html">Elegant Defiant Shortsword</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Ture and 2231 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Fireborn-Axe-50622.html">Elegant Defiant Fireborn Axe</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Murkglider Breeder and 2017 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Nightblade-50623.html">Elegant Defiant Nightblade</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a large mammoth and 2117 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Dayblade-50624.html">Elegant Defiant Dayblade</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elder driftwolf and 878 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Knuckle-Guards-50625.html">Elegant Defiant Knuckle Guards</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Dragorn Nightwalker and 2784 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Warhammer-50626.html">Elegant Defiant Warhammer</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Dragorn Nightwalker and 2253 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Forked-Spear-50627.html">Elegant Defiant Forked Spear</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Keldovan the Harrier and 2202 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Battleaxe-50628.html">Elegant Defiant Battleaxe</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>First Lieutenant Minas and 2256 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Bow-50629.html">Elegant Defiant Bow</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>First Lieutenant Minas and 2308 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Round-Shield-50630.html">Elegant Defiant Round Shield</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Gelidran Conjurer and 1727 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Buckler-50631.html">Elegant Defiant Buckler</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Gronk OneEye and 2046 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Summoned-Winterbane-52725.html">Summoned: Winterbane</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>A brann kriger and 132 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pile-of-Gravel-54379.html">Pile of Gravel</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14240 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ethereal-Blood-54567.html">Ethereal Blood</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a smoke dervish and 140 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Crimson-Nihilite-58067.html">Raw Crimson Nihilite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Mystik and 11131 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10478 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-String-60215.html">Kyv String</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14306 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Cam-60216.html">Kyv Cam</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14316 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Symbol-of-the-Kyv-60217.html">Symbol of the Kyv</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Balm-60218.html">Kyv Balm</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Bow-60250.html">Kyv Bow</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Trigger and 14248 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Summoned-Burning-Shank-69173.html">Summoned: Burning Shank</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a crowned mamba and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Worg-Scent-Gland-88282.html">Worg Scent Gland</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an armored worg</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Rough-Charta-Arcanum-90322.html">Smudged Rough Charta Arcanum</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an urd ghoul wizard and 628 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Charta-Arcanum-90323.html">Sooty Charta Arcanum</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a burly gnoll and 656 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Fine-Charta-Arcanum-90324.html">Sooty Fine Charta Arcanum</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an urd ghoul wizard and 608 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Runic-Charta-Arcanum-90325.html">Smudged Runic Charta Arcanum</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>an elite gnoll guard and 605 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Stained-Fine-Runic-Charta-Arcanum-90326.html">Stained Fine Runic Charta Arcanum</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a kor ghoul wizard and 621 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7629 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staurolite-97002.html">Staurolite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7041 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Harmonagate-97003.html">Harmonagate</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 6610 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ghostly-Essence-97157.html">Ghostly Essence</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a ghostly cook and 131 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taaffeite-97286.html">Taaffeite</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 6325 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spider-Mandible-97363.html">Spider Mandible</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a hedge creeper and 82 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Intricately-Patterned-Spider-Carapace-97364.html">Intricately Patterned Spider Carapace</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a catacomb creeper and 75 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pearlescent-Spider-Fang-97411.html">Pearlescent Spider Fang</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a dark widow and 58 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warped-Steel-Bracer-100200.html">Warped Steel Bracer</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warped-Steel-Greaves-100205.html">Warped Steel Greaves</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Raknos the fang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warped-Steel-Breastplate-100206.html">Warped Steel Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Eldervine the Twisted and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/AlloyLinked-Wristguard-100207.html">Alloy-Linked Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/AlloyLinked-Leggings-100212.html">Alloy-Linked Leggings</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Raknos the fang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/AlloyLinked-Coat-100213.html">Alloy-Linked Coat</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Eldervine the Twisted and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scratched-Hide-Wristguard-100214.html">Scratched Hide Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scratched-Hide-Leggings-100219.html">Scratched Hide Leggings</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Raknos the fang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scratched-Hide-Tunic-100220.html">Scratched Hide Tunic</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Eldervine the Twisted and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glossy-Silk-Wristband-100221.html">Glossy Silk Wristband</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glossy-Silk-Pantaloons-100226.html">Glossy Silk Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Raknos the fang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glossy-Silk-Robe-100227.html">Glossy Silk Robe</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Eldervine the Twisted and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodmoon-Warrior-Crest-101113.html">Bloodmoon Warrior Crest</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodmoon-Ritual-Mantle-101120.html">Bloodmoon Ritual Mantle</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Grawlthin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eye-of-Raknos-101151.html">Eye of Raknos</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Raknos the fang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grawlthins-Axe-101167.html">Grawlthin&#39;s Axe</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Grawlthin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodmoon-Stained-Faycite-101350.html">Bloodmoon Stained Faycite</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 11 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raknos-Lost-Fang-101351.html">Raknos&#39; Lost Fang</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 11 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cursed-Rage-Channeler-101360.html">Cursed Rage Channeler</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon shaman and 6 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodmoon-Endless-Draught-101361.html">Bloodmoon Endless Draught</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crawtooths-Shield-101613.html">Crawtooth&#39;s Shield</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Crawtooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vorashs-Ritual-Mantle-101620.html">Vorash&#39;s Ritual Mantle</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Grawlthin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloodied-Gnome-Head-101648.html">Bloodied Gnome Head</a></td>
+                                <td>Gear</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Warden Jaklor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cursed-Moonfang-Shield-of-Vile-Deathwarding-102748.html">Cursed Moonfang Shield of Vile Deathwarding</a></td>
+                                <td>Weapon</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>Warden Jaklor and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Elddars-Dawnsong-Rk-II-115001.html">Song: Elddar&#39;s Dawnsong Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 276 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Ambers-Last-Lullaby-Rk-II-115004.html">Song: Amber&#39;s Last Lullaby Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 230 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Cantata-of-Restoration-Rk-II-115007.html">Song: Cantata of Restoration Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Garadells-Fatesong-Rk-II-115013.html">Song: Garadell&#39;s Fatesong Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 194 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Dirge-of-the-Darkvine-Rk-II-115019.html">Song: Dirge of the Darkvine Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 272 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Performers-Explosive-Aria-Rk-II-115022.html">Song: Performer&#39;s Explosive Aria Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 327 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Chorus-of-Restoration-Rk-II-115025.html">Song: Chorus of Restoration Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 315 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Coldcrows-Spry-Sonata-Rk-II-115055.html">Song: Coldcrow&#39;s Spry Sonata Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 333 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Aria-of-the-Artist-Rk-II-115061.html">Song: Aria of the Artist Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 287 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Vyskudras-Chant-of-Disease-Rk-II-115064.html">Song: Vyskudra&#39;s Chant of Disease Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 297 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-ZeixshiKars-Chant-of-Frost-Rk-II-115067.html">Song: Zeixshi-Kar&#39;s Chant of Frost Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork soldier and 310 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Kildrukauns-Chant-of-Poison-Rk-II-115070.html">Song: Kildrukaun&#39;s Chant of Poison Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 284 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Rhythm-of-Restoration-Rk-II-115076.html">Song: Rhythm of Restoration Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 348 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Salve-of-Feldan-Rk-II-115094.html">Spell: Salve of Feldan Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 325 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Falrazims-Gnashing-Rk-II-115097.html">Spell: Falrazim&#39;s Gnashing Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Darias-Mending-Rk-II-115100.html">Spell: Daria&#39;s Mending Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 315 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Focus-of-Zott-Rk-II-115103.html">Spell: Focus of Zott Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 315 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spiritual-Vivacity-Rk-II-115106.html">Spell: Spiritual Vivacity Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 279 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Peerless-Penchant-Rk-II-115115.html">Spell: Peerless Penchant Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 340 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Dragonscale-Guard-Rk-II-115136.html">Spell: Dragonscale Guard Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 291 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Fever-Surge-Rk-II-115140.html">Spell: Fever Surge Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 373 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bulwark-of-TriQaras-Rk-II-115165.html">Spell: Bulwark of Tri&#39;Qaras Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 346 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Tendon-Sever-Rk-II-115178.html">Tome of Tendon Sever Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 292 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Agitating-Scream-Rk-II-115181.html">Tome of Agitating Scream Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Temple-Strike-Rk-II-115184.html">Tome of Temple Strike Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork soldier and 301 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Third-Wind-Rk-II-115193.html">Tome of Third Wind Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 576 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Blessing-of-Resolve-Rk-II-115208.html">Spell: Blessing of Resolve Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 527 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Remedy-Rk-II-115211.html">Spell: Solemn Remedy Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 501 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Symbol-of-Kaerra-Rk-II-115214.html">Spell: Symbol of Kaerra Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 497 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ward-of-the-Resolute-Rk-II-115217.html">Spell: Ward of the Resolute Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 507 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aweshock-Rk-II-115220.html">Spell: Aweshock Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 469 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Forbear-Corruption-Rk-II-115223.html">Spell: Forbear Corruption Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 648 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Temerity-Rk-II-115226.html">Spell: Temerity Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 529 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Elixir-Rk-II-115232.html">Spell: Solemn Elixir Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 567 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Divine-Censure-Rk-II-115235.html">Spell: Divine Censure Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 495 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shield-of-Vie-Rk-II-115238.html">Spell: Shield of Vie Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 543 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Light-Rk-II-115241.html">Spell: Solemn Light Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 583 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sound-of-Resonance-Rk-II-115244.html">Spell: Sound of Resonance Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 544 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aura-of-Resolve-Rk-II-115271.html">Spell: Aura of Resolve Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 580 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Yaulp-IX-Rk-II-115274.html">Spell: Yaulp IX Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 521 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ward-of-Requital-Rk-II-115277.html">Spell: Ward of Requital Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 596 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mollify-Rk-II-115289.html">Spell: Mollify Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 466 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Divine-Destiny-Rk-II-115313.html">Spell: Divine Destiny Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 591 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sermon-of-Admonition-Rk-II-115341.html">Spell: Sermon of Admonition Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 565 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Fool-the-Fallen-Rk-II-115347.html">Spell: Fool the Fallen Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 566 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Torrid-Sunray-Rk-II-115353.html">Spell: Torrid Sunray Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 357 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Tempest-of-the-Stormborn-Rk-II-115356.html">Spell: Tempest of the Stormborn Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 415 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Torrential-Hail-Rk-II-115362.html">Spell: Torrential Hail Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 417 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Natures-Calm-Rk-II-115368.html">Spell: Nature&#39;s Calm Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 411 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Chillvapor-Breath-Rk-II-115380.html">Spell: Chillvapor Breath Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 358 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Viridifloral-Bulwark-Rk-II-115383.html">Spell: Viridifloral Bulwark Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 427 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Skin-to-Mulch-Rk-II-115386.html">Spell: Skin to Mulch Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 452 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ironwood-Skin-Rk-II-115389.html">Spell: Ironwood Skin Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 364 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Puravida-Rk-II-115392.html">Spell: Puravida Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 391 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Horde-of-Fireants-Rk-II-115395.html">Spell: Horde of Fireants Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 419 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Viridithorn-Coat-Rk-II-115398.html">Spell: Viridithorn Coat Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 516 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Beasts-Bewitching-Rk-II-115431.html">Spell: Beast&#39;s Bewitching Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 410 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Annihilate-the-Aberrant-Rk-II-115455.html">Spell: Annihilate the Aberrant Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 552 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Scales-of-the-Reptile-115467.html">Spell: Scales of the Reptile</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a shadow priest and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sharp-Eyes-Rk-II-115477.html">Spell: Sharp Eyes Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 436 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Reaping-Inferno-Rk-II-115480.html">Spell: Reaping Inferno Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 401 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shattered-Consciousness-Rk-II-115495.html">Spell: Shattered Consciousness Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 381 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Opalescent-Rune-Rk-II-115498.html">Spell: Opalescent Rune Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 425 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spellbound-Shield-Rk-II-115501.html">Spell: Spellbound Shield Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 398 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Erradiens-Animation-Rk-II-115504.html">Spell: Erradien&#39;s Animation Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 388 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Rune-of-Erradien-Rk-II-115507.html">Spell: Rune of Erradien Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 393 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Silent-Mind-Rk-II-115510.html">Spell: Silent Mind Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 371 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Speed-of-Erradien-Rk-II-115513.html">Spell: Speed of Erradien Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 389 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Din-of-Tashan-Rk-II-115516.html">Spell: Din of Tashan Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 367 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cajole-Rk-II-115519.html">Spell: Cajole Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 421 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Seers-Cognizance-Rk-II-115522.html">Spell: Seer&#39;s Cognizance Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 430 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aegis-of-Qandieal-Rk-II-115525.html">Spell: Aegis of Qandieal Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 419 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Multichromatic-Assault-Rk-II-115528.html">Spell: Multichromatic Assault Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 419 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Visions-of-Kirathas-Rk-II-115531.html">Spell: Visions of Kirathas Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 476 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Strangling-Air-Rk-II-115537.html">Spell: Strangling Air Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 488 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mystify-Rk-II-115549.html">Spell: Mystify Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 424 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mystifying-Flash-Rk-II-115606.html">Spell: Mystifying Flash Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 374 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Learners-Aura-Rk-II-115627.html">Spell: Learner&#39;s Aura Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 355 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aura-of-Endless-Glamour-115632.html">Spell: Aura of Endless Glamour</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a bloodfang spider</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aura-of-Horror-115638.html">Spell: Aura of Horror</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Malosinatia-Rk-II-115660.html">Spell: Malosinatia Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 484 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Lavaskin-Rk-II-115663.html">Spell: Lavaskin Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 291 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Prime-Guard-Rk-II-115669.html">Spell: Prime Guard Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 356 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bolt-of-Molten-Dross-Rk-II-115673.html">Spell: Bolt of Molten Dross Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 357 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Wand-of-Prime-Transvergence-Rk-II-115676.html">Spell: Wand of Prime Transvergence Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 341 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Rain-of-Molten-Dross-Rk-II-115682.html">Spell: Rain of Molten Dross Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 352 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Eidolic-Guardian-Rk-II-115687.html">Spell: Eidolic Guardian Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 358 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shock-of-Cineral-Steel-Rk-II-115691.html">Spell: Shock of Cineral Steel Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 389 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Searing-Skin-Rk-II-115695.html">Spell: Searing Skin Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 430 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Grounded-Stance-Rk-II-115698.html">Spell: Grounded Stance Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 416 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Burnout-VII-Rk-II-115701.html">Spell: Burnout VII Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 358 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Scorching-Sands-Rk-II-115704.html">Spell: Scorching Sands Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 380 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Revival-of-Aenro-Rk-II-115707.html">Spell: Revival of Aenro Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 395 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Beam-of-Molten-Dross-Rk-II-115739.html">Spell: Beam of Molten Dross Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 364 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Echo-of-Deception-Rk-II-115785.html">Tome of Echo of Deception Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 236 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Shimmering-Silhouette-Rk-II-115800.html">Tome of Shimmering Silhouette Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 317 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Astral-Projection-Rk-II-115812.html">Tome of Astral Projection Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 333 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ruinous-Venin-Rk-II-115825.html">Spell: Ruinous Venin Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 313 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bulwark-of-Shadows-Rk-II-115831.html">Spell: Bulwark of Shadows Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 354 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Eranons-Decay-Rk-II-115834.html">Spell: Eranon&#39;s Decay Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 395 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Siphon-Essence-Rk-II-115847.html">Spell: Siphon Essence Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 356 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sigil-of-the-Aberrant-Rk-II-115853.html">Spell: Sigil of the Aberrant Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 337 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Anathema-of-Life-Rk-II-115857.html">Spell: Anathema of Life Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 382 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Visziajs-Grasp-Rk-II-115860.html">Spell: Visziaj&#39;s Grasp Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 381 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Scent-of-Afterlight-Rk-II-115866.html">Spell: Scent of Afterlight Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 328 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-SpineChilling-Shriek-Rk-II-115872.html">Spell: Spine-Chilling Shriek Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spectral-Ward-Rk-II-115875.html">Spell: Spectral Ward Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 415 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shadowskin-Rk-II-115878.html">Spell: Shadowskin Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork soldier and 425 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Riftbone-Manacles-Rk-II-115881.html">Spell: Riftbone Manacles Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 416 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Wintry-Revival-Rk-II-115884.html">Spell: Wintry Revival Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork soldier and 342 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Pyre-of-the-Lifeless-115886.html">Spell: Pyre of the Lifeless</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a shadow priest and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Touch-Rk-II-115940.html">Spell: Solemn Touch Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 385 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Force-Rk-II-115943.html">Spell: Solemn Force Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 336 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Symbol-of-Bthur-Rk-II-115949.html">Spell: Symbol of Bthur Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 337 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Atonement-Rk-II-115952.html">Spell: Atonement Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 372 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Radiant-Light-Rk-II-115961.html">Spell: Radiant Light Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 329 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Lesson-of-Contrition-Rk-II-115964.html">Spell: Lesson of Contrition Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 391 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Armor-of-Inexorable-Faith-Rk-II-115970.html">Spell: Armor of Inexorable Faith Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 437 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Solemn-Cleansing-Rk-II-115973.html">Spell: Solemn Cleansing Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 304 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Armor-of-Decorum-Rk-II-115988.html">Tome of Armor of Decorum Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 417 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Benediction-Rk-II-115991.html">Spell: Benediction Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 353 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Potameid-Balm-Rk-II-116015.html">Spell: Potameid Balm Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 360 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shield-of-Spurs-Rk-II-116018.html">Spell: Shield of Spurs Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 356 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Horde-of-Hornets-Rk-II-116024.html">Spell: Horde of Hornets Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 364 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Dragonscale-Aquifer-Rk-II-116027.html">Spell: Dragonscale Aquifer Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 379 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Strength-of-the-Gladewalker-Rk-II-116030.html">Spell: Strength of the Gladewalker Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 339 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Drifting-Haze-Rk-II-116036.html">Spell: Drifting Haze Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 373 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Gnarl-of-the-Predator-Rk-II-116039.html">Spell: Gnarl of the Predator Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 342 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Galvanic-Ash-Rk-II-116042.html">Spell: Galvanic Ash Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 419 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Summers-Viridity-116047.html">Spell: Summer&#39;s Viridity</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a bloodfang spider</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cloak-of-Scales-Rk-II-116077.html">Spell: Cloak of Scales Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 374 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Skylight-Sagacity-Rk-II-116080.html">Spell: Skylight Sagacity Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 400 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Jolting-Strikes-Rk-II-116086.html">Spell: Jolting Strikes Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 462 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Arc-of-Arrows-116094.html">Spell: Arc of Arrows</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a Bloodmoon warrior and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Blinding-Flare-Rk-II-116098.html">Tome of Blinding Flare Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 317 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Docent-of-Toxicity-Rk-II-116104.html">Tome of Docent of Toxicity Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 404 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Waylay-Rk-II-116119.html">Tome of Waylay Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 274 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Jugular-Slash-Rk-II-116122.html">Tome of Jugular Slash Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bond-of-the-Blackwater-Rk-II-116143.html">Spell: Bond of the Blackwater Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 328 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Blackwater-Bite-Rk-II-116149.html">Spell: Blackwater Bite Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 335 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shroud-of-the-Gloomborn-Rk-II-116155.html">Spell: Shroud of the Gloomborn Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 279 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Terror-of-the-Soulbleeder-Rk-II-116161.html">Spell: Terror of the Soulbleeder Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 267 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Blood-of-the-Blackwater-Rk-II-116170.html">Spell: Blood of the Blackwater Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 328 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Maladroit-Minion-Rk-II-116173.html">Spell: Maladroit Minion Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 357 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Expatiate-Death-Rk-II-116176.html">Spell: Expatiate Death Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 391 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Grim-Covenant-Rk-II-116179.html">Spell: Grim Covenant Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 360 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Umbral-Carapace-Rk-II-116212.html">Tome of Umbral Carapace Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 358 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Rigor-Mortis-Rk-II-116224.html">Tome of Rigor Mortis Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork soldier and 404 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Vestaxs-Spear-of-Venom-Rk-II-116233.html">Spell: Vestax&#39;s Spear of Venom Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 393 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spirit-of-the-Stalwart-Rk-II-116236.html">Spell: Spirit of the Stalwart Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 438 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Vegus-Faithful-Rk-II-116251.html">Spell: Vegu&#39;s Faithful Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 432 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Breath-of-Big-Bynn-Rk-II-116254.html">Spell: Breath of Big Bynn Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 451 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Feralisis-Rk-II-116257.html">Spell: Feralisis Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 485 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Gemmis-Mending-Rk-II-116260.html">Spell: Gemmi&#39;s Mending Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 545 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bloodworg-Focusing-Rk-II-116263.html">Spell: Bloodworg Focusing Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 550 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spirit-of-Vehemence-Rk-II-116266.html">Spell: Spirit of Vehemence Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 393 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Talisman-of-Vehemence-Rk-II-116278.html">Spell: Talisman of Vehemence Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 468 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Halcyon-Zephyr-Rk-II-116308.html">Spell: Halcyon Zephyr Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 482 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Armor-of-Draconic-Runes-Rk-II-116346.html">Tome of Armor of Draconic Runes Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 386 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Shield-Reflect-Rk-II-116370.html">Tome of Shield Reflect Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 393 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Lure-of-Isaz-Rk-II-116385.html">Spell: Lure of Isaz Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 335 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bulwark-of-the-Crystalwing-Rk-II-116388.html">Spell: Bulwark of the Crystalwing Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 290 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Tears-of-the-Forsaken-Rk-II-116391.html">Spell: Tears of the Forsaken Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 250 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Concussive-Burst-Rk-II-116394.html">Spell: Concussive Burst Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 310 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Vsorugs-Presence-Rk-II-116403.html">Spell: Vsorug&#39;s Presence Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 317 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Tranquil-Harvest-Rk-II-116406.html">Spell: Tranquil Harvest Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 313 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cloudburst-Bolts-Rk-II-116412.html">Spell: Cloudburst Bolts Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 339 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Pyrolure-Rk-II-116420.html">Spell: Pyrolure Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 401 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Laminae-of-the-Crystalwing-Rk-II-116423.html">Spell: Laminae of the Crystalwing Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork trooper and 357 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Leap-of-Arclight-Rk-II-116426.html">Spell: Leap of Arclight Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 316 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Rolling-Lightning-Rk-II-116429.html">Spell: Rolling Lightning Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mender and 383 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Leap-of-Static-Bolts-Rk-II-116432.html">Spell: Leap of Static Bolts Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 311 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bulwark-of-Caella-Rk-II-116463.html">Spell: Bulwark of Caella Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 356 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Etherroot-Guard-Rk-II-116472.html">Spell: Etherroot Guard Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 395 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aspect-of-Zomm-Rk-II-116506.html">Spell: Aspect of Zomm Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 414 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Phase-March-Rk-II-116512.html">Spell: Phase March Rk. II</a></td>
+                                <td>Item</td>
+                                <td>15</td>
+                                <td></td>
+                                <td>a steamwork mechanic and 304 more NPCs</td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <script>
+    $(document).ready(function() {
+        $('#advanced').click(function() {
+            $('#item-table').DataTable({
+                responsive: true
+            });
+            $('#advanced').hide();
+        });
+    });
+    </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

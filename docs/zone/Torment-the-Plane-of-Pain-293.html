@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Torment, the Plane of Pain | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Torment, the Plane of Pain</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p></p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                            <th>NPC</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Miserable-Bauble-4118.html">Miserable Bauble</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lesser-Eye-of-Insanity-5431.html">Lesser Eye of Insanity</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Herald Shelia Gransith</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tormentors-Chain-Collar-8783.html">Tormentor&#39;s Chain Collar</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Keeper of Sorrows</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Adorned-Soulstone-Mask-9325.html">Adorned Soulstone Mask</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Acolyte of Affliction</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Peridot-10028.html">Peridot</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a hill giant and 6761 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sapphire-10034.html">Sapphire</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 18259 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 11150 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Band-of-Miserable-Souls-10238.html">Band of Miserable Souls</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Baraguj Szuul</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lupine-Runed-Armband-10315.html">Lupine Runed Armband</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Serpent-Insignia-Collar-10316.html">Serpent Insignia Collar</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Band-of-the-Adorned-10800.html">Band of the Adorned</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>TaGrusch the Abomination</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadowwoven-Sleeves-11405.html">Shadow-woven Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Maareq the Prophet</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadowhide-Gloves-12079.html">Shadowhide Gloves</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Baraguj Szuul</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Black-Cloak-of-Malise-15794.html">Black Cloak of Malise</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Acolyte of Affliction</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cape-Embroidered-with-Runes-15806.html">Cape Embroidered with Runes</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Battlecloak-of-Lost-Souls-15838.html">Battlecloak of Lost Souls</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Maareq the Prophet</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Unadorned-Cloak-of-Battle-15843.html">Unadorned Cloak of Battle</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tainted-Planar-Essence-15970.html">Tainted Planar Essence</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Bubonian War Rat and 103 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Diamond-15981.html">Raw Diamond</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Bubonian War Rat and 1763 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Girdle-of-the-Tormentor-16149.html">Girdle of the Tormentor</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>TaGrusch the Abomination</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pained-Leggings-16164.html">Pained Leggings</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Horrifying Vision</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brick-of-Ethereal-Energy-16282.html">Brick of Ethereal Energy</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Bubonian War Rat and 274 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Strand-of-Ether-16285.html">Strand of Ether</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Bubonian War Rat and 272 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mouths-of-Baraguj-Szuul-17172.html">Mouths of Baraguj Szuul</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Baraguj Szuul</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Slippers-of-Eternal-Nightmares-19091.html">Slippers of Eternal Nightmares</a></td>
+                                <td>Gear</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Baraguj Szuul</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brick-of-Crude-Iron-Ore-19630.html">Brick of Crude Iron Ore</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tormented-Stone-of-Souls-20438.html">Tormented Stone of Souls</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>TaGrusch the Abomination</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Baton-of-Torment-21838.html">Baton of Torment</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Salczek the Fleshgrinder</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staff-of-Primordial-Ooze-21897.html">Staff of Primordial Ooze</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>TaGrusch the Abomination</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 23614 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crowned-Staff-of-Anguish-22893.html">Crowned Staff of Anguish</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Withering-Staff-of-Agony-22898.html">Withering Staff of Agony</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Orb-of-Agony-22950.html">Orb of Agony</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Avatar of Agony</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Orb-of-Anguish-22951.html">Orb of Anguish</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Avatar of Anguish</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Orb-of-Pain-22952.html">Orb of Pain</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Avatar of Pain</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Orb-of-Suffering-22953.html">Orb of Suffering</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Avatar of Suffering</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Screaming-Sphere-22954.html">Screaming Sphere</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td>Quest Reward</td>
+                                <td>Tylis Newleaf</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Twinblade-of-Sorrow-22982.html">Twin-blade of Sorrow</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Plague-Mites-24087.html">Plague Mites</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a drolvarg sentry and 64 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Whip-of-Unending-Pain-24568.html">Whip of Unending Pain</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Acolyte of Affliction</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Longblade-of-Ethereal-Terror-24572.html">Longblade of Ethereal Terror</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Maareq the Prophet</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dirk-of-Great-Sorrow-24605.html">Dirk of Great Sorrow</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Salczek the Fleshgrinder</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rapier-of-Curses-24694.html">Rapier of Curses</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Baraguj Szuul</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staff-of-Agonizing-Battle-25843.html">Staff of Agonizing Battle</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Acolyte of Affliction</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Great-Blade-of-Malise-26030.html">Great Blade of Malise</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Keeper of Sorrows</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Great-Lance-of-Grief-26045.html">Great Lance of Grief</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Horrifying Vision</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greatstaff-of-Misery-26087.html">Greatstaff of Misery</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tooth-of-the-Insane-26624.html">Tooth of the Insane</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A construct of agony and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Broken-Spine-26625.html">Broken Spine</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A twisted crawler and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ragged-Section-of-Skin-26626.html">Ragged Section of Skin</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A twisted crawler</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Massive-Tusks-26627.html">Massive Tusks</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 21 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Large-Black-Horn-26628.html">Large Black Horn</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 20 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tormentors-Hoof-26629.html">Tormentor&#39;s Hoof</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 22 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blood-Raven-Beak-26630.html">Blood Raven Beak</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A blood raven hatchling and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blood-Raven-Talon-26631.html">Blood Raven Talon</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A blood raven hatchling and 13 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blood-Raven-Tailfeather-26632.html">Blood Raven Tailfeather</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Bregna and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mass-of-Muscle-26633.html">Mass of Muscle</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A flayed horror</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ball-of-Skin-26634.html">Ball of Skin</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A flayed horror</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Putrescent-Blood-26635.html">Putrescent Blood</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A flayed horror and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Semi-Precious-Stone-Chunk-26675.html">Semi Precious Stone Chunk</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Enameled-Gargoyle-Eye-26676.html">Enameled Gargoyle Eye</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flake-of-Gold-Leaf-26677.html">Flake of Gold Leaf</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shield-of-Unimaginable-Horrors-27164.html">Shield of Unimaginable Horrors</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>The Acolyte of Affliction</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Aegis-of-Gloom-27276.html">Aegis of Gloom</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Salczek the Fleshgrinder</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Orb-of-Infinite-Terror-27407.html">Orb of Infinite Terror</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Saryrn</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tormented-Flute-27991.html">Tormented Flute</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Salczek the Fleshgrinder</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Insanity-Fangs-28589.html">Insanity Fangs</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A construct of agony and 15 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ethereal-Parchment-29112.html">Ethereal Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Dolsoj Warrebs and 606 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spectral-Parchment-29131.html">Spectral Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Legendary Hill Giant and 345 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Boruk-Hide-29492.html">Boruk Hide</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Boruk hunter and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kaniz-Hide-29493.html">Kaniz Hide</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 11 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blood-Raven-Parts-29750.html">Blood Raven Parts</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a blood raven and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bloody-Tormentor-Parts-29759.html">Bloody Tormentor Parts</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 22 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Symbol-of-Ducee-Cupidon-32064.html">Symbol of Ducee Cupidon</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 23 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Pebble-33791.html">Sunshard Pebble</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Velarte Selire and 7014 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Ore-33792.html">Sunshard Ore</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Water Elemental Overseer and 7195 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Silk-34219.html">Fine Silk</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Jaylia the Faithful and 5801 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Excellent-Silk-34220.html">Excellent Silk</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a furtive figure and 5861 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Animal-Pelt-34232.html">Fine Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a gnoll pup and 2539 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rhenium-Ore-34245.html">Rhenium Ore</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Drevlon Knacknabber and 2802 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bonded-Loam-34882.html">Bonded Loam</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Coercer Qioul and 1516 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Excellent-Spinneret-Fluid-34910.html">Excellent Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 1550 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lucidem-35084.html">Lucidem</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 2508 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Refined-Binding-Powder-36283.html">Refined Binding Powder</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Coercer Qioul and 1086 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11105 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Combine-Star-37845.html">Uncut Combine Star</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10954 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Black-Sapphire-37846.html">Uncut Black Sapphire</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7577 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Mystik and 10997 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 8065 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Morganite-37849.html">Uncut Morganite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11162 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11143 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a furtive figure and 10808 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Rubellite-37852.html">Uncut Rubellite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a furtive figure and 10291 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10930 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Amber-Nihilite-37859.html">Raw Amber Nihilite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Rendolf Deathbringer and 10906 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-AA-Choresine-Sample-44812.html">Grade AA Choresine Sample</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>imp protector and 372 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-AA-Choresine-Sample-44815.html">Concentrated Grade AA Choresine Sample</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Dark Reign Guard and 310 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scale-Ore-45891.html">Scale Ore</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Mystik and 7904 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Intricate-Combatants-Orb-50407.html">Intricate Combatant&#39;s Orb</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a water elemental invader and 655 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Intricate-Adepts-Sphere-50417.html">Intricate Adept&#39;s Sphere</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an earth elemental rockshaper and 709 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elaborate-Adepts-Crystal-50438.html">Elaborate Adept&#39;s Crystal</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a patrolling gnoll and 959 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pile-of-Gravel-54379.html">Pile of Gravel</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14240 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Crimson-Nihilite-58067.html">Raw Crimson Nihilite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Mystik and 11131 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 10478 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-String-60215.html">Kyv String</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14306 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Cam-60216.html">Kyv Cam</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14316 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Symbol-of-the-Kyv-60217.html">Symbol of the Kyv</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Balm-60218.html">Kyv Balm</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Bow-60250.html">Kyv Bow</a></td>
+                                <td>Weapon</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Trigger and 14248 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dull-Boar-Tusk-67162.html">Dull Boar Tusk</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz hopedefiler and 35 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Inscribable-Words-69330.html">Inscribable Words</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vhalens-Necklace-77629.html">Vhalen&#39;s Necklace</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td>Quest Item</td>
+                                <td>a bruised woman</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Collectors-Tormentor-Hide-84302.html">Collector&#39;s Tormentor Hide</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>A Kaniz ravager and 21 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Used-Parchment-93493.html">Used Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 994 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grubby-Fine-Parchment-93494.html">Grubby Fine Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a furtive figure and 980 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shabby-Vellum-Parchment-93495.html">Shabby Vellum Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1005 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grimy-Fine-Vellum-Parchment-93496.html">Grimy Fine Vellum Parchment</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Finnelzi Springworthy and 1029 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7629 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staurolite-97002.html">Staurolite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7041 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Harmonagate-97003.html">Harmonagate</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 6610 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taaffeite-97286.html">Taaffeite</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 6325 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Stained-Fine-Runic-Spell-Scroll-97872.html">Stained Fine Runic Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1519 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Rough-Papyrus-97873.html">Smudged Rough Papyrus</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1209 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grimy-Papyrus-97874.html">Grimy Papyrus</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1260 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grubby-Fine-Papyrus-97875.html">Grubby Fine Papyrus</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>Finnelzi Springworthy and 1290 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dirty-Runic-Papyrus-97876.html">Dirty Runic Papyrus</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1261 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Fine-Runic-Papyrus-97877.html">Sooty Fine Runic Papyrus</a></td>
+                                <td>Item</td>
+                                <td>5</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 664 more NPCs</td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <script>
+    $(document).ready(function() {
+        $('#advanced').click(function() {
+            $('#item-table').DataTable({
+                responsive: true
+            });
+            $('#advanced').hide();
+        });
+    });
+    </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

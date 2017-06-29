@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>The Plane of Fear | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">The Plane of Fear</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p></p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                            <th>NPC</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Jerkin-1201.html">Shiverback-hide Jerkin</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Armbands-1202.html">Shiverback-hide Armbands</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Wristbands-1203.html">Shiverback-hide Wristbands</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Gloves-1204.html">Shiverback-hide Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Leggings-1205.html">Shiverback-hide Leggings</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shiverbackhide-Boots-1206.html">Shiverback-hide Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 19 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Cap-1211.html">Cryosilk Cap</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Veil-1212.html">Cryosilk Veil</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Choker-1213.html">Cryosilk Choker</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Robe-1214.html">Cryosilk Robe</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 9 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Amice-1215.html">Cryosilk Amice</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Cloak-1216.html">Cryosilk Cloak</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Sash-1217.html">Cryosilk Sash</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Sleeves-1218.html">Cryosilk Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 9 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Bracelet-1219.html">Cryosilk Bracelet</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Gloves-1220.html">Cryosilk Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Pantaloons-1221.html">Cryosilk Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 11 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Lined-Shoes-1222.html">Cryosilk Lined Shoes</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Turban-1225.html">Carmine Turban</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Robe-1226.html">Carmine Robe</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Sleeves-1227.html">Carmine Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Trinket-1228.html">Carmine Trinket</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Gloves-1229.html">Carmine Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Pants-1230.html">Carmine Pants</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Carmine-Boots-1231.html">Carmine Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a frightfinger and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Skullcap-1232.html">Blighted Skullcap</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Robe-1233.html">Blighted Robe</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Sleeves-1234.html">Blighted Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Armband-1235.html">Blighted Armband</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Gloves-1236.html">Blighted Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Trousers-1237.html">Blighted Trousers</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blighted-Boots-1238.html">Blighted Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pauldrons-of-Ferocity-1531.html">Pauldrons of Ferocity</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eye-of-CazicThule-1547.html">Eye of Cazic-Thule</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Halo-of-the-Enlightened-1549.html">Halo of the Enlightened</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bile-Etched-Obsidian-Choker-1550.html">Bile Etched Obsidian Choker</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cloak-of-the-Fearsome-1551.html">Cloak of the Fearsome</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Robe-of-Inspiration-1552.html">Robe of Inspiration</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brain-of-CazicThule-1554.html">Brain of Cazic-Thule</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fearsome-Shield-1555.html">Fearsome Shield</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a dracoliche</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grotesque-Girdle-1556.html">Grotesque Girdle</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a dracoliche</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shawl-of-Protection-1557.html">Shawl of Protection</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a dracoliche</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Berserkers-Ring-1558.html">Berserkers Ring</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a dracoliche</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Zombie-Flesh-Bracer-1559.html">Zombie Flesh Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a dracoliche</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nightmare-Hide-2333.html">Nightmare Hide</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Girdle-of-the-Diligent-2500.html">Girdle of the Diligent</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dweamorvine-Garland-2501.html">Dweamorvine Garland</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flayed-Turmoilskin-Belt-2502.html">Flayed Turmoilskin Belt</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a turmoil toad and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Crown-3801.html">Vermiculated Crown</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Tunic-3802.html">Vermiculated Tunic</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Armplates-3803.html">Vermiculated Armplates</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Bracelet-3804.html">Vermiculated Bracelet</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 11 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Gloves-3805.html">Vermiculated Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Leggings-3806.html">Vermiculated Leggings</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vermiculated-Boots-3807.html">Vermiculated Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Helm-4841.html">Umbral Platemail Helm</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Breastplate-4842.html">Umbral Platemail Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Vambraces-4843.html">Umbral Platemail Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 13 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Bracer-4844.html">Umbral Platemail Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 17 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Gauntlets-4845.html">Umbral Platemail Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Greaves-4846.html">Umbral Platemail Greaves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Umbral-Platemail-Boots-4847.html">Umbral Platemail Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Helmet-4851.html">Valorium Helmet</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Chestplate-4852.html">Valorium Chestplate</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Vambraces-4853.html">Valorium Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Bracers-4854.html">Valorium Bracers</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 15 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Gauntlets-4855.html">Valorium Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Greaves-4856.html">Valorium Greaves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 17 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Valorium-Boots-4857.html">Valorium Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Imbrued-Platemail-Bracer-4864.html">Imbrued Platemail Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>phoboplasm and 19 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Etched-Boots-4877.html">Rune Etched Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>phoboplasm and 15 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ethereal-Mist-Boots-4887.html">Ethereal Mist Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>phoboplasm and 28 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Helm-4891.html">Thorny Vine Helm</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan knight and 13 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Chestplate-4892.html">Thorny Vine Chestplate</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Vambraces-4893.html">Thorny Vine Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Bracer-4894.html">Thorny Vine Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Gauntlets-4895.html">Thorny Vine Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a shiverback and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Greaves-4896.html">Thorny Vine Greaves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thorny-Vine-Boots-4897.html">Thorny Vine Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a tentacle tormentor and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Woven-Shadow-Bracer-4904.html">Woven Shadow Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>phoboplasm and 20 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Indicolite-Gauntlets-4915.html">Indicolite Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>phoboplasm and 31 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Helm-5166.html">Greenmist Helm</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Breastplate-5167.html">Greenmist Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Vambraces-5168.html">Greenmist Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Bracer-5169.html">Greenmist Bracer</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Greaves-5171.html">Greenmist Greaves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Boots-5172.html">Greenmist Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greenmist-Mask-5173.html">Greenmist Mask</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Legionnaire-Scale-Helm-5174.html">Legionnaire Scale Helm</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 10 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Amygdalan-Tendril-5520.html">Amygdalan Tendril</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Forpar Fizfla and 14 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fluxbladed-Axe-5523.html">Fluxbladed Axe</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eyerazzia-7508.html">Eyerazzia</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Vilnius the Small and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Wristguard-7817.html">Anthemion Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Boots-7818.html">Anthemion Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Leggings-7819.html">Anthemion Leggings</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Gloves-7832.html">Anthemion Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Jerkin-7833.html">Anthemion Jerkin</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Armbands-7834.html">Anthemion Armbands</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Anthemion-Skullcap-7835.html">Anthemion Skullcap</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a decrepit warder and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Whistling-Fists-7836.html">Whistling Fists</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td>Quest Reward</td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Satchel-of-CazicThule-8226.html">Satchel of Cazic-Thule</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td>Quest Item</td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Turmoil-Warts-8331.html">Turmoil Warts</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a turmoil toad and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Essence-of-the-Tempest-Guard-8953.html">Essence of the Tempest Guard</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>The Tempest Reaver</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cryosilk-Webshield-9401.html">Cryosilk Webshield</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nautilus-Shield-9404.html">Nautilus Shield</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan warrior and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pearl-Necklace-10001.html">Pearl Necklace</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a noble and 1310 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fire-Opal-10031.html">Fire Opal</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Lord Pickclaw and 3357 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Star-Ruby-10032.html">Star Ruby</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Ulan Meadowgreen and 3478 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fire-Emerald-10033.html">Fire Emerald</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a Sporali Scavenger and 5017 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sapphire-10034.html">Sapphire</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 18259 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ruby-10035.html">Ruby</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Ulan Meadowgreen and 2544 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Black-Sapphire-10036.html">Black Sapphire</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 3462 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 11150 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Emerald-Ring-10045.html">Emerald Ring</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>an elemental crusader and 1286 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Opal-Bracelet-10046.html">Opal Bracelet</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Captain Boshinko and 2413 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mithril-Amulet-10047.html">Mithril Amulet</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a gnoll and 1521 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Star-Ruby-Earring-10048.html">Star Ruby Earring</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a gnoll commander and 681 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fire-Emerald-Ring-10049.html">Fire Emerald Ring</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a gnoll commander and 1786 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sapphire-Necklace-10050.html">Sapphire Necklace</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a gnoll commander and 1765 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ruby-Crown-10051.html">Ruby Crown</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a gnoll commander and 918 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Jacinth-10053.html">Jacinth</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 1558 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fiery-Defender-10099.html">Fiery Defender</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td>Quest Reward</td>
+                                <td>Irak Altil</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Swatch-of-Cryosilk-10185.html">Swatch of Cryosilk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a spinechiller spider and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wraithstone-10298.html">Wraithstone</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a worry wraith and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lupine-Runed-Armband-10315.html">Lupine Runed Armband</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Serpent-Insignia-Collar-10316.html">Serpent Insignia Collar</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Head-of-the-Serpent-10622.html">Head of the Serpent</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wraith of a Shissar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fiery-Avenger-11050.html">Fiery Avenger</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td>Quest Item</td>
+                                <td>Irak Altil and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Soul-Leech-Dark-Sword-of-Blood-11609.html">Soul Leech, Dark Sword of Blood</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crimson-Robe-of-Alendine-11641.html">Crimson Robe of Alendine</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Terror</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lyssas-Darkwood-Piccolo-11642.html">Lyssa`s Darkwood Piccolo</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Puppet-Strings-11643.html">Puppet Strings</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shield-of-Rainbow-Hues-11644.html">Shield of Rainbow Hues</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blood-Fire-11645.html">Blood Fire</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Amulet-of-Necropotence-11646.html">Amulet of Necropotence</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Barbarian-Spiritists-Hammer-11647.html">Barbarian Spiritist`s Hammer</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Terror</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/DawnFire-Morning-Star-of-Light-11648.html">DawnFire, Morning Star of Light</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staff-of-the-Earthcrafter-11649.html">Staff of the Earthcrafter</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bone-Razor-11661.html">Bone Razor</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staff-of-Undead-Legions-11662.html">Staff of Undead Legions</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spined-Dragon-Claws-11663.html">Spined Dragon Claws</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Withered-Totem-of-Widdershins-11665.html">Withered Totem of Widdershins</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/BoneClasped-Girdle-11666.html">Bone-Clasped Girdle</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Monsoon-Sword-of-the-Swiftwind-11667.html">Monsoon, Sword of the Swiftwind</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-378-11730.html">Nilitim&#39;s Grimoire Pg. 378</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 893 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-379-11731.html">Nilitim&#39;s Grimoire Pg. 379</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 917 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-400-11732.html">Nilitim&#39;s Grimoire Pg. 400</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 1007 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-401-11733.html">Nilitim&#39;s Grimoire Pg. 401</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Kithicor and 910 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-415-11734.html">Nilitim&#39;s Grimoire Pg. 415</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Kithicor and 919 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-416-11735.html">Nilitim&#39;s Grimoire Pg. 416</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 920 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-449-11736.html">Nilitim&#39;s Grimoire Pg. 449</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Sulgar and 902 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nilitims-Grimoire-Pg-450-11737.html">Nilitim&#39;s Grimoire Pg. 450</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xanuusus and 920 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Concussion-11763.html">Rune of Concussion</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a Pickclaw Destroyer and 1910 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Rathe-11776.html">Rune of Rathe</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Scout Malityn and 1591 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-ApSagor-11779.html">Rune of Ap`Sagor</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 911 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Frost-11780.html">Rune of Frost</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Scout Malityn and 930 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-the-Astral-11781.html">Rune of the Astral</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 1023 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Impetus-11782.html">Rune of Impetus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 901 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Crippling-11783.html">Rune of Crippling</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xanuusus and 916 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tears-of-Prexus-11806.html">Tears of Prexus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 1546 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Bondage-11807.html">Words of Bondage</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Sir Lucan DLere and 927 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Breath-of-Ro-11808.html">Breath of Ro</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 921 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wing-of-Xegony-11809.html">Wing of Xegony</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xanuusus and 897 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Requisition-11865.html">Words of Requisition</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 923 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Acquisition-Beza-11866.html">Words of Acquisition (Beza)</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 913 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Grappling-11867.html">Words of Grappling</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 2053 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Odus-11868.html">Words of Odus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 917 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-the-Ethereal-11869.html">Words of the Ethereal</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xanuusus and 901 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Crippling-Force-11870.html">Words of Crippling Force</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 899 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wand-of-Lava-12503.html">Wand of Lava</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a glare lord and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wand-of-Darkness-12505.html">Wand of Darkness</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a nightmare and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wand-of-Allure-12507.html">Wand of Allure</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a worry wraith and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fetid-Skin-13150.html">Fetid Skin</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fetid fiend and 8 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eye-of-Fright-13151.html">Eye of Fright</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a boogeyman and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scare-Straw-13152.html">Scare Straw</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Golem-Sprocket-14319.html">Golem Sprocket</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td>Quest Item</td>
+                                <td>a broken golem</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crystallized-Sulfur-16976.html">Crystallized Sulfur</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Captain Boshinko and 7068 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Darkwood-Trunk-17703.html">Darkwood Trunk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flayed-Skin-Tome-18898.html">Flayed Skin Tome</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td>Quest Reward</td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flayed-Skin-Tome-18899.html">Flayed Skin Tome</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td>Quest Item</td>
+                                <td>Cazic Thule</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brick-of-Crude-Iron-Ore-19630.html">Brick of Crude Iron Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Slime-Blood-of-CazicThule-20655.html">Slime Blood of Cazic-Thule</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Dread and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ball-of-Everliving-Golem-20677.html">Ball of Everliving Golem</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Wenden Blackhammer and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eye-of-the-Dark-God-21675.html">Eye of the Dark God</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Amygdalan warrior and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/JackOLantern-Fungus-22122.html">Jack-O-Lantern Fungus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>an animated scarecrow and 12 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Russet-Oxide-22123.html">Russet Oxide</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fire elemental and 192 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iron-Oxide-22124.html">Iron Oxide</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fire elemental and 192 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Charcoal-22125.html">Charcoal</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a fire elemental and 151 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 23614 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Semi-Precious-Stone-Chunk-26675.html">Semi Precious Stone Chunk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Enameled-Gargoyle-Eye-26676.html">Enameled Gargoyle Eye</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flake-of-Gold-Leaf-26677.html">Flake of Gold Leaf</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mark-of-Atonement-29010.html">Mark of Atonement</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td>Quest Item</td>
+                                <td>Reklon Gnallen</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Pebble-33791.html">Sunshard Pebble</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Velarte Selire and 7014 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Ore-33792.html">Sunshard Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Water Elemental Overseer and 7195 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Silk-34216.html">Crude Silk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Gibson Galliway and 5037 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Natural-Silk-34217.html">Natural Silk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xantomo Salmor and 4522 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Silk-34218.html">Pristine Silk</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Guard Gehnus and 6262 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Animal-Pelt-34229.html">Rough Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Merdan Fleetfoot and 4699 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Animal-Pelt-34230.html">Flawed Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xantomo Salmor and 3992 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Animal-Pelt-34231.html">Pristine Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Drevlon Knacknabber and 3038 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fulginate-Ore-34242.html">Fulginate Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Guard Gehnus and 4880 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rubicite-Ore-34243.html">Rubicite Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Guard Gehnus and 4387 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Indium-Ore-34244.html">Indium Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Drevlon Knacknabber and 3181 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rhenium-Ore-34245.html">Rhenium Ore</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Drevlon Knacknabber and 2802 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Malleable-Loam-34879.html">Malleable Loam</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Merdan Fleetfoot and 3064 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Supple-Loam-34880.html">Supple Loam</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a guard and 2739 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ductile-Loam-34881.html">Ductile Loam</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Norraths Keepers Guard and 1306 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Moist-Marrow-34894.html">Moist Marrow</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Ioltos Vghera and 2137 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Spinneret-Fluid-34906.html">Crude Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Niera Farbreeze and 3252 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Natural-Spinneret-Fluid-34907.html">Natural Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Adjutant Dkan and 2640 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Spinneret-Fluid-34908.html">Pristine Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Norraths Keepers Guard and 1220 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lucidem-35084.html">Lucidem</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 2508 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Versluierd-Fungus-35087.html">Versluierd Fungus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Mystik and 2548 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Simple-Binding-Powder-36281.html">Simple Binding Powder</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Velarte Selire and 887 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Refined-Binding-Powder-36283.html">Refined Binding Powder</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Coercer Qioul and 1086 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11105 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 11143 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Gem-Dusted-Rune-38699.html">Exquisite Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Coercer Qioul and 5003 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gold-Gem-Dusted-Rune-38700.html">Gold Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Advisor Czatl and 3972 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Gold-Gem-Dusted-Rune-38701.html">Complex Gold Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Mayor Gubbin and 2014 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Platinum-Gem-Dusted-Rune-38704.html">Complex Platinum Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Brigadier Gtav and 1785 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Platinum-Gem-Dusted-Rune-38705.html">Exquisite Platinum Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Brigadier Gtav and 1659 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Gem-Dusted-Rune-38706.html">Velium Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Advisor Czatl and 4881 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Velium-Gem-Dusted-Rune-38707.html">Complex Velium Gem Dusted Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Corporal Lancot and 897 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Velium-Gemmed-Rune-38710.html">Complex Velium Gemmed Rune</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a Tae Ew defender and 76 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Basilisk-Parts-40894.html">Basilisk Parts</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a basilisk hatchling and 139 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-VIII-44553.html">Consigned Bite of the Shissar VIII</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Giz XTin and 676 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-B-Nigriventer-Venom-44753.html">Concentrated Grade B Nigriventer Venom</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Xantomo Salmor and 829 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-B-Gormar-Venom-44768.html">Concentrated Grade B Gormar Venom</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Corporal Lancot and 763 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-B-Mamba-Venom-44783.html">Concentrated Grade B Mamba Venom</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>imp protector and 391 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-B-Taipan-Venom-44798.html">Concentrated Grade B Taipan Venom</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>imp protector and 415 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Concentrated-Grade-B-Choresine-Sample-44813.html">Concentrated Grade B Choresine Sample</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>imp protector and 370 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brittle-Muscimol-44910.html">Brittle Muscimol</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Guard Gehnus and 795 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brittle-Oleander-44921.html">Brittle Oleander</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Corporal Lancot and 800 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brittle-Larkspur-44932.html">Brittle Larkspur</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Corporal Lancot and 780 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brittle-Caladium-44943.html">Brittle Caladium</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Giz XTin and 790 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brittle-Laburnum-44954.html">Brittle Laburnum</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Giz XTin and 806 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Combatants-Hoe-50386.html">Flawed Combatant&#39;s Hoe</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant warrior and 1016 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Adepts-Rake-50396.html">Flawed Adept&#39;s Rake</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>lava duct crawler and 988 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pile-of-Gravel-54379.html">Pile of Gravel</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14240 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Helm-55601.html">Shadow Rage Helm</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Tunic-55602.html">Shadow Rage Tunic</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Sleeves-55603.html">Shadow Rage Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Wristguard-55604.html">Shadow Rage Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Gloves-55605.html">Shadow Rage Gloves</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Leggings-55606.html">Shadow Rage Leggings</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shadow-Rage-Boots-55607.html">Shadow Rage Boots</a></td>
+                                <td>Gear</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a samhain and 5 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-String-60215.html">Kyv String</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14306 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Cam-60216.html">Kyv Cam</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14316 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Symbol-of-the-Kyv-60217.html">Symbol of the Kyv</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Balm-60218.html">Kyv Balm</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Bow-60250.html">Kyv Bow</a></td>
+                                <td>Weapon</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Trigger and 14248 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Ellipse-65277.html">Rune of Ellipse</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Brigadier Gtav and 431 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Incitement-65285.html">Rune of Incitement</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Brigadier Gtav and 144 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Tallon-Zek-65290.html">Rune of Tallon Zek</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a Tae Ew defender and 60 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bolts-of-Tallon-65333.html">Bolts of Tallon</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a jungle raptor and 299 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Part-of-Zeannors-Thesis-Pg-15-65379.html">Part of Zeannor&#39;s Thesis Pg. 15</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a Tae Ew defender and 68 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Part-of-Yaeths-Compendium-Pg-25-65391.html">Part of Yaeth&#39;s Compendium Pg. 25</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>War Priestess Tzan and 113 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>a scrawny gnoll and 7629 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Fine-Supple-Runic-Hide-97866.html">Raw Fine Supple Runic Hide</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Lich of Miragul and 614 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grubby-Crude-Spell-Scroll-97867.html">Grubby Crude Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>fire giant wizard and 748 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shabby-Rough-Spell-Scroll-97868.html">Shabby Rough Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Magus Rokyl and 758 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grimy-Spell-Scroll-97869.html">Grimy Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Magus Rokyl and 735 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shabby-Fine-Spell-Scroll-97870.html">Shabby Fine Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Magus Rokyl and 740 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dirty-Runic-Spell-Scroll-97871.html">Dirty Runic Spell Scroll</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Velarte Selire and 738 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grubby-Fine-Papyrus-97875.html">Grubby Fine Papyrus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>Finnelzi Springworthy and 1290 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dirty-Runic-Papyrus-97876.html">Dirty Runic Papyrus</a></td>
+                                <td>Item</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>an air elemental breeze lord and 1261 more NPCs</td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <script>
+    $(document).ready(function() {
+        $('#advanced').click(function() {
+            $('#item-table').DataTable({
+                responsive: true
+            });
+            $('#advanced').hide();
+        });
+    });
+    </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

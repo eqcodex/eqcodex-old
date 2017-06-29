@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>The City of Thurgadin | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">The City of Thurgadin</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p></p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                            <th>NPC</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Round-Shield-1044.html">Velium Round Shield</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Priestess Llandra and 54 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Preserved-Kromrif-Heads-1174.html">Preserved Kromrif Heads</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Burlap-Coldain-Prayer-Shawl-1175.html">Burlap Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cloth-Coldain-Prayer-Shawl-1176.html">Cloth Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Woven-Coldain-Prayer-Shawl-1177.html">Woven Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/FurLined-Coldain-Prayer-Shawl-1178.html">Fur-Lined Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Silk-Coldain-Prayer-Shawl-1179.html">Silk Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Rexx Frostweaver</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Embroidered-Coldain-Prayer-Shawl-1198.html">Embroidered Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Betti Frostweaver and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Coldain-Prayer-Shawl-1199.html">Runed Coldain Prayer Shawl</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Leifs-Napkin-1415.html">Leif&#39;s Napkin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Guard Leif</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tritas-Napkin-1416.html">Trita&#39;s Napkin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trita Coldheart</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Britas-Napkin-1417.html">Brita&#39;s Napkin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thoridains-Napkin-1418.html">Thoridain&#39;s Napkin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Grand Historian Thoridain</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Used-Napkin-1419.html">Used Napkin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Guard Leif</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Borannins-Seal-1420.html">Borannin&#39;s Seal</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Seal-of-Thoridain-1422.html">Seal of Thoridain</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dirty-Pot-1423.html">Dirty Pot</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Trita Coldheart</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Used-Pie-Tin-1424.html">Used Pie Tin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tundrabear-Sandwich-1425.html">Tundrabear Sandwich</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Guard Leif</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Frost-Bunny-Stew-1426.html">Frost Bunny Stew</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trita Coldheart</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ulthork-Meat-Pie-1427.html">Ulthork Meat Pie</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Snow-Griffin-Souffle-1428.html">Snow Griffin Souffle</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Grand Historian Thoridain</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taniks-note-1560.html">Tanik&#39;s note</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Normons-axe-1690.html">Normon&#39;s axe</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Normon Stonetooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Normons-axe-1691.html">Normon&#39;s axe</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Normon Stonetooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Focus-1692.html">Velium Focus</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Normon Stonetooth</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ancient-Rusted-Key-1714.html">Ancient Rusted Key</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Noble Helssen</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Delivery-Note-1725.html">Velium Delivery Note</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Sentry Kale</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Embroidered-Shawl-Pattern-1833.html">Embroidered Shawl Pattern</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Betti Frostweaver</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Prayer-Shawl-pattern-1849.html">Runed Prayer Shawl pattern</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Betti Frostweaver</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blank-rune-1852.html">Blank rune</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Trademaster Kroven</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Etched-Rune-pattern-1855.html">Etched Rune pattern</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Grand Historian Thoridain</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Etched-Rune-1856.html">Etched Rune</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Grimthor Brewbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-etched-rune-1859.html">Velium etched rune</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Talem Tucter</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Casing-Pattern-2040.html">Rune Casing Pattern</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Talem Tucter</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crown-of-the-Beastlord-5453.html">Crown of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Chestguard-of-the-Beastlord-5454.html">Chestguard of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Armband-of-the-Beastlord-5455.html">Armband of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bracer-of-the-Beastlord-5456.html">Bracer of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gloves-of-the-Beastlord-5457.html">Gloves of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Leggings-of-the-Beastlord-5458.html">Leggings of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Boots-of-the-Beastlord-5459.html">Boots of the Beastlord</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Pearce Icefang</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Etching-Tools-8893.html">Etching Tools</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Meg Tucter</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Plague-Rat-Tail-9131.html">Plague Rat Tail</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a rodent and 83 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Jade-10023.html">Jade</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a smuggler and 1919 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pearl-10024.html">Pearl</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Greth Truksorn and 1697 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sapphire-10034.html">Sapphire</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 18259 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mithril-Earring-10041.html">Mithril Earring</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a smuggler and 576 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lupine-Runed-Armband-10315.html">Lupine Runed Armband</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Serpent-Insignia-Collar-10316.html">Serpent Insignia Collar</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14228 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bat-Wing-13068.html">Bat Wing</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Unsar Koldhagon and 135 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bat-Fur-13069.html">Bat Fur</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Caleah Herblender and 114 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Preservationists-Box-17102.html">Preservationists Box</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Borannin</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Purifier-17513.html">Velium Purifier</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Frundle Frenkler</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fish-oil-extractor-17514.html">Fish oil extractor</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Grimthor Brewbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glowing-Bile-Soaker-17879.html">Glowing Bile Soaker</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Rexx Frostweaver</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prayer-to-Brell-18281.html">Prayer to Brell</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Trademaster Kroven</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brick-of-Crude-Iron-Ore-19630.html">Brick of Crude Iron Ore</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14312 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Forged-Dagger-21500.html">Forged Dagger</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Sentinel Knox and 7 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 23614 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ivory-22504.html">Ivory</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Brenon and 861 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Small-Piece-of-Velium-22569.html">Small Piece of Velium</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a golem usher and 170 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Breastplate-24928.html">Corroded Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Veteran Surlren and 25 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Greaves-24929.html">Corroded Plate Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a guardian of Zek and 32 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Vambraces-24930.html">Corroded Plate Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Khyren and 36 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Boots-24931.html">Corroded Plate Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Mykeor and 45 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Bracer-24932.html">Corroded Plate Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Mykeor and 49 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Helmet-24933.html">Corroded Plate Helmet</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Uthmytel and 34 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Plate-Gauntlets-24934.html">Corroded Plate Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Uthmytel and 41 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Tunic-24935.html">Corroded Chain Tunic</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Veteran Surlren and 21 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Leggings-24936.html">Corroded Chain Leggings</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a guardian of Zek and 23 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Sleeves-24937.html">Corroded Chain Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Khyren and 32 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Boots-24938.html">Corroded Chain Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Mykeor and 34 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Bracer-24939.html">Corroded Chain Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Uthmytel and 35 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Coif-24940.html">Corroded Chain Coif</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Veteran Surlren and 25 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Corroded-Chain-Gauntlets-24941.html">Corroded Chain Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Veteran Surlren and 33 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Tunic-24942.html">Eroded Leather Tunic</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Pejhayor and 18 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Leggings-24943.html">Eroded Leather Leggings</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Legionnaire Yvedrn and 18 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Sleeves-24944.html">Eroded Leather Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Veteran Surlren and 29 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Boots-24945.html">Eroded Leather Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Coldstone and 30 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Bracelet-24946.html">Eroded Leather Bracelet</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Legionnaire Yvedrn and 29 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Cap-24947.html">Eroded Leather Cap</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Legionnaire Yvedrn and 21 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eroded-Leather-Gloves-24948.html">Eroded Leather Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Adjutant Frinevrn and 18 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Robe-24949.html">Torn Enchanted Silk Robe</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 18 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Pantaloons-24950.html">Torn Enchanted Silk Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 27 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Sleeves-24951.html">Torn Enchanted Silk Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 44 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Boots-24952.html">Torn Enchanted Silk Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 50 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Wristband-24953.html">Torn Enchanted Silk Wristband</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 46 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Turban-24954.html">Torn Enchanted Silk Turban</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 38 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Torn-Enchanted-Silk-Gloves-24955.html">Torn Enchanted Silk Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Trooper Syenn and 47 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crystalline-Silk-25306.html">Crystalline Silk</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a blizzard spider and 36 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Black-Marble-25805.html">Black Marble</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 140 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Emerald-25807.html">Pristine Emerald</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 138 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Diamond-25814.html">Flawless Diamond</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 158 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Jaundice-Gem-25815.html">Jaundice Gem</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 126 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nephrite-25816.html">Nephrite</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 118 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Topaz-25818.html">Flawed Topaz</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 128 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Emerald-25821.html">Flawed Emerald</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 147 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawed-Sea-Sapphire-25825.html">Flawed Sea Sapphire</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 136 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Chipped-Onyx-Sapphire-25827.html">Chipped Onyx Sapphire</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost spectre and 123 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Jaundice-Gem-25829.html">Crushed Jaundice Gem</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 76 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Coral-25831.html">Crushed Coral</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 98 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Topaz-25832.html">Crushed Topaz</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 116 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Black-Marble-25833.html">Crushed Black Marble</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 100 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Opal-25836.html">Crushed Opal</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 87 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Flame-Opal-25837.html">Crushed Flame Opal</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 97 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Flame-Emerald-25838.html">Crushed Flame Emerald</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 107 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Lava-Ruby-25840.html">Crushed Lava Ruby</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 91 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crushed-Onyx-Sapphire-25841.html">Crushed Onyx Sapphire</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a crystalline watcher and 100 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Semi-Precious-Stone-Chunk-26675.html">Semi Precious Stone Chunk</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Enameled-Gargoyle-Eye-26676.html">Enameled Gargoyle Eye</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flake-of-Gold-Leaf-26677.html">Flake of Gold Leaf</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14226 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shipment-of-Velium-Ore-29064.html">Shipment of Velium Ore</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Sentry Kale</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Frost-Giant-Toes-29125.html">Frost Giant Toes</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>a frost giant elite and 229 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Medium-Quality-Dire-Wolf-Fur-30025.html">Medium Quality Dire Wolf Fur</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a dire wolf and 27 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Coldain-Head-30081.html">Coldain Head</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Captain Bvellos and 83 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Braided-Beard-of-the-Coldain-30108.html">Braided Beard of the Coldain</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a lesser tar goo and 23 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/The-Icy-Mug-Souvenir-Stein-30145.html">The Icy Mug Souvenir Stein</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Petcas Coldbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/The-Broken-Glacier-Souvenir-Mug-30146.html">The Broken Glacier Souvenir Mug</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>halfling swashbuckler and 4 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Long-Sword-30200.html">Velium Long Sword</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 246 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Two-Handed-Sword-30201.html">Velium Two Handed Sword</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 246 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Short-Sword-30202.html">Velium Short Sword</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 254 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Scimitar-30203.html">Velium Scimitar</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 235 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Morning-Star-30205.html">Velium Morning Star</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 276 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Dagger-30207.html">Velium Dagger</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 234 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Rapier-30209.html">Velium Rapier</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a frost giant scout and 251 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sceptre-of-the-Coldain-Ancients-30269.html">Sceptre of the Coldain Ancients</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Erdarf Restil and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gem-of-Persuasion-30270.html">Gem of Persuasion</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Erdarf Restil</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bottle-of-Karsin-Acid-30271.html">Bottle of Karsin Acid</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Erdarf Restil and 22 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Crown-31000.html">Dark Runed Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Breastplate-31001.html">Dark Runed Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Vambraces-31002.html">Dark Runed Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Bracer-31003.html">Dark Runed Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Gauntlets-31004.html">Dark Runed Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Greaves-31005.html">Dark Runed Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dark-Runed-Boots-31006.html">Dark Runed Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dalgrim Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Helm-31007.html">Rune Crafter&#39;s Helm</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Breastplate-31008.html">Rune Crafter&#39;s Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Vambraces-31009.html">Rune Crafter&#39;s Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Bracer-31010.html">Rune Crafter&#39;s Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Gauntlets-31011.html">Rune Crafter&#39;s Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Greaves-31012.html">Rune Crafter&#39;s Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Crafters-Boots-31013.html">Rune Crafter&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Terman Underbelly</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Helm-31014.html">Runed Scout&#39;s Helm</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Breastplate-31015.html">Runed Scout&#39;s Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Vambraces-31016.html">Runed Scout&#39;s Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Bracer-31017.html">Runed Scout&#39;s Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Gauntlets-31018.html">Runed Scout&#39;s Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Greaves-31019.html">Runed Scout&#39;s Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Scouts-Boots-31020.html">Runed Scout&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Argash</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Helm-31021.html">Runed Protector&#39;s Helm</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Breastplate-31022.html">Runed Protector&#39;s Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Vambraces-31023.html">Runed Protector&#39;s Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Bracer-31024.html">Runed Protector&#39;s Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Gauntlets-31025.html">Runed Protector&#39;s Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Greaves-31026.html">Runed Protector&#39;s Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Runed-Protectors-Boots-31027.html">Runed Protector&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Battlepriest Daragor</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Circlet-31028.html">Brigand&#39;s Circlet</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Chestguard-31029.html">Brigand&#39;s Chestguard</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Vambraces-31030.html">Brigand&#39;s Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Bracer-31031.html">Brigand&#39;s Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Gauntlets-31032.html">Brigand&#39;s Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Greaves-31033.html">Brigand&#39;s Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Brigands-Boots-31034.html">Brigand&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Foreman Felspar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Helm-31035.html">Resonant Helm</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Breastplate-31036.html">Resonant Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Vambraces-31037.html">Resonant Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Bracer-31038.html">Resonant Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Gauntlets-31039.html">Resonant Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Greaves-31040.html">Resonant Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Resonant-Boots-31041.html">Resonant Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Leifur</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crown-of-Forbidden-Rites-31042.html">Crown of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Breastplate-of-Forbidden-Rites-31043.html">Breastplate of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vambraces-of-Forbidden-Rites-31044.html">Vambraces of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bracers-of-Forbidden-Rites-31045.html">Bracers of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gauntlets-of-Forbidden-Rites-31046.html">Gauntlets of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greaves-of-Forbidden-Rites-31047.html">Greaves of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Boots-of-Forbidden-Rites-31048.html">Boots of Forbidden Rites</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Loremaster Dorinan</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Circlet-of-Nature-31049.html">Rowyl&#39;s Circlet of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Chestguard-of-Nature-31050.html">Rowyl&#39;s Chestguard of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Vambraces-of-Nature-31051.html">Rowyl&#39;s Vambraces of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Bracer-of-Nature-31052.html">Rowyl&#39;s Bracer of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Gauntlets-of-Nature-31053.html">Rowyl&#39;s Gauntlets of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Greaves-of-Nature-31054.html">Rowyl&#39;s Greaves of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rowyls-Boots-of-Nature-31055.html">Rowyl&#39;s Boots of Nature</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Cobi Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Crown-31056.html">Sage&#39;s Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Robe-31057.html">Sage&#39;s Robe</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Sleeves-31058.html">Sage&#39;s Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Bracelet-31059.html">Sage&#39;s Bracelet</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Gloves-31060.html">Sage&#39;s Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Pantaloons-31061.html">Sage&#39;s Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sages-Boots-31062.html">Sage&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Mauren Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Crown-31063.html">Warlock&#39;s Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Robe-31064.html">Warlock&#39;s Robe</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Sleeves-31065.html">Warlock&#39;s Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Wristguard-31066.html">Warlock&#39;s Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Gloves-31067.html">Warlock&#39;s Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Pantaloons-31068.html">Warlock&#39;s Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Warlocks-Boots-31069.html">Warlock&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Zorik</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Crown-31070.html">Arch Mage&#39;s Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Robe-31071.html">Arch Mage&#39;s Robe</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Sleeves-31072.html">Arch Mage&#39;s Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Warband-31073.html">Arch Mage&#39;s Warband</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Gloves-31074.html">Arch Mage&#39;s Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Pantaloons-31075.html">Arch Mage&#39;s Pantaloons</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Arch-Mages-Boots-31076.html">Arch Mage&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Kyla Frostbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Crown-31077.html">Beguiler&#39;s Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Robe-31078.html">Beguiler&#39;s Robe</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Raotin Teawel and 2 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Sleeves-31079.html">Beguiler&#39;s Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Wristguard-31080.html">Beguiler&#39;s Wristguard</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Gloves-31081.html">Beguiler&#39;s Gloves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Trousers-31082.html">Beguiler&#39;s Trousers</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Beguilers-Slippers-31083.html">Beguiler&#39;s Slippers</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Brita</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Crown-31084.html">Champion&#39;s Crown</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Breastplate-31085.html">Champion&#39;s Breastplate</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Vambraces-31086.html">Champion&#39;s Vambraces</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Bracer-31087.html">Champion&#39;s Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Gauntlets-31088.html">Champion&#39;s Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Greaves-31089.html">Champion&#39;s Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Champions-Boots-31090.html">Champion&#39;s Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Captain Njall</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Headband-31091.html">Grand Master&#39;s Headband</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Chest-Wraps-31092.html">Grand Master&#39;s Chest Wraps</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Arm-Wraps-31093.html">Grand Master&#39;s Arm Wraps</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Wrist-Wraps-31094.html">Grand Master&#39;s Wrist Wraps</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fist-of-the-Grand-Master-31095.html">Fist of the Grand Master</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Leg-Wraps-31096.html">Grand Master&#39;s Leg Wraps</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grand-Masters-Slippers-31097.html">Grand Master&#39;s Slippers</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Lorekeeper Einar</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Dust-33790.html">Sunshard Dust</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Segran Rajhar and 3474 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thick-Silk-34215.html">Thick Silk</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Bruno Barstomper and 4789 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Silk-34216.html">Crude Silk</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Gibson Galliway and 5037 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Animal-Pelt-34228.html">Crude Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Bruno Barstomper and 4423 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Animal-Pelt-34229.html">Rough Animal Pelt</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Merdan Fleetfoot and 4699 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iridium-Ore-34241.html">Iridium Ore</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Danaria Hollin and 4677 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fulginate-Ore-34242.html">Fulginate Ore</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Guard Gehnus and 4880 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pliant-Loam-34878.html">Pliant Loam</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Rephas and 3368 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Malleable-Loam-34879.html">Malleable Loam</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Merdan Fleetfoot and 3064 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Damp-Marrow-34893.html">Damp Marrow</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Gibson Galliway and 2966 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thick-Spinneret-Fluid-34905.html">Thick Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Axe Broadsmith and 3279 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Spinneret-Fluid-34906.html">Crude Spinneret Fluid</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Niera Farbreeze and 3252 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Modest-Binding-Powder-36280.html">Modest Binding Powder</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Aeris Greymalkyn and 958 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-B-Nigriventer-Venom-44750.html">Grade B Nigriventer Venom</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Captain Bosec and 1010 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-B-Gormar-Venom-44765.html">Grade B Gormar Venom</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a guard and 911 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-B-Larkspur-Extract-44855.html">Grade B Larkspur Extract</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Wylin Dodmil and 991 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-B-Caladium-Extract-44867.html">Grade B Caladium Extract</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a guard and 1028 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-A-Caladium-Extract-44868.html">Grade A Caladium Extract</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Niera Farbreeze and 994 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pile-of-Gravel-54379.html">Pile of Gravel</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14240 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Coif-55317.html">Icefury Coif</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Tunic-55318.html">Icefury Tunic</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Sleeves-55319.html">Icefury Sleeves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Bracer-55320.html">Icefury Bracer</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Gauntlets-55321.html">Icefury Gauntlets</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Greaves-55322.html">Icefury Greaves</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icefury-Boots-55323.html">Icefury Boots</a></td>
+                                <td>Gear</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Glatigi</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scalded-Rat-Skin-55470.html">Scalded Rat Skin</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>a large rat and 55 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-String-60215.html">Kyv String</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14306 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Cam-60216.html">Kyv Cam</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14316 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Symbol-of-the-Kyv-60217.html">Symbol of the Kyv</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Balm-60218.html">Kyv Balm</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14321 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Kyv-Bow-60250.html">Kyv Bow</a></td>
+                                <td>Weapon</td>
+                                <td>3</td>
+                                <td></td>
+                                <td>Trigger and 14248 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Korbuks-Weapon-Plans-60285.html">Korbuk&#39;s Weapon Plans</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Dardek Bladewright and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Shank-60286.html">Elegant Shank</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Dardek Bladewright and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Emblazoned-Champions-Hilt-60288.html">Emblazoned Champion&#39;s Hilt</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Kargek Redblade and 3 more NPCs</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Coldain-Coffee-Blend-60289.html">Coldain Coffee Blend</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Item</td>
+                                <td>Dardek Bladewright</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Special-Beans-60290.html">Special Beans</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Petcas Coldbeard</td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dardeks-Forged-Blade-60292.html">Dardek&#39;s Forged Blade</a></td>
+                                <td>Item</td>
+                                <td>3</td>
+                                <td>Quest Reward</td>
+                                <td>Dardek Bladewright</td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <script>
+    $(document).ready(function() {
+        $('#advanced').click(function() {
+            $('#item-table').DataTable({
+                responsive: true
+            });
+            $('#advanced').hide();
+        });
+    });
+    </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
