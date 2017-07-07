@@ -32,7 +32,7 @@
                                 <td>{{ $value.Category }}</td>
                                 <td>{{ $value.Era }}</td>
                                 <td>{{ $value.Quest }}</td>
-                                <td>{{ $value.NPC }}</td>
+                                <td><a href="{{ $value.NpcUrl }}">{{ $value.NPC }}</a>{{ $value.NPCMore }}</td>
                             </div>
                             {{ end }}
                             </tbody>

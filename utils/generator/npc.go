@@ -36,6 +36,9 @@ func generateNPC(instance *Instance) {
 	}
 	max := len(npcs)
 	for focusId, npcEntry := range npcs {
+		if instance.tracker.NpcId > focusId {
+			continue
+		}
 		generateNPCEntry(instance, npcEntry)
 
 		rate := float64(focusId) / float64(time.Since(startTime).Seconds())
@@ -54,6 +57,9 @@ func generateNPC(instance *Instance) {
 			remainString = fmt.Sprintf("%0.0f seconds", remain)
 		}
 		showPercent(fmt.Sprintf("%d @ %0.2f/sec", focusId, rate), focusId, max, remainString, "green")
+		instance.tracker.NpcId = focusId
+		saveTracker(instance.tracker)
+
 	}
 	return
 }
@@ -151,6 +157,8 @@ func generateNPCEntry(instance *Instance, npcEntry *npc.NpcTypes) {
 			itemEntry.Quest = "Quest Reward"
 		}
 
+		itemEntry.Category = getCategory(itemEntry.Slots)
+
 		itemEntry.Url = fmt.Sprintf("/item/%s-%d.html", cleanUrl(itemEntry.Name), itemEntry.Id)
 		//log.Println(npcEntry.Name)
 		//npcEntry.Name = cleanName(npcEntry.Name)
@@ -167,7 +175,11 @@ func generateNPCEntry(instance *Instance, npcEntry *npc.NpcTypes) {
 		return
 	}
 
-	npcUrl := fmt.Sprintf("/npc/%s-%d.html", cleanUrl(npcEntry.Name), npcEntry.Id.Int64)
+	npcName := cleanUrl(npcEntry.Name)
+	if len(npcName) == 0 {
+		npcName = "(Blank)"
+	}
+	npcUrl := fmt.Sprintf("/npc/%s-%d.html", npcName, npcEntry.Id.Int64)
 
 	f, err := os.Create(instance.yamlConfig.Output + npcUrl)
 	if err != nil {

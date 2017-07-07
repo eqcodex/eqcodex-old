@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/xackery/goeq/item"
 	"github.com/xackery/goeq/npc"
@@ -19,7 +20,7 @@ func generateItem(instance *Instance) {
 	query := "SELECT * FROM items ORDER by id"
 	err = instance.db.Select(&items, query)
 	if err != nil {
-		log.Println("Failed to select zones", err.Error())
+		log.Println("Failed to select items", err.Error())
 		return
 	}
 	/*if err = os.RemoveAll(instance.yamlConfig.Output + "item/"); err != nil {
@@ -31,13 +32,31 @@ func generateItem(instance *Instance) {
 		log.Println("Failed to make item dir:", err.Error())
 		return
 	}
-	itemCount := 0
-	for _, itemEntry := range items {
-		itemCount++
-		generateItemEntry(instance, itemEntry)
-		if itemCount%1000 == 0 {
-			fmt.Printf("%d (%.2f)", itemCount, float64(itemCount/len(items)))
+	max := len(items)
+	for focusId, itemEntry := range items {
+		if instance.tracker.ItemId > focusId {
+			continue
 		}
+		generateItemEntry(instance, itemEntry)
+
+		rate := float64(focusId) / float64(time.Since(startTime).Seconds())
+		remainString := ""
+		remain := (float64(max) - float64(focusId)) / rate
+
+		if remain > 60 {
+			remain = remain / 60
+			if remain > 60 {
+				remain = remain / 60
+				remainString = fmt.Sprintf("%0.2f hours", remain)
+			} else {
+				remainString = fmt.Sprintf("%0.1f minutes", remain)
+			}
+		} else {
+			remainString = fmt.Sprintf("%0.0f seconds", remain)
+		}
+		showPercent(fmt.Sprintf("%d @ %0.2f/sec", focusId, rate), focusId, max, remainString, "green")
+		instance.tracker.ItemId = focusId
+		saveTracker(instance.tracker)
 		//break
 		//if zoneEntry.Short_name.String == "airplane" {
 		//	break
@@ -63,6 +82,7 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 		Is_quest_reward int `db:"is_quest_reward"`
 		Is_quest_item   int `db:"is_quest_item"`
 		Npc_count       int
+		Task_id         int
 		Header_line     string
 		Class_line      string
 		Race_line       string
@@ -120,7 +140,11 @@ func generateItemEntry(instance *Instance, itemEntry *item.Item) {
 			npcEntry.Quest = "Quest Reward"
 		}
 
-		npcEntry.Url = fmt.Sprintf("/npc/%s-%d.html", cleanUrl(npcEntry.Name), npcEntry.Id.Int64)
+		npcName := cleanUrl(npcEntry.Name)
+		if len(npcName) == 0 {
+			npcName = "(Blank)"
+		}
+		npcEntry.Url = fmt.Sprintf("/npc/%s-%d.html", npcName, npcEntry.Id.Int64)
 		//log.Println(npcEntry.Name)
 		npcEntry.Name = cleanName(npcEntry.Name)
 		//log.Println(npcEntry.Name)

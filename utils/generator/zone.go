@@ -70,7 +70,7 @@ func generateZoneList(instance *Instance) {
 	}
 
 	//Get zones.
-	query := "SELECT * FROM zone ORDER BY short_name"
+	query := "SELECT * FROM zone ORDER BY zoneidnumber"
 	err = instance.db.Select(&page.Zones, query)
 	if err != nil {
 		log.Println("Failed to select zones", err.Error())
@@ -84,8 +84,11 @@ func generateZoneList(instance *Instance) {
 
 	max := len(page.Zones)
 	for focusId, zoneEntry := range page.Zones {
+		if instance.tracker.ZoneId > focusId {
+			continue
+		}
 
-		zoneEntry.Url = fmt.Sprintf("zone/%s-%d.html", cleanUrl(zoneEntry.Long_name.String), zoneEntry.Id.Int64)
+		zoneEntry.Url = fmt.Sprintf("zone/%s-%d.html", cleanUrl(zoneEntry.Long_name.String), zoneEntry.Zoneidnumber)
 		generateZoneEntry(instance, zoneEntry)
 		rate := float64(focusId) / float64(time.Since(startTime).Seconds())
 		remainString := ""
@@ -103,6 +106,8 @@ func generateZoneList(instance *Instance) {
 			remainString = fmt.Sprintf("%0.0f seconds", remain)
 		}
 		showPercent(fmt.Sprintf("%s %d @ %0.2f/sec", zoneEntry.Short_name.String, focusId, rate), focusId, max, remainString, "green")
+		instance.tracker.ZoneId = focusId
+		saveTracker(instance.tracker)
 		//if zoneEntry.Short_name.String == "airplane" {
 		//	break
 		//}
@@ -151,6 +156,8 @@ func generateZoneEntry(instance *Instance, zoneEntry *ZoneData) {
 		Npc_count       int
 		Url             string
 		Task_id         int
+		NpcUrl          string
+		NPCMore         string
 	}
 
 	type PageData struct {
@@ -188,6 +195,7 @@ func generateZoneEntry(instance *Instance, zoneEntry *ZoneData) {
 		query = `SELECT npc.name FROM zone_drops
 		INNER JOIN npc_types npc ON npc.id = zone_drops.npc_id
 		WHERE item_id = ? 
+		GROUP BY npc_id
 		LIMIT 1`
 
 		if err = instance.db.Get(&itemEntry.NPC, query, itemEntry.Id); err != nil {
@@ -201,9 +209,14 @@ func generateZoneEntry(instance *Instance, zoneEntry *ZoneData) {
 		}
 		itemEntry.Npc_count--
 		itemEntry.NPC = cleanName(itemEntry.NPC)
+		npcName := cleanUrl(itemEntry.NPC)
+		if len(npcName) == 0 {
+			npcName = "(Blank)"
+		}
+		itemEntry.NpcUrl = fmt.Sprintf("/npc/%s-%d.html", npcName, itemEntry.Npc_id)
 		itemEntry.Url = fmt.Sprintf("/item/%s-%d.html", cleanUrl(itemEntry.Name), itemEntry.Id)
 		if itemEntry.Npc_count > 1 {
-			itemEntry.NPC += fmt.Sprintf(" and %d more NPCs", itemEntry.Npc_count)
+			itemEntry.NPCMore = fmt.Sprintf(" and %d more NPCs", itemEntry.Npc_count)
 		}
 	}
 

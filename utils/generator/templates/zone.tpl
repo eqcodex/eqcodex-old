@@ -19,8 +19,9 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover" id="zone-table">
                                     <thead>
-                                        <tr>
+                                        <tr>                                        
                                             <th>Name</th>
+                                            <th>Number</th>
                                             <th>1</th>
                                             <th>5</th>
                                             <th>10</th>
@@ -41,6 +42,7 @@
                                     {{ range $key, $value := .Zones }}
                                         <tr>
                                             <th><a href="{{ $value.Url }}">{{ $value.Long_name.String }}</a></th>
+                                            <th><a href="{{ $value.Url }}">{{ $value.Zoneidnumber }}</a></th>
                                             <td>{{ if $value.IsLevel $value.Levels 1}}<span class="fa fa-check"></span>{{ end }}</td>
                                             <td>{{ if $value.IsLevel $value.Levels 5}}<span class="fa fa-check"></span>{{ end }}</td>
                                             <td>{{ if $value.IsLevel $value.Levels 10}}<span class="fa fa-check"></span>{{ end }}</td>

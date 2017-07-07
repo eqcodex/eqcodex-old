@@ -12,10 +12,15 @@ import (
 	"github.com/xackery/eqemuconfig"
 )
 
+var (
+	startTime time.Time
+)
+
 type Instance struct {
 	yamlConfig  *YamlConfig
 	eqemuConfig *eqemuconfig.Config
 	db          *sqlx.DB
+	tracker     *Tracker
 }
 
 func main() {
@@ -35,8 +40,12 @@ func serveWebsite(instance *Instance) {
 
 func generateTemplates(instance *Instance) {
 	var err error
-	startTime := time.Now()
-	fmt.Println("Staring up...")
+	startTime = time.Now()
+	fmt.Println("Starting up...")
+
+	if instance.tracker, err = loadTracker(); err != nil {
+		log.Fatal("Error while loading tracker: ", err.Error())
+	}
 
 	//Load Config
 	instance.yamlConfig, err = loadYamlConfig()
@@ -56,7 +65,8 @@ func generateTemplates(instance *Instance) {
 		log.Fatalf("Database error: %s", err.Error())
 	}
 	generateZoneList(instance)
-	generateItem(instance)
-	generateIndex(instance)
+	//generateItem(instance)
+	generateNPC(instance)
+	//generateIndex(instance)
 	fmt.Println("Completed in", time.Since(startTime).Seconds())
 }
