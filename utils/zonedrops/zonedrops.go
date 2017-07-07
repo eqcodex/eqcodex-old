@@ -20,6 +20,8 @@ package main
 import ( //"database/sql"
 	"fmt"
 	"log"
+	"strings"
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
@@ -41,6 +43,7 @@ type Database struct {
 
 func main() {
 	var err error
+	startTime := time.Now()
 	if err = loadConfig(); err != nil {
 		log.Fatal(err.Error())
 	}
@@ -58,6 +61,7 @@ func main() {
 	//}
 
 	insertCount := 0
+	insertTotal := 0
 	zones := []zone.Zone{}
 	if zones, err = db.getZones(); err != nil {
 		log.Fatal(err.Error())
@@ -66,27 +70,37 @@ func main() {
 	insertQuery := "REPLACE INTO zone_drops (item_id, npc_id, zone_id) VALUES"
 	insertVals := []interface{}{}
 
-	isSkip := true
+	isSkip := false //turn to true when you want to skip
 
+	fmt.Printf("\033[48;5;7m") //white background
+	fmt.Printf("\033[38;5;0m") //black text
+	fmt.Printf("Loaded %d zones, insert zone drops into zone_drops table...", len(zones))
+	fmt.Printf("\033[48;5;0m\033[38;5;0m\033[0m\n") //restore text
+	padSize := 0
+	for _, zone := range zones {
+		if len(zone.Short_name.String) > padSize {
+			padSize = len(zone.Short_name.String)
+		}
+	}
 	for _, zone := range zones {
 		//skipping feature
 		if zone.Short_name.String != "steamfactory" && isSkip {
-			fmt.Println("Skipping", zone.Short_name.String)
+			//fmt.Println("Skipping", zone.Short_name.String)
 			continue
 		}
 		isSkip = false
-		lastInsertCount := insertCount
-		fmt.Print("\n" + zone.Short_name.String + "...")
+		insertCount = 0
+
+		//fmt.Print("\n" + zone.Short_name.String + "...")
 		spawns := []spawn.Spawn2{}
 		if spawns, err = db.getSpawns(zone.Short_name.String); err != nil {
 			log.Fatal(err.Error())
 		}
-		if zone.Min_status > 80 {
-			fmt.Printf("Skipping, status > 0, %d", zone.Min_status)
-			continue
-		}
-
+		recordCount := 0
 		for _, spawn2 := range spawns {
+			recordCount++
+			showPercent(zone.Short_name.String+strings.Repeat(" ", padSize-len(zone.Short_name.String)), recordCount, len(spawns), insertCount, insertTotal, startTime, "green")
+
 			spawnentries := []spawn.SpawnEntry{}
 			if spawnentries, err = db.getSpawnEntries(spawn2.Spawngroupid); err != nil {
 				log.Fatal("spawnentry:", err.Error())
@@ -113,20 +127,22 @@ func main() {
 							}
 							for _, itementry := range items {
 								insertCount++
-								if insertCount%1000 == 0 {
-									fmt.Printf("%d, ", insertCount)
-								}
+								insertTotal++
+								//if insertCount%1000 == 0 {
+								//	fmt.Printf("%d, ", insertCount)
+								//}
 								insertQuery += "(?, ?, ?),"
 								insertVals = append(insertVals, itementry.Id, npc.Id.Int64, zone.Zoneidnumber)
 
-								if insertCount%5000 == 0 {
-									fmt.Print(", inserting 5k records...")
+								if insertTotal%100 == 0 {
+									//fmt.Print(", inserting 5k records...")
 									insertQuery = insertQuery[0 : len(insertQuery)-1]
 									stmt, _ := db.instance.Prepare(insertQuery)
 
 									if _, err = stmt.Exec(insertVals...); err != nil {
 										log.Fatal(err.Error())
 									}
+									stmt.Close()
 									//reset query
 									insertQuery = "REPLACE INTO zone_drops (item_id, npc_id, zone_id) VALUES"
 									insertVals = []interface{}{}
@@ -140,7 +156,6 @@ func main() {
 			}
 
 		}
-		fmt.Printf("(%d)", (insertCount - lastInsertCount))
 	}
 	//trim the last
 	insertQuery = insertQuery[0 : len(insertQuery)-1]
@@ -148,7 +163,9 @@ func main() {
 	if _, err = stmt.Exec(insertVals); err != nil {
 		log.Fatal(err.Error())
 	}
-	log.Println("Done!", insertCount)
+	stmt.Close()
+	rate := float64(insertTotal) / float64(time.Since(startTime).Seconds())
+	log.Printf("Complete! inserted %s in %0.2f seconds", insertTotal, rate)
 	return
 }
 
@@ -313,4 +330,48 @@ func (db *Database) getItems(itemid int) ([]item.Item, error) {
 		return nil, err
 	}
 	return items, nil
+}
+
+func showPercent(message string, cur int, max int, insertCount int, insertTotal int, startTime time.Time, color string) {
+	switch color {
+	case "black":
+		color = "\033[30m"
+	case "maroon":
+		color = "\033[31m"
+	case "green":
+		color = "\033[32m"
+	case "yellow":
+		color = "\033[33m"
+	case "blue":
+		color = "\033[34m"
+	case "purple":
+		color = "\033[35m"
+	case "cyan":
+		color = "\033[36m"
+	case "white":
+		color = "\033[37m"
+	case "gray":
+		color = "\033[38m"
+	case "red":
+		color = "\033[39m"
+	default:
+		color = "\033[0m"
+	}
+
+	dotCount := 30
+	fmt.Printf("\033[60D")
+	val := float64(cur) / float64(max) * float64(dotCount)
+	fmt.Printf("%s%s - [", color, message)
+	for i := 0; i < dotCount; i++ {
+		if int(val) >= i {
+			fmt.Printf(".")
+		} else {
+			fmt.Printf(" ")
+		}
+	}
+	fmt.Printf("]\033[0m")
+	if cur == max {
+		rate := float64(insertTotal) / float64(time.Since(startTime).Seconds())
+		fmt.Printf(" %d inserts at %0.2f/second\n", insertTotal, rate)
+	}
 }

@@ -43,7 +43,7 @@ func main() {
 	fmt.Printf("\033[48;5;7m") //white background
 	fmt.Printf("\033[38;5;0m") //black text
 	fmt.Printf("Loaded %d zones, processing and updating the levels field...", len(zones))
-	fmt.Printf("\033[48;5;0m\033[38;5;0m\n") //restore text
+	fmt.Printf("\033[48;5;0m\033[38;5;0m\033[0m\n") //restore text
 	//iterate zones
 	for _, zone := range zones {
 		spawns := []spawn.Spawn2{}

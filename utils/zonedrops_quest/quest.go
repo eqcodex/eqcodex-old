@@ -31,6 +31,7 @@ var (
 	insertTotal   int
 	npc_id        int64
 	zone_id       int
+	isSkip        bool
 )
 
 type Database struct {
@@ -38,11 +39,11 @@ type Database struct {
 }
 
 type QuestData struct {
-	tag         string
-	title       string
-	description string
-	stepnum     int   `db:"quest_stepnum"`
-	questid     int64 `db:"quest_id"`
+	Tag         string `db:"tag"`
+	Title       string `db:"title"`
+	Description string `db:"description"`
+	Stepnum     int    `db:"quest_stepnum"`
+	Questid     int64  `db:"quest_id"`
 }
 
 func main() {
@@ -68,6 +69,7 @@ func main() {
 	//os.Chdir("../../deploy/server/quests")
 	//prefixPath = "../../../deploy/server/quests/"
 	prefixPath = "quests/"
+	isSkip = false
 	err = filepath.Walk(prefixPath, visit)
 	if err != nil {
 		log.Fatal("Error filepath: ", err.Error())
@@ -103,7 +105,10 @@ func visit(path string, f os.FileInfo, err error) error {
 	if len(filename) < 1 {
 		return nil
 	}
-
+	if isSkip && dir != "ecommons" {
+		return nil
+	}
+	isSkip = false
 	if lastZone != dir {
 		lastZone = dir
 		recordCount = 0
@@ -181,9 +186,9 @@ func visit(path string, f os.FileInfo, err error) error {
 			insertCount++
 			insertTotal++
 			//fmt.Println("Inserting", zone_id, npc_id, item_id, isQuestReward, isQuestItem, "for", dir, filename)
-			insertQuery := "REPLACE INTO zone_drops (item_id, npc_id, zone_id, is_quest_reward, is_quest_item) VALUES (?, ?, ?, ?, ?)"
+			insertQuery := "REPLACE INTO zone_drops (item_id, npc_id, zone_id, is_quest_reward, is_quest_item, quest_id, quest_stepnum) VALUES (?, ?, ?, ?, ?, ?, ?)"
 			stmt, _ := db.instance.Prepare(insertQuery)
-			if _, err = stmt.Exec(item_id, npc_id, zone_id, isQuestReward, isQuestItem); err != nil {
+			if _, err = stmt.Exec(item_id, npc_id, zone_id, isQuestReward, isQuestItem, questData.Questid, questData.Stepnum); err != nil {
 				log.Fatal(err.Error())
 			}
 			//if insertCount%1000 == 0 {
@@ -210,27 +215,27 @@ func questParse(parse string, questData *QuestData) bool {
 			return true
 		}
 
-		questData.tag = qData[1]
-		if len(questData.tag) > 64 {
-			questData.tag = questData.tag[0:64]
+		questData.Tag = qData[1]
+		if len(questData.Tag) > 64 {
+			questData.Tag = questData.Tag[0:64]
 		}
-		questData.title = qData[2]
-		if len(questData.title) > 128 {
-			questData.title = questData.title[0:128]
+		questData.Title = qData[2]
+		if len(questData.Title) > 128 {
+			questData.Title = questData.Title[0:128]
 		}
-		questData.description = qData[3]
-		if len(questData.description) > 256 {
-			questData.description = questData.description[0:256]
+		questData.Description = qData[3]
+		if len(questData.Description) > 256 {
+			questData.Description = questData.Description[0:256]
 		}
 
 		insertQuery := "REPLACE INTO quests (tag, title, description) VALUES (?, ?, ?)"
 		stmt, _ := db.instance.Prepare(insertQuery)
-		if _, err = stmt.Exec(questData.tag, questData.title, questData.description); err != nil {
+		if _, err = stmt.Exec(questData.Tag, questData.Title, questData.Description); err != nil {
 			log.Fatal(err.Error())
 		}
 		stmt.Close()
-		if err = db.instance.Get(questData.questid, "SELECT id FROM quests WHERE tag = ?", questData.tag); err != nil {
-			log.Fatal(err.Error())
+		if err = db.instance.Get(&questData.Questid, "SELECT id FROM quests WHERE tag = ?", questData.Tag); err != nil {
+			log.Fatal("Failed to get quests id ", err.Error())
 		}
 
 		return true
@@ -238,17 +243,23 @@ func questParse(parse string, questData *QuestData) bool {
 
 	if strings.Contains(parse, "#!quest") || strings.Contains(parse, "--!quest") {
 		qData := strings.Split(parse, "|")
-		if len(qData) != 3 {
-			log.Print("Failed to parse line", parse, "due to split of | being != 3 (", len(qData), ")\n")
+		if len(qData) >= 3 {
+			questData.Stepnum, _ = strconv.Atoi(qData[2])
+			//log.Print("Failed to parse line", parse, "due to split of | being != 3 (", len(qData), ")\n")
 			return true
 		}
-		if err = db.instance.Get(&questData, "SELECT * from quests WHERE tag = ?", qData[1]); err != nil {
+		tag := strings.TrimSpace(qData[1])
+		if len(tag) < 1 {
+			fmt.Printf("Invalid tag parse: %s, no tag specified, skipping", parse)
+			return true
+		}
+		if err = db.instance.Get(&questData, "SELECT * from quests WHERE tag = ?", tag); err != nil {
 			//This is OK, we just insert the data with what we know.
 
-			if result, vErr := db.instance.NamedExec("REPLACE INTO quests (tag) VALUES (:tag)", questData); err != nil {
-				log.Fatal("Failed to insert into quests tag", questData.tag, vErr.Error())
+			if result, vErr := db.instance.NamedExec("REPLACE INTO quests (tag) VALUES (:tag)", questData); vErr != nil {
+				log.Fatal("Failed to insert into quests tag ", vErr.Error())
 			} else {
-				questData.questid, _ = result.LastInsertId()
+				questData.Questid, _ = result.LastInsertId()
 			}
 		}
 
@@ -274,8 +285,8 @@ func questParse(parse string, questData *QuestData) bool {
 
 		insertQuery := "REPLACE INTO zone_drops (quest_id, item_id, npc_id, zone_id, quest_stepnum, is_quest_item) VALUES (?, ?, ?, ?, ?, ?)"
 		stmt, _ := db.instance.Prepare(insertQuery)
-		if _, err = stmt.Exec(questData.questid, item_id, npc_id, zone_id, questData.stepnum, 1); err != nil {
-			log.Fatal(err.Error())
+		if _, err = stmt.Exec(questData.Questid, item_id, npc_id, zone_id, questData.Stepnum, 1); err != nil {
+			log.Fatal("Failed to place zone_drops ", err.Error())
 		}
 		stmt.Close()
 		return true
@@ -301,8 +312,8 @@ func questParse(parse string, questData *QuestData) bool {
 
 		insertQuery := "REPLACE INTO zone_drops (quest_id, item_id, npc_id, zone_id, quest_stepnum, is_quest_reward) VALUES (?, ?, ?, ?, ?, ?)"
 		stmt, _ := db.instance.Prepare(insertQuery)
-		if _, err = stmt.Exec(questData.questid, item_id, npc_id, zone_id, questData.stepnum, 1); err != nil {
-			log.Fatal(err.Error())
+		if _, err = stmt.Exec(questData.Questid, item_id, npc_id, zone_id, questData.Stepnum, 1); err != nil {
+			log.Fatal("failed to replace zone_drops", err.Error())
 		}
 		stmt.Close()
 		return true
