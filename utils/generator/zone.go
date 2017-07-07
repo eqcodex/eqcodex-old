@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/xackery/goeq/item"
 	"github.com/xackery/goeq/zone"
@@ -81,10 +82,27 @@ func generateZoneList(instance *Instance) {
 		return
 	}
 
-	for _, zoneEntry := range page.Zones {
+	max := len(page.Zones)
+	for focusId, zoneEntry := range page.Zones {
+
 		zoneEntry.Url = fmt.Sprintf("zone/%s-%d.html", cleanUrl(zoneEntry.Long_name.String), zoneEntry.Id.Int64)
-		fmt.Println(zoneEntry.Short_name.String)
 		generateZoneEntry(instance, zoneEntry)
+		rate := float64(focusId) / float64(time.Since(startTime).Seconds())
+		remainString := ""
+		remain := (float64(max) - float64(focusId)) / rate
+
+		if remain > 60 {
+			remain = remain / 60
+			if remain > 60 {
+				remain = remain / 60
+				remainString = fmt.Sprintf("%0.2f hours", remain)
+			} else {
+				remainString = fmt.Sprintf("%0.1f minutes", remain)
+			}
+		} else {
+			remainString = fmt.Sprintf("%0.0f seconds", remain)
+		}
+		showPercent(fmt.Sprintf("%s %d @ %0.2f/sec", zoneEntry.Short_name.String, focusId, rate), focusId, max, remainString, "green")
 		//if zoneEntry.Short_name.String == "airplane" {
 		//	break
 		//}
@@ -132,6 +150,7 @@ func generateZoneEntry(instance *Instance, zoneEntry *ZoneData) {
 		Is_quest_item   int `db:"is_quest_item"`
 		Npc_count       int
 		Url             string
+		Task_id         int
 	}
 
 	type PageData struct {
@@ -152,7 +171,7 @@ func generateZoneEntry(instance *Instance, zoneEntry *ZoneData) {
 	WHERE zone_id = ? 
 	GROUP BY item_id`
 	if err = instance.db.Select(&page.Items, query, zoneEntry.Zoneidnumber); err != nil {
-		log.Println("Failed to select zones", err.Error())
+		log.Println("Failed to select zone_drops", err.Error())
 		return
 	}
 

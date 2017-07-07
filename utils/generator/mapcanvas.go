@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -54,7 +53,7 @@ func generateMaps(instance *Instance) (err error) {
 	return
 }*/
 
-func mapCanvasByNpcId(npcid int64, shortname string, instance *Instance) (jsonData []byte, err error) {
+func mapCanvasByNpcId(npcid int64, shortname string, instance *Instance) (mapData string, err error) {
 	type Index struct {
 		Lines       []Line       `json:"lines"`
 		SpawnPoints []SpawnPoint `json:"spawn_points"`
@@ -92,10 +91,11 @@ func mapCanvasByNpcId(npcid int64, shortname string, instance *Instance) (jsonDa
 		index.SpawnPoints = append(index.SpawnPoints, spawnData)
 	}
 
-	jsonData, err = json.Marshal(index)
+	jsonData, err := json.Marshal(index)
 	if err != nil {
 		err = fmt.Errorf("Error marshallingL %s", err.Error())
 	}
+	mapData = string(jsonData)
 	return
 }
 
@@ -160,14 +160,13 @@ func loadMap(shortname string) (lines []Line, err error) {
 		return
 	}
 
-	reader := csv.NewReader(strings.NewReader(string(bMap)))
-	records, err := reader.ReadAll()
-	if err != nil {
-		err = fmt.Errorf("Error reading map (%s): %s", shortname, err.Error())
-		return
-	}
+	entries := strings.Split(string(bMap), "\n")
 
-	for _, record := range records {
+	for _, entry := range entries {
+		record := strings.Split(entry, ",")
+		if len(record) < 5 {
+			continue
+		}
 		entries := strings.Split(record[0], " ")
 		drawType := entries[0]
 		if drawType == "L" {
@@ -178,6 +177,7 @@ func loadMap(shortname string) (lines []Line, err error) {
 			line.Y2, _ = strconv.ParseFloat(strings.TrimSpace(record[4]), 64)
 			lines = append(lines, line)
 		}
+
 	}
 	return
 }
