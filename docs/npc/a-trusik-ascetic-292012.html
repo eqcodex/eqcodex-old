@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>a trusik ascetic | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">a trusik ascetic</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>67</td></tr>
+                            <tr><td>HP:</td><td>42400</td></tr>
+                            <tr><td>Damage:</td><td>172-970</td></tr>
+                            <tr><td>Zone:</td><td>Uqua, the Ocean God Chantry</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>a trusik ascetic Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Blade-of-Destructive-Protection-67736.html">Blade of Destructive Protection</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ceremonial-Cowl-52270.html">Ceremonial Cowl</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Chunk-of-Discordian-Rock-58028.html">Chunk of Discordian Rock</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Club-of-Destructive-Protection-67739.html">Club of Destructive Protection</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Gold-Gem-Dusted-Rune-38701.html">Complex Gold Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Platinum-Gem-Dusted-Rune-38704.html">Complex Platinum Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Etched-Signet-65337.html">Etched Signet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Excellent-Animal-Pelt-34233.html">Excellent Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Excellent-Silk-34220.html">Excellent Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Excellent-Spinneret-Fluid-34910.html">Excellent Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Gem-Dusted-Rune-38699.html">Exquisite Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Gold-Gem-Dusted-Rune-38702.html">Exquisite Gold Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Platinum-Gem-Dusted-Rune-38705.html">Exquisite Platinum Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Velium-Gem-Dusted-Rune-38708.html">Exquisite Velium Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Femur-of-a-Trusik-52271.html">Femur of a Trusik</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Animal-Pelt-34232.html">Fine Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Silk-34219.html">Fine Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fire-Emerald-10033.html">Fire Emerald</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fire-Opal-10031.html">Fire Opal</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flake-of-Lodestone-65338.html">Flake of Lodestone</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Mangled-Trusik-Flesh-52275.html">Mangled Trusik Flesh</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Part-of-Toharons-Memoir-Pg-21-65387.html">Part of Toharon&#39;s Memoir Pg. 21</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Part-of-Yaeths-Compendium-Pg-107-65360.html">Part of Yaeth&#39;s Compendium Pg. 107</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Platinum-Gem-Dusted-Rune-38703.html">Platinum Gem Dusted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Infused-Dark-Matter-58243.html">Raw Infused Dark Matter</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Gale-65280.html">Rune of Gale</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Prexus-65287.html">Rune of Prexus</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sample-of-Highland-Sludge-58075.html">Sample of Highland Sludge</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shaped-Shimmering-Nihilite-37860.html">Shaped Shimmering Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Shimmering-Aligned-Ore-58080.html">Shimmering Aligned Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Skull-of-a-Trusik-52272.html">Skull of a Trusik</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sphere-of-Destructive-Protection-67738.html">Sphere of Destructive Protection</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Star-Ruby-10032.html">Star Ruby</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Superb-Silk-34221.html">Superb Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taelosian-Mountain-Tea-Leaves-58148.html">Taelosian Mountain Tea Leaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taelosian-Mountain-Wheat-58149.html">Taelosian Mountain Wheat</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Trusik-Blood-52273.html">Trusik Blood</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Trusik-Toes-52274.html">Trusik Toes</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tungsten-Ore-34246.html">Tungsten Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Gemmed-Rune-38709.html">Velium Gemmed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Wand-of-Destructive-Protection-67737.html">Wand of Destructive Protection</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Anguish-65297.html">Words of Anguish</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Banshee-65302.html">Words of Banshee</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Constancy-65304.html">Words of Constancy</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Distress-65308.html">Words of Distress</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Intent-65316.html">Words of Intent</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Obliteration-65320.html">Words of Obliteration</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Recall-65323.html">Words of Recall</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Recourse-65324.html">Words of Recourse</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Stimulation-65328.html">Words of Stimulation</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Writ-of-Quellious-65353.html">Writ of Quellious</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:567,\x22y1\x22:748,\x22x2\x22:597,\x22y2\x22:748},{\x22x1\x22:567,\x22y1\x22:749,\x22x2\x22:567,\x22y2\x22:748},{\x22x1\x22:566,\x22y1\x22:750,\x22x2\x22:567,\x22y2\x22:749},{\x22x1\x22:564,\x22y1\x22:750,\x22x2\x22:566,\x22y2\x22:750},{\x22x1\x22:564,\x22y1\x22:727,\x22x2\x22:564,\x22y2\x22:750},{\x22x1\x22:512,\x22y1\x22:726,\x22x2\x22:564,\x22y2\x22:727},{\x22x1\x22:512,\x22y1\x22:748,\x22x2\x22:512,\x22y2\x22:726},{\x22x1\x22:483,\x22y1\x22:748,\x22x2\x22:512,\x22y2\x22:748},{\x22x1\x22:482,\x22y1\x22:749,\x22x2\x22:483,\x22y2\x22:748},{\x22x1\x22:480,\x22y1\x22:750,\x22x2\x22:482,\x22y2\x22:749},{\x22x1\x22:479,\x22y1\x22:750,\x22x2\x22:480,\x22y2\x22:750},{\x22x1\x22:479,\x22y1\x22:694,\x22x2\x22:479,\x22y2\x22:750},{\x22x1\x22:480,\x22y1\x22:693,\x22x2\x22:479,\x22y2\x22:694},{\x22x1\x22:482,\x22y1\x22:693,\x22x2\x22:480,\x22y2\x22:693},{\x22x1\x22:484,\x22y1\x22:694,\x22x2\x22:482,\x22y2\x22:693},{\x22x1\x22:485,\x22y1\x22:693,\x22x2\x22:484,\x22y2\x22:694},{\x22x1\x22:485,\x22y1\x22:678,\x22x2\x22:485,\x22y2\x22:693},{\x22x1\x22:479,\x22y1\x22:678,\x22x2\x22:485,\x22y2\x22:678},{\x22x1\x22:479,\x22y1\x22:608,\x22x2\x22:479,\x22y2\x22:678},{\x22x1\x22:484,\x22y1\x22:608,\x22x2\x22:479,\x22y2\x22:608},{\x22x1\x22:485,\x22y1\x22:595,\x22x2\x22:484,\x22y2\x22:608},{\x22x1\x22:485,\x22y1\x22:593,\x22x2\x22:485,\x22y2\x22:595},{\x22x1\x22:479,\x22y1\x22:593,\x22x2\x22:485,\x22y2\x22:593},{\x22x1\x22:479,\x22y1\x22:486,\x22x2\x22:479,\x22y2\x22:593},{\x22x1\x22:479,\x22y1\x22:484,\x22x2\x22:479,\x22y2\x22:486},{\x22x1\x22:491,\x22y1\x22:484,\x22x2\x22:479,\x22y2\x22:484},{\x22x1\x22:494,\x22y1\x22:488,\x22x2\x22:491,\x22y2\x22:484},{\x22x1\x22:495,\x22y1\x22:489,\x22x2\x22:494,\x22y2\x22:488},{\x22x1\x22:508,\x22y1\x22:489,\x22x2\x22:495,\x22y2\x22:489},{\x22x1\x22:508,\x22y1\x22:484,\x22x2\x22:508,\x22y2\x22:489},{\x22x1\x22:526,\x22y1\x22:484,\x22x2\x22:508,\x22y2\x22:484},{\x22x1\x22:528,\x22y1\x22:484,\x22x2\x22:526,\x22y2\x22:484},{\x22x1\x22:530,\x22y1\x22:485,\x22x2\x22:528,\x22y2\x22:484},{\x22x1\x22:529,\x22y1\x22:486,\x22x2\x22:530,\x22y2\x22:485},{\x22x1\x22:530,\x22y1\x22:488,\x22x2\x22:529,\x22y2\x22:486},{\x22x1\x22:531,\x22y1\x22:489,\x22x2\x22:530,\x22y2\x22:488},{\x22x1\x22:541,\x22y1\x22:489,\x22x2\x22:531,\x22y2\x22:489},{\x22x1\x22:542,\x22y1\x22:490,\x22x2\x22:541,\x22y2\x22:489},{\x22x1\x22:543,\x22y1\x22:489,\x22x2\x22:542,\x22y2\x22:490},{\x22x1\x22:544,\x22y1\x22:486,\x22x2\x22:543,\x22y2\x22:489},{\x22x1\x22:544,\x22y1\x22:484,\x22x2\x22:544,\x22y2\x22:486},{\x22x1\x22:565,\x22y1\x22:484,\x22x2\x22:544,\x22y2\x22:484},{\x22x1\x22:566,\x22y1\x22:484,\x22x2\x22:565,\x22y2\x22:484},{\x22x1\x22:566,\x22y1\x22:487,\x22x2\x22:566,\x22y2\x22:484},{\x22x1\x22:568,\x22y1\x22:488,\x22x2\x22:566,\x22y2\x22:487},{\x22x1\x22:569,\x22y1\x22:489,\x22x2\x22:568,\x22y2\x22:488},{\x22x1\x22:582,\x22y1\x22:489,\x22x2\x22:569,\x22y2\x22:489},{\x22x1\x22:582,\x22y1\x22:484,\x22x2\x22:582,\x22y2\x22:489},{\x22x1\x22:596,\x22y1\x22:484,\x22x2\x22:582,\x22y2\x22:484},{\x22x1\x22:597,\x22y1\x22:484,\x22x2\x22:596,\x22y2\x22:484},{\x22x1\x22:597,\x22y1\x22:592,\x22x2\x22:597,\x22y2\x22:484},{\x22x1\x22:597,\x22y1\x22:593,\x22x2\x22:597,\x22y2\x22:592},{\x22x1\x22:591,\x22y1\x22:593,\x22x2\x22:597,\x22y2\x22:593},{\x22x1\x22:591,\x22y1\x22:606,\x22x2\x22:591,\x22y2\x22:593},{\x22x1\x22:592,\x22y1\x22:608,\x22x2\x22:591,\x22y2\x22:606},{\x22x1\x22:597,\x22y1\x22:608,\x22x2\x22:592,\x22y2\x22:608},{\x22x1\x22:597,\x22y1\x22:678,\x22x2\x22:597,\x22y2\x22:608},{\x22x1\x22:591,\x22y1\x22:678,\x22x2\x22:597,\x22y2\x22:678},{\x22x1\x22:591,\x22y1\x22:692,\x22x2\x22:591,\x22y2\x22:678},{\x22x1\x22:592,\x22y1\x22:693,\x22x2\x22:591,\x22y2\x22:692},{\x22x1\x22:597,\x22y1\x22:693,\x22x2\x22:592,\x22y2\x22:693},{\x22x1\x22:597,\x22y1\x22:750,\x22x2\x22:597,\x22y2\x22:693},{\x22x1\x22:1269,\x22y1\x22:629,\x22x2\x22:1270,\x22y2\x22:654},{\x22x1\x22:1264,\x22y1\x22:606,\x22x2\x22:1269,\x22y2\x22:629},{\x22x1\x22:1251,\x22y1\x22:590,\x22x2\x22:1264,\x22y2\x22:606},{\x22x1\x22:1236,\x22y1\x22:582,\x22x2\x22:1251,\x22y2\x22:590},{\x22x1\x22:1220,\x22y1\x22:581,\x22x2\x22:1236,\x22y2\x22:582},{\x22x1\x22:1204,\x22y1\x22:590,\x22x2\x22:1220,\x22y2\x22:581},{\x22x1\x22:1192,\x22y1\x22:606,\x22x2\x22:1204,\x22y2\x22:590},{\x22x1\x22:1187,\x22y1\x22:628,\x22x2\x22:1192,\x22y2\x22:606},{\x22x1\x22:1186,\x22y1\x22:658,\x22x2\x22:1187,\x22y2\x22:628},{\x22x1\x22:1191,\x22y1\x22:680,\x22x2\x22:1186,\x22y2\x22:658},{\x22x1\x22:1202,\x22y1\x22:695,\x22x2\x22:1191,\x22y2\x22:680},{\x22x1\x22:1220,\x22y1\x22:705,\x22x2\x22:1202,\x22y2\x22:695},{\x22x1\x22:1235,\x22y1\x22:705,\x22x2\x22:1220,\x22y2\x22:705},{\x22x1\x22:1251,\x22y1\x22:697,\x22x2\x22:1235,\x22y2\x22:705},{\x22x1\x22:1264,\x22y1\x22:679,\x22x2\x22:1251,\x22y2\x22:697},{\x22x1\x22:1269,\x22y1\x22:659,\x22x2\x22:1264,\x22y2\x22:679},{\x22x1\x22:1270,\x22y1\x22:643,\x22x2\x22:1269,\x22y2\x22:659},{\x22x1\x22:1269,\x22y1\x22:628,\x22x2\x22:1270,\x22y2\x22:643},{\x22x1\x22:1286,\x22y1\x22:592,\x22x2\x22:1286,\x22y2\x22:484},{\x22x1\x22:1286,\x22y1\x22:593,\x22x2\x22:1286,\x22y2\x22:592},{\x22x1\x22:1280,\x22y1\x22:593,\x22x2\x22:1286,\x22y2\x22:593},{\x22x1\x22:1280,\x22y1\x22:606,\x22x2\x22:1280,\x22y2\x22:593},{\x22x1\x22:1281,\x22y1\x22:608,\x22x2\x22:1280,\x22y2\x22:606},{\x22x1\x22:1286,\x22y1\x22:608,\x22x2\x22:1281,\x22y2\x22:608},{\x22x1\x22:1286,\x22y1\x22:676,\x22x2\x22:1286,\x22y2\x22:608},{\x22x1\x22:1285,\x22y1\x22:678,\x22x2\x22:1286,\x22y2\x22:676},{\x22x1\x22:1280,\x22y1\x22:678,\x22x2\x22:1285,\x22y2\x22:678},{\x22x1\x22:1280,\x22y1\x22:693,\x22x2\x22:1280,\x22y2\x22:678},{\x22x1\x22:1286,\x22y1\x22:693,\x22x2\x22:1280,\x22y2\x22:693},{\x22x1\x22:1286,\x22y1\x22:747,\x22x2\x22:1286,\x22y2\x22:693},{\x22x1\x22:1253,\x22y1\x22:747,\x22x2\x22:1286,\x22y2\x22:747},{\x22x1\x22:1253,\x22y1\x22:726,\x22x2\x22:1253,\x22y2\x22:747},{\x22x1\x22:1201,\x22y1\x22:726,\x22x2\x22:1253,\x22y2\x22:726},{\x22x1\x22:1201,\x22y1\x22:748,\x22x2\x22:1201,\x22y2\x22:726},{\x22x1\x22:1171,\x22y1\x22:748,\x22x2\x22:1201,\x22y2\x22:748},{\x22x1\x22:1170,\x22y1\x22:750,\x22x2\x22:1171,\x22y2\x22:748},{\x22x1\x22:1168,\x22y1\x22:750,\x22x2\x22:1170,\x22y2\x22:750},{\x22x1\x22:1168,\x22y1\x22:693,\x22x2\x22:1168,\x22y2\x22:750},{\x22x1\x22:1173,\x22y1\x22:693,\x22x2\x22:1168,\x22y2\x22:693},{\x22x1\x22:1174,\x22y1\x22:680,\x22x2\x22:1173,\x22y2\x22:693},{\x22x1\x22:1174,\x22y1\x22:678,\x22x2\x22:1174,\x22y2\x22:680},{\x22x1\x22:1168,\x22y1\x22:678,\x22x2\x22:1174,\x22y2\x22:678},{\x22x1\x22:1168,\x22y1\x22:609,\x22x2\x22:1168,\x22y2\x22:678},{\x22x1\x22:1172,\x22y1\x22:612,\x22x2\x22:1168,\x22y2\x22:609},{\x22x1\x22:1174,\x22y1\x22:609,\x22x2\x22:1172,\x22y2\x22:612},{\x22x1\x22:1174,\x22y1\x22:596,\x22x2\x22:1174,\x22y2\x22:609},{\x22x1\x22:1175,\x22y1\x22:595,\x22x2\x22:1174,\x22y2\x22:596},{\x22x1\x22:1174,\x22y1\x22:593,\x22x2\x22:1175,\x22y2\x22:595},{\x22x1\x22:1168,\x22y1\x22:593,\x22x2\x22:1174,\x22y2\x22:593},{\x22x1\x22:1168,\x22y1\x22:486,\x22x2\x22:1168,\x22y2\x22:593},{\x22x1\x22:1168,\x22y1\x22:484,\x22x2\x22:1168,\x22y2\x22:486},{\x22x1\x22:1181,\x22y1\x22:484,\x22x2\x22:1168,\x22y2\x22:484},{\x22x1\x22:1183,\x22y1\x22:484,\x22x2\x22:1181,\x22y2\x22:484},{\x22x1\x22:1183,\x22y1\x22:488,\x22x2\x22:1183,\x22y2\x22:484},{\x22x1\x22:1184,\x22y1\x22:489,\x22x2\x22:1183,\x22y2\x22:488},{\x22x1\x22:1195,\x22y1\x22:489,\x22x2\x22:1184,\x22y2\x22:489},{\x22x1\x22:1196,\x22y1\x22:486,\x22x2\x22:1195,\x22y2\x22:489},{\x22x1\x22:1196,\x22y1\x22:484,\x22x2\x22:1196,\x22y2\x22:486},{\x22x1\x22:1221,\x22y1\x22:484,\x22x2\x22:1196,\x22y2\x22:484},{\x22x1\x22:1221,\x22y1\x22:487,\x22x2\x22:1221,\x22y2\x22:484},{\x22x1\x22:1222,\x22y1\x22:489,\x22x2\x22:1221,\x22y2\x22:487},{\x22x1\x22:1233,\x22y1\x22:489,\x22x2\x22:1222,\x22y2\x22:489},{\x22x1\x22:1234,\x22y1\x22:486,\x22x2\x22:1233,\x22y2\x22:489},{\x22x1\x22:1234,\x22y1\x22:484,\x22x2\x22:1234,\x22y2\x22:486},{\x22x1\x22:1254,\x22y1\x22:484,\x22x2\x22:1234,\x22y2\x22:484},{\x22x1\x22:1253,\x22y1\x22:484,\x22x2\x22:1254,\x22y2\x22:484},{\x22x1\x22:1256,\x22y1\x22:487,\x22x2\x22:1253,\x22y2\x22:484},{\x22x1\x22:1258,\x22y1\x22:489,\x22x2\x22:1256,\x22y2\x22:487},{\x22x1\x22:1270,\x22y1\x22:489,\x22x2\x22:1258,\x22y2\x22:489},{\x22x1\x22:1270,\x22y1\x22:484,\x22x2\x22:1270,\x22y2\x22:489},{\x22x1\x22:1286,\x22y1\x22:484,\x22x2\x22:1270,\x22y2\x22:484},{\x22x1\x22:696,\x22y1\x22:36,\x22x2\x22:698,\x22y2\x22:36},{\x22x1\x22:814,\x22y1\x22:154,\x22x2\x22:696,\x22y2\x22:36},{\x22x1\x22:814,\x22y1\x22:152,\x22x2\x22:814,\x22y2\x22:154},{\x22x1\x22:815,\x22y1\x22:151,\x22x2\x22:814,\x22y2\x22:152},{\x22x1\x22:821,\x22y1\x22:151,\x22x2\x22:815,\x22y2\x22:151},{\x22x1\x22:822,\x22y1\x22:150,\x22x2\x22:821,\x22y2\x22:151},{\x22x1\x22:823,\x22y1\x22:154,\x22x2\x22:822,\x22y2\x22:150},{\x22x1\x22:823,\x22y1\x22:156,\x22x2\x22:823,\x22y2\x22:154},{\x22x1\x22:838,\x22y1\x22:156,\x22x2\x22:823,\x22y2\x22:156},{\x22x1\x22:855,\x22y1\x22:156,\x22x2\x22:838,\x22y2\x22:156},{\x22x1\x22:855,\x22y1\x22:181,\x22x2\x22:855,\x22y2\x22:156},{\x22x1\x22:860,\x22y1\x22:181,\x22x2\x22:855,\x22y2\x22:181},{\x22x1\x22:862,\x22y1\x22:181,\x22x2\x22:860,\x22y2\x22:181},{\x22x1\x22:863,\x22y1\x22:182,\x22x2\x22:862,\x22y2\x22:181},{\x22x1\x22:864,\x22y1\x22:182,\x22x2\x22:863,\x22y2\x22:182},{\x22x1\x22:865,\x22y1\x22:193,\x22x2\x22:864,\x22y2\x22:182},{\x22x1\x22:855,\x22y1\x22:193,\x22x2\x22:865,\x22y2\x22:193},{\x22x1\x22:855,\x22y1\x22:550,\x22x2\x22:855,\x22y2\x22:193},{\x22x1\x22:855,\x22y1\x22:552,\x22x2\x22:855,\x22y2\x22:550},{\x22x1\x22:862,\x22y1\x22:552,\x22x2\x22:855,\x22y2\x22:552},{\x22x1\x22:862,\x22y1\x22:566,\x22x2\x22:862,\x22y2\x22:552},{\x22x1\x22:859,\x22y1\x22:566,\x22x2\x22:862,\x22y2\x22:566},{\x22x1\x22:858,\x22y1\x22:563,\x22x2\x22:859,\x22y2\x22:566},{\x22x1\x22:858,\x22y1\x22:561,\x22x2\x22:858,\x22y2\x22:563},{\x22x1\x22:823,\x22y1\x22:561,\x22x2\x22:858,\x22y2\x22:561},{\x22x1\x22:805,\x22y1\x22:579,\x22x2\x22:823,\x22y2\x22:561},{\x22x1\x22:804,\x22y1\x22:581,\x22x2\x22:805,\x22y2\x22:579},{\x22x1\x22:803,\x22y1\x22:582,\x22x2\x22:804,\x22y2\x22:581},{\x22x1\x22:804,\x22y1\x22:584,\x22x2\x22:803,\x22y2\x22:582},{\x22x1\x22:804,\x22y1\x22:591,\x22x2\x22:804,\x22y2\x22:584},{\x22x1\x22:803,\x22y1\x22:592,\x22x2\x22:804,\x22y2\x22:591},{\x22x1\x22:799,\x22y1\x22:592,\x22x2\x22:803,\x22y2\x22:592},{\x22x1\x22:799,\x22y1\x22:649,\x22x2\x22:799,\x22y2\x22:592},{\x22x1\x22:801,\x22y1\x22:650,\x22x2\x22:799,\x22y2\x22:649},{\x22x1\x22:802,\x22y1\x22:649,\x22x2\x22:801,\x22y2\x22:650},{\x22x1\x22:804,\x22y1\x22:650,\x22x2\x22:802,\x22y2\x22:649},{\x22x1\x22:804,\x22y1\x22:654,\x22x2\x22:804,\x22y2\x22:650},{\x22x1\x22:805,\x22y1\x22:655,\x22x2\x22:804,\x22y2\x22:654},{\x22x1\x22:804,\x22y1\x22:656,\x22x2\x22:805,\x22y2\x22:655},{\x22x1\x22:803,\x22y1\x22:658,\x22x2\x22:804,\x22y2\x22:656},{\x22x1\x22:799,\x22y1\x22:658,\x22x2\x22:803,\x22y2\x22:658},{\x22x1\x22:799,\x22y1\x22:712,\x22x2\x22:799,\x22y2\x22:658},{\x22x1\x22:799,\x22y1\x22:714,\x22x2\x22:799,\x22y2\x22:712},{\x22x1\x22:800,\x22y1\x22:715,\x22x2\x22:799,\x22y2\x22:714},{\x22x1\x22:804,\x22y1\x22:715,\x22x2\x22:800,\x22y2\x22:715},{\x22x1\x22:804,\x22y1\x22:720,\x22x2\x22:804,\x22y2\x22:715},{\x22x1\x22:805,\x22y1\x22:721,\x22x2\x22:804,\x22y2\x22:720},{\x22x1\x22:804,\x22y1\x22:724,\x22x2\x22:805,\x22y2\x22:721},{\x22x1\x22:803,\x22y1\x22:725,\x22x2\x22:804,\x22y2\x22:724},{\x22x1\x22:823,\x22y1\x22:746,\x22x2\x22:803,\x22y2\x22:725},{\x22x1\x22:846,\x22y1\x22:746,\x22x2\x22:823,\x22y2\x22:746},{\x22x1\x22:852,\x22y1\x22:745,\x22x2\x22:846,\x22y2\x22:746},{\x22x1\x22:862,\x22y1\x22:744,\x22x2\x22:852,\x22y2\x22:745},{\x22x1\x22:863,\x22y1\x22:745,\x22x2\x22:862,\x22y2\x22:744},{\x22x1\x22:863,\x22y1\x22:755,\x22x2\x22:863,\x22y2\x22:745},{\x22x1\x22:855,\x22y1\x22:756,\x22x2\x22:863,\x22y2\x22:755},{\x22x1\x22:855,\x22y1\x22:796,\x22x2\x22:855,\x22y2\x22:756},{\x22x1\x22:862,\x22y1\x22:796,\x22x2\x22:855,\x22y2\x22:796},{\x22x1\x22:862,\x22y1\x22:799,\x22x2\x22:862,\x22y2\x22:796},{\x22x1\x22:862,\x22y1\x22:801,\x22x2\x22:862,\x22y2\x22:799},{\x22x1\x22:863,\x22y1\x22:810,\x22x2\x22:862,\x22y2\x22:801},{\x22x1\x22:863,\x22y1\x22:811,\x22x2\x22:863,\x22y2\x22:810},{\x22x1\x22:855,\x22y1\x22:811,\x22x2\x22:863,\x22y2\x22:811},{\x22x1\x22:855,\x22y1\x22:1168,\x22x2\x22:855,\x22y2\x22:811},{\x22x1\x22:855,\x22y1\x22:1170,\x22x2\x22:855,\x22y2\x22:1168},{\x22x1\x22:860,\x22y1\x22:1169,\x22x2\x22:855,\x22y2\x22:1170},{\x22x1\x22:862,\x22y1\x22:1169,\x22x2\x22:860,\x22y2\x22:1169},{\x22x1\x22:862,\x22y1\x22:1173,\x22x2\x22:862,\x22y2\x22:1169},{\x22x1\x22:862,\x22y1\x22:1174,\x22x2\x22:862,\x22y2\x22:1173},{\x22x1\x22:862,\x22y1\x22:1183,\x22x2\x22:862,\x22y2\x22:1174},{\x22x1\x22:860,\x22y1\x22:1184,\x22x2\x22:862,\x22y2\x22:1183},{\x22x1\x22:858,\x22y1\x22:1182,\x22x2\x22:860,\x22y2\x22:1184},{\x22x1\x22:858,\x22y1\x22:1180,\x22x2\x22:858,\x22y2\x22:1182},{\x22x1\x22:829,\x22y1\x22:1180,\x22x2\x22:858,\x22y2\x22:1180},{\x22x1\x22:825,\x22y1\x22:1188,\x22x2\x22:829,\x22y2\x22:1180},{\x22x1\x22:820,\x22y1\x22:1190,\x22x2\x22:825,\x22y2\x22:1188},{\x22x1\x22:820,\x22y1\x22:1234,\x22x2\x22:820,\x22y2\x22:1190},{\x22x1\x22:822,\x22y1\x22:1239,\x22x2\x22:820,\x22y2\x22:1234},{\x22x1\x22:822,\x22y1\x22:1243,\x22x2\x22:822,\x22y2\x22:1239},{\x22x1\x22:812,\x22y1\x22:1244,\x22x2\x22:822,\x22y2\x22:1243},{\x22x1\x22:811,\x22y1\x22:1242,\x22x2\x22:812,\x22y2\x22:1244},{\x22x1\x22:811,\x22y1\x22:1240,\x22x2\x22:811,\x22y2\x22:1242},{\x22x1\x22:812,\x22y1\x22:1239,\x22x2\x22:811,\x22y2\x22:1240},{\x22x1\x22:813,\x22y1\x22:1239,\x22x2\x22:812,\x22y2\x22:1239},{\x22x1\x22:814,\x22y1\x22:1238,\x22x2\x22:813,\x22y2\x22:1239},{\x22x1\x22:814,\x22y1\x22:1236,\x22x2\x22:814,\x22y2\x22:1238},{\x22x1\x22:708,\x22y1\x22:1236,\x22x2\x22:814,\x22y2\x22:1236},{\x22x1\x22:708,\x22y1\x22:998,\x22x2\x22:708,\x22y2\x22:1236},{\x22x1\x22:708,\x22y1\x22:996,\x22x2\x22:708,\x22y2\x22:998},{\x22x1\x22:643,\x22y1\x22:996,\x22x2\x22:708,\x22y2\x22:996},{\x22x1\x22:643,\x22y1\x22:1004,\x22x2\x22:643,\x22y2\x22:996},{\x22x1\x22:629,\x22y1\x22:1004,\x22x2\x22:643,\x22y2\x22:1004},{\x22x1\x22:629,\x22y1\x22:996,\x22x2\x22:629,\x22y2\x22:1004},{\x22x1\x22:564,\x22y1\x22:996,\x22x2\x22:629,\x22y2\x22:996},{\x22x1\x22:563,\x22y1\x22:996,\x22x2\x22:564,\x22y2\x22:996},{\x22x1\x22:562,\x22y1\x22:997,\x22x2\x22:563,\x22y2\x22:996},{\x22x1\x22:560,\x22y1\x22:996,\x22x2\x22:562,\x22y2\x22:997},{\x22x1\x22:560,\x22y1\x22:954,\x22x2\x22:560,\x22y2\x22:996},{\x22x1\x22:549,\x22y1\x22:955,\x22x2\x22:560,\x22y2\x22:954},{\x22x1\x22:548,\x22y1\x22:954,\x22x2\x22:549,\x22y2\x22:955},{\x22x1\x22:547,\x22y1\x22:950,\x22x2\x22:548,\x22y2\x22:954},{\x22x1\x22:548,\x22y1\x22:949,\x22x2\x22:547,\x22y2\x22:950},{\x22x1\x22:550,\x22y1\x22:949,\x22x2\x22:548,\x22y2\x22:949},{\x22x1\x22:551,\x22y1\x22:948,\x22x2\x22:550,\x22y2\x22:949},{\x22x1\x22:553,\x22y1\x22:948,\x22x2\x22:551,\x22y2\x22:948},{\x22x1\x22:554,\x22y1\x22:949,\x22x2\x22:553,\x22y2\x22:948},{\x22x1\x22:567,\x22y1\x22:949,\x22x2\x22:554,\x22y2\x22:949},{\x22x1\x22:581,\x22y1\x22:935,\x22x2\x22:567,\x22y2\x22:949},{\x22x1\x22:582,\x22y1\x22:934,\x22x2\x22:581,\x22y2\x22:935},{\x22x1\x22:581,\x22y1\x22:932,\x22x2\x22:582,\x22y2\x22:934},{\x22x1\x22:579,\x22y1\x22:932,\x22x2\x22:581,\x22y2\x22:932},{\x22x1\x22:579,\x22y1\x22:925,\x22x2\x22:579,\x22y2\x22:932},{\x22x1\x22:580,\x22y1\x22:924,\x22x2\x22:579,\x22y2\x22:925},{\x22x1\x22:582,\x22y1\x22:924,\x22x2\x22:580,\x22y2\x22:924},{\x22x1\x22:582,\x22y1\x22:904,\x22x2\x22:582,\x22y2\x22:924},{\x22x1\x22:582,\x22y1\x22:903,\x22x2\x22:582,\x22y2\x22:904},{\x22x1\x22:581,\x22y1\x22:901,\x22x2\x22:582,\x22y2\x22:903},{\x22x1\x22:580,\x22y1\x22:900,\x22x2\x22:581,\x22y2\x22:901},{\x22x1\x22:579,\x22y1\x22:897,\x22x2\x22:580,\x22y2\x22:900},{\x22x1\x22:579,\x22y1\x22:895,\x22x2\x22:579,\x22y2\x22:897},{\x22x1\x22:578,\x22y1\x22:894,\x22x2\x22:579,\x22y2\x22:895},{\x22x1\x22:579,\x22y1\x22:892,\x22x2\x22:578,\x22y2\x22:894},{\x22x1\x22:581,\x22y1\x22:892,\x22x2\x22:579,\x22y2\x22:892},{\x22x1\x22:579,\x22y1\x22:892,\x22x2\x22:581,\x22y2\x22:892},{\x22x1\x22:579,\x22y1\x22:895,\x22x2\x22:579,\x22y2\x22:892},{\x22x1\x22:579,\x22y1\x22:893,\x22x2\x22:579,\x22y2\x22:895},{\x22x1\x22:580,\x22y1\x22:892,\x22x2\x22:579,\x22y2\x22:893},{\x22x1\x22:582,\x22y1\x22:892,\x22x2\x22:580,\x22y2\x22:892},{\x22x1\x22:582,\x22y1\x22:864,\x22x2\x22:582,\x22y2\x22:892},{\x22x1\x22:580,\x22y1\x22:864,\x22x2\x22:582,\x22y2\x22:864},{\x22x1\x22:579,\x22y1\x22:862,\x22x2\x22:580,\x22y2\x22:864},{\x22x1\x22:579,\x22y1\x22:861,\x22x2\x22:579,\x22y2\x22:862},{\x22x1\x22:578,\x22y1\x22:859,\x22x2\x22:579,\x22y2\x22:861},{\x22x1\x22:578,\x22y1\x22:858,\x22x2\x22:578,\x22y2\x22:859},{\x22x1\x22:579,\x22y1\x22:856,\x22x2\x22:578,\x22y2\x22:858},{\x22x1\x22:581,\x22y1\x22:856,\x22x2\x22:579,\x22y2\x22:856},{\x22x1\x22:582,\x22y1\x22:854,\x22x2\x22:581,\x22y2\x22:856},{\x22x1\x22:568,\x22y1\x22:840,\x22x2\x22:582,\x22y2\x22:854},{\x22x1\x22:548,\x22y1\x22:840,\x22x2\x22:568,\x22y2\x22:840},{\x22x1\x22:548,\x22y1\x22:834,\x22x2\x22:548,\x22y2\x22:840},{\x22x1\x22:554,\x22y1\x22:833,\x22x2\x22:548,\x22y2\x22:834},{\x22x1\x22:554,\x22y1\x22:835,\x22x2\x22:554,\x22y2\x22:833},{\x22x1\x22:565,\x22y1\x22:835,\x22x2\x22:554,\x22y2\x22:835},{\x22x1\x22:565,\x22y1\x22:810,\x22x2\x22:565,\x22y2\x22:835},{\x22x1\x22:565,\x22y1\x22:808,\x22x2\x22:565,\x22y2\x22:810},{\x22x1\x22:558,\x22y1\x22:809,\x22x2\x22:565,\x22y2\x22:808},{\x22x1\x22:556,\x22y1\x22:809,\x22x2\x22:558,\x22y2\x22:809},{\x22x1\x22:554,\x22y1\x22:807,\x22x2\x22:556,\x22y2\x22:809},{\x22x1\x22:554,\x22y1\x22:806,\x22x2\x22:554,\x22y2\x22:807},{\x22x1\x22:552,\x22y1\x22:805,\x22x2\x22:554,\x22y2\x22:806},{\x22x1\x22:550,\x22y1\x22:805,\x22x2\x22:552,\x22y2\x22:805},{\x22x1\x22:550,\x22y1\x22:797,\x22x2\x22:550,\x22y2\x22:805},{\x22x1\x22:551,\x22y1\x22:796,\x22x2\x22:550,\x22y2\x22:797},{\x22x1\x22:553,\x22y1\x22:796,\x22x2\x22:551,\x22y2\x22:796},{\x22x1\x22:554,\x22y1\x22:794,\x22x2\x22:553,\x22y2\x22:796},{\x22x1\x22:557,\x22y1\x22:794,\x22x2\x22:554,\x22y2\x22:794},{\x22x1\x22:558,\x22y1\x22:796,\x22x2\x22:557,\x22y2\x22:794},{\x22x1\x22:558,\x22y1\x22:800,\x22x2\x22:558,\x22y2\x22:796},{\x22x1\x22:557,\x22y1\x22:802,\x22x2\x22:558,\x22y2\x22:800},{\x22x1\x22:597,\x22y1\x22:802,\x22x2\x22:557,\x22y2\x22:802},{\x22x1\x22:597,\x22y1\x22:757,\x22x2\x22:597,\x22y2\x22:802},{\x22x1\x22:588,\x22y1\x22:757,\x22x2\x22:597,\x22y2\x22:757},{\x22x1\x22:588,\x22y1\x22:761,\x22x2\x22:588,\x22y2\x22:757},{\x22x1\x22:583,\x22y1\x22:761,\x22x2\x22:588,\x22y2\x22:761},{\x22x1\x22:583,\x22y1\x22:754,\x22x2\x22:583,\x22y2\x22:761},{\x22x1\x22:583,\x22y1\x22:752,\x22x2\x22:583,\x22y2\x22:754},{\x22x1\x22:584,\x22y1\x22:751,\x22x2\x22:583,\x22y2\x22:752},{\x22x1\x22:586,\x22y1\x22:751,\x22x2\x22:584,\x22y2\x22:751},{\x22x1\x22:587,\x22y1\x22:753,\x22x2\x22:586,\x22y2\x22:751},{\x22x1\x22:597,\x22y1\x22:753,\x22x2\x22:587,\x22y2\x22:753},{\x22x1\x22:597,\x22y1\x22:748,\x22x2\x22:597,\x22y2\x22:753},{\x22x1\x22:479,\x22y1\x22:753,\x22x2\x22:479,\x22y2\x22:749},{\x22x1\x22:489,\x22y1\x22:753,\x22x2\x22:479,\x22y2\x22:753},{\x22x1\x22:490,\x22y1\x22:751,\x22x2\x22:489,\x22y2\x22:753},{\x22x1\x22:494,\x22y1\x22:751,\x22x2\x22:490,\x22y2\x22:751},{\x22x1\x22:494,\x22y1\x22:757,\x22x2\x22:494,\x22y2\x22:751},{\x22x1\x22:494,\x22y1\x22:759,\x22x2\x22:494,\x22y2\x22:757},{\x22x1\x22:493,\x22y1\x22:760,\x22x2\x22:494,\x22y2\x22:759},{\x22x1\x22:491,\x22y1\x22:760,\x22x2\x22:493,\x22y2\x22:760},{\x22x1\x22:490,\x22y1\x22:759,\x22x2\x22:491,\x22y2\x22:760},{\x22x1\x22:490,\x22y1\x22:757,\x22x2\x22:490,\x22y2\x22:759},{\x22x1\x22:479,\x22y1\x22:757,\x22x2\x22:490,\x22y2\x22:757},{\x22x1\x22:479,\x22y1\x22:802,\x22x2\x22:479,\x22y2\x22:757},{\x22x1\x22:530,\x22y1\x22:802,\x22x2\x22:479,\x22y2\x22:802},{\x22x1\x22:529,\x22y1\x22:800,\x22x2\x22:530,\x22y2\x22:802},{\x22x1\x22:528,\x22y1\x22:795,\x22x2\x22:529,\x22y2\x22:800},{\x22x1\x22:528,\x22y1\x22:793,\x22x2\x22:528,\x22y2\x22:795},{\x22x1\x22:536,\x22y1\x22:792,\x22x2\x22:528,\x22y2\x22:793},{\x22x1\x22:537,\x22y1\x22:797,\x22x2\x22:536,\x22y2\x22:792},{\x22x1\x22:537,\x22y1\x22:807,\x22x2\x22:537,\x22y2\x22:797},{\x22x1\x22:533,\x22y1\x22:808,\x22x2\x22:537,\x22y2\x22:807},{\x22x1\x22:531,\x22y1\x22:808,\x22x2\x22:533,\x22y2\x22:808},{\x22x1\x22:531,\x22y1\x22:806,\x22x2\x22:531,\x22y2\x22:808},{\x22x1\x22:525,\x22y1\x22:806,\x22x2\x22:531,\x22y2\x22:806},{\x22x1\x22:525,\x22y1\x22:829,\x22x2\x22:525,\x22y2\x22:806},{\x22x1\x22:525,\x22y1\x22:831,\x22x2\x22:525,\x22y2\x22:829},{\x22x1\x22:538,\x22y1\x22:831,\x22x2\x22:525,\x22y2\x22:831},{\x22x1\x22:538,\x22y1\x22:838,\x22x2\x22:538,\x22y2\x22:831},{\x22x1\x22:535,\x22y1\x22:841,\x22x2\x22:538,\x22y2\x22:838},{\x22x1\x22:533,\x22y1\x22:840,\x22x2\x22:535,\x22y2\x22:841},{\x22x1\x22:532,\x22y1\x22:839,\x22x2\x22:533,\x22y2\x22:840},{\x22x1\x22:519,\x22y1\x22:839,\x22x2\x22:532,\x22y2\x22:839},{\x22x1\x22:506,\x22y1\x22:853,\x22x2\x22:519,\x22y2\x22:839},{\x22x1\x22:504,\x22y1\x22:854,\x22x2\x22:506,\x22y2\x22:853},{\x22x1\x22:505,\x22y1\x22:856,\x22x2\x22:504,\x22y2\x22:854},{\x22x1\x22:506,\x22y1\x22:857,\x22x2\x22:505,\x22y2\x22:856},{\x22x1\x22:506,\x22y1\x22:863,\x22x2\x22:506,\x22y2\x22:857},{\x22x1\x22:504,\x22y1\x22:864,\x22x2\x22:506,\x22y2\x22:863},{\x22x1\x22:504,\x22y1\x22:887,\x22x2\x22:504,\x22y2\x22:864},{\x22x1\x22:506,\x22y1\x22:888,\x22x2\x22:504,\x22y2\x22:887},{\x22x1\x22:506,\x22y1\x22:895,\x22x2\x22:506,\x22y2\x22:888},{\x22x1\x22:504,\x22y1\x22:896,\x22x2\x22:506,\x22y2\x22:895},{\x22x1\x22:504,\x22y1\x22:924,\x22x2\x22:504,\x22y2\x22:896},{\x22x1\x22:506,\x22y1\x22:924,\x22x2\x22:504,\x22y2\x22:924},{\x22x1\x22:506,\x22y1\x22:930,\x22x2\x22:506,\x22y2\x22:924},{\x22x1\x22:505,\x22y1\x22:932,\x22x2\x22:506,\x22y2\x22:930},{\x22x1\x22:504,\x22y1\x22:934,\x22x2\x22:505,\x22y2\x22:932},{\x22x1\x22:519,\x22y1\x22:949,\x22x2\x22:504,\x22y2\x22:934},{\x22x1\x22:527,\x22y1\x22:949,\x22x2\x22:519,\x22y2\x22:949},{\x22x1\x22:530,\x22y1\x22:946,\x22x2\x22:527,\x22y2\x22:949},{\x22x1\x22:538,\x22y1\x22:946,\x22x2\x22:530,\x22y2\x22:946},{\x22x1\x22:539,\x22y1\x22:954,\x22x2\x22:538,\x22y2\x22:946},{\x22x1\x22:532,\x22y1\x22:954,\x22x2\x22:539,\x22y2\x22:954},{\x22x1\x22:530,\x22y1\x22:953,\x22x2\x22:532,\x22y2\x22:954},{\x22x1\x22:530,\x22y1\x22:1026,\x22x2\x22:530,\x22y2\x22:953},{\x22x1\x22:629,\x22y1\x22:1026,\x22x2\x22:530,\x22y2\x22:1026},{\x22x1\x22:630,\x22y1\x22:1026,\x22x2\x22:629,\x22y2\x22:1026},{\x22x1\x22:629,\x22y1\x22:1024,\x22x2\x22:630,\x22y2\x22:1026},{\x22x1\x22:629,\x22y1\x22:1019,\x22x2\x22:629,\x22y2\x22:1024},{\x22x1\x22:644,\x22y1\x22:1017,\x22x2\x22:629,\x22y2\x22:1019},{\x22x1\x22:644,\x22y1\x22:1022,\x22x2\x22:644,\x22y2\x22:1017},{\x22x1\x22:639,\x22y1\x22:1023,\x22x2\x22:644,\x22y2\x22:1022},{\x22x1\x22:638,\x22y1\x22:1024,\x22x2\x22:639,\x22y2\x22:1023},{\x22x1\x22:638,\x22y1\x22:1026,\x22x2\x22:638,\x22y2\x22:1024},{\x22x1\x22:677,\x22y1\x22:1026,\x22x2\x22:638,\x22y2\x22:1026},{\x22x1\x22:678,\x22y1\x22:1264,\x22x2\x22:677,\x22y2\x22:1026},{\x22x1\x22:678,\x22y1\x22:1266,\x22x2\x22:678,\x22y2\x22:1264},{\x22x1\x22:807,\x22y1\x22:1266,\x22x2\x22:678,\x22y2\x22:1266},{\x22x1\x22:807,\x22y1\x22:1258,\x22x2\x22:807,\x22y2\x22:1266},{\x22x1\x22:808,\x22y1\x22:1257,\x22x2\x22:807,\x22y2\x22:1258},{\x22x1\x22:823,\x22y1\x22:1256,\x22x2\x22:808,\x22y2\x22:1257},{\x22x1\x22:823,\x22y1\x22:1262,\x22x2\x22:823,\x22y2\x22:1256},{\x22x1\x22:822,\x22y1\x22:1263,\x22x2\x22:823,\x22y2\x22:1262},{\x22x1\x22:820,\x22y1\x22:1263,\x22x2\x22:822,\x22y2\x22:1263},{\x22x1\x22:820,\x22y1\x22:1314,\x22x2\x22:820,\x22y2\x22:1263},{\x22x1\x22:822,\x22y1\x22:1315,\x22x2\x22:820,\x22y2\x22:1314},{\x22x1\x22:824,\x22y1\x22:1316,\x22x2\x22:822,\x22y2\x22:1315},{\x22x1\x22:824,\x22y1\x22:1322,\x22x2\x22:824,\x22y2\x22:1316},{\x22x1\x22:853,\x22y1\x22:1322,\x22x2\x22:824,\x22y2\x22:1322},{\x22x1\x22:857,\x22y1\x22:1322,\x22x2\x22:853,\x22y2\x22:1322},{\x22x1\x22:857,\x22y1\x22:1320,\x22x2\x22:857,\x22y2\x22:1322},{\x22x1\x22:864,\x22y1\x22:1320,\x22x2\x22:857,\x22y2\x22:1320},{\x22x1\x22:864,\x22y1\x22:1331,\x22x2\x22:864,\x22y2\x22:1320},{\x22x1\x22:858,\x22y1\x22:1331,\x22x2\x22:864,\x22y2\x22:1331},{\x22x1\x22:858,\x22y1\x22:1328,\x22x2\x22:858,\x22y2\x22:1331},{\x22x1\x22:855,\x22y1\x22:1328,\x22x2\x22:858,\x22y2\x22:1328},{\x22x1\x22:855,\x22y1\x22:1384,\x22x2\x22:855,\x22y2\x22:1328},{\x22x1\x22:773,\x22y1\x22:1435,\x22x2\x22:855,\x22y2\x22:1384},{\x22x1\x22:588,\x22y1\x22:1438,\x22x2\x22:588,\x22y2\x22:1435},{\x22x1\x22:590,\x22y1\x22:1438,\x22x2\x22:588,\x22y2\x22:1438},{\x22x1\x22:590,\x22y1\x22:1442,\x22x2\x22:590,\x22y2\x22:1438},{\x22x1\x22:579,\x22y1\x22:1438,\x22x2\x22:579,\x22y2\x22:1442},{\x22x1\x22:582,\x22y1\x22:1438,\x22x2\x22:579,\x22y2\x22:1438},{\x22x1\x22:582,\x22y1\x22:1435,\x22x2\x22:582,\x22y2\x22:1438},{\x22x1\x22:510,\x22y1\x22:1435,\x22x2\x22:582,\x22y2\x22:1435},{\x22x1\x22:293,\x22y1\x22:1106,\x22x2\x22:510,\x22y2\x22:1106},{\x22x1\x22:293,\x22y1\x22:774,\x22x2\x22:293,\x22y2\x22:1106},{\x22x1\x22:285,\x22y1\x22:764,\x22x2\x22:285,\x22y2\x22:776},{\x22x1\x22:293,\x22y1\x22:764,\x22x2\x22:285,\x22y2\x22:764},{\x22x1\x22:293,\x22y1\x22:723,\x22x2\x22:293,\x22y2\x22:764},{\x22x1\x22:287,\x22y1\x22:722,\x22x2\x22:293,\x22y2\x22:723},{\x22x1\x22:286,\x22y1\x22:723,\x22x2\x22:287,\x22y2\x22:722},{\x22x1\x22:285,\x22y1\x22:713,\x22x2\x22:286,\x22y2\x22:723},{\x22x1\x22:286,\x22y1\x22:712,\x22x2\x22:285,\x22y2\x22:713},{\x22x1\x22:290,\x22y1\x22:712,\x22x2\x22:286,\x22y2\x22:712},{\x22x1\x22:290,\x22y1\x22:714,\x22x2\x22:290,\x22y2\x22:712},{\x22x1\x22:325,\x22y1\x22:714,\x22x2\x22:290,\x22y2\x22:714},{\x22x1\x22:347,\x22y1\x22:692,\x22x2\x22:325,\x22y2\x22:714},{\x22x1\x22:345,\x22y1\x22:692,\x22x2\x22:347,\x22y2\x22:692},{\x22x1\x22:344,\x22y1\x22:691,\x22x2\x22:345,\x22y2\x22:692},{\x22x1\x22:344,\x22y1\x22:683,\x22x2\x22:344,\x22y2\x22:691},{\x22x1\x22:349,\x22y1\x22:683,\x22x2\x22:344,\x22y2\x22:683},{\x22x1\x22:349,\x22y1\x22:595,\x22x2\x22:349,\x22y2\x22:683},{\x22x1\x22:345,\x22y1\x22:595,\x22x2\x22:349,\x22y2\x22:595},{\x22x1\x22:344,\x22y1\x22:589,\x22x2\x22:345,\x22y2\x22:595},{\x22x1\x22:344,\x22y1\x22:588,\x22x2\x22:344,\x22y2\x22:589},{\x22x1\x22:346,\x22y1\x22:587,\x22x2\x22:344,\x22y2\x22:588},{\x22x1\x22:348,\x22y1\x22:587,\x22x2\x22:346,\x22y2\x22:587},{\x22x1\x22:326,\x22y1\x22:565,\x22x2\x22:348,\x22y2\x22:587},{\x22x1\x22:325,\x22y1\x22:564,\x22x2\x22:326,\x22y2\x22:565},{\x22x1\x22:292,\x22y1\x22:564,\x22x2\x22:325,\x22y2\x22:564},{\x22x1\x22:292,\x22y1\x22:566,\x22x2\x22:292,\x22y2\x22:564},{\x22x1\x22:288,\x22y1\x22:566,\x22x2\x22:292,\x22y2\x22:566},{\x22x1\x22:286,\x22y1\x22:565,\x22x2\x22:288,\x22y2\x22:566},{\x22x1\x22:286,\x22y1\x22:557,\x22x2\x22:286,\x22y2\x22:565},{\x22x1\x22:287,\x22y1\x22:556,\x22x2\x22:286,\x22y2\x22:557},{\x22x1\x22:290,\x22y1\x22:556,\x22x2\x22:287,\x22y2\x22:556},{\x22x1\x22:291,\x22y1\x22:558,\x22x2\x22:290,\x22y2\x22:556},{\x22x1\x22:293,\x22y1\x22:558,\x22x2\x22:291,\x22y2\x22:558},{\x22x1\x22:293,\x22y1\x22:418,\x22x2\x22:293,\x22y2\x22:558},{\x22x1\x22:361,\x22y1\x22:340,\x22x2\x22:293,\x22y2\x22:418},{\x22x1\x22:360,\x22y1\x22:175,\x22x2\x22:361,\x22y2\x22:340},{\x22x1\x22:361,\x22y1\x22:175,\x22x2\x22:360,\x22y2\x22:175},{\x22x1\x22:311,\x22y1\x22:175,\x22x2\x22:361,\x22y2\x22:175},{\x22x1\x22:311,\x22y1\x22:181,\x22x2\x22:311,\x22y2\x22:175},{\x22x1\x22:302,\x22y1\x22:181,\x22x2\x22:311,\x22y2\x22:181},{\x22x1\x22:301,\x22y1\x22:181,\x22x2\x22:302,\x22y2\x22:181},{\x22x1\x22:299,\x22y1\x22:182,\x22x2\x22:301,\x22y2\x22:181},{\x22x1\x22:297,\x22y1\x22:182,\x22x2\x22:299,\x22y2\x22:182},{\x22x1\x22:296,\x22y1\x22:181,\x22x2\x22:297,\x22y2\x22:182},{\x22x1\x22:296,\x22y1\x22:179,\x22x2\x22:296,\x22y2\x22:181},{\x22x1\x22:233,\x22y1\x22:179,\x22x2\x22:296,\x22y2\x22:179},{\x22x1\x22:233,\x22y1\x22:-4,\x22x2\x22:233,\x22y2\x22:179},{\x22x1\x22:149,\x22y1\x22:-4,\x22x2\x22:233,\x22y2\x22:-4},{\x22x1\x22:149,\x22y1\x22:-2,\x22x2\x22:149,\x22y2\x22:-4},{\x22x1\x22:136,\x22y1\x22:-1,\x22x2\x22:149,\x22y2\x22:-2},{\x22x1\x22:134,\x22y1\x22:-1,\x22x2\x22:136,\x22y2\x22:-1},{\x22x1\x22:134,\x22y1\x22:-4,\x22x2\x22:134,\x22y2\x22:-1},{\x22x1\x22:134,\x22y1\x22:-5,\x22x2\x22:134,\x22y2\x22:-4},{\x22x1\x22:136,\x22y1\x22:-6,\x22x2\x22:134,\x22y2\x22:-5},{\x22x1\x22:136,\x22y1\x22:-41,\x22x2\x22:136,\x22y2\x22:-6},{\x22x1\x22:114,\x22y1\x22:-63,\x22x2\x22:136,\x22y2\x22:-41},{\x22x1\x22:113,\x22y1\x22:-63,\x22x2\x22:114,\x22y2\x22:-63},{\x22x1\x22:114,\x22y1\x22:-62,\x22x2\x22:113,\x22y2\x22:-63},{\x22x1\x22:112,\x22y1\x22:-60,\x22x2\x22:114,\x22y2\x22:-62},{\x22x1\x22:106,\x22y1\x22:-60,\x22x2\x22:112,\x22y2\x22:-60},{\x22x1\x22:105,\x22y1\x22:-64,\x22x2\x22:106,\x22y2\x22:-60},{\x22x1\x22:105,\x22y1\x22:-65,\x22x2\x22:105,\x22y2\x22:-64},{\x22x1\x22:65,\x22y1\x22:-65,\x22x2\x22:105,\x22y2\x22:-65},{\x22x1\x22:67,\x22y1\x22:-64,\x22x2\x22:65,\x22y2\x22:-65},{\x22x1\x22:67,\x22y1\x22:-62,\x22x2\x22:67,\x22y2\x22:-64},{\x22x1\x22:66,\x22y1\x22:-61,\x22x2\x22:67,\x22y2\x22:-62},{\x22x1\x22:64,\x22y1\x22:-60,\x22x2\x22:66,\x22y2\x22:-61},{\x22x1\x22:61,\x22y1\x22:-60,\x22x2\x22:64,\x22y2\x22:-60},{\x22x1\x22:59,\x22y1\x22:-59,\x22x2\x22:61,\x22y2\x22:-60},{\x22x1\x22:57,\x22y1\x22:-60,\x22x2\x22:59,\x22y2\x22:-59},{\x22x1\x22:57,\x22y1\x22:-65,\x22x2\x22:57,\x22y2\x22:-60},{\x22x1\x22:17,\x22y1\x22:-65,\x22x2\x22:57,\x22y2\x22:-65},{\x22x1\x22:17,\x22y1\x22:-60,\x22x2\x22:17,\x22y2\x22:-65},{\x22x1\x22:9,\x22y1\x22:-60,\x22x2\x22:17,\x22y2\x22:-60},{\x22x1\x22:9,\x22y1\x22:-64,\x22x2\x22:9,\x22y2\x22:-60},{\x22x1\x22:-13,\x22y1\x22:-42,\x22x2\x22:9,\x22y2\x22:-64},{\x22x1\x22:-14,\x22y1\x22:-41,\x22x2\x22:-13,\x22y2\x22:-42},{\x22x1\x22:-14,\x22y1\x22:53,\x22x2\x22:-14,\x22y2\x22:-41},{\x22x1\x22:8,\x22y1\x22:74,\x22x2\x22:-14,\x22y2\x22:53},{\x22x1\x22:8,\x22y1\x22:75,\x22x2\x22:8,\x22y2\x22:74},{\x22x1\x22:8,\x22y1\x22:73,\x22x2\x22:8,\x22y2\x22:75},{\x22x1\x22:9,\x22y1\x22:72,\x22x2\x22:8,\x22y2\x22:73},{\x22x1\x22:17,\x22y1\x22:72,\x22x2\x22:9,\x22y2\x22:72},{\x22x1\x22:17,\x22y1\x22:77,\x22x2\x22:17,\x22y2\x22:72},{\x22x1\x22:57,\x22y1\x22:77,\x22x2\x22:17,\x22y2\x22:77},{\x22x1\x22:57,\x22y1\x22:72,\x22x2\x22:57,\x22y2\x22:77},{\x22x1\x22:65,\x22y1\x22:72,\x22x2\x22:57,\x22y2\x22:72},{\x22x1\x22:65,\x22y1\x22:77,\x22x2\x22:65,\x22y2\x22:72},{\x22x1\x22:105,\x22y1\x22:77,\x22x2\x22:65,\x22y2\x22:77},{\x22x1\x22:105,\x22y1\x22:72,\x22x2\x22:105,\x22y2\x22:77},{\x22x1\x22:112,\x22y1\x22:72,\x22x2\x22:105,\x22y2\x22:72},{\x22x1\x22:113,\x22y1\x22:73,\x22x2\x22:112,\x22y2\x22:72},{\x22x1\x22:113,\x22y1\x22:75,\x22x2\x22:113,\x22y2\x22:73},{\x22x1\x22:135,\x22y1\x22:54,\x22x2\x22:113,\x22y2\x22:75},{\x22x1\x22:136,\x22y1\x22:53,\x22x2\x22:135,\x22y2\x22:54},{\x22x1\x22:136,\x22y1\x22:19,\x22x2\x22:136,\x22y2\x22:53},{\x22x1\x22:128,\x22y1\x22:18,\x22x2\x22:136,\x22y2\x22:19},{\x22x1\x22:127,\x22y1\x22:16,\x22x2\x22:128,\x22y2\x22:18},{\x22x1\x22:128,\x22y1\x22:15,\x22x2\x22:127,\x22y2\x22:16},{\x22x1\x22:145,\x22y1\x22:15,\x22x2\x22:128,\x22y2\x22:15},{\x22x1\x22:147,\x22y1\x22:15,\x22x2\x22:145,\x22y2\x22:15},{\x22x1\x22:149,\x22y1\x22:15,\x22x2\x22:147,\x22y2\x22:15},{\x22x1\x22:149,\x22y1\x22:17,\x22x2\x22:149,\x22y2\x22:15},{\x22x1\x22:212,\x22y1\x22:17,\x22x2\x22:149,\x22y2\x22:17},{\x22x1\x22:212,\x22y1\x22:200,\x22x2\x22:212,\x22y2\x22:17},{\x22x1\x22:293,\x22y1\x22:200,\x22x2\x22:212,\x22y2\x22:200},{\x22x1\x22:295,\x22y1\x22:199,\x22x2\x22:293,\x22y2\x22:200},{\x22x1\x22:295,\x22y1\x22:198,\x22x2\x22:295,\x22y2\x22:199},{\x22x1\x22:306,\x22y1\x22:198,\x22x2\x22:295,\x22y2\x22:198},{\x22x1\x22:307,\x22y1\x22:197,\x22x2\x22:306,\x22y2\x22:198},{\x22x1\x22:308,\x22y1\x22:201,\x22x2\x22:307,\x22y2\x22:197},{\x22x1\x22:307,\x22y1\x22:202,\x22x2\x22:308,\x22y2\x22:201},{\x22x1\x22:305,\x22y1\x22:202,\x22x2\x22:307,\x22y2\x22:202},{\x22x1\x22:304,\x22y1\x22:203,\x22x2\x22:305,\x22y2\x22:202},{\x22x1\x22:304,\x22y1\x22:205,\x22x2\x22:304,\x22y2\x22:203},{\x22x1\x22:331,\x22y1\x22:205,\x22x2\x22:304,\x22y2\x22:205},{\x22x1\x22:331,\x22y1\x22:309,\x22x2\x22:331,\x22y2\x22:205},{\x22x1\x22:330,\x22y1\x22:310,\x22x2\x22:331,\x22y2\x22:309},{\x22x1\x22:264,\x22y1\x22:385,\x22x2\x22:330,\x22y2\x22:310},{\x22x1\x22:263,\x22y1\x22:386,\x22x2\x22:264,\x22y2\x22:385},{\x22x1\x22:263,\x22y1\x22:554,\x22x2\x22:263,\x22y2\x22:386},{\x22x1\x22:271,\x22y1\x22:554,\x22x2\x22:263,\x22y2\x22:554},{\x22x1\x22:271,\x22y1\x22:566,\x22x2\x22:271,\x22y2\x22:554},{\x22x1\x22:266,\x22y1\x22:566,\x22x2\x22:271,\x22y2\x22:566},{\x22x1\x22:266,\x22y1\x22:564,\x22x2\x22:266,\x22y2\x22:566},{\x22x1\x22:231,\x22y1\x22:564,\x22x2\x22:266,\x22y2\x22:564},{\x22x1\x22:212,\x22y1\x22:584,\x22x2\x22:231,\x22y2\x22:564},{\x22x1\x22:211,\x22y1\x22:585,\x22x2\x22:212,\x22y2\x22:584},{\x22x1\x22:217,\x22y1\x22:584,\x22x2\x22:211,\x22y2\x22:585},{\x22x1\x22:217,\x22y1\x22:595,\x22x2\x22:217,\x22y2\x22:584},{\x22x1\x22:209,\x22y1\x22:595,\x22x2\x22:217,\x22y2\x22:595},{\x22x1\x22:207,\x22y1\x22:595,\x22x2\x22:209,\x22y2\x22:595},{\x22x1\x22:207,\x22y1\x22:633,\x22x2\x22:207,\x22y2\x22:595},{\x22x1\x22:215,\x22y1\x22:634,\x22x2\x22:207,\x22y2\x22:633},{\x22x1\x22:217,\x22y1\x22:634,\x22x2\x22:215,\x22y2\x22:634},{\x22x1\x22:217,\x22y1\x22:641,\x22x2\x22:217,\x22y2\x22:634},{\x22x1\x22:217,\x22y1\x22:643,\x22x2\x22:217,\x22y2\x22:641},{\x22x1\x22:209,\x22y1\x22:643,\x22x2\x22:217,\x22y2\x22:643},{\x22x1\x22:207,\x22y1\x22:643,\x22x2\x22:209,\x22y2\x22:643},{\x22x1\x22:207,\x22y1\x22:683,\x22x2\x22:207,\x22y2\x22:643},{\x22x1\x22:213,\x22y1\x22:683,\x22x2\x22:207,\x22y2\x22:683},{\x22x1\x22:213,\x22y1\x22:686,\x22x2\x22:213,\x22y2\x22:683},{\x22x1\x22:212,\x22y1\x22:689,\x22x2\x22:213,\x22y2\x22:686},{\x22x1\x22:211,\x22y1\x22:691,\x22x2\x22:212,\x22y2\x22:689},{\x22x1\x22:208,\x22y1\x22:691,\x22x2\x22:211,\x22y2\x22:691},{\x22x1\x22:230,\x22y1\x22:713,\x22x2\x22:208,\x22y2\x22:691},{\x22x1\x22:231,\x22y1\x22:714,\x22x2\x22:230,\x22y2\x22:713},{\x22x1\x22:264,\x22y1\x22:714,\x22x2\x22:231,\x22y2\x22:714},{\x22x1\x22:266,\x22y1\x22:712,\x22x2\x22:264,\x22y2\x22:714},{\x22x1\x22:269,\x22y1\x22:712,\x22x2\x22:266,\x22y2\x22:712},{\x22x1\x22:270,\x22y1\x22:711,\x22x2\x22:269,\x22y2\x22:712},{\x22x1\x22:270,\x22y1\x22:720,\x22x2\x22:270,\x22y2\x22:711},{\x22x1\x22:270,\x22y1\x22:722,\x22x2\x22:270,\x22y2\x22:720},{\x22x1\x22:266,\x22y1\x22:722,\x22x2\x22:270,\x22y2\x22:722},{\x22x1\x22:265,\x22y1\x22:720,\x22x2\x22:266,\x22y2\x22:722},{\x22x1\x22:263,\x22y1\x22:720,\x22x2\x22:265,\x22y2\x22:720},{\x22x1\x22:263,\x22y1\x22:766,\x22x2\x22:263,\x22y2\x22:720},{\x22x1\x22:271,\x22y1\x22:766,\x22x2\x22:263,\x22y2\x22:766},{\x22x1\x22:271,\x22y1\x22:776,\x22x2\x22:271,\x22y2\x22:766},{\x22x1\x22:266,\x22y1\x22:774,\x22x2\x22:266,\x22y2\x22:776},{\x22x1\x22:263,\x22y1\x22:774,\x22x2\x22:266,\x22y2\x22:774},{\x22x1\x22:592,\x22y1\x22:1457,\x22x2\x22:580,\x22y2\x22:1457},{\x22x1\x22:592,\x22y1\x22:1462,\x22x2\x22:592,\x22y2\x22:1457},{\x22x1\x22:588,\x22y1\x22:1462,\x22x2\x22:592,\x22y2\x22:1462},{\x22x1\x22:588,\x22y1\x22:1465,\x22x2\x22:588,\x22y2\x22:1462},{\x22x1\x22:791,\x22y1\x22:1465,\x22x2\x22:588,\x22y2\x22:1465},{\x22x1\x22:885,\x22y1\x22:1412,\x22x2\x22:791,\x22y2\x22:1465},{\x22x1\x22:885,\x22y1\x22:1328,\x22x2\x22:885,\x22y2\x22:1412},{\x22x1\x22:878,\x22y1\x22:1320,\x22x2\x22:878,\x22y2\x22:1330},{\x22x1\x22:882,\x22y1\x22:1320,\x22x2\x22:878,\x22y2\x22:1320},{\x22x1\x22:882,\x22y1\x22:1322,\x22x2\x22:882,\x22y2\x22:1320},{\x22x1\x22:913,\x22y1\x22:1322,\x22x2\x22:882,\x22y2\x22:1322},{\x22x1\x22:913,\x22y1\x22:1313,\x22x2\x22:913,\x22y2\x22:1322},{\x22x1\x22:920,\x22y1\x22:1313,\x22x2\x22:913,\x22y2\x22:1313},{\x22x1\x22:920,\x22y1\x22:1266,\x22x2\x22:920,\x22y2\x22:1313},{\x22x1\x22:919,\x22y1\x22:1266,\x22x2\x22:920,\x22y2\x22:1266},{\x22x1\x22:917,\x22y1\x22:1265,\x22x2\x22:919,\x22y2\x22:1266},{\x22x1\x22:917,\x22y1\x22:1257,\x22x2\x22:917,\x22y2\x22:1265},{\x22x1\x22:928,\x22y1\x22:1257,\x22x2\x22:917,\x22y2\x22:1257},{\x22x1\x22:928,\x22y1\x22:1262,\x22x2\x22:928,\x22y2\x22:1257},{\x22x1\x22:926,\x22y1\x22:1263,\x22x2\x22:928,\x22y2\x22:1262},{\x22x1\x22:926,\x22y1\x22:1266,\x22x2\x22:926,\x22y2\x22:1263},{\x22x1\x22:1087,\x22y1\x22:1266,\x22x2\x22:926,\x22y2\x22:1266},{\x22x1\x22:1087,\x22y1\x22:1032,\x22x2\x22:1087,\x22y2\x22:1266},{\x22x1\x22:1087,\x22y1\x22:1031,\x22x2\x22:1087,\x22y2\x22:1032},{\x22x1\x22:1085,\x22y1\x22:1028,\x22x2\x22:1087,\x22y2\x22:1031},{\x22x1\x22:1088,\x22y1\x22:1026,\x22x2\x22:1085,\x22y2\x22:1028},{\x22x1\x22:1126,\x22y1\x22:1026,\x22x2\x22:1088,\x22y2\x22:1026},{\x22x1\x22:1125,\x22y1\x22:1025,\x22x2\x22:1126,\x22y2\x22:1026},{\x22x1\x22:1125,\x22y1\x22:1023,\x22x2\x22:1125,\x22y2\x22:1025},{\x22x1\x22:1125,\x22y1\x22:1021,\x22x2\x22:1125,\x22y2\x22:1023},{\x22x1\x22:1125,\x22y1\x22:1020,\x22x2\x22:1125,\x22y2\x22:1021},{\x22x1\x22:1133,\x22y1\x22:1019,\x22x2\x22:1125,\x22y2\x22:1020},{\x22x1\x22:1134,\x22y1\x22:1019,\x22x2\x22:1133,\x22y2\x22:1019},{\x22x1\x22:1135,\x22y1\x22:1020,\x22x2\x22:1134,\x22y2\x22:1019},{\x22x1\x22:1135,\x22y1\x22:1022,\x22x2\x22:1135,\x22y2\x22:1020},{\x22x1\x22:1133,\x22y1\x22:1024,\x22x2\x22:1135,\x22y2\x22:1022},{\x22x1\x22:1133,\x22y1\x22:1026,\x22x2\x22:1133,\x22y2\x22:1024},{\x22x1\x22:1234,\x22y1\x22:1026,\x22x2\x22:1133,\x22y2\x22:1026},{\x22x1\x22:1235,\x22y1\x22:1026,\x22x2\x22:1234,\x22y2\x22:1026},{\x22x1\x22:1235,\x22y1\x22:955,\x22x2\x22:1235,\x22y2\x22:1026},{\x22x1\x22:1234,\x22y1\x22:954,\x22x2\x22:1235,\x22y2\x22:955},{\x22x1\x22:1231,\x22y1\x22:954,\x22x2\x22:1234,\x22y2\x22:954},{\x22x1\x22:1230,\x22y1\x22:953,\x22x2\x22:1231,\x22y2\x22:954},{\x22x1\x22:1228,\x22y1\x22:953,\x22x2\x22:1230,\x22y2\x22:953},{\x22x1\x22:1228,\x22y1\x22:951,\x22x2\x22:1228,\x22y2\x22:953},{\x22x1\x22:1227,\x22y1\x22:949,\x22x2\x22:1228,\x22y2\x22:951},{\x22x1\x22:1231,\x22y1\x22:948,\x22x2\x22:1227,\x22y2\x22:949},{\x22x1\x22:1232,\x22y1\x22:948,\x22x2\x22:1231,\x22y2\x22:948},{\x22x1\x22:1233,\x22y1\x22:949,\x22x2\x22:1232,\x22y2\x22:948},{\x22x1\x22:1246,\x22y1\x22:949,\x22x2\x22:1233,\x22y2\x22:949},{\x22x1\x22:1260,\x22y1\x22:935,\x22x2\x22:1246,\x22y2\x22:949},{\x22x1\x22:1261,\x22y1\x22:933,\x22x2\x22:1260,\x22y2\x22:935},{\x22x1\x22:1259,\x22y1\x22:932,\x22x2\x22:1261,\x22y2\x22:933},{\x22x1\x22:1259,\x22y1\x22:925,\x22x2\x22:1259,\x22y2\x22:932},{\x22x1\x22:1261,\x22y1\x22:924,\x22x2\x22:1259,\x22y2\x22:925},{\x22x1\x22:1261,\x22y1\x22:901,\x22x2\x22:1261,\x22y2\x22:924},{\x22x1\x22:1259,\x22y1\x22:900,\x22x2\x22:1261,\x22y2\x22:901},{\x22x1\x22:1258,\x22y1\x22:899,\x22x2\x22:1259,\x22y2\x22:900},{\x22x1\x22:1258,\x22y1\x22:893,\x22x2\x22:1258,\x22y2\x22:899},{\x22x1\x22:1259,\x22y1\x22:892,\x22x2\x22:1258,\x22y2\x22:893},{\x22x1\x22:1261,\x22y1\x22:892,\x22x2\x22:1259,\x22y2\x22:892},{\x22x1\x22:1261,\x22y1\x22:866,\x22x2\x22:1261,\x22y2\x22:892},{\x22x1\x22:1261,\x22y1\x22:865,\x22x2\x22:1261,\x22y2\x22:866},{\x22x1\x22:1259,\x22y1\x22:864,\x22x2\x22:1261,\x22y2\x22:865},{\x22x1\x22:1259,\x22y1\x22:858,\x22x2\x22:1259,\x22y2\x22:864},{\x22x1\x22:1260,\x22y1\x22:856,\x22x2\x22:1259,\x22y2\x22:858},{\x22x1\x22:1261,\x22y1\x22:854,\x22x2\x22:1260,\x22y2\x22:856},{\x22x1\x22:1246,\x22y1\x22:839,\x22x2\x22:1261,\x22y2\x22:854},{\x22x1\x22:1234,\x22y1\x22:839,\x22x2\x22:1246,\x22y2\x22:839},{\x22x1\x22:1233,\x22y1\x22:840,\x22x2\x22:1234,\x22y2\x22:839},{\x22x1\x22:1228,\x22y1\x22:840,\x22x2\x22:1233,\x22y2\x22:840},{\x22x1\x22:1227,\x22y1\x22:834,\x22x2\x22:1228,\x22y2\x22:840},{\x22x1\x22:1233,\x22y1\x22:834,\x22x2\x22:1227,\x22y2\x22:834},{\x22x1\x22:1233,\x22y1\x22:835,\x22x2\x22:1233,\x22y2\x22:834},{\x22x1\x22:1240,\x22y1\x22:835,\x22x2\x22:1233,\x22y2\x22:835},{\x22x1\x22:1240,\x22y1\x22:809,\x22x2\x22:1240,\x22y2\x22:835},{\x22x1\x22:1240,\x22y1\x22:807,\x22x2\x22:1240,\x22y2\x22:809},{\x22x1\x22:1234,\x22y1\x22:807,\x22x2\x22:1240,\x22y2\x22:807},{\x22x1\x22:1229,\x22y1\x22:807,\x22x2\x22:1234,\x22y2\x22:807},{\x22x1\x22:1228,\x22y1\x22:798,\x22x2\x22:1229,\x22y2\x22:807},{\x22x1\x22:1229,\x22y1\x22:796,\x22x2\x22:1228,\x22y2\x22:798},{\x22x1\x22:1229,\x22y1\x22:793,\x22x2\x22:1229,\x22y2\x22:796},{\x22x1\x22:1235,\x22y1\x22:794,\x22x2\x22:1229,\x22y2\x22:793},{\x22x1\x22:1234,\x22y1\x22:801,\x22x2\x22:1235,\x22y2\x22:794},{\x22x1\x22:1235,\x22y1\x22:802,\x22x2\x22:1234,\x22y2\x22:801},{\x22x1\x22:1286,\x22y1\x22:802,\x22x2\x22:1235,\x22y2\x22:802},{\x22x1\x22:1286,\x22y1\x22:757,\x22x2\x22:1286,\x22y2\x22:802},{\x22x1\x22:1276,\x22y1\x22:757,\x22x2\x22:1286,\x22y2\x22:757},{\x22x1\x22:1274,\x22y1\x22:759,\x22x2\x22:1276,\x22y2\x22:757},{\x22x1\x22:1272,\x22y1\x22:759,\x22x2\x22:1274,\x22y2\x22:759},{\x22x1\x22:1272,\x22y1\x22:753,\x22x2\x22:1272,\x22y2\x22:759},{\x22x1\x22:1272,\x22y1\x22:752,\x22x2\x22:1272,\x22y2\x22:753},{\x22x1\x22:1273,\x22y1\x22:751,\x22x2\x22:1272,\x22y2\x22:752},{\x22x1\x22:1275,\x22y1\x22:751,\x22x2\x22:1273,\x22y2\x22:751},{\x22x1\x22:1276,\x22y1\x22:753,\x22x2\x22:1275,\x22y2\x22:751},{\x22x1\x22:1286,\x22y1\x22:753,\x22x2\x22:1276,\x22y2\x22:753},{\x22x1\x22:1286,\x22y1\x22:748,\x22x2\x22:1286,\x22y2\x22:753},{\x22x1\x22:1249,\x22y1\x22:748,\x22x2\x22:1286,\x22y2\x22:748},{\x22x1\x22:1168,\x22y1\x22:748,\x22x2\x22:1205,\x22y2\x22:748},{\x22x1\x22:1168,\x22y1\x22:753,\x22x2\x22:1168,\x22y2\x22:748},{\x22x1\x22:1177,\x22y1\x22:753,\x22x2\x22:1168,\x22y2\x22:753},{\x22x1\x22:1180,\x22y1\x22:751,\x22x2\x22:1177,\x22y2\x22:753},{\x22x1\x22:1182,\x22y1\x22:751,\x22x2\x22:1180,\x22y2\x22:751},{\x22x1\x22:1182,\x22y1\x22:753,\x22x2\x22:1182,\x22y2\x22:751},{\x22x1\x22:1183,\x22y1\x22:758,\x22x2\x22:1182,\x22y2\x22:753},{\x22x1\x22:1181,\x22y1\x22:760,\x22x2\x22:1183,\x22y2\x22:758},{\x22x1\x22:1180,\x22y1\x22:760,\x22x2\x22:1181,\x22y2\x22:760},{\x22x1\x22:1179,\x22y1\x22:759,\x22x2\x22:1180,\x22y2\x22:760},{\x22x1\x22:1179,\x22y1\x22:757,\x22x2\x22:1179,\x22y2\x22:759},{\x22x1\x22:1168,\x22y1\x22:757,\x22x2\x22:1179,\x22y2\x22:757},{\x22x1\x22:1168,\x22y1\x22:802,\x22x2\x22:1168,\x22y2\x22:757},{\x22x1\x22:1206,\x22y1\x22:802,\x22x2\x22:1168,\x22y2\x22:802},{\x22x1\x22:1207,\x22y1\x22:800,\x22x2\x22:1206,\x22y2\x22:802},{\x22x1\x22:1207,\x22y1\x22:794,\x22x2\x22:1207,\x22y2\x22:800},{\x22x1\x22:1214,\x22y1\x22:794,\x22x2\x22:1207,\x22y2\x22:794},{\x22x1\x22:1214,\x22y1\x22:807,\x22x2\x22:1214,\x22y2\x22:794},{\x22x1\x22:1211,\x22y1\x22:807,\x22x2\x22:1214,\x22y2\x22:807},{\x22x1\x22:1209,\x22y1\x22:808,\x22x2\x22:1211,\x22y2\x22:807},{\x22x1\x22:1208,\x22y1\x22:806,\x22x2\x22:1209,\x22y2\x22:808},{\x22x1\x22:1202,\x22y1\x22:806,\x22x2\x22:1208,\x22y2\x22:806},{\x22x1\x22:1200,\x22y1\x22:806,\x22x2\x22:1202,\x22y2\x22:806},{\x22x1\x22:1200,\x22y1\x22:831,\x22x2\x22:1200,\x22y2\x22:806},{\x22x1\x22:1200,\x22y1\x22:833,\x22x2\x22:1200,\x22y2\x22:831},{\x22x1\x22:1205,\x22y1\x22:832,\x22x2\x22:1200,\x22y2\x22:833},{\x22x1\x22:1216,\x22y1\x22:831,\x22x2\x22:1205,\x22y2\x22:832},{\x22x1\x22:1216,\x22y1\x22:838,\x22x2\x22:1216,\x22y2\x22:831},{\x22x1\x22:1214,\x22y1\x22:840,\x22x2\x22:1216,\x22y2\x22:838},{\x22x1\x22:1212,\x22y1\x22:840,\x22x2\x22:1214,\x22y2\x22:840},{\x22x1\x22:1211,\x22y1\x22:839,\x22x2\x22:1212,\x22y2\x22:840},{\x22x1\x22:1198,\x22y1\x22:839,\x22x2\x22:1211,\x22y2\x22:839},{\x22x1\x22:1185,\x22y1\x22:852,\x22x2\x22:1198,\x22y2\x22:839},{\x22x1\x22:1184,\x22y1\x22:853,\x22x2\x22:1185,\x22y2\x22:852},{\x22x1\x22:1183,\x22y1\x22:855,\x22x2\x22:1184,\x22y2\x22:853},{\x22x1\x22:1184,\x22y1\x22:856,\x22x2\x22:1183,\x22y2\x22:855},{\x22x1\x22:1186,\x22y1\x22:856,\x22x2\x22:1184,\x22y2\x22:856},{\x22x1\x22:1186,\x22y1\x22:862,\x22x2\x22:1186,\x22y2\x22:856},{\x22x1\x22:1185,\x22y1\x22:864,\x22x2\x22:1186,\x22y2\x22:862},{\x22x1\x22:1183,\x22y1\x22:864,\x22x2\x22:1185,\x22y2\x22:864},{\x22x1\x22:1183,\x22y1\x22:885,\x22x2\x22:1183,\x22y2\x22:864},{\x22x1\x22:1183,\x22y1\x22:886,\x22x2\x22:1183,\x22y2\x22:885},{\x22x1\x22:1184,\x22y1\x22:888,\x22x2\x22:1183,\x22y2\x22:886},{\x22x1\x22:1185,\x22y1\x22:888,\x22x2\x22:1184,\x22y2\x22:888},{\x22x1\x22:1186,\x22y1\x22:893,\x22x2\x22:1185,\x22y2\x22:888},{\x22x1\x22:1186,\x22y1\x22:895,\x22x2\x22:1186,\x22y2\x22:893},{\x22x1\x22:1185,\x22y1\x22:896,\x22x2\x22:1186,\x22y2\x22:895},{\x22x1\x22:1183,\x22y1\x22:896,\x22x2\x22:1185,\x22y2\x22:896},{\x22x1\x22:1183,\x22y1\x22:923,\x22x2\x22:1183,\x22y2\x22:896},{\x22x1\x22:1184,\x22y1\x22:922,\x22x2\x22:1183,\x22y2\x22:923},{\x22x1\x22:1185,\x22y1\x22:923,\x22x2\x22:1184,\x22y2\x22:922},{\x22x1\x22:1186,\x22y1\x22:925,\x22x2\x22:1185,\x22y2\x22:923},{\x22x1\x22:1186,\x22y1\x22:927,\x22x2\x22:1186,\x22y2\x22:925},{\x22x1\x22:1187,\x22y1\x22:929,\x22x2\x22:1186,\x22y2\x22:927},{\x22x1\x22:1188,\x22y1\x22:929,\x22x2\x22:1187,\x22y2\x22:929},{\x22x1\x22:1187,\x22y1\x22:931,\x22x2\x22:1188,\x22y2\x22:929},{\x22x1\x22:1185,\x22y1\x22:932,\x22x2\x22:1187,\x22y2\x22:931},{\x22x1\x22:1184,\x22y1\x22:932,\x22x2\x22:1185,\x22y2\x22:932},{\x22x1\x22:1183,\x22y1\x22:934,\x22x2\x22:1184,\x22y2\x22:932},{\x22x1\x22:1198,\x22y1\x22:949,\x22x2\x22:1183,\x22y2\x22:934},{\x22x1\x22:1207,\x22y1\x22:949,\x22x2\x22:1198,\x22y2\x22:949},{\x22x1\x22:1208,\x22y1\x22:948,\x22x2\x22:1207,\x22y2\x22:949},{\x22x1\x22:1218,\x22y1\x22:948,\x22x2\x22:1208,\x22y2\x22:948},{\x22x1\x22:1219,\x22y1\x22:954,\x22x2\x22:1218,\x22y2\x22:948},{\x22x1\x22:1219,\x22y1\x22:955,\x22x2\x22:1219,\x22y2\x22:954},{\x22x1\x22:1212,\x22y1\x22:956,\x22x2\x22:1219,\x22y2\x22:955},{\x22x1\x22:1211,\x22y1\x22:954,\x22x2\x22:1212,\x22y2\x22:956},{\x22x1\x22:1205,\x22y1\x22:953,\x22x2\x22:1211,\x22y2\x22:954},{\x22x1\x22:1205,\x22y1\x22:993,\x22x2\x22:1205,\x22y2\x22:953},{\x22x1\x22:1206,\x22y1\x22:995,\x22x2\x22:1205,\x22y2\x22:993},{\x22x1\x22:1205,\x22y1\x22:996,\x22x2\x22:1206,\x22y2\x22:995},{\x22x1\x22:1138,\x22y1\x22:996,\x22x2\x22:1205,\x22y2\x22:996},{\x22x1\x22:1137,\x22y1\x22:996,\x22x2\x22:1138,\x22y2\x22:996},{\x22x1\x22:1136,\x22y1\x22:1004,\x22x2\x22:1137,\x22y2\x22:996},{\x22x1\x22:1124,\x22y1\x22:1004,\x22x2\x22:1136,\x22y2\x22:1004},{\x22x1\x22:1123,\x22y1\x22:1002,\x22x2\x22:1124,\x22y2\x22:1004},{\x22x1\x22:1124,\x22y1\x22:1001,\x22x2\x22:1123,\x22y2\x22:1002},{\x22x1\x22:1125,\x22y1\x22:999,\x22x2\x22:1124,\x22y2\x22:1001},{\x22x1\x22:1126,\x22y1\x22:999,\x22x2\x22:1125,\x22y2\x22:999},{\x22x1\x22:1127,\x22y1\x22:997,\x22x2\x22:1126,\x22y2\x22:999},{\x22x1\x22:1127,\x22y1\x22:996,\x22x2\x22:1127,\x22y2\x22:997},{\x22x1\x22:1057,\x22y1\x22:996,\x22x2\x22:1127,\x22y2\x22:996},{\x22x1\x22:1057,\x22y1\x22:1232,\x22x2\x22:1057,\x22y2\x22:996},{\x22x1\x22:1057,\x22y1\x22:1233,\x22x2\x22:1057,\x22y2\x22:1232},{\x22x1\x22:1058,\x22y1\x22:1235,\x22x2\x22:1057,\x22y2\x22:1233},{\x22x1\x22:1056,\x22y1\x22:1236,\x22x2\x22:1058,\x22y2\x22:1235},{\x22x1\x22:932,\x22y1\x22:1236,\x22x2\x22:1056,\x22y2\x22:1236},{\x22x1\x22:932,\x22y1\x22:1243,\x22x2\x22:932,\x22y2\x22:1236},{\x22x1\x22:926,\x22y1\x22:1244,\x22x2\x22:932,\x22y2\x22:1243},{\x22x1\x22:918,\x22y1\x22:1243,\x22x2\x22:926,\x22y2\x22:1244},{\x22x1\x22:918,\x22y1\x22:1240,\x22x2\x22:918,\x22y2\x22:1243},{\x22x1\x22:920,\x22y1\x22:1240,\x22x2\x22:918,\x22y2\x22:1240},{\x22x1\x22:920,\x22y1\x22:1187,\x22x2\x22:920,\x22y2\x22:1240},{\x22x1\x22:918,\x22y1\x22:1187,\x22x2\x22:920,\x22y2\x22:1187},{\x22x1\x22:911,\x22y1\x22:1180,\x22x2\x22:918,\x22y2\x22:1187},{\x22x1\x22:886,\x22y1\x22:1180,\x22x2\x22:911,\x22y2\x22:1180},{\x22x1\x22:883,\x22y1\x22:1180,\x22x2\x22:886,\x22y2\x22:1180},{\x22x1\x22:881,\x22y1\x22:1182,\x22x2\x22:883,\x22y2\x22:1180},{\x22x1\x22:877,\x22y1\x22:1184,\x22x2\x22:881,\x22y2\x22:1182},{\x22x1\x22:877,\x22y1\x22:1170,\x22x2\x22:877,\x22y2\x22:1184},{\x22x1\x22:885,\x22y1\x22:1170,\x22x2\x22:877,\x22y2\x22:1170},{\x22x1\x22:885,\x22y1\x22:813,\x22x2\x22:885,\x22y2\x22:1170},{\x22x1\x22:885,\x22y1\x22:811,\x22x2\x22:885,\x22y2\x22:813},{\x22x1\x22:879,\x22y1\x22:811,\x22x2\x22:885,\x22y2\x22:811},{\x22x1\x22:878,\x22y1\x22:809,\x22x2\x22:879,\x22y2\x22:811},{\x22x1\x22:878,\x22y1\x22:808,\x22x2\x22:878,\x22y2\x22:809},{\x22x1\x22:878,\x22y1\x22:798,\x22x2\x22:878,\x22y2\x22:808},{\x22x1\x22:878,\x22y1\x22:797,\x22x2\x22:878,\x22y2\x22:798},{\x22x1\x22:885,\x22y1\x22:797,\x22x2\x22:878,\x22y2\x22:797},{\x22x1\x22:885,\x22y1\x22:754,\x22x2\x22:885,\x22y2\x22:797},{\x22x1\x22:879,\x22y1\x22:754,\x22x2\x22:885,\x22y2\x22:754},{\x22x1\x22:878,\x22y1\x22:752,\x22x2\x22:879,\x22y2\x22:754},{\x22x1\x22:878,\x22y1\x22:741,\x22x2\x22:878,\x22y2\x22:752},{\x22x1\x22:878,\x22y1\x22:739,\x22x2\x22:878,\x22y2\x22:741},{\x22x1\x22:882,\x22y1\x22:739,\x22x2\x22:878,\x22y2\x22:739},{\x22x1\x22:882,\x22y1\x22:746,\x22x2\x22:882,\x22y2\x22:739},{\x22x1\x22:917,\x22y1\x22:746,\x22x2\x22:882,\x22y2\x22:746},{\x22x1\x22:938,\x22y1\x22:725,\x22x2\x22:917,\x22y2\x22:746},{\x22x1\x22:939,\x22y1\x22:724,\x22x2\x22:938,\x22y2\x22:725},{\x22x1\x22:937,\x22y1\x22:725,\x22x2\x22:939,\x22y2\x22:724},{\x22x1\x22:936,\x22y1\x22:723,\x22x2\x22:937,\x22y2\x22:725},{\x22x1\x22:936,\x22y1\x22:718,\x22x2\x22:936,\x22y2\x22:723},{\x22x1\x22:935,\x22y1\x22:716,\x22x2\x22:936,\x22y2\x22:718},{\x22x1\x22:937,\x22y1\x22:715,\x22x2\x22:935,\x22y2\x22:716},{\x22x1\x22:941,\x22y1\x22:715,\x22x2\x22:937,\x22y2\x22:715},{\x22x1\x22:941,\x22y1\x22:658,\x22x2\x22:941,\x22y2\x22:715},{\x22x1\x22:939,\x22y1\x22:658,\x22x2\x22:941,\x22y2\x22:658},{\x22x1\x22:937,\x22y1\x22:659,\x22x2\x22:939,\x22y2\x22:658},{\x22x1\x22:936,\x22y1\x22:657,\x22x2\x22:937,\x22y2\x22:659},{\x22x1\x22:936,\x22y1\x22:651,\x22x2\x22:936,\x22y2\x22:657},{\x22x1\x22:938,\x22y1\x22:650,\x22x2\x22:936,\x22y2\x22:651},{\x22x1\x22:941,\x22y1\x22:650,\x22x2\x22:938,\x22y2\x22:650},{\x22x1\x22:941,\x22y1\x22:595,\x22x2\x22:941,\x22y2\x22:650},{\x22x1\x22:941,\x22y1\x22:593,\x22x2\x22:941,\x22y2\x22:595},{\x22x1\x22:939,\x22y1\x22:592,\x22x2\x22:941,\x22y2\x22:593},{\x22x1\x22:938,\x22y1\x22:592,\x22x2\x22:939,\x22y2\x22:592},{\x22x1\x22:936,\x22y1\x22:591,\x22x2\x22:938,\x22y2\x22:592},{\x22x1\x22:936,\x22y1\x22:589,\x22x2\x22:936,\x22y2\x22:591},{\x22x1\x22:935,\x22y1\x22:587,\x22x2\x22:936,\x22y2\x22:589},{\x22x1\x22:936,\x22y1\x22:586,\x22x2\x22:935,\x22y2\x22:587},{\x22x1\x22:936,\x22y1\x22:584,\x22x2\x22:936,\x22y2\x22:586},{\x22x1\x22:940,\x22y1\x22:584,\x22x2\x22:936,\x22y2\x22:584},{\x22x1\x22:917,\x22y1\x22:561,\x22x2\x22:940,\x22y2\x22:584},{\x22x1\x22:886,\x22y1\x22:561,\x22x2\x22:917,\x22y2\x22:561},{\x22x1\x22:883,\x22y1\x22:561,\x22x2\x22:886,\x22y2\x22:561},{\x22x1\x22:882,\x22y1\x22:563,\x22x2\x22:883,\x22y2\x22:561},{\x22x1\x22:881,\x22y1\x22:563,\x22x2\x22:882,\x22y2\x22:563},{\x22x1\x22:880,\x22y1\x22:564,\x22x2\x22:881,\x22y2\x22:563},{\x22x1\x22:877,\x22y1\x22:565,\x22x2\x22:880,\x22y2\x22:564},{\x22x1\x22:873,\x22y1\x22:553,\x22x2\x22:877,\x22y2\x22:565},{\x22x1\x22:881,\x22y1\x22:550,\x22x2\x22:873,\x22y2\x22:553},{\x22x1\x22:882,\x22y1\x22:554,\x22x2\x22:881,\x22y2\x22:550},{\x22x1\x22:883,\x22y1\x22:555,\x22x2\x22:882,\x22y2\x22:554},{\x22x1\x22:885,\x22y1\x22:555,\x22x2\x22:883,\x22y2\x22:555},{\x22x1\x22:885,\x22y1\x22:192,\x22x2\x22:885,\x22y2\x22:555},{\x22x1\x22:885,\x22y1\x22:191,\x22x2\x22:885,\x22y2\x22:192},{\x22x1\x22:884,\x22y1\x22:189,\x22x2\x22:885,\x22y2\x22:191},{\x22x1\x22:883,\x22y1\x22:189,\x22x2\x22:884,\x22y2\x22:189},{\x22x1\x22:882,\x22y1\x22:191,\x22x2\x22:883,\x22y2\x22:189},{\x22x1\x22:879,\x22y1\x22:191,\x22x2\x22:882,\x22y2\x22:191},{\x22x1\x22:877,\x22y1\x22:190,\x22x2\x22:879,\x22y2\x22:191},{\x22x1\x22:878,\x22y1\x22:189,\x22x2\x22:877,\x22y2\x22:190},{\x22x1\x22:879,\x22y1\x22:187,\x22x2\x22:878,\x22y2\x22:189},{\x22x1\x22:878,\x22y1\x22:185,\x22x2\x22:879,\x22y2\x22:187},{\x22x1\x22:877,\x22y1\x22:184,\x22x2\x22:878,\x22y2\x22:185},{\x22x1\x22:877,\x22y1\x22:182,\x22x2\x22:877,\x22y2\x22:184},{\x22x1\x22:878,\x22y1\x22:181,\x22x2\x22:877,\x22y2\x22:182},{\x22x1\x22:879,\x22y1\x22:181,\x22x2\x22:878,\x22y2\x22:181},{\x22x1\x22:881,\x22y1\x22:180,\x22x2\x22:879,\x22y2\x22:181},{\x22x1\x22:882,\x22y1\x22:182,\x22x2\x22:881,\x22y2\x22:180},{\x22x1\x22:883,\x22y1\x22:183,\x22x2\x22:882,\x22y2\x22:182},{\x22x1\x22:885,\x22y1\x22:183,\x22x2\x22:883,\x22y2\x22:183},{\x22x1\x22:885,\x22y1\x22:156,\x22x2\x22:885,\x22y2\x22:183},{\x22x1\x22:884,\x22y1\x22:155,\x22x2\x22:885,\x22y2\x22:156},{\x22x1\x22:899,\x22y1\x22:156,\x22x2\x22:884,\x22y2\x22:155},{\x22x1\x22:908,\x22y1\x22:156,\x22x2\x22:899,\x22y2\x22:156},{\x22x1\x22:910,\x22y1\x22:156,\x22x2\x22:908,\x22y2\x22:156},{\x22x1\x22:911,\x22y1\x22:152,\x22x2\x22:910,\x22y2\x22:156},{\x22x1\x22:911,\x22y1\x22:151,\x22x2\x22:911,\x22y2\x22:152},{\x22x1\x22:918,\x22y1\x22:151,\x22x2\x22:911,\x22y2\x22:151},{\x22x1\x22:919,\x22y1\x22:153,\x22x2\x22:918,\x22y2\x22:151},{\x22x1\x22:919,\x22y1\x22:155,\x22x2\x22:919,\x22y2\x22:153},{\x22x1\x22:1035,\x22y1\x22:38,\x22x2\x22:919,\x22y2\x22:155},{\x22x1\x22:1037,\x22y1\x22:37,\x22x2\x22:1035,\x22y2\x22:38},{\x22x1\x22:1035,\x22y1\x22:37,\x22x2\x22:1037,\x22y2\x22:37},{\x22x1\x22:1034,\x22y1\x22:36,\x22x2\x22:1035,\x22y2\x22:37},{\x22x1\x22:1034,\x22y1\x22:30,\x22x2\x22:1034,\x22y2\x22:36},{\x22x1\x22:1035,\x22y1\x22:28,\x22x2\x22:1034,\x22y2\x22:30},{\x22x1\x22:1039,\x22y1\x22:28,\x22x2\x22:1035,\x22y2\x22:28},{\x22x1\x22:1039,\x22y1\x22:-9,\x22x2\x22:1039,\x22y2\x22:28},{\x22x1\x22:1039,\x22y1\x22:-11,\x22x2\x22:1039,\x22y2\x22:-9},{\x22x1\x22:1038,\x22y1\x22:-12,\x22x2\x22:1039,\x22y2\x22:-11},{\x22x1\x22:1034,\x22y1\x22:-12,\x22x2\x22:1038,\x22y2\x22:-12},{\x22x1\x22:1034,\x22y1\x22:-20,\x22x2\x22:1034,\x22y2\x22:-12},{\x22x1\x22:1039,\x22y1\x22:-20,\x22x2\x22:1034,\x22y2\x22:-20},{\x22x1\x22:1039,\x22y1\x22:-60,\x22x2\x22:1039,\x22y2\x22:-20},{\x22x1\x22:1034,\x22y1\x22:-60,\x22x2\x22:1039,\x22y2\x22:-60},{\x22x1\x22:1034,\x22y1\x22:-67,\x22x2\x22:1034,\x22y2\x22:-60},{\x22x1\x22:1035,\x22y1\x22:-68,\x22x2\x22:1034,\x22y2\x22:-67},{\x22x1\x22:1037,\x22y1\x22:-68,\x22x2\x22:1035,\x22y2\x22:-68},{\x22x1\x22:936,\x22y1\x22:-170,\x22x2\x22:1037,\x22y2\x22:-68},{\x22x1\x22:935,\x22y1\x22:-170,\x22x2\x22:936,\x22y2\x22:-170},{\x22x1\x22:922,\x22y1\x22:-183,\x22x2\x22:935,\x22y2\x22:-170},{\x22x1\x22:921,\x22y1\x22:-183,\x22x2\x22:922,\x22y2\x22:-183},{\x22x1\x22:920,\x22y1\x22:-184,\x22x2\x22:921,\x22y2\x22:-183},{\x22x1\x22:919,\x22y1\x22:-183,\x22x2\x22:920,\x22y2\x22:-184},{\x22x1\x22:913,\x22y1\x22:-182,\x22x2\x22:919,\x22y2\x22:-183},{\x22x1\x22:911,\x22y1\x22:-183,\x22x2\x22:913,\x22y2\x22:-182},{\x22x1\x22:910,\x22y1\x22:-186,\x22x2\x22:911,\x22y2\x22:-183},{\x22x1\x22:910,\x22y1\x22:-187,\x22x2\x22:910,\x22y2\x22:-186},{\x22x1\x22:874,\x22y1\x22:-187,\x22x2\x22:910,\x22y2\x22:-187},{\x22x1\x22:872,\x22y1\x22:-187,\x22x2\x22:874,\x22y2\x22:-187},{\x22x1\x22:872,\x22y1\x22:-184,\x22x2\x22:872,\x22y2\x22:-187},{\x22x1\x22:871,\x22y1\x22:-183,\x22x2\x22:872,\x22y2\x22:-184},{\x22x1\x22:871,\x22y1\x22:-182,\x22x2\x22:871,\x22y2\x22:-183},{\x22x1\x22:863,\x22y1\x22:-182,\x22x2\x22:871,\x22y2\x22:-182},{\x22x1\x22:862,\x22y1\x22:-186,\x22x2\x22:863,\x22y2\x22:-182},{\x22x1\x22:862,\x22y1\x22:-187,\x22x2\x22:862,\x22y2\x22:-186},{\x22x1\x22:845,\x22y1\x22:-187,\x22x2\x22:862,\x22y2\x22:-187},{\x22x1\x22:843,\x22y1\x22:-187,\x22x2\x22:845,\x22y2\x22:-187},{\x22x1\x22:841,\x22y1\x22:-187,\x22x2\x22:843,\x22y2\x22:-187},{\x22x1\x22:826,\x22y1\x22:-187,\x22x2\x22:841,\x22y2\x22:-187},{\x22x1\x22:824,\x22y1\x22:-187,\x22x2\x22:826,\x22y2\x22:-187},{\x22x1\x22:824,\x22y1\x22:-185,\x22x2\x22:824,\x22y2\x22:-187},{\x22x1\x22:823,\x22y1\x22:-183,\x22x2\x22:824,\x22y2\x22:-185},{\x22x1\x22:821,\x22y1\x22:-182,\x22x2\x22:823,\x22y2\x22:-183},{\x22x1\x22:816,\x22y1\x22:-182,\x22x2\x22:821,\x22y2\x22:-182},{\x22x1\x22:814,\x22y1\x22:-183,\x22x2\x22:816,\x22y2\x22:-182},{\x22x1\x22:814,\x22y1\x22:-185,\x22x2\x22:814,\x22y2\x22:-183},{\x22x1\x22:699,\x22y1\x22:-70,\x22x2\x22:814,\x22y2\x22:-185},{\x22x1\x22:698,\x22y1\x22:-69,\x22x2\x22:699,\x22y2\x22:-70},{\x22x1\x22:700,\x22y1\x22:-69,\x22x2\x22:698,\x22y2\x22:-69},{\x22x1\x22:701,\x22y1\x22:-68,\x22x2\x22:700,\x22y2\x22:-69},{\x22x1\x22:701,\x22y1\x22:-60,\x22x2\x22:701,\x22y2\x22:-68},{\x22x1\x22:699,\x22y1\x22:-59,\x22x2\x22:701,\x22y2\x22:-60},{\x22x1\x22:696,\x22y1\x22:-59,\x22x2\x22:699,\x22y2\x22:-59},{\x22x1\x22:696,\x22y1\x22:-22,\x22x2\x22:696,\x22y2\x22:-59},{\x22x1\x22:696,\x22y1\x22:-24,\x22x2\x22:696,\x22y2\x22:-22},{\x22x1\x22:699,\x22y1\x22:-21,\x22x2\x22:696,\x22y2\x22:-24},{\x22x1\x22:701,\x22y1\x22:-19,\x22x2\x22:699,\x22y2\x22:-21},{\x22x1\x22:701,\x22y1\x22:-16,\x22x2\x22:701,\x22y2\x22:-19},{\x22x1\x22:702,\x22y1\x22:-15,\x22x2\x22:701,\x22y2\x22:-16},{\x22x1\x22:702,\x22y1\x22:-14,\x22x2\x22:702,\x22y2\x22:-15},{\x22x1\x22:699,\x22y1\x22:-10,\x22x2\x22:702,\x22y2\x22:-14},{\x22x1\x22:700,\x22y1\x22:-12,\x22x2\x22:699,\x22y2\x22:-10},{\x22x1\x22:701,\x22y1\x22:-16,\x22x2\x22:700,\x22y2\x22:-12},{\x22x1\x22:701,\x22y1\x22:-15,\x22x2\x22:701,\x22y2\x22:-16},{\x22x1\x22:702,\x22y1\x22:-14,\x22x2\x22:701,\x22y2\x22:-15},{\x22x1\x22:701,\x22y1\x22:-12,\x22x2\x22:702,\x22y2\x22:-14},{\x22x1\x22:699,\x22y1\x22:-11,\x22x2\x22:701,\x22y2\x22:-12},{\x22x1\x22:696,\x22y1\x22:-11,\x22x2\x22:699,\x22y2\x22:-11},{\x22x1\x22:696,\x22y1\x22:26,\x22x2\x22:696,\x22y2\x22:-11},{\x22x1\x22:696,\x22y1\x22:27,\x22x2\x22:696,\x22y2\x22:26},{\x22x1\x22:699,\x22y1\x22:27,\x22x2\x22:696,\x22y2\x22:27},{\x22x1\x22:700,\x22y1\x22:28,\x22x2\x22:699,\x22y2\x22:27},{\x22x1\x22:701,\x22y1\x22:35,\x22x2\x22:700,\x22y2\x22:28},{\x22x1\x22:700,\x22y1\x22:36,\x22x2\x22:701,\x22y2\x22:35},{\x22x1\x22:698,\x22y1\x22:37,\x22x2\x22:700,\x22y2\x22:36},{\x22x1\x22:885,\x22y1\x22:1328,\x22x2\x22:882,\x22y2\x22:1328},{\x22x1\x22:882,\x22y1\x22:1328,\x22x2\x22:882,\x22y2\x22:1330},{\x22x1\x22:878,\x22y1\x22:1330,\x22x2\x22:882,\x22y2\x22:1330},{\x22x1\x22:590,\x22y1\x22:1442,\x22x2\x22:579,\x22y2\x22:1442},{\x22x1\x22:582,\x22y1\x22:1465,\x22x2\x22:582,\x22y2\x22:1462},{\x22x1\x22:582,\x22y1\x22:1462,\x22x2\x22:580,\x22y2\x22:1462},{\x22x1\x22:580,\x22y1\x22:1462,\x22x2\x22:580,\x22y2\x22:1457},{\x22x1\x22:588,\x22y1\x22:1435,\x22x2\x22:773,\x22y2\x22:1435},{\x22x1\x22:263,\x22y1\x22:774,\x22x2\x22:263,\x22y2\x22:1136},{\x22x1\x22:263,\x22y1\x22:1136,\x22x2\x22:480,\x22y2\x22:1136},{\x22x1\x22:480,\x22y1\x22:1136,\x22x2\x22:480,\x22y2\x22:1465},{\x22x1\x22:510,\x22y1\x22:1106,\x22x2\x22:510,\x22y2\x22:1435},{\x22x1\x22:480,\x22y1\x22:1465,\x22x2\x22:582,\x22y2\x22:1465},{\x22x1\x22:293,\x22y1\x22:774,\x22x2\x22:290,\x22y2\x22:774},{\x22x1\x22:290,\x22y1\x22:776,\x22x2\x22:285,\x22y2\x22:776},{\x22x1\x22:290,\x22y1\x22:774,\x22x2\x22:290,\x22y2\x22:776},{\x22x1\x22:271,\x22y1\x22:776,\x22x2\x22:266,\x22y2\x22:776},{\x22x1\x22:498,\x22y1\x22:658,\x22x2\x22:504,\x22y2\x22:681},{\x22x1\x22:504,\x22y1\x22:681,\x22x2\x22:516,\x22y2\x22:696},{\x22x1\x22:516,\x22y1\x22:696,\x22x2\x22:530,\x22y2\x22:703},{\x22x1\x22:530,\x22y1\x22:703,\x22x2\x22:542,\x22y2\x22:703},{\x22x1\x22:542,\x22y1\x22:703,\x22x2\x22:545,\x22y2\x22:702},{\x22x1\x22:545,\x22y1\x22:702,\x22x2\x22:559,\x22y2\x22:695},{\x22x1\x22:559,\x22y1\x22:695,\x22x2\x22:571,\x22y2\x22:679},{\x22x1\x22:571,\x22y1\x22:679,\x22x2\x22:575,\x22y2\x22:661},{\x22x1\x22:575,\x22y1\x22:661,\x22x2\x22:576,\x22y2\x22:638},{\x22x1\x22:576,\x22y1\x22:638,\x22x2\x22:574,\x22y2\x22:622},{\x22x1\x22:574,\x22y1\x22:622,\x22x2\x22:571,\x22y2\x22:606},{\x22x1\x22:571,\x22y1\x22:606,\x22x2\x22:559,\x22y2\x22:591},{\x22x1\x22:559,\x22y1\x22:591,\x22x2\x22:545,\x22y2\x22:584},{\x22x1\x22:545,\x22y1\x22:584,\x22x2\x22:531,\x22y2\x22:583},{\x22x1\x22:531,\x22y1\x22:583,\x22x2\x22:515,\x22y2\x22:591},{\x22x1\x22:515,\x22y1\x22:591,\x22x2\x22:504,\x22y2\x22:606},{\x22x1\x22:504,\x22y1\x22:606,\x22x2\x22:498,\x22y2\x22:628},{\x22x1\x22:498,\x22y1\x22:628,\x22x2\x22:498,\x22y2\x22:658}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:61440,\x22x\x22:288,\x22y\x22:198,\x22z\x22:-20.125},{\x22spawn_group_id\x22:61455,\x22x\x22:224,\x22y\x22:640,\x22z\x22:-24.125},{\x22spawn_group_id\x22:61479,\x22x\x22:856,\x22y\x22:362,\x22z\x22:59.75},{\x22spawn_group_id\x22:61483,\x22x\x22:267,\x22y\x22:1131,\x22z\x22:-52.125},{\x22spawn_group_id\x22:61486,\x22x\x22:470,\x22y\x22:1131,\x22z\x22:-52.125},{\x22spawn_group_id\x22:61500,\x22x\x22:857,\x22y\x22:439,\x22z\x22:31.75},{\x22spawn_group_id\x22:61504,\x22x\x22:481,\x22y\x22:1148,\x22z\x22:-52.125}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

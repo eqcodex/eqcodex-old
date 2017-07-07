@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>a cryptic prophet | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">a cryptic prophet</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>85</td></tr>
+                            <tr><td>HP:</td><td>8075</td></tr>
+                            <tr><td>Damage:</td><td>0-4</td></tr>
+                            <tr><td>Zone:</td><td>Kaesora Library</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>a cryptic prophet Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Aderirse-Bur-35089.html">Aderirse Bur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Alkalai-Loam-34885.html">Alkalai Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Battle-Fractured-Diamond-17554.html">Battle Fractured Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Cabilisian-Diamond-17556.html">Cabilisian Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Chronal-Resonance-Dust-40581.html">Chronal Resonance Dust</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-XV-44560.html">Consigned Bite of the Shissar XV</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Battleaxe-50628.html">Elegant Defiant Battleaxe</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Bow-50629.html">Elegant Defiant Bow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Breastplate-50221.html">Elegant Defiant Breastplate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Buckler-50631.html">Elegant Defiant Buckler</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Boots-50225.html">Elegant Defiant Chain Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Coif-50226.html">Elegant Defiant Chain Coif</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Gauntlets-50224.html">Elegant Defiant Chain Gauntlets</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Leggings-50228.html">Elegant Defiant Chain Leggings</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Sleeves-50227.html">Elegant Defiant Chain Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Tunic-50229.html">Elegant Defiant Chain Tunic</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Fireborn-Axe-50622.html">Elegant Defiant Fireborn Axe</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Goshenite-50617.html">Elegant Defiant Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Knuckle-Guards-50625.html">Elegant Defiant Knuckle Guards</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Boots-50233.html">Elegant Defiant Leather Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Cap-50234.html">Elegant Defiant Leather Cap</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Sleeves-50235.html">Elegant Defiant Leather Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Wristguard-50231.html">Elegant Defiant Leather Wristguard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Nightblade-50623.html">Elegant Defiant Nightblade</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Boots-50217.html">Elegant Defiant Plate Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Bracer-50213.html">Elegant Defiant Plate Bracer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Greaves-50220.html">Elegant Defiant Plate Greaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Helm-50218.html">Elegant Defiant Plate Helm</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Vambraces-50219.html">Elegant Defiant Plate Vambraces</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Sceptre-50620.html">Elegant Defiant Sceptre</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Gloves-50241.html">Elegant Defiant Silk Gloves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Pantaloons-50245.html">Elegant Defiant Silk Pantaloons</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Sleeves-50244.html">Elegant Defiant Silk Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Wristguard-50238.html">Elegant Defiant Silk Wristguard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Square-Hammer-50619.html">Elegant Defiant Square Hammer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Warhammer-50626.html">Elegant Defiant Warhammer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Animal-Pelt-34236.html">Exquisite Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Marrow-34900.html">Exquisite Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Silk-34223.html">Exquisite Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Spinneret-Fluid-34913.html">Exquisite Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Extruded-Underfoot-Diamond-47099.html">Extruded Underfoot Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Animal-Pelt-34235.html">Flawless Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Silk-34222.html">Flawless Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Spinneret-Fluid-34912.html">Flawless Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Harmonagate-97003.html">Harmonagate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iksar-Blood-22522.html">Iksar Blood</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iksar-Meat-21961.html">Iksar Meat</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Animal-Pelt-48163.html">Immaculate Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Marrow-48907.html">Immaculate Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Silk-48892.html">Immaculate Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Spinneret-Fluid-48908.html">Immaculate Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Porous-Loam-34886.html">Porous Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Caladium-44950.html">Pristine Caladium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Delphinium-44976.html">Pristine Delphinium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Laburnum-44961.html">Pristine Laburnum</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Larkspur-44939.html">Pristine Larkspur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Muscimol-44917.html">Pristine Muscimol</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Oleander-44928.html">Pristine Oleander</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Privit-44968.html">Pristine Privit</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Choresine-Sample-44820.html">Purified Grade AA Choresine Sample</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Gormar-Venom-44775.html">Purified Grade AA Gormar Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Mamba-Venom-44790.html">Purified Grade AA Mamba Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Nigriventer-Venom-44760.html">Purified Grade AA Nigriventer Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Taipan-Venom-44805.html">Purified Grade AA Taipan Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Amber-Nihilite-37859.html">Raw Amber Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Crimson-Nihilite-58067.html">Raw Crimson Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Binding-Powder-36287.html">Rune Binding Powder</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scale-Ore-45891.html">Scale Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Rough-Spell-Tablet-64915.html">Smudged Rough Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Runic-Spell-Tablet-64918.html">Smudged Runic Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Druzzils-Psalm-of-Potency-RkII-117793.html">Song: Druzzil&#39;s Psalm of Potency Rk.II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Pulse-of-Rodcet-RkII-117811.html">Song: Pulse of Rodcet Rk.II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Severilous-Chant-of-Poison-RkII-117805.html">Song: Severilous&#39; Chant of Poison Rk.II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Song-Voice-of-the-Mindshear-RkII-117775.html">Song: Voice of the Mindshear Rk.II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Fine-Spell-Tablet-64917.html">Sooty Fine Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Spell-Tablet-64916.html">Sooty Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Abolish-Corruption-Rk-II-118057.html">Spell: Abolish Corruption Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aegis-of-Xadrith-Rk-II-118333.html">Spell: Aegis of Xadrith Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ainas-Faithful-Rk-II-119163.html">Spell: Aina&#39;s Faithful Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ancestral-Obligation-Rk-II-119184.html">Spell: Ancestral Obligation Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Aura-of-Loyalty-Rk-II-118042.html">Spell: Aura of Loyalty Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Bark-of-Tashan-Rk-II-118324.html">Spell: Bark of Tashan Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Beam-of-Molten-Scoria-Rk-II-118562.html">Spell: Beam of Molten Scoria Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Befuddle-Rk-II-118357.html">Spell: Befuddle Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Blanched-Frost-Rk-II-118155.html">Spell: Blanched Frost Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Brells-Loamy-Ward-Rk-II-118843.html">Spell: Brell&#39;s Loamy Ward Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Brierbloom-Coat-Rk-II-118188.html">Spell: Brierbloom Coat Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Burning-Pyroshroud-Rk-II-118599.html">Spell: Burning Pyroshroud Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cadmaels-Mending-Rk-II-117862.html">Spell: Cadmael&#39;s Mending Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cataclysm-Ash-Rk-II-118924.html">Spell: Cataclysm Ash Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Chant-of-the-Burynai-Rk-II-118218.html">Spell: Chant of the Burynai Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Circle-of-Brimstoneskin-Rk-II-118533.html">Spell: Circle of Brimstoneskin Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Clawing-Darkness-Rk-II-118724.html">Spell: Clawing Darkness Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cloak-of-Feathers-Rk-II-118959.html">Spell: Cloak of Feathers Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Cloudburst-Levin-Rk-II-119342.html">Spell: Cloudburst Levin Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Coldwhisper-Breath-Rk-II-118170.html">Spell: Coldwhisper Breath Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Color-Conflux-Rk-II-118354.html">Spell: Color Conflux Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Corpseskin-Rk-II-118733.html">Spell: Corpseskin Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Crush-of-the-Crying-Seas-Rk-II-118891.html">Spell: Crush of the Crying Seas Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Crystalwing-Shell-Rk-II-119374.html">Spell: Crystalwing Shell Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Dannals-Mending-Rk-II-119172.html">Spell: Dannal&#39;s Mending Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Daverons-Pyroblade-Rk-II-119383.html">Spell: Daveron&#39;s Pyroblade Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Deluge-of-Thunderbolts-Rk-II-118536.html">Spell: Deluge of Thunderbolts Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Dermal-Brimstone-Rk-II-118351.html">Spell: Dermal Brimstone Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Devout-Cleansing-Rk-II-118837.html">Spell: Devout Cleansing Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Devout-Elixir-Rk-II-118003.html">Spell: Devout Elixir Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Devout-Light-Rk-II-118012.html">Spell: Devout Light Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Distract-the-Departed-Rk-II-118118.html">Spell: Distract the Departed Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Divine-Eminence-Rk-II-118084.html">Spell: Divine Eminence Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Drape-of-Korafax-Rk-II-119091.html">Spell: Drape of Korafax Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Earthen-Stance-Rk-II-118515.html">Spell: Earthen Stance Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Eyes-of-the-Nocturnal-Rk-II-118951.html">Spell: Eyes of the Nocturnal Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Fellids-Grasp-Rk-II-118715.html">Spell: Fellid&#39;s Grasp Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Fellids-Pallid-Haze-Rk-II-118747.html">Spell: Fellid&#39;s Pallid Haze Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Flarelure-Rk-II-119350.html">Spell: Flarelure Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Frigid-Lance-Rk-II-117892.html">Spell: Frigid Lance Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Gallantry-Rk-II-117997.html">Spell: Gallantry Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Halcyon-Whisper-Rk-II-119220.html">Spell: Halcyon Whisper Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Heartpierce-Rk-II-118965.html">Spell: Heartpierce Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Horde-of-the-Hive-Rk-II-118185.html">Spell: Horde of the Hive Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ice-Sheet-Rk-II-119196.html">Spell: Ice Sheet Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Iceflame-Efflux-Rk-II-118565.html">Spell: Iceflame Efflux Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Icesheet-Cascade-Rk-II-119380.html">Spell: Icesheet Cascade Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Icy-Stitches-Rk-II-118739.html">Spell: Icy Stitches Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Jenecas-Mark-Rk-II-118831.html">Spell: Jeneca&#39;s Mark Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Legion-of-Xadrith-Rk-II-118363.html">Spell: Legion of Xadrith Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Lesson-of-Compunction-Rk-II-118828.html">Spell: Lesson of Compunction Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Magmatic-Eruption-Rk-II-119377.html">Spell: Magmatic Eruption Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Malarian-Spear-Rk-II-119085.html">Spell: Malarian Spear Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mark-of-the-Pious-Rk-II-118867.html">Spell: Mark of the Pious Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mark-of-the-Unsullied-Rk-II-118036.html">Spell: Mark of the Unsullied Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mind-Decomposition-Rk-II-118777.html">Spell: Mind Decomposition Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mornings-Glory-Rk-II-118276.html">Spell: Morning&#39;s Glory Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Mortal-Coil-Rk-II-118712.html">Spell: Mortal Coil Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Nectar-of-the-Slitheren-Rk-II-119230.html">Spell: Nectar of the Slitheren Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Palladium-of-Vie-Rk-II-118009.html">Spell: Palladium of Vie Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Plague-of-the-Karanas-Rk-II-119124.html">Spell: Plague of the Karanas Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Prescience-Rk-II-118330.html">Spell: Prescience Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Promised-Reknit-Rk-II-118285.html">Spell: Promised Reknit Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Providence-Rk-II-118124.html">Spell: Providence Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Purified-Blood-Rk-II-118140.html">Spell: Purified Blood Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Putrescence-Rk-II-118789.html">Spell: Putrescence Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Renewal-of-Cadwin-Rk-II-118524.html">Spell: Renewal of Cadwin Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Repel-Corruption-Rk-II-117994.html">Spell: Repel Corruption Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Reprehend-Rk-II-118006.html">Spell: Reprehend Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ribbon-Lightning-Rk-II-119359.html">Spell: Ribbon Lightning Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Rune-of-the-Void-Rk-II-118390.html">Spell: Rune of the Void Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Seduction-Rk-II-118327.html">Spell: Seduction Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Serene-Harvest-Rk-II-119336.html">Spell: Serene Harvest Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sermon-of-Castigation-Rk-II-118112.html">Spell: Sermon of Castigation Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shining-Light-Rk-II-118825.html">Spell: Shining Light Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Shroud-of-the-Blightborn-Rk-II-119058.html">Spell: Shroud of the Blightborn Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Silent-Edict-Rk-II-118063.html">Spell: Silent Edict Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Smother-Rk-II-118345.html">Spell: Smother Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sound-of-Reverberance-Rk-II-118015.html">Spell: Sound of Reverberance Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spinecoat-Rk-II-118989.html">Spell: Spinecoat Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spirit-of-Vaxztn-Rk-II-117880.html">Spell: Spirit of Vaxztn Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Spiritual-Edification-Rk-II-117895.html">Spell: Spiritual Edification Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Summer-Solstice-Rk-II-118209.html">Spell: Summer Solstice Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Summon-Frigid-Paradox-Rk-II-118483.html">Spell: Summon Frigid Paradox Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Sunsinge-Rk-II-118200.html">Spell: Sunsinge Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Symbol-of-Jeneca-Rk-II-118813.html">Spell: Symbol of Jeneca Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Talendors-Presence-Rk-II-119333.html">Spell: Talendor&#39;s Presence Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Talisman-of-the-Resolute-Rk-II-119193.html">Spell: Talisman of the Resolute Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Tectonic-Tumult-Rk-II-118039.html">Spell: Tectonic Tumult Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-The-Downward-Spiral-Rk-II-118360.html">Spell: The Downward Spiral Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Torrid-Sands-Rk-II-118521.html">Spell: Torrid Sands Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Tsetsian-Endemic-Rk-II-117902.html">Spell: Tsetsian Endemic Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Unwavering-Hammer-of-Zeal-Rk-II-118081.html">Spell: Unwavering Hammer of Zeal Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Venrils-Covenant-Rk-II-119082.html">Spell: Venril&#39;s Covenant Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Voidwhisper-Manacles-Rk-II-118736.html">Spell: Voidwhisper Manacles Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Wand-of-Ethereal-Transvergence-Rk-II-118493.html">Spell: Wand of Ethereal Transvergence Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Ward-of-Admonishment-Rk-II-118048.html">Spell: Ward of Admonishment Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Wave-of-Remitment-Rk-II-118840.html">Spell: Wave of Remitment Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spell-Yowl-of-the-Predator-Rk-II-118921.html">Spell: Yowl of the Predator Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Spongy-Loam-48956.html">Spongy Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Stained-Fine-Runic-Spell-Tablet-64919.html">Stained Fine Runic Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staurolite-97002.html">Staurolite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Superb-Marrow-34899.html">Superb Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taaffeite-97286.html">Taaffeite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tablet-of-Forgotten-Lore-51916.html">Tablet of Forgotten Lore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tantalum-Ore-34249.html">Tantalum Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Titanium-Ore-34248.html">Titanium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Armor-of-Endless-Honor-Rk-II-118852.html">Tome of Armor of Endless Honor Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Blood-Hatchet-Rk-II-117961.html">Tome of Blood Hatchet Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Chrono-Projection-Rk-II-118667.html">Tome of Chrono Projection Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Echo-of-Distraction-Rk-II-118640.html">Tome of Echo of Distraction Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Fourth-Wind-Rk-II-117964.html">Tome of Fourth Wind Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Jarring-Clash-Rk-II-117958.html">Tome of Jarring Clash Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Jugular-Slice-Rk-II-119019.html">Tome of Jugular Slice Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Lesson-in-Toxicity-Rk-II-119001.html">Tome of Lesson in Toxicity Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Maelstrom-Blade-Rk-II-119279.html">Tome of Maelstrom Blade Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Malarian-Carapace-Rk-II-119115.html">Tome of Malarian Carapace Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Pinpoint-Vitals-Rk-II-119013.html">Tome of Pinpoint Vitals Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Punch-Through-Rk-II-119303.html">Tome of Punch Through Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Temple-Bash-Rk-II-117955.html">Tome of Temple Bash Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tome-of-Withstand-Rk-II-118882.html">Tome of Withstand Rk. II</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Black-Sapphire-37846.html">Uncut Black Sapphire</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Combine-Star-37845.html">Uncut Combine Star</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Morganite-37849.html">Uncut Morganite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Rubellite-37852.html">Uncut Rubellite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Urticaceae-35086.html">Urticaceae</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vanadium-Ore-48162.html">Vanadium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:-153,\x22y1\x22:1776,\x22x2\x22:-153,\x22y2\x22:1767},{\x22x1\x22:-95,\x22y1\x22:1775,\x22x2\x22:-153,\x22y2\x22:1776},{\x22x1\x22:-95,\x22y1\x22:1905,\x22x2\x22:-95,\x22y2\x22:1775},{\x22x1\x22:-225,\x22y1\x22:1905,\x22x2\x22:-95,\x22y2\x22:1905},{\x22x1\x22:-225,\x22y1\x22:1818,\x22x2\x22:-225,\x22y2\x22:1905},{\x22x1\x22:-224,\x22y1\x22:1776,\x22x2\x22:-225,\x22y2\x22:1818},{\x22x1\x22:-165,\x22y1\x22:1780,\x22x2\x22:-224,\x22y2\x22:1776},{\x22x1\x22:-165,\x22y1\x22:1767,\x22x2\x22:-165,\x22y2\x22:1780},{\x22x1\x22:-232,\x22y1\x22:1768,\x22x2\x22:-165,\x22y2\x22:1767},{\x22x1\x22:-233,\x22y1\x22:1912,\x22x2\x22:-232,\x22y2\x22:1768},{\x22x1\x22:-88,\x22y1\x22:1912,\x22x2\x22:-233,\x22y2\x22:1912},{\x22x1\x22:-87,\x22y1\x22:1766,\x22x2\x22:-88,\x22y2\x22:1912},{\x22x1\x22:-153,\x22y1\x22:1767,\x22x2\x22:-87,\x22y2\x22:1766},{\x22x1\x22:2250,\x22y1\x22:1417,\x22x2\x22:2255,\x22y2\x22:1279},{\x22x1\x22:2375,\x22y1\x22:1414,\x22x2\x22:2250,\x22y2\x22:1417},{\x22x1\x22:2374,\x22y1\x22:1457,\x22x2\x22:2375,\x22y2\x22:1414},{\x22x1\x22:2400,\x22y1\x22:1457,\x22x2\x22:2374,\x22y2\x22:1457},{\x22x1\x22:2434,\x22y1\x22:1455,\x22x2\x22:2400,\x22y2\x22:1457},{\x22x1\x22:2434,\x22y1\x22:1496,\x22x2\x22:2434,\x22y2\x22:1455},{\x22x1\x22:2476,\x22y1\x22:1497,\x22x2\x22:2434,\x22y2\x22:1496},{\x22x1\x22:2476,\x22y1\x22:1375,\x22x2\x22:2476,\x22y2\x22:1497},{\x22x1\x22:2383,\x22y1\x22:1377,\x22x2\x22:2476,\x22y2\x22:1375},{\x22x1\x22:2383,\x22y1\x22:1383,\x22x2\x22:2383,\x22y2\x22:1377},{\x22x1\x22:2287,\x22y1\x22:1382,\x22x2\x22:2383,\x22y2\x22:1383},{\x22x1\x22:2286,\x22y1\x22:1380,\x22x2\x22:2287,\x22y2\x22:1382},{\x22x1\x22:2287,\x22y1\x22:1276,\x22x2\x22:2286,\x22y2\x22:1380},{\x22x1\x22:2287,\x22y1\x22:876,\x22x2\x22:2287,\x22y2\x22:962},{\x22x1\x22:2288,\x22y1\x22:875,\x22x2\x22:2287,\x22y2\x22:876},{\x22x1\x22:2288,\x22y1\x22:854,\x22x2\x22:2288,\x22y2\x22:875},{\x22x1\x22:2308,\x22y1\x22:857,\x22x2\x22:2288,\x22y2\x22:854},{\x22x1\x22:2310,\x22y1\x22:857,\x22x2\x22:2308,\x22y2\x22:857},{\x22x1\x22:2416,\x22y1\x22:856,\x22x2\x22:2310,\x22y2\x22:857},{\x22x1\x22:2414,\x22y1\x22:886,\x22x2\x22:2416,\x22y2\x22:856},{\x22x1\x22:2506,\x22y1\x22:885,\x22x2\x22:2414,\x22y2\x22:886},{\x22x1\x22:2506,\x22y1\x22:793,\x22x2\x22:2506,\x22y2\x22:885},{\x22x1\x22:2493,\x22y1\x22:794,\x22x2\x22:2506,\x22y2\x22:793},{\x22x1\x22:2493,\x22y1\x22:784,\x22x2\x22:2493,\x22y2\x22:794},{\x22x1\x22:2515,\x22y1\x22:783,\x22x2\x22:2493,\x22y2\x22:784},{\x22x1\x22:2516,\x22y1\x22:744,\x22x2\x22:2515,\x22y2\x22:783},{\x22x1\x22:2445,\x22y1\x22:743,\x22x2\x22:2516,\x22y2\x22:744},{\x22x1\x22:2446,\x22y1\x22:780,\x22x2\x22:2445,\x22y2\x22:743},{\x22x1\x22:2479,\x22y1\x22:782,\x22x2\x22:2446,\x22y2\x22:780},{\x22x1\x22:2481,\x22y1\x22:793,\x22x2\x22:2479,\x22y2\x22:782},{\x22x1\x22:2416,\x22y1\x22:793,\x22x2\x22:2481,\x22y2\x22:793},{\x22x1\x22:2415,\x22y1\x22:822,\x22x2\x22:2416,\x22y2\x22:793},{\x22x1\x22:2414,\x22y1\x22:825,\x22x2\x22:2415,\x22y2\x22:822},{\x22x1\x22:2254,\x22y1\x22:820,\x22x2\x22:2414,\x22y2\x22:825},{\x22x1\x22:2254,\x22y1\x22:966,\x22x2\x22:2254,\x22y2\x22:820},{\x22x1\x22:2278,\x22y1\x22:1074,\x22x2\x22:2254,\x22y2\x22:1061},{\x22x1\x22:2286,\x22y1\x22:1084,\x22x2\x22:2278,\x22y2\x22:1074},{\x22x1\x22:2291,\x22y1\x22:1098,\x22x2\x22:2286,\x22y2\x22:1084},{\x22x1\x22:2290,\x22y1\x22:1111,\x22x2\x22:2291,\x22y2\x22:1098},{\x22x1\x22:2271,\x22y1\x22:1111,\x22x2\x22:2290,\x22y2\x22:1111},{\x22x1\x22:2271,\x22y1\x22:1107,\x22x2\x22:2271,\x22y2\x22:1111},{\x22x1\x22:2283,\x22y1\x22:1107,\x22x2\x22:2271,\x22y2\x22:1107},{\x22x1\x22:2281,\x22y1\x22:1093,\x22x2\x22:2283,\x22y2\x22:1107},{\x22x1\x22:2266,\x22y1\x22:1074,\x22x2\x22:2281,\x22y2\x22:1093},{\x22x1\x22:2253,\x22y1\x22:1067,\x22x2\x22:2266,\x22y2\x22:1074},{\x22x1\x22:2195,\x22y1\x22:1067,\x22x2\x22:2253,\x22y2\x22:1067},{\x22x1\x22:2175,\x22y1\x22:1083,\x22x2\x22:2195,\x22y2\x22:1067},{\x22x1\x22:2165,\x22y1\x22:1102,\x22x2\x22:2175,\x22y2\x22:1083},{\x22x1\x22:2164,\x22y1\x22:1141,\x22x2\x22:2165,\x22y2\x22:1102},{\x22x1\x22:2173,\x22y1\x22:1158,\x22x2\x22:2164,\x22y2\x22:1141},{\x22x1\x22:2202,\x22y1\x22:1173,\x22x2\x22:2173,\x22y2\x22:1158},{\x22x1\x22:2263,\x22y1\x22:1168,\x22x2\x22:2202,\x22y2\x22:1173},{\x22x1\x22:2278,\x22y1\x22:1156,\x22x2\x22:2263,\x22y2\x22:1168},{\x22x1\x22:2286,\x22y1\x22:1141,\x22x2\x22:2278,\x22y2\x22:1156},{\x22x1\x22:2280,\x22y1\x22:1133,\x22x2\x22:2286,\x22y2\x22:1141},{\x22x1\x22:2268,\x22y1\x22:1132,\x22x2\x22:2280,\x22y2\x22:1133},{\x22x1\x22:2268,\x22y1\x22:1128,\x22x2\x22:2268,\x22y2\x22:1132},{\x22x1\x22:2291,\x22y1\x22:1128,\x22x2\x22:2268,\x22y2\x22:1128},{\x22x1\x22:2277,\x22y1\x22:1165,\x22x2\x22:2291,\x22y2\x22:1128},{\x22x1\x22:2256,\x22y1\x22:1180,\x22x2\x22:2277,\x22y2\x22:1165},{\x22x1\x22:2246,\x22y1\x22:1181,\x22x2\x22:2256,\x22y2\x22:1180},{\x22x1\x22:2226,\x22y1\x22:1183,\x22x2\x22:2246,\x22y2\x22:1181},{\x22x1\x22:2200,\x22y1\x22:1181,\x22x2\x22:2226,\x22y2\x22:1183},{\x22x1\x22:2170,\x22y1\x22:1161,\x22x2\x22:2200,\x22y2\x22:1181},{\x22x1\x22:2156,\x22y1\x22:1122,\x22x2\x22:2170,\x22y2\x22:1161},{\x22x1\x22:2169,\x22y1\x22:1079,\x22x2\x22:2156,\x22y2\x22:1122},{\x22x1\x22:2197,\x22y1\x22:1060,\x22x2\x22:2169,\x22y2\x22:1079},{\x22x1\x22:2252,\x22y1\x22:1059,\x22x2\x22:2197,\x22y2\x22:1060},{\x22x1\x22:2219,\x22y1\x22:1047,\x22x2\x22:2254,\x22y2\x22:1046},{\x22x1\x22:2198,\x22y1\x22:1047,\x22x2\x22:2219,\x22y2\x22:1047},{\x22x1\x22:2197,\x22y1\x22:1043,\x22x2\x22:2198,\x22y2\x22:1047},{\x22x1\x22:2125,\x22y1\x22:1048,\x22x2\x22:2197,\x22y2\x22:1043},{\x22x1\x22:2106,\x22y1\x22:1065,\x22x2\x22:2125,\x22y2\x22:1048},{\x22x1\x22:2086,\x22y1\x22:1104,\x22x2\x22:2106,\x22y2\x22:1065},{\x22x1\x22:1884,\x22y1\x22:1106,\x22x2\x22:2086,\x22y2\x22:1104},{\x22x1\x22:1883,\x22y1\x22:1105,\x22x2\x22:1884,\x22y2\x22:1106},{\x22x1\x22:1893,\x22y1\x22:1097,\x22x2\x22:1883,\x22y2\x22:1105},{\x22x1\x22:1921,\x22y1\x22:1096,\x22x2\x22:1893,\x22y2\x22:1097},{\x22x1\x22:2057,\x22y1\x22:1097,\x22x2\x22:1921,\x22y2\x22:1096},{\x22x1\x22:2088,\x22y1\x22:1097,\x22x2\x22:2057,\x22y2\x22:1097},{\x22x1\x22:2089,\x22y1\x22:1090,\x22x2\x22:2088,\x22y2\x22:1097},{\x22x1\x22:2089,\x22y1\x22:1088,\x22x2\x22:2089,\x22y2\x22:1090},{\x22x1\x22:2106,\x22y1\x22:1060,\x22x2\x22:2089,\x22y2\x22:1088},{\x22x1\x22:2122,\x22y1\x22:1048,\x22x2\x22:2106,\x22y2\x22:1060},{\x22x1\x22:2146,\x22y1\x22:1042,\x22x2\x22:2122,\x22y2\x22:1048},{\x22x1\x22:2149,\x22y1\x22:1042,\x22x2\x22:2146,\x22y2\x22:1042},{\x22x1\x22:2198,\x22y1\x22:1043,\x22x2\x22:2149,\x22y2\x22:1042},{\x22x1\x22:2199,\x22y1\x22:921,\x22x2\x22:2198,\x22y2\x22:1043},{\x22x1\x22:2144,\x22y1\x22:920,\x22x2\x22:2199,\x22y2\x22:921},{\x22x1\x22:2069,\x22y1\x22:938,\x22x2\x22:2144,\x22y2\x22:920},{\x22x1\x22:1992,\x22y1\x22:980,\x22x2\x22:2069,\x22y2\x22:938},{\x22x1\x22:1939,\x22y1\x22:1045,\x22x2\x22:1992,\x22y2\x22:980},{\x22x1\x22:1927,\x22y1\x22:1096,\x22x2\x22:1939,\x22y2\x22:1045},{\x22x1\x22:1735,\x22y1\x22:950,\x22x2\x22:1735,\x22y2\x22:948},{\x22x1\x22:1736,\x22y1\x22:951,\x22x2\x22:1735,\x22y2\x22:950},{\x22x1\x22:1749,\x22y1\x22:952,\x22x2\x22:1736,\x22y2\x22:951},{\x22x1\x22:1750,\x22y1\x22:1000,\x22x2\x22:1749,\x22y2\x22:952},{\x22x1\x22:1742,\x22y1\x22:1000,\x22x2\x22:1750,\x22y2\x22:1000},{\x22x1\x22:1742,\x22y1\x22:1016,\x22x2\x22:1742,\x22y2\x22:1000},{\x22x1\x22:1753,\x22y1\x22:1017,\x22x2\x22:1742,\x22y2\x22:1016},{\x22x1\x22:1751,\x22y1\x22:1074,\x22x2\x22:1753,\x22y2\x22:1017},{\x22x1\x22:1750,\x22y1\x22:1075,\x22x2\x22:1751,\x22y2\x22:1074},{\x22x1\x22:1734,\x22y1\x22:1076,\x22x2\x22:1750,\x22y2\x22:1075},{\x22x1\x22:1733,\x22y1\x22:1285,\x22x2\x22:1734,\x22y2\x22:1076},{\x22x1\x22:1737,\x22y1\x22:1286,\x22x2\x22:1733,\x22y2\x22:1285},{\x22x1\x22:1737,\x22y1\x22:1350,\x22x2\x22:1737,\x22y2\x22:1286},{\x22x1\x22:1736,\x22y1\x22:1351,\x22x2\x22:1737,\x22y2\x22:1350},{\x22x1\x22:1734,\x22y1\x22:1492,\x22x2\x22:1736,\x22y2\x22:1351},{\x22x1\x22:1735,\x22y1\x22:1493,\x22x2\x22:1734,\x22y2\x22:1492},{\x22x1\x22:1736,\x22y1\x22:1494,\x22x2\x22:1735,\x22y2\x22:1493},{\x22x1\x22:1737,\x22y1\x22:1507,\x22x2\x22:1736,\x22y2\x22:1494},{\x22x1\x22:1807,\x22y1\x22:1505,\x22x2\x22:1737,\x22y2\x22:1507},{\x22x1\x22:1863,\x22y1\x22:1504,\x22x2\x22:1807,\x22y2\x22:1505},{\x22x1\x22:2101,\x22y1\x22:1503,\x22x2\x22:1863,\x22y2\x22:1504},{\x22x1\x22:2103,\x22y1\x22:1362,\x22x2\x22:2101,\x22y2\x22:1503},{\x22x1\x22:2069,\x22y1\x22:1354,\x22x2\x22:2103,\x22y2\x22:1362},{\x22x1\x22:2047,\x22y1\x22:1337,\x22x2\x22:2069,\x22y2\x22:1354},{\x22x1\x22:2030,\x22y1\x22:1344,\x22x2\x22:2047,\x22y2\x22:1337},{\x22x1\x22:1950,\x22y1\x22:1295,\x22x2\x22:2030,\x22y2\x22:1344},{\x22x1\x22:1908,\x22y1\x22:1235,\x22x2\x22:1950,\x22y2\x22:1295},{\x22x1\x22:1895,\x22y1\x22:1203,\x22x2\x22:1908,\x22y2\x22:1235},{\x22x1\x22:1880,\x22y1\x22:1192,\x22x2\x22:1895,\x22y2\x22:1203},{\x22x1\x22:1863,\x22y1\x22:1203,\x22x2\x22:1880,\x22y2\x22:1192},{\x22x1\x22:1857,\x22y1\x22:1215,\x22x2\x22:1863,\x22y2\x22:1203},{\x22x1\x22:1807,\x22y1\x22:1216,\x22x2\x22:1857,\x22y2\x22:1215},{\x22x1\x22:1806,\x22y1\x22:1205,\x22x2\x22:1807,\x22y2\x22:1216},{\x22x1\x22:1801,\x22y1\x22:1205,\x22x2\x22:1806,\x22y2\x22:1205},{\x22x1\x22:1801,\x22y1\x22:1161,\x22x2\x22:1801,\x22y2\x22:1205},{\x22x1\x22:1805,\x22y1\x22:1161,\x22x2\x22:1801,\x22y2\x22:1161},{\x22x1\x22:1805,\x22y1\x22:1151,\x22x2\x22:1805,\x22y2\x22:1161},{\x22x1\x22:1802,\x22y1\x22:1149,\x22x2\x22:1805,\x22y2\x22:1151},{\x22x1\x22:1801,\x22y1\x22:1096,\x22x2\x22:1802,\x22y2\x22:1149},{\x22x1\x22:1804,\x22y1\x22:1096,\x22x2\x22:1801,\x22y2\x22:1096},{\x22x1\x22:1805,\x22y1\x22:1079,\x22x2\x22:1804,\x22y2\x22:1096},{\x22x1\x22:1801,\x22y1\x22:1077,\x22x2\x22:1805,\x22y2\x22:1079},{\x22x1\x22:1801,\x22y1\x22:1039,\x22x2\x22:1801,\x22y2\x22:1077},{\x22x1\x22:1805,\x22y1\x22:1039,\x22x2\x22:1801,\x22y2\x22:1039},{\x22x1\x22:1805,\x22y1\x22:1027,\x22x2\x22:1805,\x22y2\x22:1039},{\x22x1\x22:1806,\x22y1\x22:1026,\x22x2\x22:1805,\x22y2\x22:1027},{\x22x1\x22:1858,\x22y1\x22:1025,\x22x2\x22:1806,\x22y2\x22:1026},{\x22x1\x22:1860,\x22y1\x22:1035,\x22x2\x22:1858,\x22y2\x22:1025},{\x22x1\x22:1867,\x22y1\x22:1042,\x22x2\x22:1860,\x22y2\x22:1035},{\x22x1\x22:1878,\x22y1\x22:1047,\x22x2\x22:1867,\x22y2\x22:1042},{\x22x1\x22:1893,\x22y1\x22:1042,\x22x2\x22:1878,\x22y2\x22:1047},{\x22x1\x22:1904,\x22y1\x22:1022,\x22x2\x22:1893,\x22y2\x22:1042},{\x22x1\x22:1901,\x22y1\x22:1006,\x22x2\x22:1904,\x22y2\x22:1022},{\x22x1\x22:1955,\x22y1\x22:940,\x22x2\x22:1901,\x22y2\x22:1006},{\x22x1\x22:2014,\x22y1\x22:908,\x22x2\x22:1955,\x22y2\x22:940},{\x22x1\x22:2059,\x22y1\x22:895,\x22x2\x22:2014,\x22y2\x22:908},{\x22x1\x22:2072,\x22y1\x22:881,\x22x2\x22:2059,\x22y2\x22:895},{\x22x1\x22:2099,\x22y1\x22:882,\x22x2\x22:2072,\x22y2\x22:881},{\x22x1\x22:2103,\x22y1\x22:876,\x22x2\x22:2099,\x22y2\x22:882},{\x22x1\x22:2103,\x22y1\x22:746,\x22x2\x22:2103,\x22y2\x22:876},{\x22x1\x22:2101,\x22y1\x22:745,\x22x2\x22:2103,\x22y2\x22:746},{\x22x1\x22:2100,\x22y1\x22:738,\x22x2\x22:2101,\x22y2\x22:745},{\x22x1\x22:2090,\x22y1\x22:735,\x22x2\x22:2100,\x22y2\x22:738},{\x22x1\x22:1774,\x22y1\x22:734,\x22x2\x22:2090,\x22y2\x22:735},{\x22x1\x22:1739,\x22y1\x22:737,\x22x2\x22:1774,\x22y2\x22:734},{\x22x1\x22:1739,\x22y1\x22:738,\x22x2\x22:1739,\x22y2\x22:737},{\x22x1\x22:1734,\x22y1\x22:742,\x22x2\x22:1739,\x22y2\x22:738},{\x22x1\x22:1735,\x22y1\x22:946,\x22x2\x22:1734,\x22y2\x22:742},{\x22x1\x22:1254,\x22y1\x22:1072,\x22x2\x22:1255,\x22y2\x22:1216},{\x22x1\x22:1270,\x22y1\x22:1067,\x22x2\x22:1254,\x22y2\x22:1072},{\x22x1\x22:1272,\x22y1\x22:1024,\x22x2\x22:1270,\x22y2\x22:1067},{\x22x1\x22:1460,\x22y1\x22:1024,\x22x2\x22:1272,\x22y2\x22:1024},{\x22x1\x22:1520,\x22y1\x22:1025,\x22x2\x22:1460,\x22y2\x22:1024},{\x22x1\x22:1559,\x22y1\x22:1024,\x22x2\x22:1520,\x22y2\x22:1025},{\x22x1\x22:1687,\x22y1\x22:1024,\x22x2\x22:1559,\x22y2\x22:1024},{\x22x1\x22:1689,\x22y1\x22:1068,\x22x2\x22:1687,\x22y2\x22:1024},{\x22x1\x22:1705,\x22y1\x22:1068,\x22x2\x22:1689,\x22y2\x22:1068},{\x22x1\x22:1706,\x22y1\x22:1278,\x22x2\x22:1705,\x22y2\x22:1068},{\x22x1\x22:1704,\x22y1\x22:1288,\x22x2\x22:1706,\x22y2\x22:1278},{\x22x1\x22:1700,\x22y1\x22:1536,\x22x2\x22:1704,\x22y2\x22:1288},{\x22x1\x22:1708,\x22y1\x22:1537,\x22x2\x22:1700,\x22y2\x22:1536},{\x22x1\x22:1794,\x22y1\x22:1534,\x22x2\x22:1708,\x22y2\x22:1537},{\x22x1\x22:1868,\x22y1\x22:1536,\x22x2\x22:1794,\x22y2\x22:1534},{\x22x1\x22:2137,\x22y1\x22:1538,\x22x2\x22:1868,\x22y2\x22:1536},{\x22x1\x22:2137,\x22y1\x22:1529,\x22x2\x22:2137,\x22y2\x22:1538},{\x22x1\x22:2139,\x22y1\x22:1370,\x22x2\x22:2137,\x22y2\x22:1529},{\x22x1\x22:2179,\x22y1\x22:1374,\x22x2\x22:2139,\x22y2\x22:1370},{\x22x1\x22:2185,\x22y1\x22:1368,\x22x2\x22:2179,\x22y2\x22:1374},{\x22x1\x22:2197,\x22y1\x22:1362,\x22x2\x22:2185,\x22y2\x22:1368},{\x22x1\x22:2199,\x22y1\x22:1264,\x22x2\x22:2197,\x22y2\x22:1362},{\x22x1\x22:2200,\x22y1\x22:1262,\x22x2\x22:2199,\x22y2\x22:1264},{\x22x1\x22:2201,\x22y1\x22:1262,\x22x2\x22:2200,\x22y2\x22:1262},{\x22x1\x22:2203,\x22y1\x22:1198,\x22x2\x22:2201,\x22y2\x22:1262},{\x22x1\x22:2246,\x22y1\x22:1197,\x22x2\x22:2203,\x22y2\x22:1198},{\x22x1\x22:2248,\x22y1\x22:1198,\x22x2\x22:2246,\x22y2\x22:1197},{\x22x1\x22:2248,\x22y1\x22:1200,\x22x2\x22:2248,\x22y2\x22:1198},{\x22x1\x22:2250,\x22y1\x22:1200,\x22x2\x22:2248,\x22y2\x22:1200},{\x22x1\x22:2250,\x22y1\x22:1205,\x22x2\x22:2250,\x22y2\x22:1200},{\x22x1\x22:2246,\x22y1\x22:1279,\x22x2\x22:2250,\x22y2\x22:1205},{\x22x1\x22:2293,\x22y1\x22:1279,\x22x2\x22:2246,\x22y2\x22:1279},{\x22x1\x22:2370,\x22y1\x22:1245,\x22x2\x22:2293,\x22y2\x22:1279},{\x22x1\x22:2411,\x22y1\x22:1178,\x22x2\x22:2370,\x22y2\x22:1245},{\x22x1\x22:2418,\x22y1\x22:1148,\x22x2\x22:2411,\x22y2\x22:1178},{\x22x1\x22:2365,\x22y1\x22:1144,\x22x2\x22:2418,\x22y2\x22:1148},{\x22x1\x22:2351,\x22y1\x22:1132,\x22x2\x22:2365,\x22y2\x22:1144},{\x22x1\x22:2360,\x22y1\x22:1090,\x22x2\x22:2351,\x22y2\x22:1132},{\x22x1\x22:2414,\x22y1\x22:1091,\x22x2\x22:2360,\x22y2\x22:1090},{\x22x1\x22:2416,\x22y1\x22:1090,\x22x2\x22:2414,\x22y2\x22:1091},{\x22x1\x22:2402,\x22y1\x22:1045,\x22x2\x22:2416,\x22y2\x22:1090},{\x22x1\x22:2367,\x22y1\x22:995,\x22x2\x22:2402,\x22y2\x22:1045},{\x22x1\x22:2300,\x22y1\x22:966,\x22x2\x22:2367,\x22y2\x22:995},{\x22x1\x22:2247,\x22y1\x22:959,\x22x2\x22:2300,\x22y2\x22:966},{\x22x1\x22:2246,\x22y1\x22:975,\x22x2\x22:2247,\x22y2\x22:959},{\x22x1\x22:2247,\x22y1\x22:1039,\x22x2\x22:2246,\x22y2\x22:975},{\x22x1\x22:2242,\x22y1\x22:1041,\x22x2\x22:2247,\x22y2\x22:1039},{\x22x1\x22:2194,\x22y1\x22:1039,\x22x2\x22:2242,\x22y2\x22:1041},{\x22x1\x22:2197,\x22y1\x22:1029,\x22x2\x22:2194,\x22y2\x22:1039},{\x22x1\x22:2196,\x22y1\x22:901,\x22x2\x22:2197,\x22y2\x22:1029},{\x22x1\x22:2197,\x22y1\x22:883,\x22x2\x22:2196,\x22y2\x22:901},{\x22x1\x22:2176,\x22y1\x22:872,\x22x2\x22:2197,\x22y2\x22:883},{\x22x1\x22:2141,\x22y1\x22:870,\x22x2\x22:2176,\x22y2\x22:872},{\x22x1\x22:2136,\x22y1\x22:847,\x22x2\x22:2141,\x22y2\x22:870},{\x22x1\x22:2135,\x22y1\x22:707,\x22x2\x22:2136,\x22y2\x22:847},{\x22x1\x22:2134,\x22y1\x22:706,\x22x2\x22:2135,\x22y2\x22:707},{\x22x1\x22:2077,\x22y1\x22:707,\x22x2\x22:2134,\x22y2\x22:706},{\x22x1\x22:1764,\x22y1\x22:705,\x22x2\x22:2077,\x22y2\x22:707},{\x22x1\x22:1704,\x22y1\x22:701,\x22x2\x22:1764,\x22y2\x22:705},{\x22x1\x22:1703,\x22y1\x22:952,\x22x2\x22:1704,\x22y2\x22:701},{\x22x1\x22:1694,\x22y1\x22:953,\x22x2\x22:1703,\x22y2\x22:952},{\x22x1\x22:1694,\x22y1\x22:997,\x22x2\x22:1694,\x22y2\x22:953},{\x22x1\x22:1580,\x22y1\x22:996,\x22x2\x22:1694,\x22y2\x22:997},{\x22x1\x22:1526,\x22y1\x22:996,\x22x2\x22:1580,\x22y2\x22:996},{\x22x1\x22:1454,\x22y1\x22:997,\x22x2\x22:1526,\x22y2\x22:996},{\x22x1\x22:1275,\x22y1\x22:995,\x22x2\x22:1454,\x22y2\x22:997},{\x22x1\x22:1271,\x22y1\x22:983,\x22x2\x22:1275,\x22y2\x22:995},{\x22x1\x22:1272,\x22y1\x22:940,\x22x2\x22:1271,\x22y2\x22:983},{\x22x1\x22:1208,\x22y1\x22:940,\x22x2\x22:1272,\x22y2\x22:940},{\x22x1\x22:1209,\x22y1\x22:1001,\x22x2\x22:1208,\x22y2\x22:940},{\x22x1\x22:1217,\x22y1\x22:1001,\x22x2\x22:1209,\x22y2\x22:1001},{\x22x1\x22:1217,\x22y1\x22:1021,\x22x2\x22:1217,\x22y2\x22:1001},{\x22x1\x22:1208,\x22y1\x22:1021,\x22x2\x22:1217,\x22y2\x22:1021},{\x22x1\x22:1209,\x22y1\x22:1074,\x22x2\x22:1208,\x22y2\x22:1021},{\x22x1\x22:1225,\x22y1\x22:1074,\x22x2\x22:1209,\x22y2\x22:1074},{\x22x1\x22:1223,\x22y1\x22:1209,\x22x2\x22:1225,\x22y2\x22:1074},{\x22x1\x22:1224,\x22y1\x22:1221,\x22x2\x22:1223,\x22y2\x22:1209},{\x22x1\x22:1204,\x22y1\x22:1277,\x22x2\x22:1198,\x22y2\x22:1303},{\x22x1\x22:1228,\x22y1\x22:1261,\x22x2\x22:1204,\x22y2\x22:1277},{\x22x1\x22:1241,\x22y1\x22:1259,\x22x2\x22:1228,\x22y2\x22:1261},{\x22x1\x22:1242,\x22y1\x22:1258,\x22x2\x22:1241,\x22y2\x22:1259},{\x22x1\x22:1248,\x22y1\x22:1257,\x22x2\x22:1242,\x22y2\x22:1258},{\x22x1\x22:1263,\x22y1\x22:1262,\x22x2\x22:1248,\x22y2\x22:1257},{\x22x1\x22:1286,\x22y1\x22:1300,\x22x2\x22:1263,\x22y2\x22:1262},{\x22x1\x22:1285,\x22y1\x22:1302,\x22x2\x22:1286,\x22y2\x22:1300},{\x22x1\x22:1283,\x22y1\x22:1302,\x22x2\x22:1285,\x22y2\x22:1302},{\x22x1\x22:1277,\x22y1\x22:1322,\x22x2\x22:1283,\x22y2\x22:1302},{\x22x1\x22:1257,\x22y1\x22:1341,\x22x2\x22:1277,\x22y2\x22:1322},{\x22x1\x22:1224,\x22y1\x22:1340,\x22x2\x22:1257,\x22y2\x22:1341},{\x22x1\x22:1213,\x22y1\x22:1333,\x22x2\x22:1224,\x22y2\x22:1340},{\x22x1\x22:1203,\x22y1\x22:1317,\x22x2\x22:1213,\x22y2\x22:1333},{\x22x1\x22:1199,\x22y1\x22:1304,\x22x2\x22:1203,\x22y2\x22:1317},{\x22x1\x22:1255,\x22y1\x22:1085,\x22x2\x22:1256,\x22y2\x22:1129},{\x22x1\x22:1258,\x22y1\x22:1085,\x22x2\x22:1255,\x22y2\x22:1085},{\x22x1\x22:1259,\x22y1\x22:1016,\x22x2\x22:1258,\x22y2\x22:1085},{\x22x1\x22:1256,\x22y1\x22:1013,\x22x2\x22:1259,\x22y2\x22:1016},{\x22x1\x22:1255,\x22y1\x22:887,\x22x2\x22:1256,\x22y2\x22:1013},{\x22x1\x22:1256,\x22y1\x22:886,\x22x2\x22:1255,\x22y2\x22:887},{\x22x1\x22:1257,\x22y1\x22:865,\x22x2\x22:1256,\x22y2\x22:886},{\x22x1\x22:1354,\x22y1\x22:864,\x22x2\x22:1257,\x22y2\x22:865},{\x22x1\x22:1440,\x22y1\x22:865,\x22x2\x22:1354,\x22y2\x22:864},{\x22x1\x22:1484,\x22y1\x22:866,\x22x2\x22:1440,\x22y2\x22:865},{\x22x1\x22:1485,\x22y1\x22:867,\x22x2\x22:1484,\x22y2\x22:866},{\x22x1\x22:1499,\x22y1\x22:867,\x22x2\x22:1485,\x22y2\x22:867},{\x22x1\x22:1505,\x22y1\x22:881,\x22x2\x22:1499,\x22y2\x22:867},{\x22x1\x22:1506,\x22y1\x22:968,\x22x2\x22:1505,\x22y2\x22:881},{\x22x1\x22:1505,\x22y1\x22:1061,\x22x2\x22:1506,\x22y2\x22:968},{\x22x1\x22:1504,\x22y1\x22:1240,\x22x2\x22:1505,\x22y2\x22:1061},{\x22x1\x22:1488,\x22y1\x22:1240,\x22x2\x22:1504,\x22y2\x22:1240},{\x22x1\x22:1490,\x22y1\x22:1285,\x22x2\x22:1488,\x22y2\x22:1240},{\x22x1\x22:1492,\x22y1\x22:1286,\x22x2\x22:1490,\x22y2\x22:1285},{\x22x1\x22:1502,\x22y1\x22:1284,\x22x2\x22:1492,\x22y2\x22:1286},{\x22x1\x22:1333,\x22y1\x22:1285,\x22x2\x22:1502,\x22y2\x22:1284},{\x22x1\x22:1322,\x22y1\x22:1260,\x22x2\x22:1333,\x22y2\x22:1285},{\x22x1\x22:1321,\x22y1\x22:1236,\x22x2\x22:1322,\x22y2\x22:1260},{\x22x1\x22:1318,\x22y1\x22:1226,\x22x2\x22:1321,\x22y2\x22:1236},{\x22x1\x22:1309,\x22y1\x22:1217,\x22x2\x22:1318,\x22y2\x22:1226},{\x22x1\x22:1170,\x22y1\x22:1217,\x22x2\x22:1309,\x22y2\x22:1217},{\x22x1\x22:1156,\x22y1\x22:1231,\x22x2\x22:1170,\x22y2\x22:1217},{\x22x1\x22:1158,\x22y1\x22:1369,\x22x2\x22:1156,\x22y2\x22:1231},{\x22x1\x22:1159,\x22y1\x22:1370,\x22x2\x22:1158,\x22y2\x22:1369},{\x22x1\x22:1161,\x22y1\x22:1370,\x22x2\x22:1159,\x22y2\x22:1370},{\x22x1\x22:1171,\x22y1\x22:1383,\x22x2\x22:1161,\x22y2\x22:1370},{\x22x1\x22:1309,\x22y1\x22:1381,\x22x2\x22:1171,\x22y2\x22:1383},{\x22x1\x22:1322,\x22y1\x22:1372,\x22x2\x22:1309,\x22y2\x22:1381},{\x22x1\x22:1325,\x22y1\x22:1339,\x22x2\x22:1322,\x22y2\x22:1372},{\x22x1\x22:1339,\x22y1\x22:1313,\x22x2\x22:1325,\x22y2\x22:1339},{\x22x1\x22:1340,\x22y1\x22:1314,\x22x2\x22:1339,\x22y2\x22:1313},{\x22x1\x22:1486,\x22y1\x22:1315,\x22x2\x22:1340,\x22y2\x22:1314},{\x22x1\x22:1486,\x22y1\x22:1363,\x22x2\x22:1486,\x22y2\x22:1315},{\x22x1\x22:1504,\x22y1\x22:1364,\x22x2\x22:1486,\x22y2\x22:1363},{\x22x1\x22:1507,\x22y1\x22:1539,\x22x2\x22:1504,\x22y2\x22:1364},{\x22x1\x22:1505,\x22y1\x22:1624,\x22x2\x22:1507,\x22y2\x22:1539},{\x22x1\x22:1503,\x22y1\x22:1697,\x22x2\x22:1505,\x22y2\x22:1624},{\x22x1\x22:1327,\x22y1\x22:1696,\x22x2\x22:1503,\x22y2\x22:1697},{\x22x1\x22:1255,\x22y1\x22:1693,\x22x2\x22:1327,\x22y2\x22:1696},{\x22x1\x22:1255,\x22y1\x22:1535,\x22x2\x22:1255,\x22y2\x22:1693},{\x22x1\x22:1255,\x22y1\x22:1471,\x22x2\x22:1255,\x22y2\x22:1535},{\x22x1\x22:1226,\x22y1\x22:1541,\x22x2\x22:1225,\x22y2\x22:1470},{\x22x1\x22:1225,\x22y1\x22:1679,\x22x2\x22:1226,\x22y2\x22:1541},{\x22x1\x22:1224,\x22y1\x22:1727,\x22x2\x22:1225,\x22y2\x22:1679},{\x22x1\x22:1343,\x22y1\x22:1724,\x22x2\x22:1224,\x22y2\x22:1727},{\x22x1\x22:1416,\x22y1\x22:1724,\x22x2\x22:1343,\x22y2\x22:1724},{\x22x1\x22:1535,\x22y1\x22:1728,\x22x2\x22:1416,\x22y2\x22:1724},{\x22x1\x22:1533,\x22y1\x22:1598,\x22x2\x22:1535,\x22y2\x22:1728},{\x22x1\x22:1534,\x22y1\x22:1533,\x22x2\x22:1533,\x22y2\x22:1598},{\x22x1\x22:1536,\x22y1\x22:1362,\x22x2\x22:1534,\x22y2\x22:1533},{\x22x1\x22:1555,\x22y1\x22:1362,\x22x2\x22:1536,\x22y2\x22:1362},{\x22x1\x22:1554,\x22y1\x22:1312,\x22x2\x22:1555,\x22y2\x22:1362},{\x22x1\x22:1545,\x22y1\x22:1314,\x22x2\x22:1554,\x22y2\x22:1312},{\x22x1\x22:1545,\x22y1\x22:1293,\x22x2\x22:1545,\x22y2\x22:1314},{\x22x1\x22:1553,\x22y1\x22:1292,\x22x2\x22:1545,\x22y2\x22:1293},{\x22x1\x22:1553,\x22y1\x22:1243,\x22x2\x22:1553,\x22y2\x22:1292},{\x22x1\x22:1535,\x22y1\x22:1244,\x22x2\x22:1553,\x22y2\x22:1243},{\x22x1\x22:1535,\x22y1\x22:1102,\x22x2\x22:1535,\x22y2\x22:1244},{\x22x1\x22:1535,\x22y1\x22:947,\x22x2\x22:1535,\x22y2\x22:1102},{\x22x1\x22:1540,\x22y1\x22:833,\x22x2\x22:1535,\x22y2\x22:947},{\x22x1\x22:1446,\x22y1\x22:837,\x22x2\x22:1540,\x22y2\x22:833},{\x22x1\x22:1355,\x22y1\x22:836,\x22x2\x22:1446,\x22y2\x22:837},{\x22x1\x22:1224,\x22y1\x22:831,\x22x2\x22:1355,\x22y2\x22:836},{\x22x1\x22:1225,\x22y1\x22:938,\x22x2\x22:1224,\x22y2\x22:831},{\x22x1\x22:1226,\x22y1\x22:1021,\x22x2\x22:1225,\x22y2\x22:938},{\x22x1\x22:1225,\x22y1\x22:1085,\x22x2\x22:1226,\x22y2\x22:1021},{\x22x1\x22:1225,\x22y1\x22:1141,\x22x2\x22:1225,\x22y2\x22:1085},{\x22x1\x22:1092,\x22y1\x22:1279,\x22x2\x22:1097,\x22y2\x22:1255},{\x22x1\x22:1105,\x22y1\x22:1361,\x22x2\x22:1092,\x22y2\x22:1279},{\x22x1\x22:1149,\x22y1\x22:1416,\x22x2\x22:1105,\x22y2\x22:1361},{\x22x1\x22:1174,\x22y1\x22:1433,\x22x2\x22:1149,\x22y2\x22:1416},{\x22x1\x22:1193,\x22y1\x22:1438,\x22x2\x22:1174,\x22y2\x22:1433},{\x22x1\x22:1290,\x22y1\x22:1439,\x22x2\x22:1193,\x22y2\x22:1438},{\x22x1\x22:1311,\x22y1\x22:1431,\x22x2\x22:1290,\x22y2\x22:1439},{\x22x1\x22:1367,\x22y1\x22:1378,\x22x2\x22:1311,\x22y2\x22:1431},{\x22x1\x22:1379,\x22y1\x22:1358,\x22x2\x22:1367,\x22y2\x22:1378},{\x22x1\x22:1322,\x22y1\x22:1358,\x22x2\x22:1379,\x22y2\x22:1358},{\x22x1\x22:1321,\x22y1\x22:1311,\x22x2\x22:1322,\x22y2\x22:1358},{\x22x1\x22:1351,\x22y1\x22:1312,\x22x2\x22:1321,\x22y2\x22:1311},{\x22x1\x22:1410,\x22y1\x22:1311,\x22x2\x22:1351,\x22y2\x22:1312},{\x22x1\x22:1411,\x22y1\x22:1310,\x22x2\x22:1410,\x22y2\x22:1311},{\x22x1\x22:1411,\x22y1\x22:1309,\x22x2\x22:1411,\x22y2\x22:1310},{\x22x1\x22:1410,\x22y1\x22:1308,\x22x2\x22:1411,\x22y2\x22:1309},{\x22x1\x22:1331,\x22y1\x22:1308,\x22x2\x22:1410,\x22y2\x22:1308},{\x22x1\x22:1332,\x22y1\x22:1294,\x22x2\x22:1331,\x22y2\x22:1308},{\x22x1\x22:1411,\x22y1\x22:1292,\x22x2\x22:1332,\x22y2\x22:1294},{\x22x1\x22:1411,\x22y1\x22:1288,\x22x2\x22:1411,\x22y2\x22:1292},{\x22x1\x22:1406,\x22y1\x22:1288,\x22x2\x22:1411,\x22y2\x22:1288},{\x22x1\x22:1355,\x22y1\x22:1289,\x22x2\x22:1406,\x22y2\x22:1288},{\x22x1\x22:1323,\x22y1\x22:1288,\x22x2\x22:1355,\x22y2\x22:1289},{\x22x1\x22:1323,\x22y1\x22:1244,\x22x2\x22:1323,\x22y2\x22:1288},{\x22x1\x22:1373,\x22y1\x22:1244,\x22x2\x22:1323,\x22y2\x22:1244},{\x22x1\x22:1364,\x22y1\x22:1216,\x22x2\x22:1373,\x22y2\x22:1244},{\x22x1\x22:1315,\x22y1\x22:1168,\x22x2\x22:1364,\x22y2\x22:1216},{\x22x1\x22:1268,\x22y1\x22:1159,\x22x2\x22:1315,\x22y2\x22:1168},{\x22x1\x22:1174,\x22y1\x22:1164,\x22x2\x22:1268,\x22y2\x22:1159},{\x22x1\x22:1110,\x22y1\x22:1229,\x22x2\x22:1174,\x22y2\x22:1164},{\x22x1\x22:1097,\x22y1\x22:1255,\x22x2\x22:1110,\x22y2\x22:1229},{\x22x1\x22:1055,\x22y1\x22:1403,\x22x2\x22:1048,\x22y2\x22:1271},{\x22x1\x22:1126,\x22y1\x22:1476,\x22x2\x22:1055,\x22y2\x22:1403},{\x22x1\x22:1164,\x22y1\x22:1503,\x22x2\x22:1126,\x22y2\x22:1476},{\x22x1\x22:1165,\x22y1\x22:1529,\x22x2\x22:1164,\x22y2\x22:1503},{\x22x1\x22:1169,\x22y1\x22:1529,\x22x2\x22:1165,\x22y2\x22:1529},{\x22x1\x22:1170,\x22y1\x22:1525,\x22x2\x22:1169,\x22y2\x22:1529},{\x22x1\x22:1172,\x22y1\x22:1480,\x22x2\x22:1170,\x22y2\x22:1525},{\x22x1\x22:1171,\x22y1\x22:1471,\x22x2\x22:1172,\x22y2\x22:1480},{\x22x1\x22:1170,\x22y1\x22:1470,\x22x2\x22:1171,\x22y2\x22:1471},{\x22x1\x22:1167,\x22y1\x22:1471,\x22x2\x22:1170,\x22y2\x22:1470},{\x22x1\x22:1166,\x22y1\x22:1490,\x22x2\x22:1167,\x22y2\x22:1471},{\x22x1\x22:1136,\x22y1\x22:1480,\x22x2\x22:1166,\x22y2\x22:1490},{\x22x1\x22:1054,\x22y1\x22:1389,\x22x2\x22:1136,\x22y2\x22:1480},{\x22x1\x22:1066,\x22y1\x22:1194,\x22x2\x22:1054,\x22y2\x22:1389},{\x22x1\x22:1136,\x22y1\x22:1126,\x22x2\x22:1066,\x22y2\x22:1194},{\x22x1\x22:1170,\x22y1\x22:1117,\x22x2\x22:1136,\x22y2\x22:1126},{\x22x1\x22:1171,\x22y1\x22:1102,\x22x2\x22:1170,\x22y2\x22:1117},{\x22x1\x22:1170,\x22y1\x22:1093,\x22x2\x22:1171,\x22y2\x22:1102},{\x22x1\x22:1171,\x22y1\x22:1072,\x22x2\x22:1170,\x22y2\x22:1093},{\x22x1\x22:1165,\x22y1\x22:1071,\x22x2\x22:1171,\x22y2\x22:1072},{\x22x1\x22:1162,\x22y1\x22:1106,\x22x2\x22:1165,\x22y2\x22:1071},{\x22x1\x22:1140,\x22y1\x22:1115,\x22x2\x22:1162,\x22y2\x22:1106},{\x22x1\x22:1096,\x22y1\x22:1149,\x22x2\x22:1140,\x22y2\x22:1115},{\x22x1\x22:1046,\x22y1\x22:1230,\x22x2\x22:1096,\x22y2\x22:1149},{\x22x1\x22:1049,\x22y1\x22:1247,\x22x2\x22:1046,\x22y2\x22:1230},{\x22x1\x22:1048,\x22y1\x22:1248,\x22x2\x22:1049,\x22y2\x22:1247},{\x22x1\x22:1048,\x22y1\x22:1271,\x22x2\x22:1048,\x22y2\x22:1248},{\x22x1\x22:-6,\x22y1\x22:45,\x22x2\x22:-50,\x22y2\x22:44},{\x22x1\x22:-5,\x22y1\x22:89,\x22x2\x22:-6,\x22y2\x22:45},{\x22x1\x22:4,\x22y1\x22:90,\x22x2\x22:-5,\x22y2\x22:89},{\x22x1\x22:5,\x22y1\x22:108,\x22x2\x22:4,\x22y2\x22:90},{\x22x1\x22:-1,\x22y1\x22:108,\x22x2\x22:5,\x22y2\x22:108},{\x22x1\x22:-2,\x22y1\x22:239,\x22x2\x22:-1,\x22y2\x22:108},{\x22x1\x22:-2,\x22y1\x22:273,\x22x2\x22:-2,\x22y2\x22:239},{\x22x1\x22:3,\x22y1\x22:273,\x22x2\x22:-2,\x22y2\x22:273},{\x22x1\x22:2,\x22y1\x22:289,\x22x2\x22:3,\x22y2\x22:273},{\x22x1\x22:-4,\x22y1\x22:288,\x22x2\x22:2,\x22y2\x22:289},{\x22x1\x22:-5,\x22y1\x22:336,\x22x2\x22:-4,\x22y2\x22:288},{\x22x1\x22:-54,\x22y1\x22:336,\x22x2\x22:-5,\x22y2\x22:336},{\x22x1\x22:-54,\x22y1\x22:344,\x22x2\x22:-54,\x22y2\x22:336},{\x22x1\x22:-177,\x22y1\x22:343,\x22x2\x22:-54,\x22y2\x22:344},{\x22x1\x22:-176,\x22y1\x22:467,\x22x2\x22:-177,\x22y2\x22:343},{\x22x1\x22:-183,\x22y1\x22:465,\x22x2\x22:-176,\x22y2\x22:467},{\x22x1\x22:-217,\x22y1\x22:464,\x22x2\x22:-183,\x22y2\x22:465},{\x22x1\x22:-218,\x22y1\x22:577,\x22x2\x22:-217,\x22y2\x22:464},{\x22x1\x22:-190,\x22y1\x22:579,\x22x2\x22:-218,\x22y2\x22:577},{\x22x1\x22:-190,\x22y1\x22:491,\x22x2\x22:-190,\x22y2\x22:579},{\x22x1\x22:-176,\x22y1\x22:490,\x22x2\x22:-190,\x22y2\x22:491},{\x22x1\x22:-177,\x22y1\x22:578,\x22x2\x22:-176,\x22y2\x22:490},{\x22x1\x22:-177,\x22y1\x22:696,\x22x2\x22:-177,\x22y2\x22:578},{\x22x1\x22:-176,\x22y1\x22:697,\x22x2\x22:-177,\x22y2\x22:696},{\x22x1\x22:23,\x22y1\x22:696,\x22x2\x22:-176,\x22y2\x22:697},{\x22x1\x22:24,\x22y1\x22:735,\x22x2\x22:23,\x22y2\x22:696},{\x22x1\x22:64,\x22y1\x22:736,\x22x2\x22:24,\x22y2\x22:735},{\x22x1\x22:64,\x22y1\x22:902,\x22x2\x22:64,\x22y2\x22:736},{\x22x1\x22:24,\x22y1\x22:902,\x22x2\x22:64,\x22y2\x22:902},{\x22x1\x22:24,\x22y1\x22:943,\x22x2\x22:24,\x22y2\x22:902},{\x22x1\x22:-19,\x22y1\x22:942,\x22x2\x22:24,\x22y2\x22:943},{\x22x1\x22:-21,\x22y1\x22:942,\x22x2\x22:-19,\x22y2\x22:942},{\x22x1\x22:-64,\x22y1\x22:942,\x22x2\x22:-21,\x22y2\x22:942},{\x22x1\x22:-65,\x22y1\x22:942,\x22x2\x22:-64,\x22y2\x22:942},{\x22x1\x22:-64,\x22y1\x22:902,\x22x2\x22:-65,\x22y2\x22:942},{\x22x1\x22:-173,\x22y1\x22:901,\x22x2\x22:-64,\x22y2\x22:902},{\x22x1\x22:-173,\x22y1\x22:931,\x22x2\x22:-173,\x22y2\x22:901},{\x22x1\x22:-95,\x22y1\x22:931,\x22x2\x22:-173,\x22y2\x22:931},{\x22x1\x22:-95,\x22y1\x22:945,\x22x2\x22:-95,\x22y2\x22:931},{\x22x1\x22:-107,\x22y1\x22:945,\x22x2\x22:-95,\x22y2\x22:945},{\x22x1\x22:-309,\x22y1\x22:945,\x22x2\x22:-107,\x22y2\x22:945},{\x22x1\x22:-309,\x22y1\x22:937,\x22x2\x22:-309,\x22y2\x22:945},{\x22x1\x22:-388,\x22y1\x22:938,\x22x2\x22:-309,\x22y2\x22:937},{\x22x1\x22:-388,\x22y1\x22:943,\x22x2\x22:-388,\x22y2\x22:938},{\x22x1\x22:-410,\x22y1\x22:942,\x22x2\x22:-388,\x22y2\x22:943},{\x22x1\x22:-410,\x22y1\x22:934,\x22x2\x22:-410,\x22y2\x22:942},{\x22x1\x22:-506,\x22y1\x22:933,\x22x2\x22:-410,\x22y2\x22:934},{\x22x1\x22:-507,\x22y1\x22:1010,\x22x2\x22:-506,\x22y2\x22:933},{\x22x1\x22:-498,\x22y1\x22:1011,\x22x2\x22:-507,\x22y2\x22:1010},{\x22x1\x22:-496,\x22y1\x22:1012,\x22x2\x22:-498,\x22y2\x22:1011},{\x22x1\x22:-497,\x22y1\x22:1027,\x22x2\x22:-496,\x22y2\x22:1012},{\x22x1\x22:-502,\x22y1\x22:1027,\x22x2\x22:-497,\x22y2\x22:1027},{\x22x1\x22:-503,\x22y1\x22:1067,\x22x2\x22:-502,\x22y2\x22:1027},{\x22x1\x22:-502,\x22y1\x22:1149,\x22x2\x22:-503,\x22y2\x22:1067},{\x22x1\x22:-501,\x22y1\x22:1190,\x22x2\x22:-502,\x22y2\x22:1149},{\x22x1\x22:-495,\x22y1\x22:1190,\x22x2\x22:-501,\x22y2\x22:1190},{\x22x1\x22:-495,\x22y1\x22:1205,\x22x2\x22:-495,\x22y2\x22:1190},{\x22x1\x22:-501,\x22y1\x22:1206,\x22x2\x22:-495,\x22y2\x22:1205},{\x22x1\x22:-500,\x22y1\x22:1291,\x22x2\x22:-501,\x22y2\x22:1206},{\x22x1\x22:-497,\x22y1\x22:1292,\x22x2\x22:-500,\x22y2\x22:1291},{\x22x1\x22:-495,\x22y1\x22:1384,\x22x2\x22:-497,\x22y2\x22:1292},{\x22x1\x22:-537,\x22y1\x22:1384,\x22x2\x22:-495,\x22y2\x22:1384},{\x22x1\x22:-536,\x22y1\x22:1423,\x22x2\x22:-537,\x22y2\x22:1384},{\x22x1\x22:-623,\x22y1\x22:1423,\x22x2\x22:-536,\x22y2\x22:1423},{\x22x1\x22:-622,\x22y1\x22:1386,\x22x2\x22:-623,\x22y2\x22:1423},{\x22x1\x22:-738,\x22y1\x22:1384,\x22x2\x22:-622,\x22y2\x22:1386},{\x22x1\x22:-738,\x22y1\x22:1415,\x22x2\x22:-738,\x22y2\x22:1384},{\x22x1\x22:-723,\x22y1\x22:1429,\x22x2\x22:-738,\x22y2\x22:1415},{\x22x1\x22:-721,\x22y1\x22:1446,\x22x2\x22:-723,\x22y2\x22:1429},{\x22x1\x22:-735,\x22y1\x22:1459,\x22x2\x22:-721,\x22y2\x22:1446},{\x22x1\x22:-735,\x22y1\x22:1498,\x22x2\x22:-735,\x22y2\x22:1459},{\x22x1\x22:-625,\x22y1\x22:1495,\x22x2\x22:-735,\x22y2\x22:1498},{\x22x1\x22:-625,\x22y1\x22:1457,\x22x2\x22:-625,\x22y2\x22:1495},{\x22x1\x22:-536,\x22y1\x22:1456,\x22x2\x22:-625,\x22y2\x22:1457},{\x22x1\x22:-535,\x22y1\x22:1496,\x22x2\x22:-536,\x22y2\x22:1456},{\x22x1\x22:-495,\x22y1\x22:1498,\x22x2\x22:-535,\x22y2\x22:1496},{\x22x1\x22:-497,\x22y1\x22:1585,\x22x2\x22:-495,\x22y2\x22:1498},{\x22x1\x22:-536,\x22y1\x22:1584,\x22x2\x22:-497,\x22y2\x22:1585},{\x22x1\x22:-537,\x22y1\x22:1696,\x22x2\x22:-536,\x22y2\x22:1584},{\x22x1\x22:-503,\x22y1\x22:1697,\x22x2\x22:-537,\x22y2\x22:1696},{\x22x1\x22:-486,\x22y1\x22:1681,\x22x2\x22:-503,\x22y2\x22:1697},{\x22x1\x22:-480,\x22y1\x22:1681,\x22x2\x22:-486,\x22y2\x22:1681},{\x22x1\x22:-458,\x22y1\x22:1696,\x22x2\x22:-480,\x22y2\x22:1681},{\x22x1\x22:-424,\x22y1\x22:1696,\x22x2\x22:-458,\x22y2\x22:1696},{\x22x1\x22:-421,\x22y1\x22:1599,\x22x2\x22:-424,\x22y2\x22:1696},{\x22x1\x22:-421,\x22y1\x22:1593,\x22x2\x22:-421,\x22y2\x22:1599},{\x22x1\x22:-422,\x22y1\x22:1585,\x22x2\x22:-421,\x22y2\x22:1593},{\x22x1\x22:-464,\x22y1\x22:1588,\x22x2\x22:-422,\x22y2\x22:1585},{\x22x1\x22:-467,\x22y1\x22:1497,\x22x2\x22:-464,\x22y2\x22:1588},{\x22x1\x22:-424,\x22y1\x22:1497,\x22x2\x22:-467,\x22y2\x22:1497},{\x22x1\x22:-423,\x22y1\x22:1496,\x22x2\x22:-424,\x22y2\x22:1497},{\x22x1\x22:-425,\x22y1\x22:1455,\x22x2\x22:-423,\x22y2\x22:1496},{\x22x1\x22:-360,\x22y1\x22:1456,\x22x2\x22:-425,\x22y2\x22:1455},{\x22x1\x22:-330,\x22y1\x22:1457,\x22x2\x22:-360,\x22y2\x22:1456},{\x22x1\x22:-282,\x22y1\x22:1457,\x22x2\x22:-330,\x22y2\x22:1457},{\x22x1\x22:-177,\x22y1\x22:1455,\x22x2\x22:-282,\x22y2\x22:1457},{\x22x1\x22:-176,\x22y1\x22:1544,\x22x2\x22:-177,\x22y2\x22:1455},{\x22x1\x22:-340,\x22y1\x22:1545,\x22x2\x22:-176,\x22y2\x22:1544},{\x22x1\x22:-340,\x22y1\x22:1586,\x22x2\x22:-340,\x22y2\x22:1545},{\x22x1\x22:-340,\x22y1\x22:1587,\x22x2\x22:-340,\x22y2\x22:1586},{\x22x1\x22:-335,\x22y1\x22:1588,\x22x2\x22:-340,\x22y2\x22:1587},{\x22x1\x22:-334,\x22y1\x22:1613,\x22x2\x22:-335,\x22y2\x22:1588},{\x22x1\x22:-332,\x22y1\x22:1613,\x22x2\x22:-334,\x22y2\x22:1613},{\x22x1\x22:-322,\x22y1\x22:1635,\x22x2\x22:-332,\x22y2\x22:1613},{\x22x1\x22:-333,\x22y1\x22:1648,\x22x2\x22:-322,\x22y2\x22:1635},{\x22x1\x22:-334,\x22y1\x22:1964,\x22x2\x22:-333,\x22y2\x22:1648},{\x22x1\x22:-340,\x22y1\x22:1964,\x22x2\x22:-334,\x22y2\x22:1964},{\x22x1\x22:-339,\x22y1\x22:2021,\x22x2\x22:-340,\x22y2\x22:1964},{\x22x1\x22:-321,\x22y1\x22:2023,\x22x2\x22:-339,\x22y2\x22:2021},{\x22x1\x22:-321,\x22y1\x22:2015,\x22x2\x22:-321,\x22y2\x22:2023},{\x22x1\x22:-314,\x22y1\x22:2013,\x22x2\x22:-321,\x22y2\x22:2015},{\x22x1\x22:-241,\x22y1\x22:2015,\x22x2\x22:-314,\x22y2\x22:2013},{\x22x1\x22:-242,\x22y1\x22:2027,\x22x2\x22:-241,\x22y2\x22:2015},{\x22x1\x22:-309,\x22y1\x22:2026,\x22x2\x22:-242,\x22y2\x22:2027},{\x22x1\x22:-310,\x22y1\x22:2132,\x22x2\x22:-309,\x22y2\x22:2026},{\x22x1\x22:-189,\x22y1\x22:2132,\x22x2\x22:-310,\x22y2\x22:2132},{\x22x1\x22:-190,\x22y1\x22:2033,\x22x2\x22:-189,\x22y2\x22:2132},{\x22x1\x22:-229,\x22y1\x22:2033,\x22x2\x22:-190,\x22y2\x22:2033},{\x22x1\x22:-230,\x22y1\x22:2014,\x22x2\x22:-229,\x22y2\x22:2033},{\x22x1\x22:-175,\x22y1\x22:2014,\x22x2\x22:-230,\x22y2\x22:2014},{\x22x1\x22:-175,\x22y1\x22:2017,\x22x2\x22:-175,\x22y2\x22:2014},{\x22x1\x22:-175,\x22y1\x22:2018,\x22x2\x22:-175,\x22y2\x22:2017},{\x22x1\x22:-176,\x22y1\x22:2060,\x22x2\x22:-175,\x22y2\x22:2018},{\x22x1\x22:-177,\x22y1\x22:2143,\x22x2\x22:-176,\x22y2\x22:2060},{\x22x1\x22:-273,\x22y1\x22:2146,\x22x2\x22:-177,\x22y2\x22:2143},{\x22x1\x22:-272,\x22y1\x22:2133,\x22x2\x22:-273,\x22y2\x22:2146},{\x22x1\x22:-268,\x22y1\x22:2134,\x22x2\x22:-272,\x22y2\x22:2133},{\x22x1\x22:-268,\x22y1\x22:2135,\x22x2\x22:-268,\x22y2\x22:2134},{\x22x1\x22:-222,\x22y1\x22:2135,\x22x2\x22:-268,\x22y2\x22:2135},{\x22x1\x22:-221,\x22y1\x22:2114,\x22x2\x22:-222,\x22y2\x22:2135},{\x22x1\x22:-217,\x22y1\x22:2114,\x22x2\x22:-221,\x22y2\x22:2114},{\x22x1\x22:-217,\x22y1\x22:2135,\x22x2\x22:-217,\x22y2\x22:2114},{\x22x1\x22:-185,\x22y1\x22:2135,\x22x2\x22:-217,\x22y2\x22:2135},{\x22x1\x22:-185,\x22y1\x22:2103,\x22x2\x22:-185,\x22y2\x22:2135},{\x22x1\x22:-215,\x22y1\x22:2102,\x22x2\x22:-185,\x22y2\x22:2103},{\x22x1\x22:-216,\x22y1\x22:2107,\x22x2\x22:-215,\x22y2\x22:2102},{\x22x1\x22:-221,\x22y1\x22:2105,\x22x2\x22:-216,\x22y2\x22:2107},{\x22x1\x22:-221,\x22y1\x22:2070,\x22x2\x22:-221,\x22y2\x22:2105},{\x22x1\x22:-218,\x22y1\x22:2069,\x22x2\x22:-221,\x22y2\x22:2070},{\x22x1\x22:-217,\x22y1\x22:2096,\x22x2\x22:-218,\x22y2\x22:2069},{\x22x1\x22:-185,\x22y1\x22:2098,\x22x2\x22:-217,\x22y2\x22:2096},{\x22x1\x22:-186,\x22y1\x22:2052,\x22x2\x22:-185,\x22y2\x22:2098},{\x22x1\x22:-187,\x22y1\x22:2051,\x22x2\x22:-186,\x22y2\x22:2052},{\x22x1\x22:-185,\x22y1\x22:2025,\x22x2\x22:-187,\x22y2\x22:2051},{\x22x1\x22:-216,\x22y1\x22:2025,\x22x2\x22:-185,\x22y2\x22:2025},{\x22x1\x22:-216,\x22y1\x22:2045,\x22x2\x22:-216,\x22y2\x22:2025},{\x22x1\x22:-196,\x22y1\x22:2045,\x22x2\x22:-216,\x22y2\x22:2045},{\x22x1\x22:-195,\x22y1\x22:2052,\x22x2\x22:-196,\x22y2\x22:2045},{\x22x1\x22:-215,\x22y1\x22:2053,\x22x2\x22:-195,\x22y2\x22:2052},{\x22x1\x22:-216,\x22y1\x22:2061,\x22x2\x22:-215,\x22y2\x22:2053},{\x22x1\x22:-222,\x22y1\x22:2062,\x22x2\x22:-216,\x22y2\x22:2061},{\x22x1\x22:-221,\x22y1\x22:2025,\x22x2\x22:-222,\x22y2\x22:2062},{\x22x1\x22:-309,\x22y1\x22:2025,\x22x2\x22:-221,\x22y2\x22:2025},{\x22x1\x22:-310,\x22y1\x22:2134,\x22x2\x22:-309,\x22y2\x22:2025},{\x22x1\x22:-287,\x22y1\x22:2134,\x22x2\x22:-310,\x22y2\x22:2134},{\x22x1\x22:-287,\x22y1\x22:2142,\x22x2\x22:-287,\x22y2\x22:2134},{\x22x1\x22:-291,\x22y1\x22:2142,\x22x2\x22:-287,\x22y2\x22:2142},{\x22x1\x22:-292,\x22y1\x22:2141,\x22x2\x22:-291,\x22y2\x22:2142},{\x22x1\x22:-319,\x22y1\x22:2141,\x22x2\x22:-292,\x22y2\x22:2141},{\x22x1\x22:-318,\x22y1\x22:2177,\x22x2\x22:-319,\x22y2\x22:2141},{\x22x1\x22:-1,\x22y1\x22:2179,\x22x2\x22:-318,\x22y2\x22:2177},{\x22x1\x22:-1,\x22y1\x22:2145,\x22x2\x22:-1,\x22y2\x22:2179},{\x22x1\x22:-109,\x22y1\x22:2147,\x22x2\x22:-1,\x22y2\x22:2145},{\x22x1\x22:-141,\x22y1\x22:2145,\x22x2\x22:-109,\x22y2\x22:2147},{\x22x1\x22:-141,\x22y1\x22:2019,\x22x2\x22:-141,\x22y2\x22:2145},{\x22x1\x22:-142,\x22y1\x22:2011,\x22x2\x22:-141,\x22y2\x22:2019},{\x22x1\x22:-92,\x22y1\x22:2010,\x22x2\x22:-142,\x22y2\x22:2011},{\x22x1\x22:-91,\x22y1\x22:2026,\x22x2\x22:-92,\x22y2\x22:2010},{\x22x1\x22:-98,\x22y1\x22:2026,\x22x2\x22:-91,\x22y2\x22:2026},{\x22x1\x22:-99,\x22y1\x22:2025,\x22x2\x22:-98,\x22y2\x22:2026},{\x22x1\x22:-128,\x22y1\x22:2025,\x22x2\x22:-99,\x22y2\x22:2025},{\x22x1\x22:-129,\x22y1\x22:2135,\x22x2\x22:-128,\x22y2\x22:2025},{\x22x1\x22:-110,\x22y1\x22:2135,\x22x2\x22:-129,\x22y2\x22:2135},{\x22x1\x22:-110,\x22y1\x22:2133,\x22x2\x22:-110,\x22y2\x22:2135},{\x22x1\x22:-34,\x22y1\x22:2132,\x22x2\x22:-110,\x22y2\x22:2133},{\x22x1\x22:-33,\x22y1\x22:2133,\x22x2\x22:-34,\x22y2\x22:2132},{\x22x1\x22:-33,\x22y1\x22:2135,\x22x2\x22:-33,\x22y2\x22:2133},{\x22x1\x22:-5,\x22y1\x22:2135,\x22x2\x22:-33,\x22y2\x22:2135},{\x22x1\x22:-5,\x22y1\x22:2086,\x22x2\x22:-5,\x22y2\x22:2135},{\x22x1\x22:-15,\x22y1\x22:2085,\x22x2\x22:-5,\x22y2\x22:2086},{\x22x1\x22:-16,\x22y1\x22:2056,\x22x2\x22:-15,\x22y2\x22:2085},{\x22x1\x22:-17,\x22y1\x22:2055,\x22x2\x22:-16,\x22y2\x22:2056},{\x22x1\x22:-77,\x22y1\x22:2055,\x22x2\x22:-17,\x22y2\x22:2055},{\x22x1\x22:-77,\x22y1\x22:2036,\x22x2\x22:-77,\x22y2\x22:2055},{\x22x1\x22:-78,\x22y1\x22:2011,\x22x2\x22:-78,\x22y2\x22:2033},{\x22x1\x22:6,\x22y1\x22:2011,\x22x2\x22:-78,\x22y2\x22:2011},{\x22x1\x22:6,\x22y1\x22:2024,\x22x2\x22:6,\x22y2\x22:2011},{\x22x1\x22:14,\x22y1\x22:2024,\x22x2\x22:6,\x22y2\x22:2024},{\x22x1\x22:12,\x22y1\x22:1653,\x22x2\x22:14,\x22y2\x22:2024},{\x22x1\x22:1,\x22y1\x22:1624,\x22x2\x22:12,\x22y2\x22:1653},{\x22x1\x22:13,\x22y1\x22:1613,\x22x2\x22:1,\x22y2\x22:1624},{\x22x1\x22:14,\x22y1\x22:1546,\x22x2\x22:13,\x22y2\x22:1613},{\x22x1\x22:-145,\x22y1\x22:1544,\x22x2\x22:14,\x22y2\x22:1546},{\x22x1\x22:-144,\x22y1\x22:1423,\x22x2\x22:-145,\x22y2\x22:1544},{\x22x1\x22:-247,\x22y1\x22:1424,\x22x2\x22:-144,\x22y2\x22:1423},{\x22x1\x22:-393,\x22y1\x22:1424,\x22x2\x22:-247,\x22y2\x22:1424},{\x22x1\x22:-423,\x22y1\x22:1423,\x22x2\x22:-393,\x22y2\x22:1424},{\x22x1\x22:-425,\x22y1\x22:1385,\x22x2\x22:-423,\x22y2\x22:1423},{\x22x1\x22:-465,\x22y1\x22:1386,\x22x2\x22:-425,\x22y2\x22:1385},{\x22x1\x22:-464,\x22y1\x22:1290,\x22x2\x22:-465,\x22y2\x22:1386},{\x22x1\x22:-459,\x22y1\x22:1290,\x22x2\x22:-464,\x22y2\x22:1290},{\x22x1\x22:-463,\x22y1\x22:1177,\x22x2\x22:-459,\x22y2\x22:1290},{\x22x1\x22:-455,\x22y1\x22:1177,\x22x2\x22:-463,\x22y2\x22:1177},{\x22x1\x22:-456,\x22y1\x22:1086,\x22x2\x22:-455,\x22y2\x22:1177},{\x22x1\x22:-458,\x22y1\x22:1034,\x22x2\x22:-456,\x22y2\x22:1086},{\x22x1\x22:-463,\x22y1\x22:1034,\x22x2\x22:-458,\x22y2\x22:1034},{\x22x1\x22:-462,\x22y1\x22:1010,\x22x2\x22:-463,\x22y2\x22:1034},{\x22x1\x22:-455,\x22y1\x22:1010,\x22x2\x22:-462,\x22y2\x22:1010},{\x22x1\x22:-454,\x22y1\x22:985,\x22x2\x22:-455,\x22y2\x22:1010},{\x22x1\x22:-407,\x22y1\x22:985,\x22x2\x22:-454,\x22y2\x22:985},{\x22x1\x22:-407,\x22y1\x22:976,\x22x2\x22:-407,\x22y2\x22:985},{\x22x1\x22:-394,\x22y1\x22:975,\x22x2\x22:-407,\x22y2\x22:976},{\x22x1\x22:-393,\x22y1\x22:982,\x22x2\x22:-394,\x22y2\x22:975},{\x22x1\x22:-308,\x22y1\x22:982,\x22x2\x22:-393,\x22y2\x22:982},{\x22x1\x22:-308,\x22y1\x22:974,\x22x2\x22:-308,\x22y2\x22:982},{\x22x1\x22:-175,\x22y1\x22:975,\x22x2\x22:-308,\x22y2\x22:974},{\x22x1\x22:-94,\x22y1\x22:977,\x22x2\x22:-175,\x22y2\x22:975},{\x22x1\x22:-97,\x22y1\x22:989,\x22x2\x22:-94,\x22y2\x22:977},{\x22x1\x22:-175,\x22y1\x22:990,\x22x2\x22:-97,\x22y2\x22:989},{\x22x1\x22:-175,\x22y1\x22:1011,\x22x2\x22:-175,\x22y2\x22:990},{\x22x1\x22:-176,\x22y1\x22:1012,\x22x2\x22:-175,\x22y2\x22:1011},{\x22x1\x22:-178,\x22y1\x22:1012,\x22x2\x22:-176,\x22y2\x22:1012},{\x22x1\x22:-178,\x22y1\x22:1018,\x22x2\x22:-178,\x22y2\x22:1012},{\x22x1\x22:-63,\x22y1\x22:1017,\x22x2\x22:-178,\x22y2\x22:1018},{\x22x1\x22:-64,\x22y1\x22:975,\x22x2\x22:-63,\x22y2\x22:1017},{\x22x1\x22:23,\x22y1\x22:976,\x22x2\x22:-64,\x22y2\x22:975},{\x22x1\x22:23,\x22y1\x22:1015,\x22x2\x22:23,\x22y2\x22:976},{\x22x1\x22:62,\x22y1\x22:1016,\x22x2\x22:23,\x22y2\x22:1015},{\x22x1\x22:71,\x22y1\x22:1003,\x22x2\x22:62,\x22y2\x22:1016},{\x22x1\x22:78,\x22y1\x22:1001,\x22x2\x22:71,\x22y2\x22:1003},{\x22x1\x22:93,\x22y1\x22:1006,\x22x2\x22:78,\x22y2\x22:1001},{\x22x1\x22:96,\x22y1\x22:1016,\x22x2\x22:93,\x22y2\x22:1006},{\x22x1\x22:136,\x22y1\x22:1019,\x22x2\x22:96,\x22y2\x22:1016},{\x22x1\x22:137,\x22y1\x22:976,\x22x2\x22:136,\x22y2\x22:1019},{\x22x1\x22:352,\x22y1\x22:975,\x22x2\x22:137,\x22y2\x22:976},{\x22x1\x22:352,\x22y1\x22:985,\x22x2\x22:352,\x22y2\x22:975},{\x22x1\x22:426,\x22y1\x22:985,\x22x2\x22:352,\x22y2\x22:985},{\x22x1\x22:426,\x22y1\x22:977,\x22x2\x22:426,\x22y2\x22:985},{\x22x1\x22:427,\x22y1\x22:976,\x22x2\x22:426,\x22y2\x22:977},{\x22x1\x22:449,\x22y1\x22:976,\x22x2\x22:427,\x22y2\x22:976},{\x22x1\x22:449,\x22y1\x22:986,\x22x2\x22:449,\x22y2\x22:976},{\x22x1\x22:494,\x22y1\x22:986,\x22x2\x22:449,\x22y2\x22:986},{\x22x1\x22:495,\x22y1\x22:1033,\x22x2\x22:494,\x22y2\x22:986},{\x22x1\x22:505,\x22y1\x22:1033,\x22x2\x22:495,\x22y2\x22:1033},{\x22x1\x22:505,\x22y1\x22:1047,\x22x2\x22:505,\x22y2\x22:1033},{\x22x1\x22:497,\x22y1\x22:1047,\x22x2\x22:505,\x22y2\x22:1047},{\x22x1\x22:497,\x22y1\x22:1076,\x22x2\x22:497,\x22y2\x22:1047},{\x22x1\x22:497,\x22y1\x22:1167,\x22x2\x22:497,\x22y2\x22:1076},{\x22x1\x22:498,\x22y1\x22:1210,\x22x2\x22:497,\x22y2\x22:1167},{\x22x1\x22:502,\x22y1\x22:1210,\x22x2\x22:498,\x22y2\x22:1210},{\x22x1\x22:503,\x22y1\x22:1231,\x22x2\x22:502,\x22y2\x22:1210},{\x22x1\x22:493,\x22y1\x22:1232,\x22x2\x22:503,\x22y2\x22:1231},{\x22x1\x22:493,\x22y1\x22:1326,\x22x2\x22:493,\x22y2\x22:1232},{\x22x1\x22:588,\x22y1\x22:1326,\x22x2\x22:493,\x22y2\x22:1326},{\x22x1\x22:589,\x22y1\x22:1317,\x22x2\x22:588,\x22y2\x22:1326},{\x22x1\x22:611,\x22y1\x22:1317,\x22x2\x22:589,\x22y2\x22:1317},{\x22x1\x22:611,\x22y1\x22:1327,\x22x2\x22:611,\x22y2\x22:1317},{\x22x1\x22:692,\x22y1\x22:1327,\x22x2\x22:611,\x22y2\x22:1327},{\x22x1\x22:692,\x22y1\x22:1315,\x22x2\x22:692,\x22y2\x22:1327},{\x22x1\x22:778,\x22y1\x22:1316,\x22x2\x22:692,\x22y2\x22:1315},{\x22x1\x22:850,\x22y1\x22:1317,\x22x2\x22:778,\x22y2\x22:1316},{\x22x1\x22:985,\x22y1\x22:1317,\x22x2\x22:850,\x22y2\x22:1317},{\x22x1\x22:986,\x22y1\x22:1346,\x22x2\x22:985,\x22y2\x22:1317},{\x22x1\x22:994,\x22y1\x22:1347,\x22x2\x22:986,\x22y2\x22:1346},{\x22x1\x22:995,\x22y1\x22:1368,\x22x2\x22:994,\x22y2\x22:1347},{\x22x1\x22:1016,\x22y1\x22:1408,\x22x2\x22:995,\x22y2\x22:1368},{\x22x1\x22:1037,\x22y1\x22:1420,\x22x2\x22:1016,\x22y2\x22:1408},{\x22x1\x22:1036,\x22y1\x22:1445,\x22x2\x22:1037,\x22y2\x22:1420},{\x22x1\x22:1094,\x22y1\x22:1502,\x22x2\x22:1036,\x22y2\x22:1445},{\x22x1\x22:1123,\x22y1\x22:1502,\x22x2\x22:1094,\x22y2\x22:1502},{\x22x1\x22:1132,\x22y1\x22:1524,\x22x2\x22:1123,\x22y2\x22:1502},{\x22x1\x22:1158,\x22y1\x22:1536,\x22x2\x22:1132,\x22y2\x22:1524},{\x22x1\x22:1193,\x22y1\x22:1544,\x22x2\x22:1158,\x22y2\x22:1536},{\x22x1\x22:1197,\x22y1\x22:1548,\x22x2\x22:1193,\x22y2\x22:1544},{\x22x1\x22:1196,\x22y1\x22:1615,\x22x2\x22:1197,\x22y2\x22:1548},{\x22x1\x22:1223,\x22y1\x22:1617,\x22x2\x22:1196,\x22y2\x22:1615},{\x22x1\x22:1223,\x22y1\x22:1703,\x22x2\x22:1223,\x22y2\x22:1617},{\x22x1\x22:1184,\x22y1\x22:1705,\x22x2\x22:1223,\x22y2\x22:1703},{\x22x1\x22:1184,\x22y1\x22:1816,\x22x2\x22:1184,\x22y2\x22:1705},{\x22x1\x22:1216,\x22y1\x22:1817,\x22x2\x22:1184,\x22y2\x22:1816},{\x22x1\x22:1240,\x22y1\x22:1800,\x22x2\x22:1216,\x22y2\x22:1817},{\x22x1\x22:1254,\x22y1\x22:1805,\x22x2\x22:1240,\x22y2\x22:1800},{\x22x1\x22:1261,\x22y1\x22:1815,\x22x2\x22:1254,\x22y2\x22:1805},{\x22x1\x22:1296,\x22y1\x22:1815,\x22x2\x22:1261,\x22y2\x22:1815},{\x22x1\x22:1297,\x22y1\x22:1705,\x22x2\x22:1296,\x22y2\x22:1815},{\x22x1\x22:1255,\x22y1\x22:1706,\x22x2\x22:1297,\x22y2\x22:1705},{\x22x1\x22:1256,\x22y1\x22:1617,\x22x2\x22:1255,\x22y2\x22:1706},{\x22x1\x22:1283,\x22y1\x22:1616,\x22x2\x22:1256,\x22y2\x22:1617},{\x22x1\x22:1283,\x22y1\x22:1614,\x22x2\x22:1283,\x22y2\x22:1616},{\x22x1\x22:1287,\x22y1\x22:1613,\x22x2\x22:1283,\x22y2\x22:1614},{\x22x1\x22:1286,\x22y1\x22:1559,\x22x2\x22:1287,\x22y2\x22:1613},{\x22x1\x22:1283,\x22y1\x22:1558,\x22x2\x22:1286,\x22y2\x22:1559},{\x22x1\x22:1284,\x22y1\x22:1546,\x22x2\x22:1283,\x22y2\x22:1558},{\x22x1\x22:1313,\x22y1\x22:1548,\x22x2\x22:1284,\x22y2\x22:1546},{\x22x1\x22:1349,\x22y1\x22:1528,\x22x2\x22:1313,\x22y2\x22:1548},{\x22x1\x22:1358,\x22y1\x22:1506,\x22x2\x22:1349,\x22y2\x22:1528},{\x22x1\x22:1385,\x22y1\x22:1505,\x22x2\x22:1358,\x22y2\x22:1506},{\x22x1\x22:1417,\x22y1\x22:1480,\x22x2\x22:1385,\x22y2\x22:1505},{\x22x1\x22:1447,\x22y1\x22:1441,\x22x2\x22:1417,\x22y2\x22:1480},{\x22x1\x22:1441,\x22y1\x22:1422,\x22x2\x22:1447,\x22y2\x22:1441},{\x22x1\x22:1470,\x22y1\x22:1404,\x22x2\x22:1441,\x22y2\x22:1422},{\x22x1\x22:1486,\x22y1\x22:1363,\x22x2\x22:1470,\x22y2\x22:1404},{\x22x1\x22:1488,\x22y1\x22:1319,\x22x2\x22:1486,\x22y2\x22:1363},{\x22x1\x22:1478,\x22y1\x22:1311,\x22x2\x22:1488,\x22y2\x22:1319},{\x22x1\x22:1482,\x22y1\x22:1293,\x22x2\x22:1478,\x22y2\x22:1311},{\x22x1\x22:1491,\x22y1\x22:1277,\x22x2\x22:1482,\x22y2\x22:1293},{\x22x1\x22:1485,\x22y1\x22:1235,\x22x2\x22:1491,\x22y2\x22:1277},{\x22x1\x22:1465,\x22y1\x22:1195,\x22x2\x22:1485,\x22y2\x22:1235},{\x22x1\x22:1452,\x22y1\x22:1190,\x22x2\x22:1465,\x22y2\x22:1195},{\x22x1\x22:1448,\x22y1\x22:1183,\x22x2\x22:1452,\x22y2\x22:1190},{\x22x1\x22:1447,\x22y1\x22:1157,\x22x2\x22:1448,\x22y2\x22:1183},{\x22x1\x22:1419,\x22y1\x22:1119,\x22x2\x22:1447,\x22y2\x22:1157},{\x22x1\x22:1380,\x22y1\x22:1094,\x22x2\x22:1419,\x22y2\x22:1119},{\x22x1\x22:1360,\x22y1\x22:1094,\x22x2\x22:1380,\x22y2\x22:1094},{\x22x1\x22:1350,\x22y1\x22:1073,\x22x2\x22:1360,\x22y2\x22:1094},{\x22x1\x22:1314,\x22y1\x22:1055,\x22x2\x22:1350,\x22y2\x22:1073},{\x22x1\x22:1283,\x22y1\x22:1052,\x22x2\x22:1314,\x22y2\x22:1055},{\x22x1\x22:1284,\x22y1\x22:984,\x22x2\x22:1283,\x22y2\x22:1052},{\x22x1\x22:1256,\x22y1\x22:984,\x22x2\x22:1284,\x22y2\x22:984},{\x22x1\x22:1255,\x22y1\x22:896,\x22x2\x22:1256,\x22y2\x22:984},{\x22x1\x22:1295,\x22y1\x22:896,\x22x2\x22:1255,\x22y2\x22:896},{\x22x1\x22:1299,\x22y1\x22:785,\x22x2\x22:1295,\x22y2\x22:896},{\x22x1\x22:1264,\x22y1\x22:780,\x22x2\x22:1299,\x22y2\x22:785},{\x22x1\x22:1262,\x22y1\x22:782,\x22x2\x22:1264,\x22y2\x22:780},{\x22x1\x22:1258,\x22y1\x22:783,\x22x2\x22:1262,\x22y2\x22:782},{\x22x1\x22:1249,\x22y1\x22:797,\x22x2\x22:1258,\x22y2\x22:783},{\x22x1\x22:1233,\x22y1\x22:797,\x22x2\x22:1249,\x22y2\x22:797},{\x22x1\x22:1220,\x22y1\x22:783,\x22x2\x22:1233,\x22y2\x22:797},{\x22x1\x22:1183,\x22y1\x22:784,\x22x2\x22:1220,\x22y2\x22:783},{\x22x1\x22:1181,\x22y1\x22:897,\x22x2\x22:1183,\x22y2\x22:784},{\x22x1\x22:1223,\x22y1\x22:897,\x22x2\x22:1181,\x22y2\x22:897},{\x22x1\x22:1223,\x22y1\x22:985,\x22x2\x22:1223,\x22y2\x22:897},{\x22x1\x22:1194,\x22y1\x22:985,\x22x2\x22:1223,\x22y2\x22:985},{\x22x1\x22:1196,\x22y1\x22:1040,\x22x2\x22:1194,\x22y2\x22:985},{\x22x1\x22:1197,\x22y1\x22:1040,\x22x2\x22:1196,\x22y2\x22:1040},{\x22x1\x22:1198,\x22y1\x22:1051,\x22x2\x22:1197,\x22y2\x22:1040},{\x22x1\x22:1195,\x22y1\x22:1053,\x22x2\x22:1198,\x22y2\x22:1051},{\x22x1\x22:1171,\x22y1\x22:1054,\x22x2\x22:1195,\x22y2\x22:1053},{\x22x1\x22:1127,\x22y1\x22:1076,\x22x2\x22:1171,\x22y2\x22:1054},{\x22x1\x22:1126,\x22y1\x22:1085,\x22x2\x22:1127,\x22y2\x22:1076},{\x22x1\x22:1114,\x22y1\x22:1094,\x22x2\x22:1126,\x22y2\x22:1085},{\x22x1\x22:1099,\x22y1\x22:1092,\x22x2\x22:1114,\x22y2\x22:1094},{\x22x1\x22:1058,\x22y1\x22:1122,\x22x2\x22:1099,\x22y2\x22:1092},{\x22x1\x22:1033,\x22y1\x22:1154,\x22x2\x22:1058,\x22y2\x22:1122},{\x22x1\x22:1033,\x22y1\x22:1181,\x22x2\x22:1033,\x22y2\x22:1154},{\x22x1\x22:1021,\x22y1\x22:1188,\x22x2\x22:1033,\x22y2\x22:1181},{\x22x1\x22:999,\x22y1\x22:1236,\x22x2\x22:1021,\x22y2\x22:1188},{\x22x1\x22:998,\x22y1\x22:1257,\x22x2\x22:999,\x22y2\x22:1236},{\x22x1\x22:984,\x22y1\x22:1257,\x22x2\x22:998,\x22y2\x22:1257},{\x22x1\x22:982,\x22y1\x22:1284,\x22x2\x22:984,\x22y2\x22:1257},{\x22x1\x22:889,\x22y1\x22:1282,\x22x2\x22:982,\x22y2\x22:1284},{\x22x1\x22:776,\x22y1\x22:1283,\x22x2\x22:889,\x22y2\x22:1282},{\x22x1\x22:694,\x22y1\x22:1284,\x22x2\x22:776,\x22y2\x22:1283},{\x22x1\x22:694,\x22y1\x22:1275,\x22x2\x22:694,\x22y2\x22:1284},{\x22x1\x22:606,\x22y1\x22:1274,\x22x2\x22:694,\x22y2\x22:1275},{\x22x1\x22:605,\x22y1\x22:1283,\x22x2\x22:606,\x22y2\x22:1274},{\x22x1\x22:596,\x22y1\x22:1283,\x22x2\x22:605,\x22y2\x22:1283},{\x22x1\x22:591,\x22y1\x22:1282,\x22x2\x22:596,\x22y2\x22:1283},{\x22x1\x22:591,\x22y1\x22:1274,\x22x2\x22:591,\x22y2\x22:1282},{\x22x1\x22:546,\x22y1\x22:1273,\x22x2\x22:591,\x22y2\x22:1274},{\x22x1\x22:545,\x22y1\x22:1227,\x22x2\x22:546,\x22y2\x22:1273},{\x22x1\x22:537,\x22y1\x22:1227,\x22x2\x22:545,\x22y2\x22:1227},{\x22x1\x22:537,\x22y1\x22:1213,\x22x2\x22:537,\x22y2\x22:1227},{\x22x1\x22:544,\x22y1\x22:1213,\x22x2\x22:537,\x22y2\x22:1213},{\x22x1\x22:545,\x22y1\x22:1093,\x22x2\x22:544,\x22y2\x22:1213},{\x22x1\x22:545,\x22y1\x22:1050,\x22x2\x22:545,\x22y2\x22:1093},{\x22x1\x22:537,\x22y1\x22:1050,\x22x2\x22:545,\x22y2\x22:1050},{\x22x1\x22:538,\x22y1\x22:1034,\x22x2\x22:537,\x22y2\x22:1050},{\x22x1\x22:546,\x22y1\x22:1034,\x22x2\x22:538,\x22y2\x22:1034},{\x22x1\x22:547,\x22y1\x22:933,\x22x2\x22:546,\x22y2\x22:1034},{\x22x1\x22:449,\x22y1\x22:934,\x22x2\x22:547,\x22y2\x22:933},{\x22x1\x22:449,\x22y1\x22:943,\x22x2\x22:449,\x22y2\x22:934},{\x22x1\x22:433,\x22y1\x22:942,\x22x2\x22:449,\x22y2\x22:943},{\x22x1\x22:432,\x22y1\x22:936,\x22x2\x22:433,\x22y2\x22:942},{\x22x1\x22:348,\x22y1\x22:935,\x22x2\x22:432,\x22y2\x22:936},{\x22x1\x22:348,\x22y1\x22:944,\x22x2\x22:348,\x22y2\x22:935},{\x22x1\x22:257,\x22y1\x22:943,\x22x2\x22:348,\x22y2\x22:944},{\x22x1\x22:260,\x22y1\x22:901,\x22x2\x22:257,\x22y2\x22:943},{\x22x1\x22:252,\x22y1\x22:900,\x22x2\x22:260,\x22y2\x22:901},{\x22x1\x22:260,\x22y1\x22:901,\x22x2\x22:252,\x22y2\x22:900},{\x22x1\x22:223,\x22y1\x22:902,\x22x2\x22:260,\x22y2\x22:901},{\x22x1\x22:226,\x22y1\x22:943,\x22x2\x22:223,\x22y2\x22:902},{\x22x1\x22:137,\x22y1\x22:943,\x22x2\x22:226,\x22y2\x22:943},{\x22x1\x22:138,\x22y1\x22:903,\x22x2\x22:137,\x22y2\x22:943},{\x22x1\x22:97,\x22y1\x22:902,\x22x2\x22:138,\x22y2\x22:903},{\x22x1\x22:97,\x22y1\x22:737,\x22x2\x22:97,\x22y2\x22:902},{\x22x1\x22:136,\x22y1\x22:738,\x22x2\x22:97,\x22y2\x22:737},{\x22x1\x22:135,\x22y1\x22:697,\x22x2\x22:136,\x22y2\x22:738},{\x22x1\x22:145,\x22y1\x22:698,\x22x2\x22:135,\x22y2\x22:697},{\x22x1\x22:151,\x22y1\x22:700,\x22x2\x22:145,\x22y2\x22:698},{\x22x1\x22:185,\x22y1\x22:700,\x22x2\x22:151,\x22y2\x22:700},{\x22x1\x22:185,\x22y1\x22:663,\x22x2\x22:185,\x22y2\x22:700},{\x22x1\x22:137,\x22y1\x22:664,\x22x2\x22:185,\x22y2\x22:663},{\x22x1\x22:139,\x22y1\x22:623,\x22x2\x22:137,\x22y2\x22:664},{\x22x1\x22:97,\x22y1\x22:623,\x22x2\x22:139,\x22y2\x22:623},{\x22x1\x22:97,\x22y1\x22:616,\x22x2\x22:97,\x22y2\x22:623},{\x22x1\x22:98,\x22y1\x22:615,\x22x2\x22:97,\x22y2\x22:616},{\x22x1\x22:99,\x22y1\x22:575,\x22x2\x22:98,\x22y2\x22:615},{\x22x1\x22:62,\x22y1\x22:577,\x22x2\x22:99,\x22y2\x22:575},{\x22x1\x22:63,\x22y1\x22:623,\x22x2\x22:62,\x22y2\x22:577},{\x22x1\x22:25,\x22y1\x22:625,\x22x2\x22:63,\x22y2\x22:623},{\x22x1\x22:25,\x22y1\x22:664,\x22x2\x22:25,\x22y2\x22:625},{\x22x1\x22:-143,\x22y1\x22:663,\x22x2\x22:25,\x22y2\x22:664},{\x22x1\x22:-146,\x22y1\x22:578,\x22x2\x22:-143,\x22y2\x22:663},{\x22x1\x22:-146,\x22y1\x22:495,\x22x2\x22:-146,\x22y2\x22:578},{\x22x1\x22:-133,\x22y1\x22:495,\x22x2\x22:-146,\x22y2\x22:495},{\x22x1\x22:-132,\x22y1\x22:579,\x22x2\x22:-133,\x22y2\x22:495},{\x22x1\x22:-100,\x22y1\x22:579,\x22x2\x22:-132,\x22y2\x22:579},{\x22x1\x22:-101,\x22y1\x22:464,\x22x2\x22:-100,\x22y2\x22:579},{\x22x1\x22:-143,\x22y1\x22:465,\x22x2\x22:-101,\x22y2\x22:464},{\x22x1\x22:-143,\x22y1\x22:376,\x22x2\x22:-143,\x22y2\x22:465},{\x22x1\x22:-54,\x22y1\x22:377,\x22x2\x22:-143,\x22y2\x22:376},{\x22x1\x22:-53,\x22y1\x22:387,\x22x2\x22:-54,\x22y2\x22:377},{\x22x1\x22:46,\x22y1\x22:387,\x22x2\x22:-53,\x22y2\x22:387},{\x22x1\x22:46,\x22y1\x22:288,\x22x2\x22:46,\x22y2\x22:387},{\x22x1\x22:37,\x22y1\x22:287,\x22x2\x22:46,\x22y2\x22:288},{\x22x1\x22:37,\x22y1\x22:273,\x22x2\x22:37,\x22y2\x22:287},{\x22x1\x22:45,\x22y1\x22:273,\x22x2\x22:37,\x22y2\x22:273},{\x22x1\x22:45,\x22y1\x22:214,\x22x2\x22:45,\x22y2\x22:273},{\x22x1\x22:46,\x22y1\x22:180,\x22x2\x22:45,\x22y2\x22:214},{\x22x1\x22:46,\x22y1\x22:112,\x22x2\x22:46,\x22y2\x22:180},{\x22x1\x22:37,\x22y1\x22:112,\x22x2\x22:46,\x22y2\x22:112},{\x22x1\x22:37,\x22y1\x22:94,\x22x2\x22:37,\x22y2\x22:112},{\x22x1\x22:47,\x22y1\x22:93,\x22x2\x22:37,\x22y2\x22:94},{\x22x1\x22:45,\x22y1\x22:-2,\x22x2\x22:47,\x22y2\x22:93},{\x22x1\x22:47,\x22y1\x22:-1,\x22x2\x22:45,\x22y2\x22:-2},{\x22x1\x22:47,\x22y1\x22:-7,\x22x2\x22:47,\x22y2\x22:-1},{\x22x1\x22:-50,\x22y1\x22:-3,\x22x2\x22:47,\x22y2\x22:-7}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:87121,\x22x\x22:1316.25,\x22y\x22:1227.125,\x22z\x22:-367},{\x22spawn_group_id\x22:87229,\x22x\x22:1534.125,\x22y\x22:1425.625,\x22z\x22:-367},{\x22spawn_group_id\x22:87270,\x22x\x22:2126.125,\x22y\x22:711.125,\x22z\x22:-687}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Guard Stanard | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Guard Stanard</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>30</td></tr>
+                            <tr><td>HP:</td><td>1200</td></tr>
+                            <tr><td>Damage:</td><td>12-64</td></tr>
+                            <tr><td>Zone:</td><td>The Northern Plains of Karana</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>Guard Stanard Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Animal-Pelt-34228.html">Crude Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Short-Sword-5352.html">Fine Steel Short Sword</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Oleander-Extract-44839.html">Grade C Oleander Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Guard-Bracelet-13304.html">Guard Bracelet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iridium-Ore-34241.html">Iridium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Qeynos-Kite-Shield-9023.html">Qeynos Kite Shield</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sullied-Animal-Pelt-34227.html">Sullied Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Dust-33790.html">Sunshard Dust</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thick-Silk-34215.html">Thick Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:-1173,\x22y1\x22:4498,\x22x2\x22:-1173,\x22y2\x22:4498},{\x22x1\x22:-1173,\x22y1\x22:4498,\x22x2\x22:-1173,\x22y2\x22:4212},{\x22x1\x22:-1248,\x22y1\x22:4212,\x22x2\x22:-1248,\x22y2\x22:4212},{\x22x1\x22:-1248,\x22y1\x22:4212,\x22x2\x22:-1248,\x22y2\x22:4499},{\x22x1\x22:-3258,\x22y1\x22:4241,\x22x2\x22:-3258,\x22y2\x22:4241},{\x22x1\x22:-3258,\x22y1\x22:4241,\x22x2\x22:-3009,\x22y2\x22:4100},{\x22x1\x22:-3009,\x22y1\x22:4100,\x22x2\x22:-2948,\x22y2\x22:4138},{\x22x1\x22:-2948,\x22y1\x22:4138,\x22x2\x22:-2813,\x22y2\x22:4303},{\x22x1\x22:-2813,\x22y1\x22:4303,\x22x2\x22:-2636,\x22y2\x22:4244},{\x22x1\x22:-2636,\x22y1\x22:4244,\x22x2\x22:-2482,\x22y2\x22:4249},{\x22x1\x22:-2482,\x22y1\x22:4249,\x22x2\x22:-2333,\x22y2\x22:4154},{\x22x1\x22:-2333,\x22y1\x22:4154,\x22x2\x22:-2066,\x22y2\x22:4000},{\x22x1\x22:-2066,\x22y1\x22:4000,\x22x2\x22:-2012,\x22y2\x22:3977},{\x22x1\x22:-2012,\x22y1\x22:3977,\x22x2\x22:-1642,\x22y2\x22:3977},{\x22x1\x22:-1642,\x22y1\x22:3977,\x22x2\x22:-1623,\x22y2\x22:3996},{\x22x1\x22:-1623,\x22y1\x22:3996,\x22x2\x22:-1498,\x22y2\x22:4201},{\x22x1\x22:-1498,\x22y1\x22:4201,\x22x2\x22:-1371,\x22y2\x22:4202},{\x22x1\x22:-1371,\x22y1\x22:4202,\x22x2\x22:-1201,\x22y2\x22:4236},{\x22x1\x22:-1201,\x22y1\x22:4236,\x22x2\x22:-1051,\x22y2\x22:4238},{\x22x1\x22:-1051,\x22y1\x22:4238,\x22x2\x22:-912,\x22y2\x22:4296},{\x22x1\x22:-912,\x22y1\x22:4296,\x22x2\x22:-736,\x22y2\x22:4296},{\x22x1\x22:-736,\x22y1\x22:4296,\x22x2\x22:-459,\x22y2\x22:4004},{\x22x1\x22:-459,\x22y1\x22:4004,\x22x2\x22:-415,\x22y2\x22:3978},{\x22x1\x22:-415,\x22y1\x22:3978,\x22x2\x22:-366,\x22y2\x22:3977},{\x22x1\x22:-366,\x22y1\x22:3977,\x22x2\x22:-302,\x22y2\x22:3999},{\x22x1\x22:-302,\x22y1\x22:3999,\x22x2\x22:-179,\x22y2\x22:4137},{\x22x1\x22:-179,\x22y1\x22:4137,\x22x2\x22:-96,\x22y2\x22:4132},{\x22x1\x22:-96,\x22y1\x22:4132,\x22x2\x22:108,\x22y2\x22:4002},{\x22x1\x22:108,\x22y1\x22:4002,\x22x2\x22:223,\x22y2\x22:3982},{\x22x1\x22:223,\x22y1\x22:3982,\x22x2\x22:259,\x22y2\x22:3988},{\x22x1\x22:259,\x22y1\x22:3988,\x22x2\x22:279,\x22y2\x22:4003},{\x22x1\x22:279,\x22y1\x22:4003,\x22x2\x22:417,\x22y2\x22:4205},{\x22x1\x22:417,\x22y1\x22:4205,\x22x2\x22:544,\x22y2\x22:4257},{\x22x1\x22:544,\x22y1\x22:4257,\x22x2\x22:707,\x22y2\x22:4257},{\x22x1\x22:707,\x22y1\x22:4257,\x22x2\x22:864,\x22y2\x22:4221},{\x22x1\x22:864,\x22y1\x22:4221,\x22x2\x22:1163,\x22y2\x22:4036},{\x22x1\x22:1163,\x22y1\x22:4036,\x22x2\x22:1348,\x22y2\x22:4255},{\x22x1\x22:1348,\x22y1\x22:4255,\x22x2\x22:1502,\x22y2\x22:4258},{\x22x1\x22:1502,\x22y1\x22:4258,\x22x2\x22:1768,\x22y2\x22:4004},{\x22x1\x22:1768,\x22y1\x22:4004,\x22x2\x22:1826,\x22y2\x22:3985},{\x22x1\x22:1826,\x22y1\x22:3985,\x22x2\x22:1869,\x22y2\x22:3979},{\x22x1\x22:1869,\x22y1\x22:3979,\x22x2\x22:1879,\x22y2\x22:3999},{\x22x1\x22:1879,\x22y1\x22:3999,\x22x2\x22:1990,\x22y2\x22:4256},{\x22x1\x22:1990,\x22y1\x22:4256,\x22x2\x22:2142,\x22y2\x22:4235},{\x22x1\x22:2142,\x22y1\x22:4235,\x22x2\x22:2305,\x22y2\x22:4000},{\x22x1\x22:2305,\x22y1\x22:4000,\x22x2\x22:2305,\x22y2\x22:3863},{\x22x1\x22:2305,\x22y1\x22:3863,\x22x2\x22:2465,\x22y2\x22:3697},{\x22x1\x22:2465,\x22y1\x22:3697,\x22x2\x22:2612,\x22y2\x22:3557},{\x22x1\x22:2612,\x22y1\x22:3557,\x22x2\x22:2613,\x22y2\x22:3404},{\x22x1\x22:2613,\x22y1\x22:3404,\x22x2\x22:2625,\x22y2\x22:3219},{\x22x1\x22:2625,\x22y1\x22:3219,\x22x2\x22:2626,\x22y2\x22:2934},{\x22x1\x22:2626,\x22y1\x22:2934,\x22x2\x22:2783,\x22y2\x22:2657},{\x22x1\x22:2783,\x22y1\x22:2657,\x22x2\x22:2825,\x22y2\x22:2614},{\x22x1\x22:2825,\x22y1\x22:2614,\x22x2\x22:2832,\x22y2\x22:2313},{\x22x1\x22:2832,\x22y1\x22:2313,\x22x2\x22:2830,\x22y2\x22:2262},{\x22x1\x22:2830,\x22y1\x22:2262,\x22x2\x22:2787,\x22y2\x22:2051},{\x22x1\x22:2787,\x22y1\x22:2051,\x22x2\x22:2775,\x22y2\x22:2001},{\x22x1\x22:2775,\x22y1\x22:2001,\x22x2\x22:2788,\x22y2\x22:1722},{\x22x1\x22:2788,\x22y1\x22:1722,\x22x2\x22:2788,\x22y2\x22:1722},{\x22x1\x22:2788,\x22y1\x22:1722,\x22x2\x22:2638,\x22y2\x22:1553},{\x22x1\x22:2638,\x22y1\x22:1553,\x22x2\x22:2635,\x22y2\x22:1403},{\x22x1\x22:2635,\x22y1\x22:1403,\x22x2\x22:2781,\x22y2\x22:1249},{\x22x1\x22:2781,\x22y1\x22:1249,\x22x2\x22:2949,\x22y2\x22:1099},{\x22x1\x22:2949,\x22y1\x22:1099,\x22x2\x22:2934,\x22y2\x22:952},{\x22x1\x22:2934,\x22y1\x22:952,\x22x2\x22:2940,\x22y2\x22:783},{\x22x1\x22:2940,\x22y1\x22:783,\x22x2\x22:2939,\x22y2\x22:627},{\x22x1\x22:2939,\x22y1\x22:627,\x22x2\x22:2791,\x22y2\x22:600},{\x22x1\x22:2791,\x22y1\x22:600,\x22x2\x22:2653,\x22y2\x22:593},{\x22x1\x22:2653,\x22y1\x22:593,\x22x2\x22:2650,\x22y2\x22:459},{\x22x1\x22:2650,\x22y1\x22:459,\x22x2\x22:2787,\x22y2\x22:269},{\x22x1\x22:2787,\x22y1\x22:269,\x22x2\x22:2896,\x22y2\x22:136},{\x22x1\x22:2896,\x22y1\x22:136,\x22x2\x22:2897,\x22y2\x22:-286},{\x22x1\x22:2897,\x22y1\x22:-286,\x22x2\x22:2840,\x22y2\x22:-515},{\x22x1\x22:2840,\x22y1\x22:-515,\x22x2\x22:2839,\x22y2\x22:-565},{\x22x1\x22:2839,\x22y1\x22:-565,\x22x2\x22:2958,\x22y2\x22:-803},{\x22x1\x22:2958,\x22y1\x22:-803,\x22x2\x22:2960,\x22y2\x22:-978},{\x22x1\x22:2960,\x22y1\x22:-978,\x22x2\x22:2946,\x22y2\x22:-1123},{\x22x1\x22:2946,\x22y1\x22:-1123,\x22x2\x22:2945,\x22y2\x22:-1259},{\x22x1\x22:2945,\x22y1\x22:-1259,\x22x2\x22:2950,\x22y2\x22:-1394},{\x22x1\x22:2950,\x22y1\x22:-1394,\x22x2\x22:2950,\x22y2\x22:-1500},{\x22x1\x22:2949,\x22y1\x22:-1500,\x22x2\x22:2949,\x22y2\x22:-1500},{\x22x1\x22:2949,\x22y1\x22:-1500,\x22x2\x22:-3234,\x22y2\x22:-1500},{\x22x1\x22:-3257,\x22y1\x22:4238,\x22x2\x22:-3257,\x22y2\x22:4238},{\x22x1\x22:-3257,\x22y1\x22:4238,\x22x2\x22:-3248,\x22y2\x22:-1500},{\x22x1\x22:2775,\x22y1\x22:12,\x22x2\x22:2775,\x22y2\x22:12},{\x22x1\x22:2775,\x22y1\x22:12,\x22x2\x22:3069,\x22y2\x22:15},{\x22x1\x22:3068,\x22y1\x22:-38,\x22x2\x22:3068,\x22y2\x22:-38},{\x22x1\x22:3068,\x22y1\x22:-38,\x22x2\x22:2776,\x22y2\x22:-38},{\x22x1\x22:2786,\x22y1\x22:-12,\x22x2\x22:2786,\x22y2\x22:-12},{\x22x1\x22:2786,\x22y1\x22:-12,\x22x2\x22:1013,\x22y2\x22:-4},{\x22x1\x22:1013,\x22y1\x22:-4,\x22x2\x22:707,\x22y2\x22:304},{\x22x1\x22:707,\x22y1\x22:304,\x22x2\x22:-899,\x22y2\x22:308},{\x22x1\x22:-899,\x22y1\x22:308,\x22x2\x22:-1050,\x22y2\x22:457},{\x22x1\x22:-3247,\x22y1\x22:-628,\x22x2\x22:-3247,\x22y2\x22:-628},{\x22x1\x22:-3247,\x22y1\x22:-628,\x22x2\x22:-2168,\x22y2\x22:-654},{\x22x1\x22:-2168,\x22y1\x22:-654,\x22x2\x22:-900,\x22y2\x22:614},{\x22x1\x22:-900,\x22y1\x22:614,\x22x2\x22:82,\x22y2\x22:614},{\x22x1\x22:82,\x22y1\x22:614,\x22x2\x22:391,\x22y2\x22:929},{\x22x1\x22:385,\x22y1\x22:311,\x22x2\x22:385,\x22y2\x22:311},{\x22x1\x22:385,\x22y1\x22:311,\x22x2\x22:385,\x22y2\x22:625},{\x22x1\x22:385,\x22y1\x22:625,\x22x2\x22:233,\x22y2\x22:774},{\x22x1\x22:391,\x22y1\x22:940,\x22x2\x22:391,\x22y2\x22:940},{\x22x1\x22:391,\x22y1\x22:940,\x22x2\x22:391,\x22y2\x22:1572},{\x22x1\x22:391,\x22y1\x22:1572,\x22x2\x22:-1208,\x22y2\x22:3068},{\x22x1\x22:-1208,\x22y1\x22:3068,\x22x2\x22:-1211,\x22y2\x22:4123},{\x22x1\x22:-1196,\x22y1\x22:4123,\x22x2\x22:-1196,\x22y2\x22:4123},{\x22x1\x22:-1196,\x22y1\x22:4123,\x22x2\x22:-1166,\x22y2\x22:4123},{\x22x1\x22:-1166,\x22y1\x22:4123,\x22x2\x22:-1166,\x22y2\x22:4212},{\x22x1\x22:-1166,\x22y1\x22:4212,\x22x2\x22:-1196,\x22y2\x22:4212},{\x22x1\x22:-1196,\x22y1\x22:4212,\x22x2\x22:-1196,\x22y2\x22:4202},{\x22x1\x22:-1196,\x22y1\x22:4202,\x22x2\x22:-1177,\x22y2\x22:4201},{\x22x1\x22:-1177,\x22y1\x22:4201,\x22x2\x22:-1177,\x22y2\x22:4134},{\x22x1\x22:-1177,\x22y1\x22:4134,\x22x2\x22:-1196,\x22y2\x22:4133},{\x22x1\x22:-1196,\x22y1\x22:4133,\x22x2\x22:-1196,\x22y2\x22:4123},{\x22x1\x22:-1222,\x22y1\x22:4123,\x22x2\x22:-1222,\x22y2\x22:4123},{\x22x1\x22:-1222,\x22y1\x22:4123,\x22x2\x22:-1255,\x22y2\x22:4123},{\x22x1\x22:-1255,\x22y1\x22:4123,\x22x2\x22:-1255,\x22y2\x22:4212},{\x22x1\x22:-1255,\x22y1\x22:4212,\x22x2\x22:-1222,\x22y2\x22:4212},{\x22x1\x22:-1222,\x22y1\x22:4212,\x22x2\x22:-1222,\x22y2\x22:4202},{\x22x1\x22:-1222,\x22y1\x22:4202,\x22x2\x22:-1224,\x22y2\x22:4201},{\x22x1\x22:-1224,\x22y1\x22:4201,\x22x2\x22:-1224,\x22y2\x22:4151},{\x22x1\x22:-1222,\x22y1\x22:4123,\x22x2\x22:-1222,\x22y2\x22:4123},{\x22x1\x22:-1222,\x22y1\x22:4123,\x22x2\x22:-1222,\x22y2\x22:4133},{\x22x1\x22:-1222,\x22y1\x22:4133,\x22x2\x22:-1234,\x22y2\x22:4134},{\x22x1\x22:-1234,\x22y1\x22:4134,\x22x2\x22:-1234,\x22y2\x22:4185},{\x22x1\x22:-1076,\x22y1\x22:3814,\x22x2\x22:-1076,\x22y2\x22:3814},{\x22x1\x22:-1076,\x22y1\x22:3814,\x22x2\x22:-1076,\x22y2\x22:3732},{\x22x1\x22:-1076,\x22y1\x22:3732,\x22x2\x22:-1157,\x22y2\x22:3732},{\x22x1\x22:-1157,\x22y1\x22:3732,\x22x2\x22:-1157,\x22y2\x22:3813},{\x22x1\x22:-1157,\x22y1\x22:3813,\x22x2\x22:-1076,\x22y2\x22:3814},{\x22x1\x22:-1264,\x22y1\x22:3814,\x22x2\x22:-1264,\x22y2\x22:3814},{\x22x1\x22:-1264,\x22y1\x22:3814,\x22x2\x22:-1264,\x22y2\x22:3732},{\x22x1\x22:-1264,\x22y1\x22:3732,\x22x2\x22:-1346,\x22y2\x22:3732},{\x22x1\x22:-1346,\x22y1\x22:3732,\x22x2\x22:-1345,\x22y2\x22:3814},{\x22x1\x22:-1345,\x22y1\x22:3814,\x22x2\x22:-1263,\x22y2\x22:3814},{\x22x1\x22:-1263,\x22y1\x22:3638,\x22x2\x22:-1263,\x22y2\x22:3638},{\x22x1\x22:-1263,\x22y1\x22:3638,\x22x2\x22:-1262,\x22y2\x22:3556},{\x22x1\x22:-1262,\x22y1\x22:3556,\x22x2\x22:-1346,\x22y2\x22:3555},{\x22x1\x22:-1346,\x22y1\x22:3555,\x22x2\x22:-1344,\x22y2\x22:3638},{\x22x1\x22:-1344,\x22y1\x22:3638,\x22x2\x22:-1262,\x22y2\x22:3638},{\x22x1\x22:-1157,\x22y1\x22:3637,\x22x2\x22:-1157,\x22y2\x22:3637},{\x22x1\x22:-1157,\x22y1\x22:3637,\x22x2\x22:-1075,\x22y2\x22:3638},{\x22x1\x22:-1075,\x22y1\x22:3638,\x22x2\x22:-1075,\x22y2\x22:3556},{\x22x1\x22:-1075,\x22y1\x22:3556,\x22x2\x22:-1158,\x22y2\x22:3556},{\x22x1\x22:-1158,\x22y1\x22:3556,\x22x2\x22:-1157,\x22y2\x22:3638},{\x22x1\x22:1459,\x22y1\x22:2740,\x22x2\x22:1459,\x22y2\x22:2740},{\x22x1\x22:1459,\x22y1\x22:2740,\x22x2\x22:1464,\x22y2\x22:2758},{\x22x1\x22:1464,\x22y1\x22:2758,\x22x2\x22:1482,\x22y2\x22:2752},{\x22x1\x22:1482,\x22y1\x22:2752,\x22x2\x22:1476,\x22y2\x22:2735},{\x22x1\x22:1476,\x22y1\x22:2735,\x22x2\x22:1459,\x22y2\x22:2740},{\x22x1\x22:130,\x22y1\x22:606,\x22x2\x22:130,\x22y2\x22:606},{\x22x1\x22:130,\x22y1\x22:606,\x22x2\x22:119,\x22y2\x22:577},{\x22x1\x22:119,\x22y1\x22:577,\x22x2\x22:138,\x22y2\x22:570},{\x22x1\x22:138,\x22y1\x22:570,\x22x2\x22:149,\x22y2\x22:598},{\x22x1\x22:149,\x22y1\x22:598,\x22x2\x22:130,\x22y2\x22:606},{\x22x1\x22:208,\x22y1\x22:613,\x22x2\x22:208,\x22y2\x22:613},{\x22x1\x22:208,\x22y1\x22:613,\x22x2\x22:229,\x22y2\x22:590},{\x22x1\x22:229,\x22y1\x22:590,\x22x2\x22:244,\x22y2\x22:603},{\x22x1\x22:244,\x22y1\x22:603,\x22x2\x22:223,\x22y2\x22:626},{\x22x1\x22:223,\x22y1\x22:626,\x22x2\x22:208,\x22y2\x22:613},{\x22x1\x22:167,\x22y1\x22:697,\x22x2\x22:167,\x22y2\x22:697},{\x22x1\x22:167,\x22y1\x22:697,\x22x2\x22:147,\x22y2\x22:721},{\x22x1\x22:147,\x22y1\x22:721,\x22x2\x22:132,\x22y2\x22:709},{\x22x1\x22:132,\x22y1\x22:709,\x22x2\x22:151,\x22y2\x22:685}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:6550,\x22x\x22:-103,\x22y\x22:1227,\x22z\x22:66}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

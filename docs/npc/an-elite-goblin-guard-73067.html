@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>an elite goblin guard | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">an elite goblin guard</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>24</td></tr>
+                            <tr><td>HP:</td><td>816</td></tr>
+                            <tr><td>Damage:</td><td>1-52</td></tr>
+                            <tr><td>Zone:</td><td>The Permafrost Caverns</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>an elite goblin guard Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Aderirse-Bur-35089.html">Aderirse Bur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Alkaline-Loam-34877.html">Alkaline Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Boots-4212.html">Bronze Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Bracers-4209.html">Bronze Bracers</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Breastplate-4204.html">Bronze Breastplate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Collar-4203.html">Bronze Collar</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Gauntlets-4210.html">Bronze Gauntlets</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Girdle-4207.html">Bronze Girdle</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Greaves-4211.html">Bronze Greaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Helm-4201.html">Bronze Helm</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Mask-4202.html">Bronze Mask</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Pauldron-4205.html">Bronze Pauldron</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Bronze-Vambraces-4208.html">Bronze Vambraces</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Chunk-of-Amorphous-Granite-79626.html">Chunk of Amorphous Granite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Platinum-Silvered-Rune-38691.html">Complex Platinum Silvered Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Complex-Velium-Embossed-Rune-38688.html">Complex Velium Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-III-44548.html">Consigned Bite of the Shissar III</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-IV-44549.html">Consigned Bite of the Shissar IV</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-XV-44560.html">Consigned Bite of the Shissar XV</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-XVI-56907.html">Consigned Bite of the Shissar XVI</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Animal-Pelt-34228.html">Crude Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Silk-34216.html">Crude Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Crude-Spinneret-Fluid-34906.html">Crude Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Damp-Marrow-34893.html">Damp Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Desiccated-Marrow-34890.html">Desiccated Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dry-Marrow-34892.html">Dry Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dusty-Marrow-34891.html">Dusty Marrow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Animal-Pelt-34236.html">Exquisite Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Embossed-Rune-38680.html">Exquisite Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Gold-Embossed-Rune-38683.html">Exquisite Gold Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Platinum-Embossed-Rune-38686.html">Exquisite Platinum Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Platinum-Silvered-Rune-38692.html">Exquisite Platinum Silvered Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Silk-34223.html">Exquisite Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Eye-of-Serilis-11795.html">Eye of Serilis</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Faded-Velishouls-Tome-Page-11701.html">Faded Velishoul&#39;s Tome Page</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fantastic-Animal-Pelt-123500.html">Fantastic Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fantastic-Silk-123501.html">Fantastic Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Dagger-7350.html">Fine Steel Dagger</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Great-Staff-6352.html">Fine Steel Great Staff</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Long-Sword-5350.html">Fine Steel Long Sword</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Morning-Star-6351.html">Fine Steel Morning Star</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Rapier-7352.html">Fine Steel Rapier</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Scimitar-5353.html">Fine Steel Scimitar</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Short-Sword-5352.html">Fine Steel Short Sword</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Spear-7351.html">Fine Steel Spear</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Two-Handed-Sword-5351.html">Fine Steel Two Handed Sword</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fine-Steel-Warhammer-6350.html">Fine Steel Warhammer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flame-of-Vox-11797.html">Flame of Vox</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Animal-Pelt-34235.html">Flawless Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Silk-34222.html">Flawless Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Frost-Goblin-Skin-2362.html">Frost Goblin Skin</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fulginate-Ore-34242.html">Fulginate Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glinting-Shard-81110.html">Glinting Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glove-of-Rallos-Zek-11796.html">Glove of Rallos Zek</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gold-Etched-Rune-38671.html">Gold Etched Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Gold-Painted-Rune-38661.html">Gold Painted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Caladium-Extract-44866.html">Grade C Caladium Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Choresine-Sample-44809.html">Grade C Choresine Sample</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Gormar-Venom-44764.html">Grade C Gormar Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Laburnum-Extract-44878.html">Grade C Laburnum Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Larkspur-Extract-44854.html">Grade C Larkspur Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Mamba-Venom-44779.html">Grade C Mamba Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Muscimol-Extract-44824.html">Grade C Muscimol Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Nigriventer-Venom-44749.html">Grade C Nigriventer Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-C-Oleander-Extract-44839.html">Grade C Oleander Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Choresine-Sample-44808.html">Grade D Choresine Sample</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Gormar-Venom-44763.html">Grade D Gormar Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Larkspur-Extract-44853.html">Grade D Larkspur Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Mamba-Venom-44778.html">Grade D Mamba Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Muscimol-Extract-44823.html">Grade D Muscimol Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Nigriventer-Venom-44748.html">Grade D Nigriventer Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Oleander-Extract-44838.html">Grade D Oleander Extract</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Grade-D-Taipan-Venom-44793.html">Grade D Taipan Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ice-Goblin-Blood-22533.html">Ice Goblin Blood</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Ice-of-Velious-11789.html">Ice of Velious</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Icy-Greaves-4115.html">Icy Greaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Animal-Pelt-48163.html">Immaculate Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Delphinium-44977.html">Immaculate Delphinium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Laburnum-44962.html">Immaculate Laburnum</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Larkspur-44940.html">Immaculate Larkspur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Muscimol-44918.html">Immaculate Muscimol</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Oleander-44929.html">Immaculate Oleander</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Silk-48892.html">Immaculate Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Iridium-Ore-34241.html">Iridium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Jade-Shard-11790.html">Jade Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Large-Brick-of-High-Quality-Ore-10469.html">Large Brick of High Quality Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Large-Brick-of-Unrefined-Ore-10397.html">Large Brick of Unrefined Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Malleable-Loam-34879.html">Malleable Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Osmium-Ore-123502.html">Osmium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Part-of-Tasarins-Grimoire-Pg-390-16081.html">Part of Tasarin&#39;s Grimoire Pg. 390</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pearl-Shard-11791.html">Pearl Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Permafrost-Crystals-22121.html">Permafrost Crystals</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Platinum-Embossed-Rune-38684.html">Platinum Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Platinum-Painted-Rune-38664.html">Platinum Painted Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Platinum-Silvered-Rune-38690.html">Platinum Silvered Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pliant-Loam-34878.html">Pliant Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Caladium-44950.html">Pristine Caladium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Laburnum-44961.html">Pristine Laburnum</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Muscimol-44917.html">Pristine Muscimol</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Oleander-44928.html">Pristine Oleander</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Privit-44968.html">Pristine Privit</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Nigriventer-Venom-44760.html">Purified Grade AA Nigriventer Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Adepts-Wand-50356.html">Rough Adept&#39;s Wand</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Animal-Pelt-34229.html">Rough Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Combatants-Stake-50346.html">Rough Combatant&#39;s Stake</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Chain-Boots-50070.html">Rough Defiant Chain Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Chain-Bracer-50068.html">Rough Defiant Chain Bracer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Chain-Leggings-50073.html">Rough Defiant Chain Leggings</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Chain-Sleeves-50072.html">Rough Defiant Chain Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Chitin-Shield-50551.html">Rough Defiant Chitin Shield</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Cap-50085.html">Rough Defiant Cloth Cap</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Gloves-50083.html">Rough Defiant Cloth Gloves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Robe-50088.html">Rough Defiant Cloth Robe</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Sandals-50084.html">Rough Defiant Cloth Sandals</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Sleeves-50086.html">Rough Defiant Cloth Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Cloth-Wristwrap-50082.html">Rough Defiant Cloth Wristwrap</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Halberd-50549.html">Rough Defiant Halberd</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Hammer-50540.html">Rough Defiant Hammer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Knuckle-Dusters-50546.html">Rough Defiant Knuckle Dusters</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Boots-50077.html">Rough Defiant Leather Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Bracer-50075.html">Rough Defiant Leather Bracer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Gloves-50076.html">Rough Defiant Leather Gloves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Sleeves-50079.html">Rough Defiant Leather Sleeves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Trousers-50080.html">Rough Defiant Leather Trousers</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Leather-Tunic-50081.html">Rough Defiant Leather Tunic</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Longsword-50543.html">Rough Defiant Longsword</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Nihilite-Shard-50536.html">Rough Defiant Nihilite Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Boots-50063.html">Rough Defiant Plate Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Bracer-50061.html">Rough Defiant Plate Bracer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Gauntlets-50062.html">Rough Defiant Plate Gauntlets</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Greaves-50066.html">Rough Defiant Plate Greaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Helm-50064.html">Rough Defiant Plate Helm</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Plate-Vambraces-50065.html">Rough Defiant Plate Vambraces</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Spiked-Staff-50547.html">Rough Defiant Spiked Staff</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Stone-Dagger-50544.html">Rough Defiant Stone Dagger</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Trident-50548.html">Rough Defiant Trident</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rough-Defiant-Trillion-Amethyst-50537.html">Rough Defiant Trillion Amethyst</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-AlKabor-11746.html">Rune of Al&#39;Kabor</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Attraction-11748.html">Rune of Attraction</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Disassociation-11750.html">Rune of Disassociation</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Dismemberment-11755.html">Rune of Dismemberment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Expulsion-11747.html">Rune of Expulsion</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Fulguration-11759.html">Rune of Fulguration</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Rallos-Zek-11757.html">Rune of Rallos Zek</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Regeneration-11756.html">Rune of Regeneration</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-the-Combine-11754.html">Rune of the Combine</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-the-Helix-11758.html">Rune of the Helix</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Trauma-11751.html">Rune of Trauma</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-of-Xegony-11752.html">Rune of Xegony</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Salty-Loam-34876.html">Salty Loam</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Santugs-Gift-87516.html">Santug&#39;s Gift</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Silverwing-Circlet-79623.html">Silverwing Circlet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Silvril-Ore-34239.html">Silvril Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Simple-Combatants-Orb-50326.html">Simple Combatant&#39;s Orb</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Simple-Embossed-Rune-38677.html">Simple Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Small-Brick-of-High-Quality-Ore-10468.html">Small Brick of High Quality Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Small-Brick-of-Unrefined-Ore-10396.html">Small Brick of Unrefined Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Snowfall-Algae-16822.html">Snowfall Algae</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Splinted-Bronze-Cloak-4206.html">Splinted Bronze Cloak</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Steel-Knuckles-30979.html">Steel Knuckles</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sullied-Animal-Pelt-34227.html">Sullied Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sullied-Silk-34214.html">Sullied Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sullied-Spinneret-Fluid-34904.html">Sullied Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sunshard-Dust-33790.html">Sunshard Dust</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tacky-Silk-34213.html">Tacky Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tacky-Spinneret-Fluid-34903.html">Tacky Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tantalum-Ore-34249.html">Tantalum Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tares-Lichen-16555.html">Tares Lichen</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tattered-Animal-Pelt-34226.html">Tattered Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thalium-Ore-34240.html">Thalium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thick-Silk-34215.html">Thick Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thick-Spinneret-Fluid-34905.html">Thick Spinneret Fluid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Titanium-Ore-34248.html">Titanium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Urticaceae-35086.html">Urticaceae</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vanadium-Ore-48162.html">Vanadium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg-109-11702.html">Velishoul&#39;s Tome Pg. 109</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg-8-16082.html">Velishoul&#39;s Tome Pg. 8</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg-9-16083.html">Velishoul&#39;s Tome Pg. 9</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg17-16086.html">Velishoul&#39;s Tome Pg.17</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg43-16087.html">Velishoul&#39;s Tome Pg.43</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg44-16088.html">Velishoul&#39;s Tome Pg.44</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg67-16089.html">Velishoul&#39;s Tome Pg.67</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg68-16091.html">Velishoul&#39;s Tome Pg.68</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg75-16092.html">Velishoul&#39;s Tome Pg.75</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velishouls-Tome-Pg76-16093.html">Velishoul&#39;s Tome Pg.76</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Embossed-Rune-38687.html">Velium Embossed Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Velium-Silvered-Rune-38693.html">Velium Silvered Rune</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Weighted-Gloves-30982.html">Weighted Gloves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Acquisition-Azia-11840.html">Words of Acquisition (Azia)</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-CazicThule-16039.html">Words of Cazic-Thule</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Coercion-11794.html">Words of Coercion</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Detachment-11835.html">Words of Detachment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Dimension-11871.html">Words of Dimension</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Discernment-11823.html">Words of Discernment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Dissemination-11841.html">Words of Dissemination</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Eventide-11827.html">Words of Eventide</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Haunting-11836.html">Words of Haunting</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Mistbreath-11834.html">Words of Mistbreath</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Parasitism-11842.html">Words of Parasitism</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Possession-11815.html">Words of Possession</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Purification-11838.html">Words of Purification</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Recluse-11832.html">Words of Recluse</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Rupturing-11837.html">Words of Rupturing</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-Sight-11793.html">Words of Sight</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-the-Incorporeal-11839.html">Words of the Incorporeal</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Words-of-the-Sentient-Beza-11831.html">Words of the Sentient (Beza)</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:-352,\x22y1\x22:-206,\x22x2\x22:-352,\x22y2\x22:-206},{\x22x1\x22:-352,\x22y1\x22:-206,\x22x2\x22:-352,\x22y2\x22:-155},{\x22x1\x22:-352,\x22y1\x22:-155,\x22x2\x22:-365,\x22y2\x22:-142},{\x22x1\x22:-365,\x22y1\x22:-142,\x22x2\x22:-377,\x22y2\x22:-142},{\x22x1\x22:-377,\x22y1\x22:-142,\x22x2\x22:-389,\x22y2\x22:-154},{\x22x1\x22:-394,\x22y1\x22:-235,\x22x2\x22:-394,\x22y2\x22:-235},{\x22x1\x22:-394,\x22y1\x22:-235,\x22x2\x22:-394,\x22y2\x22:-170},{\x22x1\x22:-394,\x22y1\x22:-170,\x22x2\x22:-406,\x22y2\x22:-170},{\x22x1\x22:-406,\x22y1\x22:-170,\x22x2\x22:-420,\x22y2\x22:-157},{\x22x1\x22:-420,\x22y1\x22:-157,\x22x2\x22:-445,\x22y2\x22:-182},{\x22x1\x22:-445,\x22y1\x22:-182,\x22x2\x22:-432,\x22y2\x22:-208},{\x22x1\x22:-432,\x22y1\x22:-208,\x22x2\x22:-420,\x22y2\x22:-208},{\x22x1\x22:-420,\x22y1\x22:-208,\x22x2\x22:-418,\x22y2\x22:-223},{\x22x1\x22:-418,\x22y1\x22:-223,\x22x2\x22:-458,\x22y2\x22:-226},{\x22x1\x22:-458,\x22y1\x22:-226,\x22x2\x22:-446,\x22y2\x22:-250},{\x22x1\x22:-446,\x22y1\x22:-250,\x22x2\x22:-434,\x22y2\x22:-250},{\x22x1\x22:-434,\x22y1\x22:-250,\x22x2\x22:-445,\x22y2\x22:-266},{\x22x1\x22:-445,\x22y1\x22:-266,\x22x2\x22:-432,\x22y2\x22:-292},{\x22x1\x22:-432,\x22y1\x22:-292,\x22x2\x22:-421,\x22y2\x22:-292},{\x22x1\x22:-421,\x22y1\x22:-292,\x22x2\x22:-406,\x22y2\x22:-278},{\x22x1\x22:-406,\x22y1\x22:-278,\x22x2\x22:-391,\x22y2\x22:-278},{\x22x1\x22:-391,\x22y1\x22:-278,\x22x2\x22:-390,\x22y2\x22:-292},{\x22x1\x22:-390,\x22y1\x22:-292,\x22x2\x22:-377,\x22y2\x22:-292},{\x22x1\x22:-377,\x22y1\x22:-292,\x22x2\x22:-376,\x22y2\x22:-309},{\x22x1\x22:-376,\x22y1\x22:-309,\x22x2\x22:-389,\x22y2\x22:-322},{\x22x1\x22:-389,\x22y1\x22:-322,\x22x2\x22:-377,\x22y2\x22:-334},{\x22x1\x22:-377,\x22y1\x22:-334,\x22x2\x22:-365,\x22y2\x22:-334},{\x22x1\x22:-365,\x22y1\x22:-334,\x22x2\x22:-362,\x22y2\x22:-348},{\x22x1\x22:-362,\x22y1\x22:-348,\x22x2\x22:-351,\x22y2\x22:-348},{\x22x1\x22:-351,\x22y1\x22:-348,\x22x2\x22:-334,\x22y2\x22:-376},{\x22x1\x22:-334,\x22y1\x22:-376,\x22x2\x22:-322,\x22y2\x22:-376},{\x22x1\x22:-322,\x22y1\x22:-376,\x22x2\x22:-320,\x22y2\x22:-390},{\x22x1\x22:-320,\x22y1\x22:-390,\x22x2\x22:-308,\x22y2\x22:-390},{\x22x1\x22:-308,\x22y1\x22:-390,\x22x2\x22:-293,\x22y2\x22:-404},{\x22x1\x22:-293,\x22y1\x22:-404,\x22x2\x22:-304,\x22y2\x22:-435},{\x22x1\x22:-304,\x22y1\x22:-435,\x22x2\x22:-322,\x22y2\x22:-422},{\x22x1\x22:-322,\x22y1\x22:-422,\x22x2\x22:-335,\x22y2\x22:-422},{\x22x1\x22:-335,\x22y1\x22:-422,\x22x2\x22:-348,\x22y2\x22:-435},{\x22x1\x22:-348,\x22y1\x22:-435,\x22x2\x22:-362,\x22y2\x22:-436},{\x22x1\x22:-362,\x22y1\x22:-436,\x22x2\x22:-375,\x22y2\x22:-474},{\x22x1\x22:-375,\x22y1\x22:-474,\x22x2\x22:-365,\x22y2\x22:-474},{\x22x1\x22:-365,\x22y1\x22:-474,\x22x2\x22:-353,\x22y2\x22:-461},{\x22x1\x22:-353,\x22y1\x22:-461,\x22x2\x22:-335,\x22y2\x22:-474},{\x22x1\x22:-335,\x22y1\x22:-474,\x22x2\x22:-309,\x22y2\x22:-474},{\x22x1\x22:-309,\x22y1\x22:-474,\x22x2\x22:-295,\x22y2\x22:-460},{\x22x1\x22:-295,\x22y1\x22:-460,\x22x2\x22:-280,\x22y2\x22:-460},{\x22x1\x22:-280,\x22y1\x22:-460,\x22x2\x22:-265,\x22y2\x22:-474},{\x22x1\x22:-265,\x22y1\x22:-474,\x22x2\x22:-236,\x22y2\x22:-475},{\x22x1\x22:-236,\x22y1\x22:-475,\x22x2\x22:-223,\x22y2\x22:-488},{\x22x1\x22:-223,\x22y1\x22:-488,\x22x2\x22:-197,\x22y2\x22:-488},{\x22x1\x22:-197,\x22y1\x22:-488,\x22x2\x22:-185,\x22y2\x22:-462},{\x22x1\x22:-185,\x22y1\x22:-462,\x22x2\x22:-197,\x22y2\x22:-449},{\x22x1\x22:-197,\x22y1\x22:-449,\x22x2\x22:-184,\x22y2\x22:-418},{\x22x1\x22:-184,\x22y1\x22:-418,\x22x2\x22:-169,\x22y2\x22:-418},{\x22x1\x22:-169,\x22y1\x22:-418,\x22x2\x22:-154,\x22y2\x22:-431},{\x22x1\x22:-154,\x22y1\x22:-431,\x22x2\x22:-127,\x22y2\x22:-432},{\x22x1\x22:-127,\x22y1\x22:-432,\x22x2\x22:-114,\x22y2\x22:-419},{\x22x1\x22:-114,\x22y1\x22:-419,\x22x2\x22:-98,\x22y2\x22:-418},{\x22x1\x22:-98,\x22y1\x22:-418,\x22x2\x22:-83,\x22y2\x22:-432},{\x22x1\x22:-83,\x22y1\x22:-432,\x22x2\x22:-57,\x22y2\x22:-431},{\x22x1\x22:-57,\x22y1\x22:-431,\x22x2\x22:-42,\x22y2\x22:-418},{\x22x1\x22:-42,\x22y1\x22:-418,\x22x2\x22:-16,\x22y2\x22:-418},{\x22x1\x22:-16,\x22y1\x22:-418,\x22x2\x22:-16,\x22y2\x22:-366},{\x22x1\x22:-16,\x22y1\x22:-366,\x22x2\x22:-28,\x22y2\x22:-366},{\x22x1\x22:-28,\x22y1\x22:-366,\x22x2\x22:-43,\x22y2\x22:-352},{\x22x1\x22:-43,\x22y1\x22:-352,\x22x2\x22:-30,\x22y2\x22:-334},{\x22x1\x22:-30,\x22y1\x22:-334,\x22x2\x22:-14,\x22y2\x22:-334},{\x22x1\x22:-14,\x22y1\x22:-334,\x22x2\x22:0,\x22y2\x22:-348},{\x22x1\x22:0,\x22y1\x22:-348,\x22x2\x22:11,\x22y2\x22:-348},{\x22x1\x22:11,\x22y1\x22:-348,\x22x2\x22:11,\x22y2\x22:-323},{\x22x1\x22:11,\x22y1\x22:-323,\x22x2\x22:0,\x22y2\x22:-311},{\x22x1\x22:0,\x22y1\x22:-311,\x22x2\x22:-12,\x22y2\x22:-323},{\x22x1\x22:-12,\x22y1\x22:-323,\x22x2\x22:-29,\x22y2\x22:-310},{\x22x1\x22:-29,\x22y1\x22:-310,\x22x2\x22:-43,\x22y2\x22:-310},{\x22x1\x22:-43,\x22y1\x22:-310,\x22x2\x22:-44,\x22y2\x22:-295},{\x22x1\x22:-44,\x22y1\x22:-295,\x22x2\x22:-57,\x22y2\x22:-282},{\x22x1\x22:-57,\x22y1\x22:-282,\x22x2\x22:-50,\x22y2\x22:-271},{\x22x1\x22:-50,\x22y1\x22:-271,\x22x2\x22:-41,\x22y2\x22:-278},{\x22x1\x22:-41,\x22y1\x22:-278,\x22x2\x22:-36,\x22y2\x22:-278},{\x22x1\x22:-36,\x22y1\x22:-278,\x22x2\x22:-29,\x22y2\x22:-271},{\x22x1\x22:-29,\x22y1\x22:-271,\x22x2\x22:-20,\x22y2\x22:-278},{\x22x1\x22:-20,\x22y1\x22:-278,\x22x2\x22:-20,\x22y2\x22:-286},{\x22x1\x22:-20,\x22y1\x22:-286,\x22x2\x22:-7,\x22y2\x22:-293},{\x22x1\x22:-7,\x22y1\x22:-293,\x22x2\x22:6,\x22y2\x22:-293},{\x22x1\x22:6,\x22y1\x22:-293,\x22x2\x22:13,\x22y2\x22:-299},{\x22x1\x22:13,\x22y1\x22:-299,\x22x2\x22:19,\x22y2\x22:-300},{\x22x1\x22:19,\x22y1\x22:-300,\x22x2\x22:19,\x22y2\x22:-294},{\x22x1\x22:19,\x22y1\x22:-294,\x22x2\x22:12,\x22y2\x22:-270},{\x22x1\x22:12,\x22y1\x22:-270,\x22x2\x22:19,\x22y2\x22:-265},{\x22x1\x22:19,\x22y1\x22:-265,\x22x2\x22:19,\x22y2\x22:-259},{\x22x1\x22:19,\x22y1\x22:-259,\x22x2\x22:12,\x22y2\x22:-253},{\x22x1\x22:12,\x22y1\x22:-253,\x22x2\x22:6,\x22y2\x22:-253},{\x22x1\x22:6,\x22y1\x22:-253,\x22x2\x22:0,\x22y2\x22:-259},{\x22x1\x22:0,\x22y1\x22:-259,\x22x2\x22:0,\x22y2\x22:-265},{\x22x1\x22:0,\x22y1\x22:-265,\x22x2\x22:7,\x22y2\x22:-273},{\x22x1\x22:7,\x22y1\x22:-273,\x22x2\x22:-2,\x22y2\x22:-281},{\x22x1\x22:-2,\x22y1\x22:-281,\x22x2\x22:-13,\x22y2\x22:-281},{\x22x1\x22:-13,\x22y1\x22:-281,\x22x2\x22:-15,\x22y2\x22:-274},{\x22x1\x22:-15,\x22y1\x22:-274,\x22x2\x22:-30,\x22y2\x22:-265},{\x22x1\x22:-30,\x22y1\x22:-265,\x22x2\x22:-36,\x22y2\x22:-260},{\x22x1\x22:-36,\x22y1\x22:-260,\x22x2\x22:-41,\x22y2\x22:-260},{\x22x1\x22:-41,\x22y1\x22:-260,\x22x2\x22:-48,\x22y2\x22:-266},{\x22x1\x22:-48,\x22y1\x22:-266,\x22x2\x22:-62,\x22y2\x22:-267},{\x22x1\x22:-62,\x22y1\x22:-267,\x22x2\x22:-69,\x22y2\x22:-280},{\x22x1\x22:-69,\x22y1\x22:-280,\x22x2\x22:-69,\x22y2\x22:-293},{\x22x1\x22:-69,\x22y1\x22:-293,\x22x2\x22:-54,\x22y2\x22:-309},{\x22x1\x22:-54,\x22y1\x22:-309,\x22x2\x22:-69,\x22y2\x22:-322},{\x22x1\x22:-69,\x22y1\x22:-322,\x22x2\x22:-100,\x22y2\x22:-325},{\x22x1\x22:-100,\x22y1\x22:-325,\x22x2\x22:-99,\x22y2\x22:-318},{\x22x1\x22:-99,\x22y1\x22:-318,\x22x2\x22:-104,\x22y2\x22:-311},{\x22x1\x22:-104,\x22y1\x22:-311,\x22x2\x22:-114,\x22y2\x22:-315},{\x22x1\x22:-114,\x22y1\x22:-315,\x22x2\x22:-115,\x22y2\x22:-315},{\x22x1\x22:-115,\x22y1\x22:-315,\x22x2\x22:-117,\x22y2\x22:-320},{\x22x1\x22:-117,\x22y1\x22:-320,\x22x2\x22:-117,\x22y2\x22:-321},{\x22x1\x22:-117,\x22y1\x22:-321,\x22x2\x22:-116,\x22y2\x22:-321},{\x22x1\x22:-116,\x22y1\x22:-321,\x22x2\x22:-115,\x22y2\x22:-324},{\x22x1\x22:-115,\x22y1\x22:-324,\x22x2\x22:-121,\x22y2\x22:-325},{\x22x1\x22:-121,\x22y1\x22:-325,\x22x2\x22:-123,\x22y2\x22:-326},{\x22x1\x22:-123,\x22y1\x22:-326,\x22x2\x22:-123,\x22y2\x22:-331},{\x22x1\x22:-123,\x22y1\x22:-331,\x22x2\x22:-121,\x22y2\x22:-333},{\x22x1\x22:-121,\x22y1\x22:-333,\x22x2\x22:-116,\x22y2\x22:-333},{\x22x1\x22:-116,\x22y1\x22:-333,\x22x2\x22:-115,\x22y2\x22:-331},{\x22x1\x22:-115,\x22y1\x22:-331,\x22x2\x22:-111,\x22y2\x22:-330},{\x22x1\x22:-111,\x22y1\x22:-330,\x22x2\x22:-111,\x22y2\x22:-333},{\x22x1\x22:-111,\x22y1\x22:-333,\x22x2\x22:-110,\x22y2\x22:-335},{\x22x1\x22:-110,\x22y1\x22:-335,\x22x2\x22:-106,\x22y2\x22:-337},{\x22x1\x22:-106,\x22y1\x22:-337,\x22x2\x22:-104,\x22y2\x22:-337},{\x22x1\x22:-104,\x22y1\x22:-337,\x22x2\x22:-100,\x22y2\x22:-335},{\x22x1\x22:-100,\x22y1\x22:-335,\x22x2\x22:-71,\x22y2\x22:-335},{\x22x1\x22:-71,\x22y1\x22:-335,\x22x2\x22:-55,\x22y2\x22:-350},{\x22x1\x22:-55,\x22y1\x22:-350,\x22x2\x22:-55,\x22y2\x22:-364},{\x22x1\x22:-55,\x22y1\x22:-364,\x22x2\x22:-41,\x22y2\x22:-377},{\x22x1\x22:-41,\x22y1\x22:-377,\x22x2\x22:-27,\x22y2\x22:-377},{\x22x1\x22:-27,\x22y1\x22:-377,\x22x2\x22:-27,\x22y2\x22:-392},{\x22x1\x22:-27,\x22y1\x22:-392,\x22x2\x22:-41,\x22y2\x22:-406},{\x22x1\x22:-41,\x22y1\x22:-406,\x22x2\x22:-56,\x22y2\x22:-407},{\x22x1\x22:-56,\x22y1\x22:-407,\x22x2\x22:-69,\x22y2\x22:-421},{\x22x1\x22:-69,\x22y1\x22:-421,\x22x2\x22:-99,\x22y2\x22:-392},{\x22x1\x22:-99,\x22y1\x22:-392,\x22x2\x22:-85,\x22y2\x22:-391},{\x22x1\x22:-85,\x22y1\x22:-391,\x22x2\x22:-71,\x22y2\x22:-377},{\x22x1\x22:-71,\x22y1\x22:-377,\x22x2\x22:-71,\x22y2\x22:-364},{\x22x1\x22:-71,\x22y1\x22:-364,\x22x2\x22:-84,\x22y2\x22:-351},{\x22x1\x22:-84,\x22y1\x22:-351,\x22x2\x22:-113,\x22y2\x22:-363},{\x22x1\x22:-113,\x22y1\x22:-363,\x22x2\x22:-113,\x22y2\x22:-351},{\x22x1\x22:-113,\x22y1\x22:-351,\x22x2\x22:-125,\x22y2\x22:-351},{\x22x1\x22:-125,\x22y1\x22:-351,\x22x2\x22:-125,\x22y2\x22:-377},{\x22x1\x22:-125,\x22y1\x22:-377,\x22x2\x22:-111,\x22y2\x22:-391},{\x22x1\x22:-111,\x22y1\x22:-391,\x22x2\x22:-111,\x22y2\x22:-406},{\x22x1\x22:-111,\x22y1\x22:-406,\x22x2\x22:-127,\x22y2\x22:-407},{\x22x1\x22:-127,\x22y1\x22:-407,\x22x2\x22:-155,\x22y2\x22:-392},{\x22x1\x22:-155,\x22y1\x22:-392,\x22x2\x22:-168,\x22y2\x22:-379},{\x22x1\x22:-168,\x22y1\x22:-379,\x22x2\x22:-169,\x22y2\x22:-349},{\x22x1\x22:-169,\x22y1\x22:-349,\x22x2\x22:-156,\x22y2\x22:-349},{\x22x1\x22:-156,\x22y1\x22:-349,\x22x2\x22:-169,\x22y2\x22:-321},{\x22x1\x22:-169,\x22y1\x22:-321,\x22x2\x22:-169,\x22y2\x22:-295},{\x22x1\x22:-169,\x22y1\x22:-295,\x22x2\x22:-196,\x22y2\x22:-295},{\x22x1\x22:-196,\x22y1\x22:-295,\x22x2\x22:-210,\x22y2\x22:-281},{\x22x1\x22:-210,\x22y1\x22:-281,\x22x2\x22:-223,\x22y2\x22:-281},{\x22x1\x22:-223,\x22y1\x22:-281,\x22x2\x22:-237,\x22y2\x22:-294},{\x22x1\x22:-237,\x22y1\x22:-294,\x22x2\x22:-237,\x22y2\x22:-307},{\x22x1\x22:-237,\x22y1\x22:-307,\x22x2\x22:-223,\x22y2\x22:-321},{\x22x1\x22:-223,\x22y1\x22:-321,\x22x2\x22:-210,\x22y2\x22:-321},{\x22x1\x22:-210,\x22y1\x22:-321,\x22x2\x22:-197,\x22y2\x22:-307},{\x22x1\x22:-197,\x22y1\x22:-307,\x22x2\x22:-180,\x22y2\x22:-308},{\x22x1\x22:-180,\x22y1\x22:-308,\x22x2\x22:-181,\x22y2\x22:-323},{\x22x1\x22:-181,\x22y1\x22:-323,\x22x2\x22:-195,\x22y2\x22:-336},{\x22x1\x22:-195,\x22y1\x22:-336,\x22x2\x22:-195,\x22y2\x22:-351},{\x22x1\x22:-195,\x22y1\x22:-351,\x22x2\x22:-224,\x22y2\x22:-337},{\x22x1\x22:-224,\x22y1\x22:-337,\x22x2\x22:-279,\x22y2\x22:-365},{\x22x1\x22:-279,\x22y1\x22:-365,\x22x2\x22:-294,\x22y2\x22:-351},{\x22x1\x22:-294,\x22y1\x22:-351,\x22x2\x22:-308,\x22y2\x22:-351},{\x22x1\x22:-308,\x22y1\x22:-351,\x22x2\x22:-323,\x22y2\x22:-337},{\x22x1\x22:-323,\x22y1\x22:-337,\x22x2\x22:-351,\x22y2\x22:-322},{\x22x1\x22:-351,\x22y1\x22:-322,\x22x2\x22:-364,\x22y2\x22:-309},{\x22x1\x22:-364,\x22y1\x22:-309,\x22x2\x22:-351,\x22y2\x22:-293},{\x22x1\x22:-351,\x22y1\x22:-293,\x22x2\x22:-335,\x22y2\x22:-321},{\x22x1\x22:-335,\x22y1\x22:-321,\x22x2\x22:-322,\x22y2\x22:-321},{\x22x1\x22:-322,\x22y1\x22:-321,\x22x2\x22:-307,\x22y2\x22:-335},{\x22x1\x22:-307,\x22y1\x22:-335,\x22x2\x22:-281,\x22y2\x22:-335},{\x22x1\x22:-281,\x22y1\x22:-335,\x22x2\x22:-281,\x22y2\x22:-309},{\x22x1\x22:-281,\x22y1\x22:-309,\x22x2\x22:-308,\x22y2\x22:-295},{\x22x1\x22:-308,\x22y1\x22:-295,\x22x2\x22:-351,\x22y2\x22:-281},{\x22x1\x22:-351,\x22y1\x22:-281,\x22x2\x22:-378,\x22y2\x22:-267},{\x22x1\x22:-378,\x22y1\x22:-267,\x22x2\x22:-379,\x22y2\x22:-168},{\x22x1\x22:-379,\x22y1\x22:-168,\x22x2\x22:-378,\x22y2\x22:-153},{\x22x1\x22:-378,\x22y1\x22:-153,\x22x2\x22:-364,\x22y2\x22:-153},{\x22x1\x22:-364,\x22y1\x22:-153,\x22x2\x22:-363,\x22y2\x22:-191},{\x22x1\x22:-363,\x22y1\x22:-191,\x22x2\x22:-363,\x22y2\x22:-207},{\x22x1\x22:-390,\x22y1\x22:-155,\x22x2\x22:-390,\x22y2\x22:-155},{\x22x1\x22:-390,\x22y1\x22:-155,\x22x2\x22:-394,\x22y2\x22:-170},{\x22x1\x22:-404,\x22y1\x22:-250,\x22x2\x22:-404,\x22y2\x22:-250},{\x22x1\x22:-404,\x22y1\x22:-250,\x22x2\x22:-404,\x22y2\x22:-238},{\x22x1\x22:-404,\x22y1\x22:-238,\x22x2\x22:-422,\x22y2\x22:-251},{\x22x1\x22:-422,\x22y1\x22:-251,\x22x2\x22:-407,\x22y2\x22:-268},{\x22x1\x22:-407,\x22y1\x22:-268,\x22x2\x22:-390,\x22y2\x22:-253},{\x22x1\x22:-390,\x22y1\x22:-253,\x22x2\x22:-404,\x22y2\x22:-250},{\x22x1\x22:-251,\x22y1\x22:-418,\x22x2\x22:-251,\x22y2\x22:-418},{\x22x1\x22:-251,\x22y1\x22:-418,\x22x2\x22:-265,\x22y2\x22:-404},{\x22x1\x22:-265,\x22y1\x22:-404,\x22x2\x22:-280,\x22y2\x22:-404},{\x22x1\x22:-280,\x22y1\x22:-404,\x22x2\x22:-282,\x22y2\x22:-434},{\x22x1\x22:-282,\x22y1\x22:-434,\x22x2\x22:-223,\x22y2\x22:-450},{\x22x1\x22:-223,\x22y1\x22:-450,\x22x2\x22:-222,\x22y2\x22:-419},{\x22x1\x22:-222,\x22y1\x22:-419,\x22x2\x22:-251,\x22y2\x22:-418},{\x22x1\x22:-239,\x22y1\x22:-376,\x22x2\x22:-239,\x22y2\x22:-376},{\x22x1\x22:-239,\x22y1\x22:-376,\x22x2\x22:-252,\x22y2\x22:-376},{\x22x1\x22:-252,\x22y1\x22:-376,\x22x2\x22:-240,\x22y2\x22:-393},{\x22x1\x22:-240,\x22y1\x22:-393,\x22x2\x22:-225,\x22y2\x22:-394},{\x22x1\x22:-225,\x22y1\x22:-394,\x22x2\x22:-211,\x22y2\x22:-408},{\x22x1\x22:-211,\x22y1\x22:-408,\x22x2\x22:-180,\x22y2\x22:-379},{\x22x1\x22:-180,\x22y1\x22:-379,\x22x2\x22:-209,\x22y2\x22:-362},{\x22x1\x22:-209,\x22y1\x22:-362,\x22x2\x22:-224,\x22y2\x22:-362},{\x22x1\x22:-224,\x22y1\x22:-362,\x22x2\x22:-239,\x22y2\x22:-376},{\x22x1\x22:166,\x22y1\x22:-923,\x22x2\x22:166,\x22y2\x22:-923},{\x22x1\x22:166,\x22y1\x22:-923,\x22x2\x22:138,\x22y2\x22:-951},{\x22x1\x22:138,\x22y1\x22:-951,\x22x2\x22:166,\x22y2\x22:-994},{\x22x1\x22:166,\x22y1\x22:-994,\x22x2\x22:196,\x22y2\x22:-979},{\x22x1\x22:196,\x22y1\x22:-979,\x22x2\x22:182,\x22y2\x22:-965},{\x22x1\x22:182,\x22y1\x22:-965,\x22x2\x22:182,\x22y2\x22:-952},{\x22x1\x22:182,\x22y1\x22:-952,\x22x2\x22:196,\x22y2\x22:-925},{\x22x1\x22:196,\x22y1\x22:-925,\x22x2\x22:208,\x22y2\x22:-925},{\x22x1\x22:208,\x22y1\x22:-925,\x22x2\x22:236,\x22y2\x22:-952},{\x22x1\x22:236,\x22y1\x22:-952,\x22x2\x22:236,\x22y2\x22:-965},{\x22x1\x22:236,\x22y1\x22:-965,\x22x2\x22:208,\x22y2\x22:-979},{\x22x1\x22:208,\x22y1\x22:-979,\x22x2\x22:194,\x22y2\x22:-1020},{\x22x1\x22:194,\x22y1\x22:-1020,\x22x2\x22:153,\x22y2\x22:-1020},{\x22x1\x22:153,\x22y1\x22:-1020,\x22x2\x22:126,\x22y2\x22:-993},{\x22x1\x22:126,\x22y1\x22:-993,\x22x2\x22:112,\x22y2\x22:-951},{\x22x1\x22:112,\x22y1\x22:-951,\x22x2\x22:41,\x22y2\x22:-951},{\x22x1\x22:41,\x22y1\x22:-951,\x22x2\x22:14,\x22y2\x22:-937},{\x22x1\x22:14,\x22y1\x22:-937,\x22x2\x22:0,\x22y2\x22:-909},{\x22x1\x22:0,\x22y1\x22:-909,\x22x2\x22:0,\x22y2\x22:-882},{\x22x1\x22:0,\x22y1\x22:-882,\x22x2\x22:14,\x22y2\x22:-854},{\x22x1\x22:14,\x22y1\x22:-854,\x22x2\x22:0,\x22y2\x22:-853},{\x22x1\x22:0,\x22y1\x22:-853,\x22x2\x22:-28,\x22y2\x22:-825},{\x22x1\x22:-28,\x22y1\x22:-825,\x22x2\x22:-42,\x22y2\x22:-870},{\x22x1\x22:-42,\x22y1\x22:-870,\x22x2\x22:-31,\x22y2\x22:-903},{\x22x1\x22:-31,\x22y1\x22:-903,\x22x2\x22:-36,\x22y2\x22:-909},{\x22x1\x22:-36,\x22y1\x22:-909,\x22x2\x22:-155,\x22y2\x22:-909},{\x22x1\x22:-155,\x22y1\x22:-909,\x22x2\x22:-169,\x22y2\x22:-924},{\x22x1\x22:-169,\x22y1\x22:-924,\x22x2\x22:-155,\x22y2\x22:-966},{\x22x1\x22:-155,\x22y1\x22:-966,\x22x2\x22:-125,\x22y2\x22:-966},{\x22x1\x22:-125,\x22y1\x22:-966,\x22x2\x22:-70,\x22y2\x22:-939},{\x22x1\x22:-70,\x22y1\x22:-939,\x22x2\x22:-15,\x22y2\x22:-939},{\x22x1\x22:-15,\x22y1\x22:-939,\x22x2\x22:12,\x22y2\x22:-980},{\x22x1\x22:12,\x22y1\x22:-980,\x22x2\x22:96,\x22y2\x22:-995},{\x22x1\x22:96,\x22y1\x22:-995,\x22x2\x22:125,\x22y2\x22:-1037},{\x22x1\x22:125,\x22y1\x22:-1037,\x22x2\x22:165,\x22y2\x22:-1037},{\x22x1\x22:165,\x22y1\x22:-1037,\x22x2\x22:166,\x22y2\x22:-1044},{\x22x1\x22:166,\x22y1\x22:-1044,\x22x2\x22:180,\x22y2\x22:-1042},{\x22x1\x22:180,\x22y1\x22:-1042,\x22x2\x22:181,\x22y2\x22:-1093},{\x22x1\x22:181,\x22y1\x22:-1093,\x22x2\x22:221,\x22y2\x22:-1106},{\x22x1\x22:221,\x22y1\x22:-1106,\x22x2\x22:214,\x22y2\x22:-1122},{\x22x1\x22:214,\x22y1\x22:-1122,\x22x2\x22:208,\x22y2\x22:-1147},{\x22x1\x22:208,\x22y1\x22:-1147,\x22x2\x22:181,\x22y2\x22:-1160},{\x22x1\x22:181,\x22y1\x22:-1160,\x22x2\x22:169,\x22y2\x22:-1160},{\x22x1\x22:169,\x22y1\x22:-1160,\x22x2\x22:182,\x22y2\x22:-1134},{\x22x1\x22:182,\x22y1\x22:-1134,\x22x2\x22:132,\x22y2\x22:-1132},{\x22x1\x22:132,\x22y1\x22:-1132,\x22x2\x22:125,\x22y2\x22:-1132},{\x22x1\x22:125,\x22y1\x22:-1132,\x22x2\x22:122,\x22y2\x22:-1138},{\x22x1\x22:122,\x22y1\x22:-1138,\x22x2\x22:109,\x22y2\x22:-1165},{\x22x1\x22:109,\x22y1\x22:-1165,\x22x2\x22:124,\x22y2\x22:-1194},{\x22x1\x22:124,\x22y1\x22:-1194,\x22x2\x22:124,\x22y2\x22:-1199},{\x22x1\x22:124,\x22y1\x22:-1199,\x22x2\x22:127,\x22y2\x22:-1189},{\x22x1\x22:127,\x22y1\x22:-1189,\x22x2\x22:167,\x22y2\x22:-1163},{\x22x1\x22:167,\x22y1\x22:-1163,\x22x2\x22:181,\x22y2\x22:-1163},{\x22x1\x22:181,\x22y1\x22:-1163,\x22x2\x22:208,\x22y2\x22:-1191},{\x22x1\x22:208,\x22y1\x22:-1191,\x22x2\x22:207,\x22y2\x22:-1203},{\x22x1\x22:207,\x22y1\x22:-1203,\x22x2\x22:179,\x22y2\x22:-1217},{\x22x1\x22:179,\x22y1\x22:-1217,\x22x2\x22:222,\x22y2\x22:-1232},{\x22x1\x22:222,\x22y1\x22:-1232,\x22x2\x22:222,\x22y2\x22:-1245},{\x22x1\x22:222,\x22y1\x22:-1245,\x22x2\x22:210,\x22y2\x22:-1259},{\x22x1\x22:210,\x22y1\x22:-1259,\x22x2\x22:224,\x22y2\x22:-1246},{\x22x1\x22:224,\x22y1\x22:-1246,\x22x2\x22:224,\x22y2\x22:-1161},{\x22x1\x22:224,\x22y1\x22:-1161,\x22x2\x22:211,\x22y2\x22:-1148},{\x22x1\x22:211,\x22y1\x22:-1148,\x22x2\x22:211,\x22y2\x22:-1133},{\x22x1\x22:211,\x22y1\x22:-1133,\x22x2\x22:225,\x22y2\x22:-1104},{\x22x1\x22:166,\x22y1\x22:-923,\x22x2\x22:166,\x22y2\x22:-923},{\x22x1\x22:166,\x22y1\x22:-923,\x22x2\x22:143,\x22y2\x22:-879},{\x22x1\x22:143,\x22y1\x22:-879,\x22x2\x22:138,\x22y2\x22:-869},{\x22x1\x22:138,\x22y1\x22:-869,\x22x2\x22:83,\x22y2\x22:-841},{\x22x1\x22:83,\x22y1\x22:-841,\x22x2\x22:12,\x22y2\x22:-799},{\x22x1\x22:12,\x22y1\x22:-799,\x22x2\x22:-28,\x22y2\x22:-799},{\x22x1\x22:-28,\x22y1\x22:-799,\x22x2\x22:-66,\x22y2\x22:-818},{\x22x1\x22:-66,\x22y1\x22:-818,\x22x2\x22:-83,\x22y2\x22:-826},{\x22x1\x22:-83,\x22y1\x22:-826,\x22x2\x22:-70,\x22y2\x22:-869},{\x22x1\x22:-70,\x22y1\x22:-869,\x22x2\x22:-89,\x22y2\x22:-841},{\x22x1\x22:-89,\x22y1\x22:-841,\x22x2\x22:-104,\x22y2\x22:-847},{\x22x1\x22:-104,\x22y1\x22:-847,\x22x2\x22:-128,\x22y2\x22:-869},{\x22x1\x22:-128,\x22y1\x22:-869,\x22x2\x22:-182,\x22y2\x22:-883},{\x22x1\x22:-182,\x22y1\x22:-883,\x22x2\x22:-224,\x22y2\x22:-897},{\x22x1\x22:-224,\x22y1\x22:-897,\x22x2\x22:-252,\x22y2\x22:-897},{\x22x1\x22:-252,\x22y1\x22:-897,\x22x2\x22:-255,\x22y2\x22:-900},{\x22x1\x22:-255,\x22y1\x22:-900,\x22x2\x22:-263,\x22y2\x22:-908},{\x22x1\x22:-263,\x22y1\x22:-908,\x22x2\x22:-292,\x22y2\x22:-937},{\x22x1\x22:-292,\x22y1\x22:-937,\x22x2\x22:-251,\x22y2\x22:-966},{\x22x1\x22:-251,\x22y1\x22:-966,\x22x2\x22:-279,\x22y2\x22:-995},{\x22x1\x22:-279,\x22y1\x22:-995,\x22x2\x22:-279,\x22y2\x22:-1007},{\x22x1\x22:-279,\x22y1\x22:-1007,\x22x2\x22:-254,\x22y2\x22:-1019},{\x22x1\x22:-254,\x22y1\x22:-1019,\x22x2\x22:-238,\x22y2\x22:-1020},{\x22x1\x22:-238,\x22y1\x22:-1020,\x22x2\x22:-225,\x22y2\x22:-1007},{\x22x1\x22:-225,\x22y1\x22:-1007,\x22x2\x22:-225,\x22y2\x22:-994},{\x22x1\x22:-225,\x22y1\x22:-994,\x22x2\x22:-239,\x22y2\x22:-965},{\x22x1\x22:-239,\x22y1\x22:-965,\x22x2\x22:-224,\x22y2\x22:-923},{\x22x1\x22:-224,\x22y1\x22:-923,\x22x2\x22:-210,\x22y2\x22:-922},{\x22x1\x22:-210,\x22y1\x22:-922,\x22x2\x22:-209,\x22y2\x22:-978},{\x22x1\x22:-209,\x22y1\x22:-978,\x22x2\x22:-196,\x22y2\x22:-978},{\x22x1\x22:-196,\x22y1\x22:-978,\x22x2\x22:-181,\x22y2\x22:-1006},{\x22x1\x22:-181,\x22y1\x22:-1006,\x22x2\x22:-156,\x22y2\x22:-1006},{\x22x1\x22:-156,\x22y1\x22:-1006,\x22x2\x22:-124,\x22y2\x22:-1037},{\x22x1\x22:-124,\x22y1\x22:-1037,\x22x2\x22:-125,\x22y2\x22:-1049},{\x22x1\x22:-125,\x22y1\x22:-1049,\x22x2\x22:-97,\x22y2\x22:-1090},{\x22x1\x22:-97,\x22y1\x22:-1090,\x22x2\x22:-54,\x22y2\x22:-1092},{\x22x1\x22:-54,\x22y1\x22:-1092,\x22x2\x22:-41,\x22y2\x22:-1118},{\x22x1\x22:-41,\x22y1\x22:-1118,\x22x2\x22:18,\x22y2\x22:-1118},{\x22x1\x22:18,\x22y1\x22:-1118,\x22x2\x22:29,\x22y2\x22:-1116},{\x22x1\x22:29,\x22y1\x22:-1116,\x22x2\x22:69,\x22y2\x22:-1160},{\x22x1\x22:69,\x22y1\x22:-1160,\x22x2\x22:107,\x22y2\x22:-1198},{\x22x1\x22:107,\x22y1\x22:-1198,\x22x2\x22:112,\x22y2\x22:-1231},{\x22x1\x22:112,\x22y1\x22:-1231,\x22x2\x22:126,\x22y2\x22:-1258},{\x22x1\x22:126,\x22y1\x22:-1258,\x22x2\x22:139,\x22y2\x22:-1258},{\x22x1\x22:139,\x22y1\x22:-1258,\x22x2\x22:151,\x22y2\x22:-1252},{\x22x1\x22:151,\x22y1\x22:-1252,\x22x2\x22:168,\x22y2\x22:-1245},{\x22x1\x22:168,\x22y1\x22:-1245,\x22x2\x22:196,\x22y2\x22:-1264},{\x22x1\x22:196,\x22y1\x22:-1264,\x22x2\x22:196,\x22y2\x22:-1286},{\x22x1\x22:196,\x22y1\x22:-1286,\x22x2\x22:208,\x22y2\x22:-1286},{\x22x1\x22:208,\x22y1\x22:-1286,\x22x2\x22:222,\x22y2\x22:-1273},{\x22x1\x22:222,\x22y1\x22:-1273,\x22x2\x22:236,\x22y2\x22:-1272},{\x22x1\x22:236,\x22y1\x22:-1272,\x22x2\x22:236,\x22y2\x22:-1159},{\x22x1\x22:236,\x22y1\x22:-1159,\x22x2\x22:250,\x22y2\x22:-1147},{\x22x1\x22:250,\x22y1\x22:-1147,\x22x2\x22:250,\x22y2\x22:-1092},{\x22x1\x22:250,\x22y1\x22:-1092,\x22x2\x22:224,\x22y2\x22:-1093},{\x22x1\x22:-98,\x22y1\x22:41,\x22x2\x22:-98,\x22y2\x22:41},{\x22x1\x22:-98,\x22y1\x22:41,\x22x2\x22:-42,\x22y2\x22:41},{\x22x1\x22:-42,\x22y1\x22:41,\x22x2\x22:-42,\x22y2\x22:160},{\x22x1\x22:-42,\x22y1\x22:160,\x22x2\x22:37,\x22y2\x22:161},{\x22x1\x22:37,\x22y1\x22:161,\x22x2\x22:37,\x22y2\x22:219},{\x22x1\x22:37,\x22y1\x22:219,\x22x2\x22:29,\x22y2\x22:226},{\x22x1\x22:29,\x22y1\x22:226,\x22x2\x22:29,\x22y2\x22:237},{\x22x1\x22:29,\x22y1\x22:237,\x22x2\x22:19,\x22y2\x22:237},{\x22x1\x22:19,\x22y1\x22:237,\x22x2\x22:11,\x22y2\x22:219},{\x22x1\x22:11,\x22y1\x22:219,\x22x2\x22:1,\x22y2\x22:223},{\x22x1\x22:1,\x22y1\x22:223,\x22x2\x22:1,\x22y2\x22:198},{\x22x1\x22:1,\x22y1\x22:198,\x22x2\x22:-78,\x22y2\x22:197},{\x22x1\x22:-78,\x22y1\x22:197,\x22x2\x22:-78,\x22y2\x22:78},{\x22x1\x22:-78,\x22y1\x22:78,\x22x2\x22:-101,\x22y2\x22:77},{\x22x1\x22:31,\x22y1\x22:158,\x22x2\x22:31,\x22y2\x22:158},{\x22x1\x22:31,\x22y1\x22:158,\x22x2\x22:31,\x22y2\x22:148},{\x22x1\x22:31,\x22y1\x22:148,\x22x2\x22:15,\x22y2\x22:138},{\x22x1\x22:15,\x22y1\x22:138,\x22x2\x22:15,\x22y2\x22:135},{\x22x1\x22:15,\x22y1\x22:135,\x22x2\x22:27,\x22y2\x22:128},{\x22x1\x22:27,\x22y1\x22:128,\x22x2\x22:38,\x22y2\x22:139},{\x22x1\x22:38,\x22y1\x22:139,\x22x2\x22:37,\x22y2\x22:150},{\x22x1\x22:37,\x22y1\x22:150,\x22x2\x22:49,\x22y2\x22:151},{\x22x1\x22:49,\x22y1\x22:151,\x22x2\x22:53,\x22y2\x22:140},{\x22x1\x22:53,\x22y1\x22:140,\x22x2\x22:64,\x22y2\x22:127},{\x22x1\x22:64,\x22y1\x22:127,\x22x2\x22:84,\x22y2\x22:127},{\x22x1\x22:84,\x22y1\x22:127,\x22x2\x22:99,\x22y2\x22:111},{\x22x1\x22:99,\x22y1\x22:111,\x22x2\x22:85,\x22y2\x22:68},{\x22x1\x22:85,\x22y1\x22:68,\x22x2\x22:41,\x22y2\x22:66},{\x22x1\x22:41,\x22y1\x22:66,\x22x2\x22:30,\x22y2\x22:54},{\x22x1\x22:30,\x22y1\x22:54,\x22x2\x22:29,\x22y2\x22:27},{\x22x1\x22:29,\x22y1\x22:27,\x22x2\x22:15,\x22y2\x22:11},{\x22x1\x22:15,\x22y1\x22:11,\x22x2\x22:-3,\x22y2\x22:11},{\x22x1\x22:-3,\x22y1\x22:11,\x22x2\x22:-15,\x22y2\x22:0},{\x22x1\x22:-15,\x22y1\x22:0,\x22x2\x22:1,\x22y2\x22:-12},{\x22x1\x22:1,\x22y1\x22:-12,\x22x2\x22:1,\x22y2\x22:-54},{\x22x1\x22:1,\x22y1\x22:-54,\x22x2\x22:39,\x22y2\x22:-54},{\x22x1\x22:39,\x22y1\x22:-54,\x22x2\x22:39,\x22y2\x22:-28},{\x22x1\x22:39,\x22y1\x22:-28,\x22x2\x22:69,\x22y2\x22:-26},{\x22x1\x22:69,\x22y1\x22:-26,\x22x2\x22:70,\x22y2\x22:-72},{\x22x1\x22:70,\x22y1\x22:-72,\x22x2\x22:56,\x22y2\x22:-72},{\x22x1\x22:56,\x22y1\x22:-72,\x22x2\x22:44,\x22y2\x22:-96},{\x22x1\x22:44,\x22y1\x22:-96,\x22x2\x22:30,\x22y2\x22:-112},{\x22x1\x22:30,\x22y1\x22:-112,\x22x2\x22:16,\x22y2\x22:-126},{\x22x1\x22:16,\x22y1\x22:-126,\x22x2\x22:42,\x22y2\x22:-152},{\x22x1\x22:42,\x22y1\x22:-152,\x22x2\x22:56,\x22y2\x22:-152},{\x22x1\x22:56,\x22y1\x22:-152,\x22x2\x22:30,\x22y2\x22:-210},{\x22x1\x22:30,\x22y1\x22:-210,\x22x2\x22:43,\x22y2\x22:-239},{\x22x1\x22:43,\x22y1\x22:-239,\x22x2\x22:9,\x22y2\x22:-240},{\x22x1\x22:9,\x22y1\x22:-240,\x22x2\x22:-1,\x22y2\x22:-242},{\x22x1\x22:-1,\x22y1\x22:-242,\x22x2\x22:-2,\x22y2\x22:-226},{\x22x1\x22:-2,\x22y1\x22:-226,\x22x2\x22:-2,\x22y2\x22:-212},{\x22x1\x22:-2,\x22y1\x22:-212,\x22x2\x22:-12,\x22y2\x22:-212},{\x22x1\x22:-12,\x22y1\x22:-212,\x22x2\x22:-12,\x22y2\x22:-220},{\x22x1\x22:-12,\x22y1\x22:-220,\x22x2\x22:-14,\x22y2\x22:-226},{\x22x1\x22:-14,\x22y1\x22:-226,\x22x2\x22:-26,\x22y2\x22:-226},{\x22x1\x22:-26,\x22y1\x22:-226,\x22x2\x22:-26,\x22y2\x22:-240},{\x22x1\x22:-26,\x22y1\x22:-240,\x22x2\x22:-43,\x22y2\x22:-240},{\x22x1\x22:-43,\x22y1\x22:-240,\x22x2\x22:-44,\x22y2\x22:-212},{\x22x1\x22:-44,\x22y1\x22:-212,\x22x2\x22:-71,\x22y2\x22:-212},{\x22x1\x22:-71,\x22y1\x22:-212,\x22x2\x22:-72,\x22y2\x22:-198},{\x22x1\x22:-72,\x22y1\x22:-198,\x22x2\x22:-82,\x22y2\x22:-198},{\x22x1\x22:-82,\x22y1\x22:-198,\x22x2\x22:-82,\x22y2\x22:-222},{\x22x1\x22:-82,\x22y1\x22:-222,\x22x2\x22:-55,\x22y2\x22:-222},{\x22x1\x22:-55,\x22y1\x22:-222,\x22x2\x22:-54,\x22y2\x22:-267},{\x22x1\x22:-54,\x22y1\x22:-267,\x22x2\x22:-71,\x22y2\x22:-268},{\x22x1\x22:-71,\x22y1\x22:-268,\x22x2\x22:-72,\x22y2\x22:-240},{\x22x1\x22:-72,\x22y1\x22:-240,\x22x2\x22:-98,\x22y2\x22:-240},{\x22x1\x22:-98,\x22y1\x22:-240,\x22x2\x22:-100,\x22y2\x22:-184},{\x22x1\x22:-100,\x22y1\x22:-184,\x22x2\x22:-166,\x22y2\x22:-184},{\x22x1\x22:-166,\x22y1\x22:-184,\x22x2\x22:-167,\x22y2\x22:-212},{\x22x1\x22:-167,\x22y1\x22:-212,\x22x2\x22:-182,\x22y2\x22:-212},{\x22x1\x22:-182,\x22y1\x22:-212,\x22x2\x22:-197,\x22y2\x22:-184},{\x22x1\x22:-197,\x22y1\x22:-184,\x22x2\x22:-306,\x22y2\x22:-184},{\x22x1\x22:-306,\x22y1\x22:-184,\x22x2\x22:-321,\x22y2\x22:-212},{\x22x1\x22:-321,\x22y1\x22:-212,\x22x2\x22:-353,\x22y2\x22:-211},{\x22x1\x22:-362,\x22y1\x22:-212,\x22x2\x22:-362,\x22y2\x22:-212},{\x22x1\x22:-362,\x22y1\x22:-212,\x22x2\x22:-362,\x22y2\x22:-236},{\x22x1\x22:-362,\x22y1\x22:-236,\x22x2\x22:-322,\x22y2\x22:-236},{\x22x1\x22:-322,\x22y1\x22:-236,\x22x2\x22:-306,\x22y2\x22:-264},{\x22x1\x22:-306,\x22y1\x22:-264,\x22x2\x22:-261,\x22y2\x22:-264},{\x22x1\x22:-261,\x22y1\x22:-264,\x22x2\x22:-256,\x22y2\x22:-270},{\x22x1\x22:-256,\x22y1\x22:-270,\x22x2\x22:-247,\x22y2\x22:-270},{\x22x1\x22:-247,\x22y1\x22:-270,\x22x2\x22:-248,\x22y2\x22:-265},{\x22x1\x22:-248,\x22y1\x22:-265,\x22x2\x22:-197,\x22y2\x22:-264},{\x22x1\x22:-197,\x22y1\x22:-264,\x22x2\x22:-183,\x22y2\x22:-236},{\x22x1\x22:-183,\x22y1\x22:-236,\x22x2\x22:-142,\x22y2\x22:-236},{\x22x1\x22:-142,\x22y1\x22:-236,\x22x2\x22:-142,\x22y2\x22:-212},{\x22x1\x22:-208,\x22y1\x22:-195,\x22x2\x22:-208,\x22y2\x22:-195},{\x22x1\x22:-208,\x22y1\x22:-195,\x22x2\x22:-282,\x22y2\x22:-195},{\x22x1\x22:-282,\x22y1\x22:-195,\x22x2\x22:-282,\x22y2\x22:-253},{\x22x1\x22:-282,\x22y1\x22:-253,\x22x2\x22:-208,\x22y2\x22:-253},{\x22x1\x22:-208,\x22y1\x22:-253,\x22x2\x22:-208,\x22y2\x22:-195},{\x22x1\x22:-142,\x22y1\x22:-212,\x22x2\x22:-142,\x22y2\x22:-212},{\x22x1\x22:-142,\x22y1\x22:-212,\x22x2\x22:-155,\x22y2\x22:-212},{\x22x1\x22:-155,\x22y1\x22:-212,\x22x2\x22:-155,\x22y2\x22:-194},{\x22x1\x22:-155,\x22y1\x22:-194,\x22x2\x22:-111,\x22y2\x22:-194},{\x22x1\x22:-111,\x22y1\x22:-194,\x22x2\x22:-110,\x22y2\x22:-253},{\x22x1\x22:-110,\x22y1\x22:-253,\x22x2\x22:-116,\x22y2\x22:-254},{\x22x1\x22:-116,\x22y1\x22:-254,\x22x2\x22:-166,\x22y2\x22:-254},{\x22x1\x22:-166,\x22y1\x22:-254,\x22x2\x22:-166,\x22y2\x22:-290},{\x22x1\x22:-166,\x22y1\x22:-290,\x22x2\x22:-172,\x22y2\x22:-291},{\x22x1\x22:-172,\x22y1\x22:-291,\x22x2\x22:-177,\x22y2\x22:-277},{\x22x1\x22:-177,\x22y1\x22:-277,\x22x2\x22:-185,\x22y2\x22:-273},{\x22x1\x22:-185,\x22y1\x22:-273,\x22x2\x22:-195,\x22y2\x22:-282},{\x22x1\x22:-195,\x22y1\x22:-282,\x22x2\x22:-200,\x22y2\x22:-278},{\x22x1\x22:-200,\x22y1\x22:-278,\x22x2\x22:-205,\x22y2\x22:-276},{\x22x1\x22:-205,\x22y1\x22:-276,\x22x2\x22:-208,\x22y2\x22:-281},{\x22x1\x22:-208,\x22y1\x22:-281,\x22x2\x22:-216,\x22y2\x22:-281},{\x22x1\x22:-216,\x22y1\x22:-281,\x22x2\x22:-227,\x22y2\x22:-293},{\x22x1\x22:-227,\x22y1\x22:-293,\x22x2\x22:-224,\x22y2\x22:-306},{\x22x1\x22:-224,\x22y1\x22:-306,\x22x2\x22:-217,\x22y2\x22:-308},{\x22x1\x22:-217,\x22y1\x22:-308,\x22x2\x22:-212,\x22y2\x22:-306},{\x22x1\x22:-212,\x22y1\x22:-306,\x22x2\x22:-209,\x22y2\x22:-310},{\x22x1\x22:-209,\x22y1\x22:-310,\x22x2\x22:-208,\x22y2\x22:-320},{\x22x1\x22:-208,\x22y1\x22:-320,\x22x2\x22:-213,\x22y2\x22:-330},{\x22x1\x22:-213,\x22y1\x22:-330,\x22x2\x22:-227,\x22y2\x22:-347},{\x22x1\x22:-227,\x22y1\x22:-347,\x22x2\x22:-233,\x22y2\x22:-359},{\x22x1\x22:-233,\x22y1\x22:-359,\x22x2\x22:-234,\x22y2\x22:-367},{\x22x1\x22:-234,\x22y1\x22:-367,\x22x2\x22:-250,\x22y2\x22:-368},{\x22x1\x22:-250,\x22y1\x22:-368,\x22x2\x22:-263,\x22y2\x22:-372},{\x22x1\x22:-263,\x22y1\x22:-372,\x22x2\x22:-265,\x22y2\x22:-372},{\x22x1\x22:-265,\x22y1\x22:-372,\x22x2\x22:-276,\x22y2\x22:-335},{\x22x1\x22:-276,\x22y1\x22:-335,\x22x2\x22:-294,\x22y2\x22:-326},{\x22x1\x22:-294,\x22y1\x22:-326,\x22x2\x22:-330,\x22y2\x22:-331},{\x22x1\x22:-330,\x22y1\x22:-331,\x22x2\x22:-340,\x22y2\x22:-343},{\x22x1\x22:-340,\x22y1\x22:-343,\x22x2\x22:-343,\x22y2\x22:-363},{\x22x1\x22:-343,\x22y1\x22:-363,\x22x2\x22:-320,\x22y2\x22:-404},{\x22x1\x22:-320,\x22y1\x22:-404,\x22x2\x22:-306,\x22y2\x22:-404},{\x22x1\x22:-306,\x22y1\x22:-404,\x22x2\x22:-292,\x22y2\x22:-432},{\x22x1\x22:-292,\x22y1\x22:-432,\x22x2\x22:-280,\x22y2\x22:-431},{\x22x1\x22:-280,\x22y1\x22:-431,\x22x2\x22:-267,\x22y2\x22:-417},{\x22x1\x22:-267,\x22y1\x22:-417,\x22x2\x22:-252,\x22y2\x22:-404},{\x22x1\x22:-252,\x22y1\x22:-404,\x22x2\x22:-237,\x22y2\x22:-402},{\x22x1\x22:-237,\x22y1\x22:-402,\x22x2\x22:-231,\x22y2\x22:-404},{\x22x1\x22:-231,\x22y1\x22:-404,\x22x2\x22:-218,\x22y2\x22:-382},{\x22x1\x22:-218,\x22y1\x22:-382,\x22x2\x22:-205,\x22y2\x22:-393},{\x22x1\x22:-205,\x22y1\x22:-393,\x22x2\x22:-201,\x22y2\x22:-393},{\x22x1\x22:-201,\x22y1\x22:-393,\x22x2\x22:-194,\x22y2\x22:-384},{\x22x1\x22:-194,\x22y1\x22:-384,\x22x2\x22:-186,\x22y2\x22:-394},{\x22x1\x22:-186,\x22y1\x22:-394,\x22x2\x22:-178,\x22y2\x22:-394},{\x22x1\x22:-178,\x22y1\x22:-394,\x22x2\x22:-174,\x22y2\x22:-404},{\x22x1\x22:-174,\x22y1\x22:-404,\x22x2\x22:-163,\x22y2\x22:-404},{\x22x1\x22:-163,\x22y1\x22:-404,\x22x2\x22:-155,\x22y2\x22:-403},{\x22x1\x22:-155,\x22y1\x22:-403,\x22x2\x22:-141,\x22y2\x22:-390},{\x22x1\x22:-141,\x22y1\x22:-390,\x22x2\x22:-125,\x22y2\x22:-390},{\x22x1\x22:-125,\x22y1\x22:-390,\x22x2\x22:-110,\x22y2\x22:-404},{\x22x1\x22:-110,\x22y1\x22:-404,\x22x2\x22:-110,\x22y2\x22:-432},{\x22x1\x22:-110,\x22y1\x22:-432,\x22x2\x22:-97,\x22y2\x22:-432},{\x22x1\x22:-97,\x22y1\x22:-432,\x22x2\x22:-96,\x22y2\x22:-447},{\x22x1\x22:-96,\x22y1\x22:-447,\x22x2\x22:-83,\x22y2\x22:-460},{\x22x1\x22:-83,\x22y1\x22:-460,\x22x2\x22:-70,\x22y2\x22:-460},{\x22x1\x22:-70,\x22y1\x22:-460,\x22x2\x22:-55,\x22y2\x22:-474},{\x22x1\x22:-55,\x22y1\x22:-474,\x22x2\x22:-17,\x22y2\x22:-472},{\x22x1\x22:-17,\x22y1\x22:-472,\x22x2\x22:-1,\x22y2\x22:-460},{\x22x1\x22:-1,\x22y1\x22:-460,\x22x2\x22:29,\x22y2\x22:-461},{\x22x1\x22:29,\x22y1\x22:-461,\x22x2\x22:43,\x22y2\x22:-476},{\x22x1\x22:43,\x22y1\x22:-476,\x22x2\x22:17,\x22y2\x22:-491},{\x22x1\x22:17,\x22y1\x22:-491,\x22x2\x22:1,\x22y2\x22:-519},{\x22x1\x22:1,\x22y1\x22:-519,\x22x2\x22:-28,\x22y2\x22:-521},{\x22x1\x22:-28,\x22y1\x22:-521,\x22x2\x22:-40,\x22y2\x22:-533},{\x22x1\x22:-40,\x22y1\x22:-533,\x22x2\x22:-41,\x22y2\x22:-548},{\x22x1\x22:-41,\x22y1\x22:-548,\x22x2\x22:-56,\x22y2\x22:-548},{\x22x1\x22:-56,\x22y1\x22:-548,\x22x2\x22:-83,\x22y2\x22:-562},{\x22x1\x22:-83,\x22y1\x22:-562,\x22x2\x22:-99,\x22y2\x22:-562},{\x22x1\x22:-99,\x22y1\x22:-562,\x22x2\x22:-138,\x22y2\x22:-549},{\x22x1\x22:-138,\x22y1\x22:-549,\x22x2\x22:-142,\x22y2\x22:-547},{\x22x1\x22:-142,\x22y1\x22:-547,\x22x2\x22:-142,\x22y2\x22:-531},{\x22x1\x22:-142,\x22y1\x22:-531,\x22x2\x22:-142,\x22y2\x22:-519},{\x22x1\x22:-142,\x22y1\x22:-519,\x22x2\x22:-155,\x22y2\x22:-506},{\x22x1\x22:-155,\x22y1\x22:-506,\x22x2\x22:-167,\x22y2\x22:-506},{\x22x1\x22:-167,\x22y1\x22:-506,\x22x2\x22:-181,\x22y2\x22:-506},{\x22x1\x22:-181,\x22y1\x22:-506,\x22x2\x22:-195,\x22y2\x22:-520},{\x22x1\x22:-195,\x22y1\x22:-520,\x22x2\x22:-210,\x22y2\x22:-520},{\x22x1\x22:-210,\x22y1\x22:-520,\x22x2\x22:-225,\x22y2\x22:-505},{\x22x1\x22:-225,\x22y1\x22:-505,\x22x2\x22:-211,\x22y2\x22:-488},{\x22x1\x22:-211,\x22y1\x22:-488,\x22x2\x22:-208,\x22y2\x22:-489},{\x22x1\x22:-208,\x22y1\x22:-489,\x22x2\x22:-208,\x22y2\x22:-502},{\x22x1\x22:-208,\x22y1\x22:-502,\x22x2\x22:-198,\x22y2\x22:-502},{\x22x1\x22:-198,\x22y1\x22:-502,\x22x2\x22:-198,\x22y2\x22:-489},{\x22x1\x22:-198,\x22y1\x22:-489,\x22x2\x22:-184,\x22y2\x22:-488},{\x22x1\x22:-184,\x22y1\x22:-488,\x22x2\x22:-171,\x22y2\x22:-475},{\x22x1\x22:-171,\x22y1\x22:-475,\x22x2\x22:-171,\x22y2\x22:-448},{\x22x1\x22:-171,\x22y1\x22:-448,\x22x2\x22:-184,\x22y2\x22:-434},{\x22x1\x22:-184,\x22y1\x22:-434,\x22x2\x22:-184,\x22y2\x22:-419},{\x22x1\x22:-184,\x22y1\x22:-419,\x22x2\x22:-175,\x22y2\x22:-417},{\x22x1\x22:-175,\x22y1\x22:-417,\x22x2\x22:-170,\x22y2\x22:-412},{\x22x1\x22:-170,\x22y1\x22:-412,\x22x2\x22:-170,\x22y2\x22:-405},{\x22x1\x22:-177,\x22y1\x22:-418,\x22x2\x22:-177,\x22y2\x22:-418},{\x22x1\x22:-177,\x22y1\x22:-418,\x22x2\x22:-182,\x22y2\x22:-410},{\x22x1\x22:-182,\x22y1\x22:-410,\x22x2\x22:-194,\x22y2\x22:-402},{\x22x1\x22:-194,\x22y1\x22:-402,\x22x2\x22:-203,\x22y2\x22:-408},{\x22x1\x22:-203,\x22y1\x22:-408,\x22x2\x22:-204,\x22y2\x22:-410},{\x22x1\x22:-204,\x22y1\x22:-410,\x22x2\x22:-208,\x22y2\x22:-426},{\x22x1\x22:-208,\x22y1\x22:-426,\x22x2\x22:-190,\x22y2\x22:-435},{\x22x1\x22:-190,\x22y1\x22:-435,\x22x2\x22:-184,\x22y2\x22:-432},{\x22x1\x22:89,\x22y1\x22:-166,\x22x2\x22:89,\x22y2\x22:-166},{\x22x1\x22:89,\x22y1\x22:-166,\x22x2\x22:81,\x22y2\x22:-166},{\x22x1\x22:81,\x22y1\x22:-166,\x22x2\x22:96,\x22y2\x22:-184},{\x22x1\x22:96,\x22y1\x22:-184,\x22x2\x22:98,\x22y2\x22:-184},{\x22x1\x22:98,\x22y1\x22:-184,\x22x2\x22:110,\x22y2\x22:-182},{\x22x1\x22:110,\x22y1\x22:-182,\x22x2\x22:110,\x22y2\x22:-160},{\x22x1\x22:110,\x22y1\x22:-160,\x22x2\x22:89,\x22y2\x22:-162},{\x22x1\x22:89,\x22y1\x22:-162,\x22x2\x22:89,\x22y2\x22:-166},{\x22x1\x22:113,\x22y1\x22:-240,\x22x2\x22:113,\x22y2\x22:-240},{\x22x1\x22:113,\x22y1\x22:-240,\x22x2\x22:125,\x22y2\x22:-240},{\x22x1\x22:125,\x22y1\x22:-240,\x22x2\x22:127,\x22y2\x22:-225},{\x22x1\x22:127,\x22y1\x22:-225,\x22x2\x22:97,\x22y2\x22:-208},{\x22x1\x22:97,\x22y1\x22:-208,\x22x2\x22:68,\x22y2\x22:-208},{\x22x1\x22:68,\x22y1\x22:-208,\x22x2\x22:53,\x22y2\x22:-240},{\x22x1\x22:53,\x22y1\x22:-240,\x22x2\x22:53,\x22y2\x22:-253},{\x22x1\x22:53,\x22y1\x22:-253,\x22x2\x22:83,\x22y2\x22:-268},{\x22x1\x22:83,\x22y1\x22:-268,\x22x2\x22:113,\x22y2\x22:-252},{\x22x1\x22:113,\x22y1\x22:-252,\x22x2\x22:113,\x22y2\x22:-240},{\x22x1\x22:39,\x22y1\x22:159,\x22x2\x22:39,\x22y2\x22:159},{\x22x1\x22:39,\x22y1\x22:159,\x22x2\x22:41,\x22y2\x22:158},{\x22x1\x22:41,\x22y1\x22:158,\x22x2\x22:47,\x22y2\x22:158},{\x22x1\x22:47,\x22y1\x22:158,\x22x2\x22:67,\x22y2\x22:164},{\x22x1\x22:67,\x22y1\x22:164,\x22x2\x22:102,\x22y2\x22:137},{\x22x1\x22:102,\x22y1\x22:137,\x22x2\x22:121,\x22y2\x22:137},{\x22x1\x22:121,\x22y1\x22:137,\x22x2\x22:109,\x22y2\x22:111},{\x22x1\x22:109,\x22y1\x22:111,\x22x2\x22:109,\x22y2\x22:98},{\x22x1\x22:109,\x22y1\x22:98,\x22x2\x22:102,\x22y2\x22:77},{\x22x1\x22:102,\x22y1\x22:77,\x22x2\x22:95,\x22y2\x22:68},{\x22x1\x22:95,\x22y1\x22:68,\x22x2\x22:110,\x22y2\x22:53},{\x22x1\x22:110,\x22y1\x22:53,\x22x2\x22:137,\x22y2\x22:39},{\x22x1\x22:137,\x22y1\x22:39,\x22x2\x22:136,\x22y2\x22:28},{\x22x1\x22:136,\x22y1\x22:28,\x22x2\x22:123,\x22y2\x22:15},{\x22x1\x22:123,\x22y1\x22:15,\x22x2\x22:111,\x22y2\x22:16},{\x22x1\x22:111,\x22y1\x22:16,\x22x2\x22:100,\x22y2\x22:28},{\x22x1\x22:100,\x22y1\x22:28,\x22x2\x22:98,\x22y2\x22:43},{\x22x1\x22:98,\x22y1\x22:43,\x22x2\x22:85,\x22y2\x22:43},{\x22x1\x22:85,\x22y1\x22:43,\x22x2\x22:85,\x22y2\x22:55},{\x22x1\x22:85,\x22y1\x22:55,\x22x2\x22:54,\x22y2\x22:57},{\x22x1\x22:54,\x22y1\x22:57,\x22x2\x22:39,\x22y2\x22:27},{\x22x1\x22:39,\x22y1\x22:27,\x22x2\x22:52,\x22y2\x22:13},{\x22x1\x22:52,\x22y1\x22:13,\x22x2\x22:40,\x22y2\x22:1},{\x22x1\x22:40,\x22y1\x22:1,\x22x2\x22:26,\x22y2\x22:1},{\x22x1\x22:26,\x22y1\x22:1,\x22x2\x22:11,\x22y2\x22:-13},{\x22x1\x22:11,\x22y1\x22:-13,\x22x2\x22:11,\x22y2\x22:-43},{\x22x1\x22:11,\x22y1\x22:-43,\x22x2\x22:28,\x22y2\x22:-44},{\x22x1\x22:28,\x22y1\x22:-44,\x22x2\x22:29,\x22y2\x22:-16},{\x22x1\x22:28,\x22y1\x22:-15,\x22x2\x22:28,\x22y2\x22:-15},{\x22x1\x22:28,\x22y1\x22:-15,\x22x2\x22:82,\x22y2\x22:-15},{\x22x1\x22:82,\x22y1\x22:-15,\x22x2\x22:82,\x22y2\x22:-70},{\x22x1\x22:82,\x22y1\x22:-70,\x22x2\x22:124,\x22y2\x22:-99},{\x22x1\x22:124,\x22y1\x22:-99,\x22x2\x22:124,\x22y2\x22:-113},{\x22x1\x22:124,\x22y1\x22:-113,\x22x2\x22:151,\x22y2\x22:-126},{\x22x1\x22:151,\x22y1\x22:-126,\x22x2\x22:154,\x22y2\x22:-142},{\x22x1\x22:154,\x22y1\x22:-142,\x22x2\x22:179,\x22y2\x22:-154},{\x22x1\x22:179,\x22y1\x22:-154,\x22x2\x22:166,\x22y2\x22:-181},{\x22x1\x22:166,\x22y1\x22:-181,\x22x2\x22:153,\x22y2\x22:-181},{\x22x1\x22:153,\x22y1\x22:-181,\x22x2\x22:139,\x22y2\x22:-167},{\x22x1\x22:139,\x22y1\x22:-167,\x22x2\x22:124,\x22y2\x22:-169},{\x22x1\x22:124,\x22y1\x22:-169,\x22x2\x22:124,\x22y2\x22:-181},{\x22x1\x22:124,\x22y1\x22:-181,\x22x2\x22:138,\x22y2\x22:-225},{\x22x1\x22:138,\x22y1\x22:-225,\x22x2\x22:138,\x22y2\x22:-237},{\x22x1\x22:138,\x22y1\x22:-237,\x22x2\x22:194,\x22y2\x22:-267},{\x22x1\x22:194,\x22y1\x22:-267,\x22x2\x22:195,\x22y2\x22:-297},{\x22x1\x22:195,\x22y1\x22:-297,\x22x2\x22:207,\x22y2\x22:-321},{\x22x1\x22:207,\x22y1\x22:-321,\x22x2\x22:165,\x22y2\x22:-337},{\x22x1\x22:165,\x22y1\x22:-337,\x22x2\x22:153,\x22y2\x22:-365},{\x22x1\x22:153,\x22y1\x22:-365,\x22x2\x22:196,\x22y2\x22:-379},{\x22x1\x22:196,\x22y1\x22:-379,\x22x2\x22:210,\x22y2\x22:-379},{\x22x1\x22:210,\x22y1\x22:-379,\x22x2\x22:218,\x22y2\x22:-390},{\x22x1\x22:218,\x22y1\x22:-390,\x22x2\x22:226,\x22y2\x22:-382},{\x22x1\x22:226,\x22y1\x22:-382,\x22x2\x22:238,\x22y2\x22:-394},{\x22x1\x22:238,\x22y1\x22:-394,\x22x2\x22:266,\x22y2\x22:-363},{\x22x1\x22:266,\x22y1\x22:-363,\x22x2\x22:252,\x22y2\x22:-363},{\x22x1\x22:252,\x22y1\x22:-363,\x22x2\x22:250,\x22y2\x22:-347},{\x22x1\x22:250,\x22y1\x22:-347,\x22x2\x22:233,\x22y2\x22:-350},{\x22x1\x22:233,\x22y1\x22:-350,\x22x2\x22:222,\x22y2\x22:-363},{\x22x1\x22:222,\x22y1\x22:-363,\x22x2\x22:210,\x22y2\x22:-363},{\x22x1\x22:210,\x22y1\x22:-363,\x22x2\x22:210,\x22y2\x22:-351},{\x22x1\x22:210,\x22y1\x22:-351,\x22x2\x22:238,\x22y2\x22:-336},{\x22x1\x22:238,\x22y1\x22:-336,\x22x2\x22:247,\x22y2\x22:-319},{\x22x1\x22:247,\x22y1\x22:-319,\x22x2\x22:251,\x22y2\x22:-309},{\x22x1\x22:251,\x22y1\x22:-309,\x22x2\x22:267,\x22y2\x22:-308},{\x22x1\x22:267,\x22y1\x22:-308,\x22x2\x22:294,\x22y2\x22:-293},{\x22x1\x22:294,\x22y1\x22:-293,\x22x2\x22:294,\x22y2\x22:-280},{\x22x1\x22:294,\x22y1\x22:-280,\x22x2\x22:252,\x22y2\x22:-279},{\x22x1\x22:252,\x22y1\x22:-279,\x22x2\x22:249,\x22y2\x22:-236},{\x22x1\x22:249,\x22y1\x22:-236,\x22x2\x22:224,\x22y2\x22:-237},{\x22x1\x22:224,\x22y1\x22:-237,\x22x2\x22:221,\x22y2\x22:-222},{\x22x1\x22:221,\x22y1\x22:-222,\x22x2\x22:209,\x22y2\x22:-223},{\x22x1\x22:209,\x22y1\x22:-223,\x22x2\x22:196,\x22y2\x22:-208},{\x22x1\x22:196,\x22y1\x22:-208,\x22x2\x22:195,\x22y2\x22:-194},{\x22x1\x22:195,\x22y1\x22:-194,\x22x2\x22:183,\x22y2\x22:-182},{\x22x1\x22:183,\x22y1\x22:-182,\x22x2\x22:210,\x22y2\x22:-169},{\x22x1\x22:210,\x22y1\x22:-169,\x22x2\x22:242,\x22y2\x22:-170},{\x22x1\x22:242,\x22y1\x22:-170,\x22x2\x22:238,\x22y2\x22:-155},{\x22x1\x22:238,\x22y1\x22:-155,\x22x2\x22:238,\x22y2\x22:-131},{\x22x1\x22:238,\x22y1\x22:-131,\x22x2\x22:248,\x22y2\x22:-127},{\x22x1\x22:248,\x22y1\x22:-127,\x22x2\x22:282,\x22y2\x22:-127},{\x22x1\x22:282,\x22y1\x22:-127,\x22x2\x22:285,\x22y2\x22:-141},{\x22x1\x22:285,\x22y1\x22:-141,\x22x2\x22:299,\x22y2\x22:-134},{\x22x1\x22:299,\x22y1\x22:-134,\x22x2\x22:320,\x22y2\x22:-155},{\x22x1\x22:320,\x22y1\x22:-155,\x22x2\x22:338,\x22y2\x22:-155},{\x22x1\x22:338,\x22y1\x22:-155,\x22x2\x22:343,\x22y2\x22:-156},{\x22x1\x22:343,\x22y1\x22:-156,\x22x2\x22:349,\x22y2\x22:-155},{\x22x1\x22:349,\x22y1\x22:-155,\x22x2\x22:350,\x22y2\x22:-140},{\x22x1\x22:350,\x22y1\x22:-140,\x22x2\x22:364,\x22y2\x22:-127},{\x22x1\x22:364,\x22y1\x22:-127,\x22x2\x22:388,\x22y2\x22:-127},{\x22x1\x22:388,\x22y1\x22:-127,\x22x2\x22:405,\x22y2\x22:-128},{\x22x1\x22:405,\x22y1\x22:-128,\x22x2\x22:416,\x22y2\x22:-138},{\x22x1\x22:416,\x22y1\x22:-138,\x22x2\x22:418,\x22y2\x22:-155},{\x22x1\x22:418,\x22y1\x22:-155,\x22x2\x22:435,\x22y2\x22:-171},{\x22x1\x22:435,\x22y1\x22:-171,\x22x2\x22:436,\x22y2\x22:-169},{\x22x1\x22:436,\x22y1\x22:-169,\x22x2\x22:442,\x22y2\x22:-169},{\x22x1\x22:442,\x22y1\x22:-169,\x22x2\x22:446,\x22y2\x22:-180},{\x22x1\x22:446,\x22y1\x22:-180,\x22x2\x22:478,\x22y2\x22:-183},{\x22x1\x22:478,\x22y1\x22:-183,\x22x2\x22:481,\x22y2\x22:-185},{\x22x1\x22:481,\x22y1\x22:-185,\x22x2\x22:490,\x22y2\x22:-182},{\x22x1\x22:490,\x22y1\x22:-182,\x22x2\x22:503,\x22y2\x22:-169},{\x22x1\x22:503,\x22y1\x22:-169,\x22x2\x22:517,\x22y2\x22:-169},{\x22x1\x22:517,\x22y1\x22:-169,\x22x2\x22:533,\x22y2\x22:-155},{\x22x1\x22:533,\x22y1\x22:-155,\x22x2\x22:558,\x22y2\x22:-155},{\x22x1\x22:558,\x22y1\x22:-155,\x22x2\x22:573,\x22y2\x22:-169},{\x22x1\x22:573,\x22y1\x22:-169,\x22x2\x22:600,\x22y2\x22:-169},{\x22x1\x22:600,\x22y1\x22:-169,\x22x2\x22:600,\x22y2\x22:-183},{\x22x1\x22:600,\x22y1\x22:-183,\x22x2\x22:606,\x22y2\x22:-183},{\x22x1\x22:606,\x22y1\x22:-183,\x22x2\x22:597,\x22y2\x22:-188},{\x22x1\x22:597,\x22y1\x22:-188,\x22x2\x22:601,\x22y2\x22:-195},{\x22x1\x22:601,\x22y1\x22:-195,\x22x2\x22:600,\x22y2\x22:-209},{\x22x1\x22:600,\x22y1\x22:-209,\x22x2\x22:573,\x22y2\x22:-209},{\x22x1\x22:573,\x22y1\x22:-209,\x22x2\x22:557,\x22y2\x22:-223},{\x22x1\x22:557,\x22y1\x22:-223,\x22x2\x22:531,\x22y2\x22:-223},{\x22x1\x22:531,\x22y1\x22:-223,\x22x2\x22:519,\x22y2\x22:-210},{\x22x1\x22:519,\x22y1\x22:-210,\x22x2\x22:502,\x22y2\x22:-207},{\x22x1\x22:502,\x22y1\x22:-207,\x22x2\x22:489,\x22y2\x22:-195},{\x22x1\x22:489,\x22y1\x22:-195,\x22x2\x22:482,\x22y2\x22:-195},{\x22x1\x22:482,\x22y1\x22:-195,\x22x2\x22:447,\x22y2\x22:-195},{\x22x1\x22:447,\x22y1\x22:-195,\x22x2\x22:447,\x22y2\x22:-212},{\x22x1\x22:447,\x22y1\x22:-212,\x22x2\x22:461,\x22y2\x22:-225},{\x22x1\x22:461,\x22y1\x22:-225,\x22x2\x22:488,\x22y2\x22:-225},{\x22x1\x22:488,\x22y1\x22:-225,\x22x2\x22:488,\x22y2\x22:-237},{\x22x1\x22:488,\x22y1\x22:-237,\x22x2\x22:473,\x22y2\x22:-238},{\x22x1\x22:473,\x22y1\x22:-238,\x22x2\x22:474,\x22y2\x22:-253},{\x22x1\x22:474,\x22y1\x22:-253,\x22x2\x22:488,\x22y2\x22:-267},{\x22x1\x22:488,\x22y1\x22:-267,\x22x2\x22:488,\x22y2\x22:-280},{\x22x1\x22:488,\x22y1\x22:-280,\x22x2\x22:473,\x22y2\x22:-293},{\x22x1\x22:473,\x22y1\x22:-293,\x22x2\x22:461,\x22y2\x22:-293},{\x22x1\x22:461,\x22y1\x22:-293,\x22x2\x22:449,\x22y2\x22:-281},{\x22x1\x22:449,\x22y1\x22:-281,\x22x2\x22:449,\x22y2\x22:-266},{\x22x1\x22:449,\x22y1\x22:-266,\x22x2\x22:461,\x22y2\x22:-253},{\x22x1\x22:461,\x22y1\x22:-253,\x22x2\x22:462,\x22y2\x22:-237},{\x22x1\x22:462,\x22y1\x22:-237,\x22x2\x22:448,\x22y2\x22:-237},{\x22x1\x22:448,\x22y1\x22:-237,\x22x2\x22:434,\x22y2\x22:-223},{\x22x1\x22:434,\x22y1\x22:-223,\x22x2\x22:433,\x22y2\x22:-180},{\x22x1\x22:433,\x22y1\x22:-180,\x22x2\x22:419,\x22y2\x22:-181},{\x22x1\x22:419,\x22y1\x22:-181,\x22x2\x22:408,\x22y2\x22:-169},{\x22x1\x22:408,\x22y1\x22:-169,\x22x2\x22:406,\x22y2\x22:-153},{\x22x1\x22:406,\x22y1\x22:-153,\x22x2\x22:403,\x22y2\x22:-151},{\x22x1\x22:403,\x22y1\x22:-151,\x22x2\x22:391,\x22y2\x22:-139},{\x22x1\x22:391,\x22y1\x22:-139,\x22x2\x22:386,\x22y2\x22:-139},{\x22x1\x22:386,\x22y1\x22:-139,\x22x2\x22:378,\x22y2\x22:-139},{\x22x1\x22:378,\x22y1\x22:-139,\x22x2\x22:362,\x22y2\x22:-153},{\x22x1\x22:362,\x22y1\x22:-153,\x22x2\x22:362,\x22y2\x22:-175},{\x22x1\x22:362,\x22y1\x22:-175,\x22x2\x22:362,\x22y2\x22:-181},{\x22x1\x22:362,\x22y1\x22:-181,\x22x2\x22:376,\x22y2\x22:-197},{\x22x1\x22:376,\x22y1\x22:-197,\x22x2\x22:376,\x22y2\x22:-209},{\x22x1\x22:376,\x22y1\x22:-209,\x22x2\x22:362,\x22y2\x22:-223},{\x22x1\x22:362,\x22y1\x22:-223,\x22x2\x22:360,\x22y2\x22:-223},{\x22x1\x22:360,\x22y1\x22:-223,\x22x2\x22:362,\x22y2\x22:-218},{\x22x1\x22:362,\x22y1\x22:-218,\x22x2\x22:355,\x22y2\x22:-212},{\x22x1\x22:355,\x22y1\x22:-212,\x22x2\x22:345,\x22y2\x22:-212},{\x22x1\x22:345,\x22y1\x22:-212,\x22x2\x22:344,\x22y2\x22:-213},{\x22x1\x22:344,\x22y1\x22:-213,\x22x2\x22:336,\x22y2\x22:-209},{\x22x1\x22:336,\x22y1\x22:-209,\x22x2\x22:294,\x22y2\x22:-209},{\x22x1\x22:294,\x22y1\x22:-209,\x22x2\x22:292,\x22y2\x22:-238},{\x22x1\x22:292,\x22y1\x22:-238,\x22x2\x22:306,\x22y2\x22:-239},{\x22x1\x22:306,\x22y1\x22:-239,\x22x2\x22:308,\x22y2\x22:-225},{\x22x1\x22:308,\x22y1\x22:-225,\x22x2\x22:320,\x22y2\x22:-225},{\x22x1\x22:320,\x22y1\x22:-225,\x22x2\x22:320,\x22y2\x22:-265},{\x22x1\x22:320,\x22y1\x22:-265,\x22x2\x22:335,\x22y2\x22:-267},{\x22x1\x22:335,\x22y1\x22:-267,\x22x2\x22:336,\x22y2\x22:-239},{\x22x1\x22:336,\x22y1\x22:-239,\x22x2\x22:378,\x22y2\x22:-238},{\x22x1\x22:378,\x22y1\x22:-238,\x22x2\x22:391,\x22y2\x22:-225},{\x22x1\x22:391,\x22y1\x22:-225,\x22x2\x22:404,\x22y2\x22:-225},{\x22x1\x22:404,\x22y1\x22:-225,\x22x2\x22:418,\x22y2\x22:-238},{\x22x1\x22:418,\x22y1\x22:-238,\x22x2\x22:418,\x22y2\x22:-252},{\x22x1\x22:418,\x22y1\x22:-252,\x22x2\x22:404,\x22y2\x22:-265},{\x22x1\x22:404,\x22y1\x22:-265,\x22x2\x22:391,\x22y2\x22:-265},{\x22x1\x22:391,\x22y1\x22:-265,\x22x2\x22:377,\x22y2\x22:-251},{\x22x1\x22:377,\x22y1\x22:-251,\x22x2\x22:348,\x22y2\x22:-251},{\x22x1\x22:348,\x22y1\x22:-251,\x22x2\x22:348,\x22y2\x22:-279},{\x22x1\x22:348,\x22y1\x22:-279,\x22x2\x22:307,\x22y2\x22:-279},{\x22x1\x22:307,\x22y1\x22:-279,\x22x2\x22:306,\x22y2\x22:-289},{\x22x1\x22:306,\x22y1\x22:-289,\x22x2\x22:305,\x22y2\x22:-294},{\x22x1\x22:305,\x22y1\x22:-294,\x22x2\x22:321,\x22y2\x22:-309},{\x22x1\x22:321,\x22y1\x22:-309,\x22x2\x22:336,\x22y2\x22:-295},{\x22x1\x22:336,\x22y1\x22:-295,\x22x2\x22:343,\x22y2\x22:-295},{\x22x1\x22:343,\x22y1\x22:-295,\x22x2\x22:349,\x22y2\x22:-295},{\x22x1\x22:349,\x22y1\x22:-295,\x22x2\x22:363,\x22y2\x22:-281},{\x22x1\x22:363,\x22y1\x22:-281,\x22x2\x22:377,\x22y2\x22:-281},{\x22x1\x22:377,\x22y1\x22:-281,\x22x2\x22:389,\x22y2\x22:-294},{\x22x1\x22:389,\x22y1\x22:-294,\x22x2\x22:389,\x22y2\x22:-308},{\x22x1\x22:389,\x22y1\x22:-308,\x22x2\x22:377,\x22y2\x22:-320},{\x22x1\x22:377,\x22y1\x22:-320,\x22x2\x22:363,\x22y2\x22:-321},{\x22x1\x22:363,\x22y1\x22:-321,\x22x2\x22:350,\x22y2\x22:-308},{\x22x1\x22:350,\x22y1\x22:-308,\x22x2\x22:346,\x22y2\x22:-309},{\x22x1\x22:346,\x22y1\x22:-309,\x22x2\x22:334,\x22y2\x22:-321},{\x22x1\x22:334,\x22y1\x22:-321,\x22x2\x22:292,\x22y2\x22:-321},{\x22x1\x22:292,\x22y1\x22:-321,\x22x2\x22:307,\x22y2\x22:-338},{\x22x1\x22:307,\x22y1\x22:-338,\x22x2\x22:335,\x22y2\x22:-351},{\x22x1\x22:335,\x22y1\x22:-351,\x22x2\x22:363,\x22y2\x22:-337},{\x22x1\x22:363,\x22y1\x22:-337,\x22x2\x22:376,\x22y2\x22:-350},{\x22x1\x22:376,\x22y1\x22:-350,\x22x2\x22:376,\x22y2\x22:-363},{\x22x1\x22:376,\x22y1\x22:-363,\x22x2\x22:362,\x22y2\x22:-363},{\x22x1\x22:362,\x22y1\x22:-363,\x22x2\x22:376,\x22y2\x22:-392},{\x22x1\x22:376,\x22y1\x22:-392,\x22x2\x22:376,\x22y2\x22:-406},{\x22x1\x22:376,\x22y1\x22:-406,\x22x2\x22:362,\x22y2\x22:-419},{\x22x1\x22:362,\x22y1\x22:-419,\x22x2\x22:362,\x22y2\x22:-433},{\x22x1\x22:362,\x22y1\x22:-433,\x22x2\x22:348,\x22y2\x22:-447},{\x22x1\x22:348,\x22y1\x22:-447,\x22x2\x22:322,\x22y2\x22:-447},{\x22x1\x22:322,\x22y1\x22:-447,\x22x2\x22:307,\x22y2\x22:-432},{\x22x1\x22:307,\x22y1\x22:-432,\x22x2\x22:295,\x22y2\x22:-409},{\x22x1\x22:295,\x22y1\x22:-409,\x22x2\x22:307,\x22y2\x22:-393},{\x22x1\x22:307,\x22y1\x22:-393,\x22x2\x22:308,\x22y2\x22:-351},{\x22x1\x22:308,\x22y1\x22:-351,\x22x2\x22:276,\x22y2\x22:-350},{\x22x1\x22:276,\x22y1\x22:-350,\x22x2\x22:278,\x22y2\x22:-363},{\x22x1\x22:278,\x22y1\x22:-363,\x22x2\x22:290,\x22y2\x22:-379},{\x22x1\x22:290,\x22y1\x22:-379,\x22x2\x22:278,\x22y2\x22:-391},{\x22x1\x22:278,\x22y1\x22:-391,\x22x2\x22:265,\x22y2\x22:-391},{\x22x1\x22:265,\x22y1\x22:-391,\x22x2\x22:252,\x22y2\x22:-404},{\x22x1\x22:252,\x22y1\x22:-404,\x22x2\x22:236,\x22y2\x22:-405},{\x22x1\x22:236,\x22y1\x22:-405,\x22x2\x22:222,\x22y2\x22:-423},{\x22x1\x22:222,\x22y1\x22:-423,\x22x2\x22:220,\x22y2\x22:-427},{\x22x1\x22:220,\x22y1\x22:-427,\x22x2\x22:222,\x22y2\x22:-434},{\x22x1\x22:222,\x22y1\x22:-434,\x22x2\x22:264,\x22y2\x22:-449},{\x22x1\x22:264,\x22y1\x22:-449,\x22x2\x22:294,\x22y2\x22:-477},{\x22x1\x22:294,\x22y1\x22:-477,\x22x2\x22:321,\x22y2\x22:-463},{\x22x1\x22:321,\x22y1\x22:-463,\x22x2\x22:349,\x22y2\x22:-477},{\x22x1\x22:349,\x22y1\x22:-477,\x22x2\x22:376,\x22y2\x22:-504},{\x22x1\x22:376,\x22y1\x22:-504,\x22x2\x22:390,\x22y2\x22:-532},{\x22x1\x22:390,\x22y1\x22:-532,\x22x2\x22:418,\x22y2\x22:-533},{\x22x1\x22:418,\x22y1\x22:-533,\x22x2\x22:431,\x22y2\x22:-560},{\x22x1\x22:431,\x22y1\x22:-560,\x22x2\x22:417,\x22y2\x22:-574},{\x22x1\x22:417,\x22y1\x22:-574,\x22x2\x22:431,\x22y2\x22:-587},{\x22x1\x22:431,\x22y1\x22:-587,\x22x2\x22:402,\x22y2\x22:-604},{\x22x1\x22:402,\x22y1\x22:-604,\x22x2\x22:403,\x22y2\x22:-630},{\x22x1\x22:403,\x22y1\x22:-630,\x22x2\x22:391,\x22y2\x22:-642},{\x22x1\x22:391,\x22y1\x22:-642,\x22x2\x22:376,\x22y2\x22:-643},{\x22x1\x22:376,\x22y1\x22:-643,\x22x2\x22:362,\x22y2\x22:-657},{\x22x1\x22:362,\x22y1\x22:-657,\x22x2\x22:345,\x22y2\x22:-658},{\x22x1\x22:345,\x22y1\x22:-658,\x22x2\x22:320,\x22y2\x22:-685},{\x22x1\x22:320,\x22y1\x22:-685,\x22x2\x22:294,\x22y2\x22:-688},{\x22x1\x22:294,\x22y1\x22:-688,\x22x2\x22:296,\x22y2\x22:-698},{\x22x1\x22:296,\x22y1\x22:-698,\x22x2\x22:318,\x22y2\x22:-701},{\x22x1\x22:318,\x22y1\x22:-701,\x22x2\x22:348,\x22y2\x22:-715},{\x22x1\x22:348,\x22y1\x22:-715,\x22x2\x22:348,\x22y2\x22:-727},{\x22x1\x22:348,\x22y1\x22:-727,\x22x2\x22:334,\x22y2\x22:-741},{\x22x1\x22:334,\x22y1\x22:-741,\x22x2\x22:293,\x22y2\x22:-740},{\x22x1\x22:293,\x22y1\x22:-740,\x22x2\x22:284,\x22y2\x22:-741},{\x22x1\x22:284,\x22y1\x22:-741,\x22x2\x22:271,\x22y2\x22:-735},{\x22x1\x22:271,\x22y1\x22:-735,\x22x2\x22:261,\x22y2\x22:-739},{\x22x1\x22:261,\x22y1\x22:-739,\x22x2\x22:238,\x22y2\x22:-741},{\x22x1\x22:238,\x22y1\x22:-741,\x22x2\x22:222,\x22y2\x22:-755},{\x22x1\x22:222,\x22y1\x22:-755,\x22x2\x22:204,\x22y2\x22:-755},{\x22x1\x22:204,\x22y1\x22:-755,\x22x2\x22:196,\x22y2\x22:-745},{\x22x1\x22:196,\x22y1\x22:-745,\x22x2\x22:187,\x22y2\x22:-746},{\x22x1\x22:187,\x22y1\x22:-746,\x22x2\x22:182,\x22y2\x22:-741},{\x22x1\x22:182,\x22y1\x22:-741,\x22x2\x22:182,\x22y2\x22:-728},{\x22x1\x22:182,\x22y1\x22:-728,\x22x2\x22:164,\x22y2\x22:-727},{\x22x1\x22:164,\x22y1\x22:-727,\x22x2\x22:154,\x22y2\x22:-727},{\x22x1\x22:154,\x22y1\x22:-727,\x22x2\x22:152,\x22y2\x22:-743},{\x22x1\x22:152,\x22y1\x22:-743,\x22x2\x22:151,\x22y2\x22:-756},{\x22x1\x22:151,\x22y1\x22:-756,\x22x2\x22:138,\x22y2\x22:-769},{\x22x1\x22:138,\x22y1\x22:-769,\x22x2\x22:48,\x22y2\x22:-769},{\x22x1\x22:48,\x22y1\x22:-769,\x22x2\x22:54,\x22y2\x22:-786},{\x22x1\x22:54,\x22y1\x22:-786,\x22x2\x22:54,\x22y2\x22:-832},{\x22x1\x22:54,\x22y1\x22:-832,\x22x2\x22:37,\x22y2\x22:-831},{\x22x1\x22:37,\x22y1\x22:-831,\x22x2\x22:32,\x22y2\x22:-836},{\x22x1\x22:32,\x22y1\x22:-836,\x22x2\x22:54,\x22y2\x22:-853},{\x22x1\x22:54,\x22y1\x22:-853,\x22x2\x22:-45,\x22y2\x22:-853},{\x22x1\x22:-45,\x22y1\x22:-853,\x22x2\x22:-85,\x22y2\x22:-854},{\x22x1\x22:-85,\x22y1\x22:-854,\x22x2\x22:-84,\x22y2\x22:-883},{\x22x1\x22:-84,\x22y1\x22:-883,\x22x2\x22:56,\x22y2\x22:-883},{\x22x1\x22:54,\x22y1\x22:-883,\x22x2\x22:54,\x22y2\x22:-883},{\x22x1\x22:54,\x22y1\x22:-883,\x22x2\x22:55,\x22y2\x22:-909},{\x22x1\x22:55,\x22y1\x22:-909,\x22x2\x22:82,\x22y2\x22:-912},{\x22x1\x22:82,\x22y1\x22:-912,\x22x2\x22:82,\x22y2\x22:-883},{\x22x1\x22:82,\x22y1\x22:-883,\x22x2\x22:54,\x22y2\x22:-883},{\x22x1\x22:82,\x22y1\x22:-911,\x22x2\x22:82,\x22y2\x22:-911},{\x22x1\x22:82,\x22y1\x22:-911,\x22x2\x22:82,\x22y2\x22:-951},{\x22x1\x22:82,\x22y1\x22:-951,\x22x2\x22:82,\x22y2\x22:-1005},{\x22x1\x22:82,\x22y1\x22:-1005,\x22x2\x22:89,\x22y2\x22:-1009},{\x22x1\x22:89,\x22y1\x22:-1009,\x22x2\x22:119,\x22y2\x22:-1009},{\x22x1\x22:119,\x22y1\x22:-1009,\x22x2\x22:133,\x22y2\x22:-1019},{\x22x1\x22:133,\x22y1\x22:-1019,\x22x2\x22:141,\x22y2\x22:-1014},{\x22x1\x22:141,\x22y1\x22:-1014,\x22x2\x22:146,\x22y2\x22:-995},{\x22x1\x22:146,\x22y1\x22:-995,\x22x2\x22:159,\x22y2\x22:-985},{\x22x1\x22:159,\x22y1\x22:-985,\x22x2\x22:157,\x22y2\x22:-972},{\x22x1\x22:157,\x22y1\x22:-972,\x22x2\x22:168,\x22y2\x22:-967},{\x22x1\x22:168,\x22y1\x22:-967,\x22x2\x22:159,\x22y2\x22:-960},{\x22x1\x22:159,\x22y1\x22:-960,\x22x2\x22:153,\x22y2\x22:-946},{\x22x1\x22:153,\x22y1\x22:-946,\x22x2\x22:140,\x22y2\x22:-943},{\x22x1\x22:140,\x22y1\x22:-943,\x22x2\x22:139,\x22y2\x22:-921},{\x22x1\x22:139,\x22y1\x22:-921,\x22x2\x22:110,\x22y2\x22:-921},{\x22x1\x22:110,\x22y1\x22:-921,\x22x2\x22:98,\x22y2\x22:-909},{\x22x1\x22:98,\x22y1\x22:-909,\x22x2\x22:98,\x22y2\x22:-896},{\x22x1\x22:98,\x22y1\x22:-896,\x22x2\x22:84,\x22y2\x22:-854},{\x22x1\x22:84,\x22y1\x22:-854,\x22x2\x22:111,\x22y2\x22:-841},{\x22x1\x22:111,\x22y1\x22:-841,\x22x2\x22:140,\x22y2\x22:-854},{\x22x1\x22:140,\x22y1\x22:-854,\x22x2\x22:140,\x22y2\x22:-841},{\x22x1\x22:140,\x22y1\x22:-841,\x22x2\x22:169,\x22y2\x22:-826},{\x22x1\x22:169,\x22y1\x22:-826,\x22x2\x22:169,\x22y2\x22:-811},{\x22x1\x22:169,\x22y1\x22:-811,\x22x2\x22:179,\x22y2\x22:-801},{\x22x1\x22:179,\x22y1\x22:-801,\x22x2\x22:184,\x22y2\x22:-811},{\x22x1\x22:184,\x22y1\x22:-811,\x22x2\x22:199,\x22y2\x22:-804},{\x22x1\x22:199,\x22y1\x22:-804,\x22x2\x22:208,\x22y2\x22:-812},{\x22x1\x22:208,\x22y1\x22:-812,\x22x2\x22:224,\x22y2\x22:-785},{\x22x1\x22:224,\x22y1\x22:-785,\x22x2\x22:251,\x22y2\x22:-785},{\x22x1\x22:251,\x22y1\x22:-785,\x22x2\x22:265,\x22y2\x22:-771},{\x22x1\x22:265,\x22y1\x22:-771,\x22x2\x22:307,\x22y2\x22:-771},{\x22x1\x22:307,\x22y1\x22:-771,\x22x2\x22:334,\x22y2\x22:-784},{\x22x1\x22:334,\x22y1\x22:-784,\x22x2\x22:360,\x22y2\x22:-785},{\x22x1\x22:360,\x22y1\x22:-785,\x22x2\x22:378,\x22y2\x22:-799},{\x22x1\x22:378,\x22y1\x22:-799,\x22x2\x22:404,\x22y2\x22:-799},{\x22x1\x22:404,\x22y1\x22:-799,\x22x2\x22:405,\x22y2\x22:-754},{\x22x1\x22:405,\x22y1\x22:-754,\x22x2\x22:375,\x22y2\x22:-756},{\x22x1\x22:375,\x22y1\x22:-756,\x22x2\x22:375,\x22y2\x22:-772},{\x22x1\x22:375,\x22y1\x22:-772,\x22x2\x22:370,\x22y2\x22:-779},{\x22x1\x22:370,\x22y1\x22:-779,\x22x2\x22:353,\x22y2\x22:-779},{\x22x1\x22:354,\x22y1\x22:-779,\x22x2\x22:354,\x22y2\x22:-779},{\x22x1\x22:354,\x22y1\x22:-779,\x22x2\x22:356,\x22y2\x22:-761},{\x22x1\x22:356,\x22y1\x22:-761,\x22x2\x22:356,\x22y2\x22:-761},{\x22x1\x22:356,\x22y1\x22:-761,\x22x2\x22:364,\x22y2\x22:-756},{\x22x1\x22:364,\x22y1\x22:-756,\x22x2\x22:364,\x22y2\x22:-743},{\x22x1\x22:364,\x22y1\x22:-743,\x22x2\x22:410,\x22y2\x22:-743},{\x22x1\x22:410,\x22y1\x22:-743,\x22x2\x22:412,\x22y2\x22:-748},{\x22x1\x22:412,\x22y1\x22:-748,\x22x2\x22:417,\x22y2\x22:-752},{\x22x1\x22:417,\x22y1\x22:-752,\x22x2\x22:418,\x22y2\x22:-807},{\x22x1\x22:418,\x22y1\x22:-807,\x22x2\x22:418,\x22y2\x22:-811},{\x22x1\x22:418,\x22y1\x22:-811,\x22x2\x22:403,\x22y2\x22:-812},{\x22x1\x22:403,\x22y1\x22:-812,\x22x2\x22:390,\x22y2\x22:-854},{\x22x1\x22:390,\x22y1\x22:-854,\x22x2\x22:417,\x22y2\x22:-855},{\x22x1\x22:417,\x22y1\x22:-855,\x22x2\x22:431,\x22y2\x22:-868},{\x22x1\x22:431,\x22y1\x22:-868,\x22x2\x22:418,\x22y2\x22:-881},{\x22x1\x22:418,\x22y1\x22:-881,\x22x2\x22:403,\x22y2\x22:-882},{\x22x1\x22:403,\x22y1\x22:-882,\x22x2\x22:404,\x22y2\x22:-895},{\x22x1\x22:404,\x22y1\x22:-895,\x22x2\x22:424,\x22y2\x22:-906},{\x22x1\x22:424,\x22y1\x22:-906,\x22x2\x22:422,\x22y2\x22:-916},{\x22x1\x22:422,\x22y1\x22:-916,\x22x2\x22:421,\x22y2\x22:-922},{\x22x1\x22:421,\x22y1\x22:-922,\x22x2\x22:432,\x22y2\x22:-922},{\x22x1\x22:432,\x22y1\x22:-922,\x22x2\x22:431,\x22y2\x22:-952},{\x22x1\x22:431,\x22y1\x22:-952,\x22x2\x22:426,\x22y2\x22:-957},{\x22x1\x22:426,\x22y1\x22:-957,\x22x2\x22:416,\x22y2\x22:-948},{\x22x1\x22:416,\x22y1\x22:-948,\x22x2\x22:401,\x22y2\x22:-955},{\x22x1\x22:401,\x22y1\x22:-955,\x22x2\x22:395,\x22y2\x22:-969},{\x22x1\x22:395,\x22y1\x22:-969,\x22x2\x22:404,\x22y2\x22:-984},{\x22x1\x22:404,\x22y1\x22:-984,\x22x2\x22:393,\x22y2\x22:-988},{\x22x1\x22:393,\x22y1\x22:-988,\x22x2\x22:389,\x22y2\x22:-1000},{\x22x1\x22:389,\x22y1\x22:-1000,\x22x2\x22:375,\x22y2\x22:-1006},{\x22x1\x22:375,\x22y1\x22:-1006,\x22x2\x22:350,\x22y2\x22:-1006},{\x22x1\x22:350,\x22y1\x22:-1006,\x22x2\x22:334,\x22y2\x22:-1023},{\x22x1\x22:334,\x22y1\x22:-1023,\x22x2\x22:354,\x22y2\x22:-1065},{\x22x1\x22:354,\x22y1\x22:-1065,\x22x2\x22:357,\x22y2\x22:-1067},{\x22x1\x22:357,\x22y1\x22:-1067,\x22x2\x22:360,\x22y2\x22:-1065},{\x22x1\x22:360,\x22y1\x22:-1065,\x22x2\x22:379,\x22y2\x22:-1065},{\x22x1\x22:379,\x22y1\x22:-1065,\x22x2\x22:387,\x22y2\x22:-1045},{\x22x1\x22:387,\x22y1\x22:-1045,\x22x2\x22:392,\x22y2\x22:-1044},{\x22x1\x22:392,\x22y1\x22:-1044,\x22x2\x22:396,\x22y2\x22:-1041},{\x22x1\x22:396,\x22y1\x22:-1041,\x22x2\x22:401,\x22y2\x22:-1037},{\x22x1\x22:401,\x22y1\x22:-1037,\x22x2\x22:419,\x22y2\x22:-1037},{\x22x1\x22:419,\x22y1\x22:-1037,\x22x2\x22:446,\x22y2\x22:-1051},{\x22x1\x22:446,\x22y1\x22:-1051,\x22x2\x22:446,\x22y2\x22:-1064},{\x22x1\x22:446,\x22y1\x22:-1064,\x22x2\x22:450,\x22y2\x22:-1064},{\x22x1\x22:450,\x22y1\x22:-1064,\x22x2\x22:461,\x22y2\x22:-1051},{\x22x1\x22:461,\x22y1\x22:-1051,\x22x2\x22:501,\x22y2\x22:-1051},{\x22x1\x22:501,\x22y1\x22:-1051,\x22x2\x22:502,\x22y2\x22:-1078},{\x22x1\x22:502,\x22y1\x22:-1078,\x22x2\x22:519,\x22y2\x22:-1078},{\x22x1\x22:519,\x22y1\x22:-1078,\x22x2\x22:532,\x22y2\x22:-1065},{\x22x1\x22:532,\x22y1\x22:-1065,\x22x2\x22:544,\x22y2\x22:-1065},{\x22x1\x22:544,\x22y1\x22:-1065,\x22x2\x22:558,\x22y2\x22:-1079},{\x22x1\x22:558,\x22y1\x22:-1079,\x22x2\x22:558,\x22y2\x22:-1091},{\x22x1\x22:558,\x22y1\x22:-1091,\x22x2\x22:542,\x22y2\x22:-1104},{\x22x1\x22:542,\x22y1\x22:-1104,\x22x2\x22:533,\x22y2\x22:-1104},{\x22x1\x22:533,\x22y1\x22:-1104,\x22x2\x22:517,\x22y2\x22:-1091},{\x22x1\x22:517,\x22y1\x22:-1091,\x22x2\x22:490,\x22y2\x22:-1090},{\x22x1\x22:490,\x22y1\x22:-1090,\x22x2\x22:488,\x22y2\x22:-1061},{\x22x1\x22:488,\x22y1\x22:-1061,\x22x2\x22:475,\x22y2\x22:-1062},{\x22x1\x22:475,\x22y1\x22:-1062,\x22x2\x22:460,\x22y2\x22:-1076},{\x22x1\x22:460,\x22y1\x22:-1076,\x22x2\x22:435,\x22y2\x22:-1076},{\x22x1\x22:435,\x22y1\x22:-1076,\x22x2\x22:434,\x22y2\x22:-1063},{\x22x1\x22:434,\x22y1\x22:-1063,\x22x2\x22:420,\x22y2\x22:-1049},{\x22x1\x22:420,\x22y1\x22:-1049,\x22x2\x22:404,\x22y2\x22:-1048},{\x22x1\x22:404,\x22y1\x22:-1048,\x22x2\x22:393,\x22y2\x22:-1070},{\x22x1\x22:393,\x22y1\x22:-1070,\x22x2\x22:376,\x22y2\x22:-1077},{\x22x1\x22:376,\x22y1\x22:-1077,\x22x2\x22:376,\x22y2\x22:-1090},{\x22x1\x22:376,\x22y1\x22:-1090,\x22x2\x22:364,\x22y2\x22:-1090},{\x22x1\x22:364,\x22y1\x22:-1090,\x22x2\x22:358,\x22y2\x22:-1077},{\x22x1\x22:358,\x22y1\x22:-1077,\x22x2\x22:352,\x22y2\x22:-1076},{\x22x1\x22:352,\x22y1\x22:-1076,\x22x2\x22:349,\x22y2\x22:-1076},{\x22x1\x22:349,\x22y1\x22:-1076,\x22x2\x22:321,\x22y2\x22:-1090},{\x22x1\x22:321,\x22y1\x22:-1090,\x22x2\x22:308,\x22y2\x22:-1090},{\x22x1\x22:308,\x22y1\x22:-1090,\x22x2\x22:279,\x22y2\x22:-1034},{\x22x1\x22:279,\x22y1\x22:-1034,\x22x2\x22:264,\x22y2\x22:-1035},{\x22x1\x22:264,\x22y1\x22:-1035,\x22x2\x22:260,\x22y2\x22:-1043},{\x22x1\x22:260,\x22y1\x22:-1043,\x22x2\x22:253,\x22y2\x22:-1057},{\x22x1\x22:253,\x22y1\x22:-1057,\x22x2\x22:250,\x22y2\x22:-1065},{\x22x1\x22:250,\x22y1\x22:-1065,\x22x2\x22:250,\x22y2\x22:-1076},{\x22x1\x22:250,\x22y1\x22:-1076,\x22x2\x22:224,\x22y2\x22:-1076},{\x22x1\x22:224,\x22y1\x22:-1076,\x22x2\x22:224,\x22y2\x22:-1062},{\x22x1\x22:224,\x22y1\x22:-1062,\x22x2\x22:210,\x22y2\x22:-1036},{\x22x1\x22:210,\x22y1\x22:-1036,\x22x2\x22:203,\x22y2\x22:-1034},{\x22x1\x22:203,\x22y1\x22:-1034,\x22x2\x22:199,\x22y2\x22:-1027},{\x22x1\x22:199,\x22y1\x22:-1027,\x22x2\x22:194,\x22y2\x22:-1024},{\x22x1\x22:194,\x22y1\x22:-1024,\x22x2\x22:182,\x22y2\x22:-1033},{\x22x1\x22:182,\x22y1\x22:-1033,\x22x2\x22:104,\x22y2\x22:-1034},{\x22x1\x22:104,\x22y1\x22:-1034,\x22x2\x22:100,\x22y2\x22:-1022},{\x22x1\x22:100,\x22y1\x22:-1022,\x22x2\x22:91,\x22y2\x22:-1015},{\x22x1\x22:91,\x22y1\x22:-1015,\x22x2\x22:84,\x22y2\x22:-1017},{\x22x1\x22:84,\x22y1\x22:-1017,\x22x2\x22:74,\x22y2\x22:-1024},{\x22x1\x22:74,\x22y1\x22:-1024,\x22x2\x22:74,\x22y2\x22:-1032},{\x22x1\x22:74,\x22y1\x22:-1032,\x22x2\x22:81,\x22y2\x22:-1042},{\x22x1\x22:81,\x22y1\x22:-1042,\x22x2\x22:82,\x22y2\x22:-1064},{\x22x1\x22:82,\x22y1\x22:-1064,\x22x2\x22:92,\x22y2\x22:-1065},{\x22x1\x22:92,\x22y1\x22:-1065,\x22x2\x22:152,\x22y2\x22:-1065},{\x22x1\x22:152,\x22y1\x22:-1065,\x22x2\x22:152,\x22y2\x22:-1090},{\x22x1\x22:152,\x22y1\x22:-1090,\x22x2\x22:88,\x22y2\x22:-1090},{\x22x1\x22:88,\x22y1\x22:-1090,\x22x2\x22:81,\x22y2\x22:-1090},{\x22x1\x22:83,\x22y1\x22:-1090,\x22x2\x22:83,\x22y2\x22:-1090},{\x22x1\x22:83,\x22y1\x22:-1090,\x22x2\x22:57,\x22y2\x22:-1090},{\x22x1\x22:57,\x22y1\x22:-1090,\x22x2\x22:56,\x22y2\x22:-1064},{\x22x1\x22:56,\x22y1\x22:-1064,\x22x2\x22:82,\x22y2\x22:-1063},{\x22x1\x22:82,\x22y1\x22:-1063,\x22x2\x22:83,\x22y2\x22:-1090},{\x22x1\x22:56,\x22y1\x22:-1063,\x22x2\x22:56,\x22y2\x22:-1063},{\x22x1\x22:56,\x22y1\x22:-1063,\x22x2\x22:56,\x22y2\x22:-1036},{\x22x1\x22:-26,\x22y1\x22:-1034,\x22x2\x22:-26,\x22y2\x22:-1034},{\x22x1\x22:-26,\x22y1\x22:-1034,\x22x2\x22:56,\x22y2\x22:-1035},{\x22x1\x22:-26,\x22y1\x22:-1034,\x22x2\x22:-26,\x22y2\x22:-1034},{\x22x1\x22:-26,\x22y1\x22:-1034,\x22x2\x22:-55,\x22y2\x22:-1034},{\x22x1\x22:-55,\x22y1\x22:-1034,\x22x2\x22:-55,\x22y2\x22:-1006},{\x22x1\x22:-55,\x22y1\x22:-1006,\x22x2\x22:-29,\x22y2\x22:-1007},{\x22x1\x22:-29,\x22y1\x22:-1007,\x22x2\x22:-25,\x22y2\x22:-1034},{\x22x1\x22:-55,\x22y1\x22:-1007,\x22x2\x22:-55,\x22y2\x22:-1007},{\x22x1\x22:-55,\x22y1\x22:-1007,\x22x2\x22:-57,\x22y2\x22:-909},{\x22x1\x22:-57,\x22y1\x22:-909,\x22x2\x22:-88,\x22y2\x22:-908},{\x22x1\x22:-88,\x22y1\x22:-908,\x22x2\x22:-94,\x22y2\x22:-898},{\x22x1\x22:-94,\x22y1\x22:-898,\x22x2\x22:-104,\x22y2\x22:-894},{\x22x1\x22:-104,\x22y1\x22:-894,\x22x2\x22:-111,\x22y2\x22:-896},{\x22x1\x22:-111,\x22y1\x22:-896,\x22x2\x22:-112,\x22y2\x22:-796},{\x22x1\x22:-112,\x22y1\x22:-796,\x22x2\x22:-140,\x22y2\x22:-797},{\x22x1\x22:-140,\x22y1\x22:-797,\x22x2\x22:-141,\x22y2\x22:-812},{\x22x1\x22:-141,\x22y1\x22:-812,\x22x2\x22:-150,\x22y2\x22:-810},{\x22x1\x22:-150,\x22y1\x22:-810,\x22x2\x22:-157,\x22y2\x22:-813},{\x22x1\x22:-157,\x22y1\x22:-813,\x22x2\x22:-158,\x22y2\x22:-825},{\x22x1\x22:-158,\x22y1\x22:-825,\x22x2\x22:-223,\x22y2\x22:-825},{\x22x1\x22:-223,\x22y1\x22:-825,\x22x2\x22:-223,\x22y2\x22:-770},{\x22x1\x22:-223,\x22y1\x22:-770,\x22x2\x22:-245,\x22y2\x22:-769},{\x22x1\x22:-245,\x22y1\x22:-769,\x22x2\x22:-253,\x22y2\x22:-759},{\x22x1\x22:-253,\x22y1\x22:-759,\x22x2\x22:-245,\x22y2\x22:-736},{\x22x1\x22:-245,\x22y1\x22:-736,\x22x2\x22:-255,\x22y2\x22:-735},{\x22x1\x22:-255,\x22y1\x22:-735,\x22x2\x22:-251,\x22y2\x22:-712},{\x22x1\x22:-251,\x22y1\x22:-712,\x22x2\x22:-286,\x22y2\x22:-713},{\x22x1\x22:-286,\x22y1\x22:-713,\x22x2\x22:-292,\x22y2\x22:-693},{\x22x1\x22:-292,\x22y1\x22:-693,\x22x2\x22:-283,\x22y2\x22:-686},{\x22x1\x22:-283,\x22y1\x22:-686,\x22x2\x22:-295,\x22y2\x22:-679},{\x22x1\x22:-295,\x22y1\x22:-679,\x22x2\x22:-299,\x22y2\x22:-668},{\x22x1\x22:-299,\x22y1\x22:-668,\x22x2\x22:-295,\x22y2\x22:-662},{\x22x1\x22:-295,\x22y1\x22:-662,\x22x2\x22:-289,\x22y2\x22:-658},{\x22x1\x22:-289,\x22y1\x22:-658,\x22x2\x22:-299,\x22y2\x22:-641},{\x22x1\x22:-299,\x22y1\x22:-641,\x22x2\x22:-299,\x22y2\x22:-635},{\x22x1\x22:-299,\x22y1\x22:-635,\x22x2\x22:-286,\x22y2\x22:-631},{\x22x1\x22:-286,\x22y1\x22:-631,\x22x2\x22:-280,\x22y2\x22:-631},{\x22x1\x22:-280,\x22y1\x22:-631,\x22x2\x22:-281,\x22y2\x22:-620},{\x22x1\x22:-281,\x22y1\x22:-620,\x22x2\x22:-253,\x22y2\x22:-602},{\x22x1\x22:-253,\x22y1\x22:-602,\x22x2\x22:-249,\x22y2\x22:-614},{\x22x1\x22:-249,\x22y1\x22:-614,\x22x2\x22:-252,\x22y2\x22:-628},{\x22x1\x22:-252,\x22y1\x22:-628,\x22x2\x22:-222,\x22y2\x22:-630},{\x22x1\x22:-222,\x22y1\x22:-630,\x22x2\x22:-217,\x22y2\x22:-623},{\x22x1\x22:-217,\x22y1\x22:-623,\x22x2\x22:-200,\x22y2\x22:-626},{\x22x1\x22:-200,\x22y1\x22:-626,\x22x2\x22:-197,\x22y2\x22:-630},{\x22x1\x22:-197,\x22y1\x22:-630,\x22x2\x22:-197,\x22y2\x22:-658},{\x22x1\x22:-197,\x22y1\x22:-658,\x22x2\x22:-111,\x22y2\x22:-658},{\x22x1\x22:-111,\x22y1\x22:-658,\x22x2\x22:-111,\x22y2\x22:-645},{\x22x1\x22:-111,\x22y1\x22:-645,\x22x2\x22:-111,\x22y2\x22:-631},{\x22x1\x22:-111,\x22y1\x22:-631,\x22x2\x22:-5,\x22y2\x22:-631},{\x22x1\x22:-5,\x22y1\x22:-631,\x22x2\x22:-1,\x22y2\x22:-657},{\x22x1\x22:-1,\x22y1\x22:-657,\x22x2\x22:-6,\x22y2\x22:-657},{\x22x1\x22:-6,\x22y1\x22:-657,\x22x2\x22:-29,\x22y2\x22:-657},{\x22x1\x22:-29,\x22y1\x22:-657,\x22x2\x22:-28,\x22y2\x22:-688},{\x22x1\x22:-28,\x22y1\x22:-688,\x22x2\x22:-17,\x22y2\x22:-687},{\x22x1\x22:-17,\x22y1\x22:-687,\x22x2\x22:-9,\x22y2\x22:-688},{\x22x1\x22:-9,\x22y1\x22:-688,\x22x2\x22:-1,\x22y2\x22:-687},{\x22x1\x22:-1,\x22y1\x22:-687,\x22x2\x22:22,\x22y2\x22:-665},{\x22x1\x22:22,\x22y1\x22:-665,\x22x2\x22:28,\x22y2\x22:-662},{\x22x1\x22:28,\x22y1\x22:-662,\x22x2\x22:36,\x22y2\x22:-653},{\x22x1\x22:36,\x22y1\x22:-653,\x22x2\x22:28,\x22y2\x22:-644},{\x22x1\x22:28,\x22y1\x22:-644,\x22x2\x22:28,\x22y2\x22:-604},{\x22x1\x22:28,\x22y1\x22:-604,\x22x2\x22:84,\x22y2\x22:-603},{\x22x1\x22:84,\x22y1\x22:-603,\x22x2\x22:84,\x22y2\x22:-575},{\x22x1\x22:84,\x22y1\x22:-575,\x22x2\x22:110,\x22y2\x22:-575},{\x22x1\x22:110,\x22y1\x22:-575,\x22x2\x22:110,\x22y2\x22:-629},{\x22x1\x22:110,\x22y1\x22:-629,\x22x2\x22:55,\x22y2\x22:-629},{\x22x1\x22:55,\x22y1\x22:-629,\x22x2\x22:53,\x22y2\x22:-647},{\x22x1\x22:53,\x22y1\x22:-647,\x22x2\x22:51,\x22y2\x22:-653},{\x22x1\x22:51,\x22y1\x22:-653,\x22x2\x22:55,\x22y2\x22:-665},{\x22x1\x22:55,\x22y1\x22:-665,\x22x2\x22:56,\x22y2\x22:-667},{\x22x1\x22:56,\x22y1\x22:-667,\x22x2\x22:71,\x22y2\x22:-659},{\x22x1\x22:71,\x22y1\x22:-659,\x22x2\x22:139,\x22y2\x22:-659},{\x22x1\x22:139,\x22y1\x22:-659,\x22x2\x22:152,\x22y2\x22:-673},{\x22x1\x22:152,\x22y1\x22:-673,\x22x2\x22:152,\x22y2\x22:-690},{\x22x1\x22:152,\x22y1\x22:-690,\x22x2\x22:155,\x22y2\x22:-701},{\x22x1\x22:155,\x22y1\x22:-701,\x22x2\x22:158,\x22y2\x22:-701},{\x22x1\x22:158,\x22y1\x22:-701,\x22x2\x22:168,\x22y2\x22:-700},{\x22x1\x22:168,\x22y1\x22:-700,\x22x2\x22:181,\x22y2\x22:-688},{\x22x1\x22:181,\x22y1\x22:-688,\x22x2\x22:208,\x22y2\x22:-715},{\x22x1\x22:208,\x22y1\x22:-715,\x22x2\x22:238,\x22y2\x22:-701},{\x22x1\x22:238,\x22y1\x22:-701,\x22x2\x22:241,\x22y2\x22:-686},{\x22x1\x22:241,\x22y1\x22:-686,\x22x2\x22:210,\x22y2\x22:-657},{\x22x1\x22:210,\x22y1\x22:-657,\x22x2\x22:182,\x22y2\x22:-654},{\x22x1\x22:182,\x22y1\x22:-654,\x22x2\x22:182,\x22y2\x22:-643},{\x22x1\x22:182,\x22y1\x22:-643,\x22x2\x22:169,\x22y2\x22:-640},{\x22x1\x22:169,\x22y1\x22:-640,\x22x2\x22:180,\x22y2\x22:-597},{\x22x1\x22:180,\x22y1\x22:-597,\x22x2\x22:181,\x22y2\x22:-591},{\x22x1\x22:181,\x22y1\x22:-591,\x22x2\x22:168,\x22y2\x22:-572},{\x22x1\x22:168,\x22y1\x22:-572,\x22x2\x22:168,\x22y2\x22:-547},{\x22x1\x22:168,\x22y1\x22:-547,\x22x2\x22:154,\x22y2\x22:-529},{\x22x1\x22:154,\x22y1\x22:-529,\x22x2\x22:155,\x22y2\x22:-512},{\x22x1\x22:155,\x22y1\x22:-512,\x22x2\x22:154,\x22y2\x22:-489},{\x22x1\x22:154,\x22y1\x22:-489,\x22x2\x22:168,\x22y2\x22:-462},{\x22x1\x22:168,\x22y1\x22:-462,\x22x2\x22:210,\x22y2\x22:-434},{\x22x1\x22:210,\x22y1\x22:-434,\x22x2\x22:210,\x22y2\x22:-431},{\x22x1\x22:212,\x22y1\x22:-486,\x22x2\x22:212,\x22y2\x22:-486},{\x22x1\x22:212,\x22y1\x22:-486,\x22x2\x22:208,\x22y2\x22:-471},{\x22x1\x22:208,\x22y1\x22:-471,\x22x2\x22:202,\x22y2\x22:-472},{\x22x1\x22:202,\x22y1\x22:-472,\x22x2\x22:182,\x22y2\x22:-468},{\x22x1\x22:182,\x22y1\x22:-468,\x22x2\x22:182,\x22y2\x22:-481},{\x22x1\x22:182,\x22y1\x22:-481,\x22x2\x22:193,\x22y2\x22:-500},{\x22x1\x22:193,\x22y1\x22:-500,\x22x2\x22:198,\x22y2\x22:-499},{\x22x1\x22:198,\x22y1\x22:-499,\x22x2\x22:213,\x22y2\x22:-486},{\x22x1\x22:270,\x22y1\x22:-587,\x22x2\x22:270,\x22y2\x22:-586},{\x22x1\x22:270,\x22y1\x22:-586,\x22x2\x22:265,\x22y2\x22:-587},{\x22x1\x22:265,\x22y1\x22:-587,\x22x2\x22:260,\x22y2\x22:-591},{\x22x1\x22:260,\x22y1\x22:-591,\x22x2\x22:250,\x22y2\x22:-583},{\x22x1\x22:250,\x22y1\x22:-583,\x22x2\x22:232,\x22y2\x22:-596},{\x22x1\x22:232,\x22y1\x22:-596,\x22x2\x22:240,\x22y2\x22:-609},{\x22x1\x22:240,\x22y1\x22:-609,\x22x2\x22:245,\x22y2\x22:-611},{\x22x1\x22:245,\x22y1\x22:-611,\x22x2\x22:251,\x22y2\x22:-608},{\x22x1\x22:251,\x22y1\x22:-608,\x22x2\x22:269,\x22y2\x22:-614},{\x22x1\x22:269,\x22y1\x22:-614,\x22x2\x22:281,\x22y2\x22:-616},{\x22x1\x22:281,\x22y1\x22:-616,\x22x2\x22:280,\x22y2\x22:-606},{\x22x1\x22:280,\x22y1\x22:-606,\x22x2\x22:291,\x22y2\x22:-608},{\x22x1\x22:291,\x22y1\x22:-608,\x22x2\x22:272,\x22y2\x22:-603},{\x22x1\x22:272,\x22y1\x22:-603,\x22x2\x22:279,\x22y2\x22:-604},{\x22x1\x22:279,\x22y1\x22:-604,\x22x2\x22:287,\x22y2\x22:-601},{\x22x1\x22:287,\x22y1\x22:-601,\x22x2\x22:290,\x22y2\x22:-594},{\x22x1\x22:290,\x22y1\x22:-594,\x22x2\x22:287,\x22y2\x22:-585},{\x22x1\x22:287,\x22y1\x22:-585,\x22x2\x22:279,\x22y2\x22:-580},{\x22x1\x22:279,\x22y1\x22:-580,\x22x2\x22:269,\x22y2\x22:-587},{\x22x1\x22:126,\x22y1\x22:-685,\x22x2\x22:126,\x22y2\x22:-685},{\x22x1\x22:126,\x22y1\x22:-685,\x22x2\x22:83,\x22y2\x22:-685},{\x22x1\x22:83,\x22y1\x22:-685,\x22x2\x22:82,\x22y2\x22:-695},{\x22x1\x22:82,\x22y1\x22:-695,\x22x2\x22:82,\x22y2\x22:-699},{\x22x1\x22:82,\x22y1\x22:-699,\x22x2\x22:86,\x22y2\x22:-701},{\x22x1\x22:86,\x22y1\x22:-701,\x22x2\x22:91,\x22y2\x22:-703},{\x22x1\x22:91,\x22y1\x22:-703,\x22x2\x22:110,\x22y2\x22:-701},{\x22x1\x22:110,\x22y1\x22:-701,\x22x2\x22:110,\x22y2\x22:-727},{\x22x1\x22:110,\x22y1\x22:-727,\x22x2\x22:86,\x22y2\x22:-727},{\x22x1\x22:86,\x22y1\x22:-727,\x22x2\x22:82,\x22y2\x22:-742},{\x22x1\x22:82,\x22y1\x22:-742,\x22x2\x22:126,\x22y2\x22:-742},{\x22x1\x22:126,\x22y1\x22:-742,\x22x2\x22:126,\x22y2\x22:-686},{\x22x1\x22:20,\x22y1\x22:-761,\x22x2\x22:20,\x22y2\x22:-761},{\x22x1\x22:20,\x22y1\x22:-761,\x22x2\x22:-3,\x22y2\x22:-741},{\x22x1\x22:-3,\x22y1\x22:-741,\x22x2\x22:-9,\x22y2\x22:-737},{\x22x1\x22:-9,\x22y1\x22:-737,\x22x2\x22:-14,\x22y2\x22:-737},{\x22x1\x22:-14,\x22y1\x22:-737,\x22x2\x22:-20,\x22y2\x22:-741},{\x22x1\x22:-20,\x22y1\x22:-741,\x22x2\x22:-29,\x22y2\x22:-741},{\x22x1\x22:-29,\x22y1\x22:-741,\x22x2\x22:-29,\x22y2\x22:-754},{\x22x1\x22:-29,\x22y1\x22:-754,\x22x2\x22:-45,\x22y2\x22:-762},{\x22x1\x22:-45,\x22y1\x22:-762,\x22x2\x22:-45,\x22y2\x22:-769},{\x22x1\x22:-45,\x22y1\x22:-769,\x22x2\x22:-58,\x22y2\x22:-770},{\x22x1\x22:-58,\x22y1\x22:-770,\x22x2\x22:-57,\x22y2\x22:-797},{\x22x1\x22:-57,\x22y1\x22:-797,\x22x2\x22:-84,\x22y2\x22:-797},{\x22x1\x22:-84,\x22y1\x22:-797,\x22x2\x22:-85,\x22y2\x22:-808},{\x22x1\x22:-85,\x22y1\x22:-808,\x22x2\x22:-85,\x22y2\x22:-822},{\x22x1\x22:-85,\x22y1\x22:-822,\x22x2\x22:-80,\x22y2\x22:-830},{\x22x1\x22:-80,\x22y1\x22:-830,\x22x2\x22:-14,\x22y2\x22:-827},{\x22x1\x22:-14,\x22y1\x22:-827,\x22x2\x22:-15,\x22y2\x22:-834},{\x22x1\x22:-15,\x22y1\x22:-834,\x22x2\x22:-3,\x22y2\x22:-840},{\x22x1\x22:-3,\x22y1\x22:-840,\x22x2\x22:7,\x22y2\x22:-834},{\x22x1\x22:7,\x22y1\x22:-834,\x22x2\x22:13,\x22y2\x22:-827},{\x22x1\x22:13,\x22y1\x22:-827,\x22x2\x22:29,\x22y2\x22:-826},{\x22x1\x22:29,\x22y1\x22:-826,\x22x2\x22:28,\x22y2\x22:-784},{\x22x1\x22:28,\x22y1\x22:-784,\x22x2\x22:32,\x22y2\x22:-782},{\x22x1\x22:32,\x22y1\x22:-782,\x22x2\x22:31,\x22y2\x22:-763},{\x22x1\x22:31,\x22y1\x22:-763,\x22x2\x22:20,\x22y2\x22:-761},{\x22x1\x22:1,\x22y1\x22:-977,\x22x2\x22:1,\x22y2\x22:-977},{\x22x1\x22:1,\x22y1\x22:-977,\x22x2\x22:1,\x22y2\x22:-954},{\x22x1\x22:1,\x22y1\x22:-954,\x22x2\x22:-2,\x22y2\x22:-907},{\x22x1\x22:-2,\x22y1\x22:-907,\x22x2\x22:-26,\x22y2\x22:-907},{\x22x1\x22:-26,\x22y1\x22:-907,\x22x2\x22:-30,\x22y2\x22:-1007},{\x22x1\x22:-30,\x22y1\x22:-1007,\x22x2\x22:56,\x22y2\x22:-1010},{\x22x1\x22:56,\x22y1\x22:-1010,\x22x2\x22:57,\x22y2\x22:-978},{\x22x1\x22:57,\x22y1\x22:-978,\x22x2\x22:1,\x22y2\x22:-977},{\x22x1\x22:26,\x22y1\x22:-953,\x22x2\x22:26,\x22y2\x22:-953},{\x22x1\x22:26,\x22y1\x22:-953,\x22x2\x22:56,\x22y2\x22:-953},{\x22x1\x22:56,\x22y1\x22:-953,\x22x2\x22:57,\x22y2\x22:-909},{\x22x1\x22:57,\x22y1\x22:-909,\x22x2\x22:26,\x22y2\x22:-908},{\x22x1\x22:26,\x22y1\x22:-908,\x22x2\x22:26,\x22y2\x22:-953},{\x22x1\x22:-82,\x22y1\x22:-744,\x22x2\x22:-82,\x22y2\x22:-744},{\x22x1\x22:-82,\x22y1\x22:-744,\x22x2\x22:-56,\x22y2\x22:-744},{\x22x1\x22:-56,\x22y1\x22:-744,\x22x2\x22:-54,\x22y2\x22:-672},{\x22x1\x22:-54,\x22y1\x22:-672,\x22x2\x22:-55,\x22y2\x22:-656},{\x22x1\x22:-55,\x22y1\x22:-656,\x22x2\x22:-85,\x22y2\x22:-656},{\x22x1\x22:-85,\x22y1\x22:-656,\x22x2\x22:-86,\x22y2\x22:-683},{\x22x1\x22:-86,\x22y1\x22:-683,\x22x2\x22:-141,\x22y2\x22:-684},{\x22x1\x22:-141,\x22y1\x22:-684,\x22x2\x22:-142,\x22y2\x22:-711},{\x22x1\x22:-142,\x22y1\x22:-711,\x22x2\x22:-166,\x22y2\x22:-711},{\x22x1\x22:-166,\x22y1\x22:-711,\x22x2\x22:-166,\x22y2\x22:-685},{\x22x1\x22:-166,\x22y1\x22:-685,\x22x2\x22:-198,\x22y2\x22:-685},{\x22x1\x22:-198,\x22y1\x22:-685,\x22x2\x22:-198,\x22y2\x22:-694},{\x22x1\x22:-198,\x22y1\x22:-694,\x22x2\x22:-211,\x22y2\x22:-695},{\x22x1\x22:-211,\x22y1\x22:-695,\x22x2\x22:-225,\x22y2\x22:-707},{\x22x1\x22:-225,\x22y1\x22:-707,\x22x2\x22:-232,\x22y2\x22:-730},{\x22x1\x22:-232,\x22y1\x22:-730,\x22x2\x22:-226,\x22y2\x22:-743},{\x22x1\x22:-226,\x22y1\x22:-743,\x22x2\x22:-189,\x22y2\x22:-744},{\x22x1\x22:-189,\x22y1\x22:-744,\x22x2\x22:-158,\x22y2\x22:-744},{\x22x1\x22:-158,\x22y1\x22:-744,\x22x2\x22:-157,\x22y2\x22:-749},{\x22x1\x22:-157,\x22y1\x22:-749,\x22x2\x22:-142,\x22y2\x22:-754},{\x22x1\x22:-142,\x22y1\x22:-754,\x22x2\x22:-142,\x22y2\x22:-770},{\x22x1\x22:-142,\x22y1\x22:-770,\x22x2\x22:-83,\x22y2\x22:-772},{\x22x1\x22:-83,\x22y1\x22:-772,\x22x2\x22:-82,\x22y2\x22:-744},{\x22x1\x22:353,\x22y1\x22:-777,\x22x2\x22:353,\x22y2\x22:-777},{\x22x1\x22:353,\x22y1\x22:-777,\x22x2\x22:336,\x22y2\x22:-777},{\x22x1\x22:336,\x22y1\x22:-777,\x22x2\x22:329,\x22y2\x22:-763},{\x22x1\x22:329,\x22y1\x22:-763,\x22x2\x22:309,\x22y2\x22:-761},{\x22x1\x22:309,\x22y1\x22:-761,\x22x2\x22:309,\x22y2\x22:-761},{\x22x1\x22:309,\x22y1\x22:-761,\x22x2\x22:307,\x22y2\x22:-750},{\x22x1\x22:307,\x22y1\x22:-750,\x22x2\x22:307,\x22y2\x22:-750},{\x22x1\x22:307,\x22y1\x22:-750,\x22x2\x22:336,\x22y2\x22:-753},{\x22x1\x22:336,\x22y1\x22:-753,\x22x2\x22:353,\x22y2\x22:-761},{\x22x1\x22:305,\x22y1\x22:-761,\x22x2\x22:305,\x22y2\x22:-761},{\x22x1\x22:305,\x22y1\x22:-761,\x22x2\x22:292,\x22y2\x22:-759},{\x22x1\x22:292,\x22y1\x22:-759,\x22x2\x22:285,\x22y2\x22:-753},{\x22x1\x22:285,\x22y1\x22:-753,\x22x2\x22:282,\x22y2\x22:-742},{\x22x1\x22:291,\x22y1\x22:-740,\x22x2\x22:291,\x22y2\x22:-740},{\x22x1\x22:291,\x22y1\x22:-740,\x22x2\x22:291,\x22y2\x22:-748},{\x22x1\x22:291,\x22y1\x22:-748,\x22x2\x22:297,\x22y2\x22:-752},{\x22x1\x22:297,\x22y1\x22:-752,\x22x2\x22:305,\x22y2\x22:-750},{\x22x1\x22:211,\x22y1\x22:-432,\x22x2\x22:211,\x22y2\x22:-432},{\x22x1\x22:211,\x22y1\x22:-432,\x22x2\x22:213,\x22y2\x22:-423},{\x22x1\x22:213,\x22y1\x22:-423,\x22x2\x22:211,\x22y2\x22:-405},{\x22x1\x22:211,\x22y1\x22:-405,\x22x2\x22:205,\x22y2\x22:-404},{\x22x1\x22:205,\x22y1\x22:-404,\x22x2\x22:198,\x22y2\x22:-402},{\x22x1\x22:198,\x22y1\x22:-402,\x22x2\x22:194,\x22y2\x22:-403},{\x22x1\x22:194,\x22y1\x22:-403,\x22x2\x22:182,\x22y2\x22:-404},{\x22x1\x22:182,\x22y1\x22:-404,\x22x2\x22:155,\x22y2\x22:-390},{\x22x1\x22:155,\x22y1\x22:-390,\x22x2\x22:141,\x22y2\x22:-362},{\x22x1\x22:141,\x22y1\x22:-362,\x22x2\x22:141,\x22y2\x22:-352},{\x22x1\x22:141,\x22y1\x22:-352,\x22x2\x22:156,\x22y2\x22:-335},{\x22x1\x22:156,\x22y1\x22:-335,\x22x2\x22:169,\x22y2\x22:-309},{\x22x1\x22:169,\x22y1\x22:-309,\x22x2\x22:182,\x22y2\x22:-296},{\x22x1\x22:182,\x22y1\x22:-296,\x22x2\x22:170,\x22y2\x22:-279},{\x22x1\x22:170,\x22y1\x22:-279,\x22x2\x22:153,\x22y2\x22:-278},{\x22x1\x22:153,\x22y1\x22:-278,\x22x2\x22:126,\x22y2\x22:-295},{\x22x1\x22:126,\x22y1\x22:-295,\x22x2\x22:123,\x22y2\x22:-284},{\x22x1\x22:123,\x22y1\x22:-284,\x22x2\x22:115,\x22y2\x22:-282},{\x22x1\x22:115,\x22y1\x22:-282,\x22x2\x22:101,\x22y2\x22:-285},{\x22x1\x22:101,\x22y1\x22:-285,\x22x2\x22:97,\x22y2\x22:-297},{\x22x1\x22:97,\x22y1\x22:-297,\x22x2\x22:101,\x22y2\x22:-306},{\x22x1\x22:101,\x22y1\x22:-306,\x22x2\x22:96,\x22y2\x22:-305},{\x22x1\x22:96,\x22y1\x22:-305,\x22x2\x22:70,\x22y2\x22:-292},{\x22x1\x22:70,\x22y1\x22:-292,\x22x2\x22:55,\x22y2\x22:-292},{\x22x1\x22:55,\x22y1\x22:-292,\x22x2\x22:30,\x22y2\x22:-279},{\x22x1\x22:30,\x22y1\x22:-279,\x22x2\x22:43,\x22y2\x22:-253},{\x22x1\x22:43,\x22y1\x22:-253,\x22x2\x22:41,\x22y2\x22:-249},{\x22x1\x22:41,\x22y1\x22:-249,\x22x2\x22:9,\x22y2\x22:-250},{\x22x1\x22:9,\x22y1\x22:-250,\x22x2\x22:1,\x22y2\x22:-248},{\x22x1\x22:1,\x22y1\x22:-248,\x22x2\x22:-2,\x22y2\x22:-251},{\x22x1\x22:-2,\x22y1\x22:-251,\x22x2\x22:-2,\x22y2\x22:-278},{\x22x1\x22:-2,\x22y1\x22:-278,\x22x2\x22:-12,\x22y2\x22:-278},{\x22x1\x22:-12,\x22y1\x22:-278,\x22x2\x22:-12,\x22y2\x22:-270},{\x22x1\x22:-12,\x22y1\x22:-270,\x22x2\x22:-10,\x22y2\x22:-266},{\x22x1\x22:-10,\x22y1\x22:-266,\x22x2\x22:-26,\x22y2\x22:-264},{\x22x1\x22:-26,\x22y1\x22:-264,\x22x2\x22:-26,\x22y2\x22:-251},{\x22x1\x22:-26,\x22y1\x22:-251,\x22x2\x22:-33,\x22y2\x22:-250},{\x22x1\x22:-33,\x22y1\x22:-250,\x22x2\x22:-42,\x22y2\x22:-250},{\x22x1\x22:-42,\x22y1\x22:-250,\x22x2\x22:-44,\x22y2\x22:-278},{\x22x1\x22:-44,\x22y1\x22:-278,\x22x2\x22:-70,\x22y2\x22:-278},{\x22x1\x22:-70,\x22y1\x22:-278,\x22x2\x22:-72,\x22y2\x22:-292},{\x22x1\x22:-72,\x22y1\x22:-292,\x22x2\x22:-110,\x22y2\x22:-292},{\x22x1\x22:-110,\x22y1\x22:-292,\x22x2\x22:-110,\x22y2\x22:-265},{\x22x1\x22:-110,\x22y1\x22:-265,\x22x2\x22:-116,\x22y2\x22:-264},{\x22x1\x22:-116,\x22y1\x22:-264,\x22x2\x22:-122,\x22y2\x22:-262},{\x22x1\x22:-122,\x22y1\x22:-262,\x22x2\x22:-127,\x22y2\x22:-264},{\x22x1\x22:-127,\x22y1\x22:-264,\x22x2\x22:-128,\x22y2\x22:-292},{\x22x1\x22:-128,\x22y1\x22:-292,\x22x2\x22:-160,\x22y2\x22:-292},{\x22x1\x22:-160,\x22y1\x22:-292,\x22x2\x22:-166,\x22y2\x22:-297},{\x22x1\x22:-166,\x22y1\x22:-297,\x22x2\x22:-157,\x22y2\x22:-298},{\x22x1\x22:-157,\x22y1\x22:-298,\x22x2\x22:-157,\x22y2\x22:-299},{\x22x1\x22:-157,\x22y1\x22:-299,\x22x2\x22:-157,\x22y2\x22:-309},{\x22x1\x22:-157,\x22y1\x22:-309,\x22x2\x22:-160,\x22y2\x22:-313},{\x22x1\x22:-160,\x22y1\x22:-313,\x22x2\x22:-162,\x22y2\x22:-314},{\x22x1\x22:-162,\x22y1\x22:-314,\x22x2\x22:-174,\x22y2\x22:-315},{\x22x1\x22:-174,\x22y1\x22:-315,\x22x2\x22:-178,\x22y2\x22:-311},{\x22x1\x22:-178,\x22y1\x22:-311,\x22x2\x22:-181,\x22y2\x22:-306},{\x22x1\x22:-181,\x22y1\x22:-306,\x22x2\x22:-178,\x22y2\x22:-298},{\x22x1\x22:-178,\x22y1\x22:-298,\x22x2\x22:-182,\x22y2\x22:-292},{\x22x1\x22:-182,\x22y1\x22:-292,\x22x2\x22:-189,\x22y2\x22:-296},{\x22x1\x22:-189,\x22y1\x22:-296,\x22x2\x22:-195,\x22y2\x22:-292},{\x22x1\x22:-195,\x22y1\x22:-292,\x22x2\x22:-197,\x22y2\x22:-296},{\x22x1\x22:-197,\x22y1\x22:-296,\x22x2\x22:-195,\x22y2\x22:-301},{\x22x1\x22:-195,\x22y1\x22:-301,\x22x2\x22:-197,\x22y2\x22:-306},{\x22x1\x22:-197,\x22y1\x22:-306,\x22x2\x22:-192,\x22y2\x22:-313},{\x22x1\x22:-192,\x22y1\x22:-313,\x22x2\x22:-192,\x22y2\x22:-313},{\x22x1\x22:-192,\x22y1\x22:-313,\x22x2\x22:-198,\x22y2\x22:-322},{\x22x1\x22:-198,\x22y1\x22:-322,\x22x2\x22:-184,\x22y2\x22:-337},{\x22x1\x22:-184,\x22y1\x22:-337,\x22x2\x22:-173,\x22y2\x22:-359},{\x22x1\x22:-173,\x22y1\x22:-359,\x22x2\x22:-168,\x22y2\x22:-366},{\x22x1\x22:-168,\x22y1\x22:-366,\x22x2\x22:-154,\x22y2\x22:-367},{\x22x1\x22:-154,\x22y1\x22:-367,\x22x2\x22:-142,\x22y2\x22:-379},{\x22x1\x22:-142,\x22y1\x22:-379,\x22x2\x22:-125,\x22y2\x22:-380},{\x22x1\x22:-125,\x22y1\x22:-380,\x22x2\x22:-124,\x22y2\x22:-374},{\x22x1\x22:-124,\x22y1\x22:-374,\x22x2\x22:-124,\x22y2\x22:-366},{\x22x1\x22:-124,\x22y1\x22:-366,\x22x2\x22:-124,\x22y2\x22:-348},{\x22x1\x22:-124,\x22y1\x22:-348,\x22x2\x22:-138,\x22y2\x22:-334},{\x22x1\x22:-138,\x22y1\x22:-334,\x22x2\x22:-137,\x22y2\x22:-322},{\x22x1\x22:-137,\x22y1\x22:-322,\x22x2\x22:-128,\x22y2\x22:-314},{\x22x1\x22:-128,\x22y1\x22:-314,\x22x2\x22:-125,\x22y2\x22:-310},{\x22x1\x22:-125,\x22y1\x22:-310,\x22x2\x22:-113,\x22y2\x22:-310},{\x22x1\x22:-113,\x22y1\x22:-310,\x22x2\x22:-100,\x22y2\x22:-323},{\x22x1\x22:-100,\x22y1\x22:-323,\x22x2\x22:-100,\x22y2\x22:-334},{\x22x1\x22:-100,\x22y1\x22:-334,\x22x2\x22:-109,\x22y2\x22:-343},{\x22x1\x22:-109,\x22y1\x22:-343,\x22x2\x22:-114,\x22y2\x22:-348},{\x22x1\x22:-114,\x22y1\x22:-348,\x22x2\x22:-114,\x22y2\x22:-368},{\x22x1\x22:-114,\x22y1\x22:-368,\x22x2\x22:-115,\x22y2\x22:-368},{\x22x1\x22:-115,\x22y1\x22:-368,\x22x2\x22:-114,\x22y2\x22:-377},{\x22x1\x22:-114,\x22y1\x22:-377,\x22x2\x22:-100,\x22y2\x22:-393},{\x22x1\x22:-100,\x22y1\x22:-393,\x22x2\x22:-100,\x22y2\x22:-406},{\x22x1\x22:-100,\x22y1\x22:-406,\x22x2\x22:-85,\x22y2\x22:-422},{\x22x1\x22:-85,\x22y1\x22:-422,\x22x2\x22:-68,\x22y2\x22:-407},{\x22x1\x22:-68,\x22y1\x22:-407,\x22x2\x22:-82,\x22y2\x22:-390},{\x22x1\x22:-82,\x22y1\x22:-390,\x22x2\x22:-82,\x22y2\x22:-379},{\x22x1\x22:-82,\x22y1\x22:-379,\x22x2\x22:-68,\x22y2\x22:-366},{\x22x1\x22:-68,\x22y1\x22:-366,\x22x2\x22:-56,\x22y2\x22:-366},{\x22x1\x22:-56,\x22y1\x22:-366,\x22x2\x22:-16,\x22y2\x22:-379},{\x22x1\x22:-16,\x22y1\x22:-379,\x22x2\x22:0,\x22y2\x22:-366},{\x22x1\x22:0,\x22y1\x22:-366,\x22x2\x22:12,\x22y2\x22:-366},{\x22x1\x22:12,\x22y1\x22:-366,\x22x2\x22:25,\x22y2\x22:-379},{\x22x1\x22:25,\x22y1\x22:-379,\x22x2\x22:25,\x22y2\x22:-391},{\x22x1\x22:25,\x22y1\x22:-391,\x22x2\x22:12,\x22y2\x22:-404},{\x22x1\x22:12,\x22y1\x22:-404,\x22x2\x22:1,\x22y2\x22:-404},{\x22x1\x22:1,\x22y1\x22:-404,\x22x2\x22:-13,\x22y2\x22:-390},{\x22x1\x22:-13,\x22y1\x22:-390,\x22x2\x22:-44,\x22y2\x22:-404},{\x22x1\x22:-44,\x22y1\x22:-404,\x22x2\x22:-44,\x22y2\x22:-461},{\x22x1\x22:-44,\x22y1\x22:-461,\x22x2\x22:-13,\x22y2\x22:-450},{\x22x1\x22:-13,\x22y1\x22:-450,\x22x2\x22:13,\x22y2\x22:-423},{\x22x1\x22:13,\x22y1\x22:-423,\x22x2\x22:39,\x22y2\x22:-435},{\x22x1\x22:39,\x22y1\x22:-435,\x22x2\x22:39,\x22y2\x22:-446},{\x22x1\x22:39,\x22y1\x22:-446,\x22x2\x22:55,\x22y2\x22:-478},{\x22x1\x22:55,\x22y1\x22:-478,\x22x2\x22:81,\x22y2\x22:-491},{\x22x1\x22:81,\x22y1\x22:-491,\x22x2\x22:81,\x22y2\x22:-516},{\x22x1\x22:81,\x22y1\x22:-516,\x22x2\x22:40,\x22y2\x22:-530},{\x22x1\x22:40,\x22y1\x22:-530,\x22x2\x22:31,\x22y2\x22:-530},{\x22x1\x22:31,\x22y1\x22:-530,\x22x2\x22:24,\x22y2\x22:-533},{\x22x1\x22:24,\x22y1\x22:-533,\x22x2\x22:25,\x22y2\x22:-544},{\x22x1\x22:25,\x22y1\x22:-544,\x22x2\x22:12,\x22y2\x22:-557},{\x22x1\x22:12,\x22y1\x22:-557,\x22x2\x22:0,\x22y2\x22:-558},{\x22x1\x22:0,\x22y1\x22:-558,\x22x2\x22:-15,\x22y2\x22:-571},{\x22x1\x22:-15,\x22y1\x22:-571,\x22x2\x22:-27,\x22y2\x22:-572},{\x22x1\x22:-27,\x22y1\x22:-572,\x22x2\x22:-43,\x22y2\x22:-599},{\x22x1\x22:-43,\x22y1\x22:-599,\x22x2\x22:-71,\x22y2\x22:-600},{\x22x1\x22:-71,\x22y1\x22:-600,\x22x2\x22:-85,\x22y2\x22:-613},{\x22x1\x22:-85,\x22y1\x22:-613,\x22x2\x22:-99,\x22y2\x22:-613},{\x22x1\x22:-99,\x22y1\x22:-613,\x22x2\x22:-117,\x22y2\x22:-604},{\x22x1\x22:-117,\x22y1\x22:-604,\x22x2\x22:-125,\x22y2\x22:-600},{\x22x1\x22:-125,\x22y1\x22:-600,\x22x2\x22:-141,\x22y2\x22:-627},{\x22x1\x22:-141,\x22y1\x22:-627,\x22x2\x22:-149,\x22y2\x22:-627},{\x22x1\x22:-149,\x22y1\x22:-627,\x22x2\x22:-154,\x22y2\x22:-627},{\x22x1\x22:-154,\x22y1\x22:-627,\x22x2\x22:-178,\x22y2\x22:-615},{\x22x1\x22:-178,\x22y1\x22:-615,\x22x2\x22:-172,\x22y2\x22:-609},{\x22x1\x22:-172,\x22y1\x22:-609,\x22x2\x22:-166,\x22y2\x22:-602},{\x22x1\x22:-166,\x22y1\x22:-602,\x22x2\x22:-179,\x22y2\x22:-587},{\x22x1\x22:-179,\x22y1\x22:-587,\x22x2\x22:-176,\x22y2\x22:-583},{\x22x1\x22:-176,\x22y1\x22:-583,\x22x2\x22:-155,\x22y2\x22:-552},{\x22x1\x22:-155,\x22y1\x22:-552,\x22x2\x22:-152,\x22y2\x22:-537},{\x22x1\x22:-152,\x22y1\x22:-537,\x22x2\x22:-152,\x22y2\x22:-533},{\x22x1\x22:-152,\x22y1\x22:-533,\x22x2\x22:-167,\x22y2\x22:-516},{\x22x1\x22:-167,\x22y1\x22:-516,\x22x2\x22:-176,\x22y2\x22:-523},{\x22x1\x22:-176,\x22y1\x22:-523,\x22x2\x22:-183,\x22y2\x22:-530},{\x22x1\x22:-183,\x22y1\x22:-530,\x22x2\x22:-184,\x22y2\x22:-558},{\x22x1\x22:-184,\x22y1\x22:-558,\x22x2\x22:-196,\x22y2\x22:-570},{\x22x1\x22:-196,\x22y1\x22:-570,\x22x2\x22:-251,\x22y2\x22:-571},{\x22x1\x22:-251,\x22y1\x22:-571,\x22x2\x22:-264,\x22y2\x22:-558},{\x22x1\x22:-264,\x22y1\x22:-558,\x22x2\x22:-264,\x22y2\x22:-544},{\x22x1\x22:-264,\x22y1\x22:-544,\x22x2\x22:-279,\x22y2\x22:-530},{\x22x1\x22:-279,\x22y1\x22:-530,\x22x2\x22:-293,\x22y2\x22:-529},{\x22x1\x22:-293,\x22y1\x22:-529,\x22x2\x22:-305,\x22y2\x22:-518},{\x22x1\x22:-305,\x22y1\x22:-518,\x22x2\x22:-292,\x22y2\x22:-505},{\x22x1\x22:-292,\x22y1\x22:-505,\x22x2\x22:-292,\x22y2\x22:-490},{\x22x1\x22:-292,\x22y1\x22:-490,\x22x2\x22:-305,\x22y2\x22:-475},{\x22x1\x22:-309,\x22y1\x22:-474,\x22x2\x22:-309,\x22y2\x22:-474},{\x22x1\x22:-309,\x22y1\x22:-474,\x22x2\x22:-296,\x22y2\x22:-460},{\x22x1\x22:-306,\x22y1\x22:-474,\x22x2\x22:-306,\x22y2\x22:-474},{\x22x1\x22:-295,\x22y1\x22:-464,\x22x2\x22:-295,\x22y2\x22:-464},{\x22x1\x22:-295,\x22y1\x22:-464,\x22x2\x22:-282,\x22y2\x22:-491},{\x22x1\x22:-282,\x22y1\x22:-491,\x22x2\x22:-269,\x22y2\x22:-504},{\x22x1\x22:-269,\x22y1\x22:-504,\x22x2\x22:-255,\x22y2\x22:-531},{\x22x1\x22:-255,\x22y1\x22:-531,\x22x2\x22:-253,\x22y2\x22:-548},{\x22x1\x22:-253,\x22y1\x22:-548,\x22x2\x22:-240,\x22y2\x22:-561},{\x22x1\x22:-240,\x22y1\x22:-561,\x22x2\x22:-209,\x22y2\x22:-562},{\x22x1\x22:-209,\x22y1\x22:-562,\x22x2\x22:-195,\x22y2\x22:-548},{\x22x1\x22:-195,\x22y1\x22:-548,\x22x2\x22:-194,\x22y2\x22:-534},{\x22x1\x22:-194,\x22y1\x22:-534,\x22x2\x22:-224,\x22y2\x22:-529},{\x22x1\x22:-224,\x22y1\x22:-529,\x22x2\x22:-236,\x22y2\x22:-517},{\x22x1\x22:-236,\x22y1\x22:-517,\x22x2\x22:-235,\x22y2\x22:-490},{\x22x1\x22:-235,\x22y1\x22:-490,\x22x2\x22:-223,\x22y2\x22:-478},{\x22x1\x22:-223,\x22y1\x22:-478,\x22x2\x22:-196,\x22y2\x22:-478},{\x22x1\x22:-196,\x22y1\x22:-478,\x22x2\x22:-180,\x22y2\x22:-463},{\x22x1\x22:-180,\x22y1\x22:-463,\x22x2\x22:-195,\x22y2\x22:-446},{\x22x1\x22:-195,\x22y1\x22:-446,\x22x2\x22:-212,\x22y2\x22:-447},{\x22x1\x22:-212,\x22y1\x22:-447,\x22x2\x22:-225,\x22y2\x22:-459},{\x22x1\x22:-225,\x22y1\x22:-459,\x22x2\x22:-251,\x22y2\x22:-460},{\x22x1\x22:-251,\x22y1\x22:-460,\x22x2\x22:-263,\x22y2\x22:-448},{\x22x1\x22:-263,\x22y1\x22:-448,\x22x2\x22:-249,\x22y2\x22:-430},{\x22x1\x22:-249,\x22y1\x22:-430,\x22x2\x22:-246,\x22y2\x22:-411},{\x22x1\x22:-245,\x22y1\x22:-411,\x22x2\x22:-245,\x22y2\x22:-411},{\x22x1\x22:-245,\x22y1\x22:-411,\x22x2\x22:-246,\x22y2\x22:-363},{\x22x1\x22:-239,\x22y1\x22:-360,\x22x2\x22:-239,\x22y2\x22:-360},{\x22x1\x22:-239,\x22y1\x22:-360,\x22x2\x22:-239,\x22y2\x22:-410},{\x22x1\x22:-238,\x22y1\x22:-427,\x22x2\x22:-238,\x22y2\x22:-427},{\x22x1\x22:-238,\x22y1\x22:-427,\x22x2\x22:-240,\x22y2\x22:-448},{\x22x1\x22:-240,\x22y1\x22:-448,\x22x2\x22:-222,\x22y2\x22:-435},{\x22x1\x22:-222,\x22y1\x22:-435,\x22x2\x22:-222,\x22y2\x22:-421},{\x22x1\x22:-222,\x22y1\x22:-421,\x22x2\x22:-229,\x22y2\x22:-418},{\x22x1\x22:-229,\x22y1\x22:-418,\x22x2\x22:-238,\x22y2\x22:-427},{\x22x1\x22:-246,\x22y1\x22:-362,\x22x2\x22:-246,\x22y2\x22:-362},{\x22x1\x22:-246,\x22y1\x22:-362,\x22x2\x22:-248,\x22y2\x22:-359},{\x22x1\x22:-248,\x22y1\x22:-359,\x22x2\x22:-253,\x22y2\x22:-350},{\x22x1\x22:-253,\x22y1\x22:-350,\x22x2\x22:-256,\x22y2\x22:-343},{\x22x1\x22:-256,\x22y1\x22:-343,\x22x2\x22:-256,\x22y2\x22:-334},{\x22x1\x22:-256,\x22y1\x22:-334,\x22x2\x22:-262,\x22y2\x22:-331},{\x22x1\x22:-262,\x22y1\x22:-331,\x22x2\x22:-273,\x22y2\x22:-332},{\x22x1\x22:-273,\x22y1\x22:-332,\x22x2\x22:-295,\x22y2\x22:-322},{\x22x1\x22:-295,\x22y1\x22:-322,\x22x2\x22:-330,\x22y2\x22:-326},{\x22x1\x22:-330,\x22y1\x22:-326,\x22x2\x22:-344,\x22y2\x22:-339},{\x22x1\x22:-344,\x22y1\x22:-339,\x22x2\x22:-348,\x22y2\x22:-361},{\x22x1\x22:-348,\x22y1\x22:-361,\x22x2\x22:-325,\x22y2\x22:-405},{\x22x1\x22:-325,\x22y1\x22:-405,\x22x2\x22:-352,\x22y2\x22:-433},{\x22x1\x22:-352,\x22y1\x22:-433,\x22x2\x22:-352,\x22y2\x22:-433},{\x22x1\x22:-352,\x22y1\x22:-433,\x22x2\x22:-360,\x22y2\x22:-436},{\x22x1\x22:-361,\x22y1\x22:-436,\x22x2\x22:-361,\x22y2\x22:-436},{\x22x1\x22:-361,\x22y1\x22:-436,\x22x2\x22:-348,\x22y2\x22:-405},{\x22x1\x22:-348,\x22y1\x22:-405,\x22x2\x22:-361,\x22y2\x22:-391},{\x22x1\x22:-361,\x22y1\x22:-391,\x22x2\x22:-361,\x22y2\x22:-336},{\x22x1\x22:-361,\x22y1\x22:-336,\x22x2\x22:-348,\x22y2\x22:-310},{\x22x1\x22:-348,\x22y1\x22:-310,\x22x2\x22:-335,\x22y2\x22:-310},{\x22x1\x22:-335,\x22y1\x22:-310,\x22x2\x22:-326,\x22y2\x22:-301},{\x22x1\x22:-326,\x22y1\x22:-301,\x22x2\x22:-323,\x22y2\x22:-305},{\x22x1\x22:-323,\x22y1\x22:-305,\x22x2\x22:-312,\x22y2\x22:-305},{\x22x1\x22:-312,\x22y1\x22:-305,\x22x2\x22:-304,\x22y2\x22:-303},{\x22x1\x22:-304,\x22y1\x22:-303,\x22x2\x22:-302,\x22y2\x22:-296},{\x22x1\x22:-302,\x22y1\x22:-296,\x22x2\x22:-295,\x22y2\x22:-296},{\x22x1\x22:-295,\x22y1\x22:-296,\x22x2\x22:-281,\x22y2\x22:-310},{\x22x1\x22:-281,\x22y1\x22:-310,\x22x2\x22:-254,\x22y2\x22:-310},{\x22x1\x22:-254,\x22y1\x22:-310,\x22x2\x22:-238,\x22y2\x22:-327},{\x22x1\x22:-238,\x22y1\x22:-327,\x22x2\x22:-221,\x22y2\x22:-339},{\x22x1\x22:263,\x22y1\x22:-194,\x22x2\x22:263,\x22y2\x22:-194},{\x22x1\x22:263,\x22y1\x22:-194,\x22x2\x22:236,\x22y2\x22:-194},{\x22x1\x22:236,\x22y1\x22:-194,\x22x2\x22:235,\x22y2\x22:-225},{\x22x1\x22:235,\x22y1\x22:-225,\x22x2\x22:263,\x22y2\x22:-226},{\x22x1\x22:263,\x22y1\x22:-226,\x22x2\x22:263,\x22y2\x22:-266},{\x22x1\x22:263,\x22y1\x22:-266,\x22x2\x22:302,\x22y2\x22:-268},{\x22x1\x22:302,\x22y1\x22:-268,\x22x2\x22:312,\x22y2\x22:-263},{\x22x1\x22:312,\x22y1\x22:-263,\x22x2\x22:309,\x22y2\x22:-250},{\x22x1\x22:309,\x22y1\x22:-250,\x22x2\x22:281,\x22y2\x22:-250},{\x22x1\x22:281,\x22y1\x22:-250,\x22x2\x22:281,\x22y2\x22:-198},{\x22x1\x22:281,\x22y1\x22:-198,\x22x2\x22:338,\x22y2\x22:-196},{\x22x1\x22:338,\x22y1\x22:-196,\x22x2\x22:351,\x22y2\x22:-180},{\x22x1\x22:351,\x22y1\x22:-180,\x22x2\x22:351,\x22y2\x22:-170},{\x22x1\x22:351,\x22y1\x22:-170,\x22x2\x22:343,\x22y2\x22:-166},{\x22x1\x22:343,\x22y1\x22:-166,\x22x2\x22:337,\x22y2\x22:-165},{\x22x1\x22:337,\x22y1\x22:-165,\x22x2\x22:318,\x22y2\x22:-168},{\x22x1\x22:318,\x22y1\x22:-168,\x22x2\x22:306,\x22y2\x22:-180},{\x22x1\x22:306,\x22y1\x22:-180,\x22x2\x22:263,\x22y2\x22:-181},{\x22x1\x22:263,\x22y1\x22:-181,\x22x2\x22:263,\x22y2\x22:-194},{\x22x1\x22:209,\x22y1\x22:-170,\x22x2\x22:209,\x22y2\x22:-170},{\x22x1\x22:209,\x22y1\x22:-170,\x22x2\x22:211,\x22y2\x22:-128},{\x22x1\x22:211,\x22y1\x22:-128,\x22x2\x22:225,\x22y2\x22:-126},{\x22x1\x22:225,\x22y1\x22:-126,\x22x2\x22:225,\x22y2\x22:-97},{\x22x1\x22:225,\x22y1\x22:-97,\x22x2\x22:191,\x22y2\x22:-96},{\x22x1\x22:191,\x22y1\x22:-96,\x22x2\x22:186,\x22y2\x22:-94},{\x22x1\x22:186,\x22y1\x22:-94,\x22x2\x22:181,\x22y2\x22:-96},{\x22x1\x22:181,\x22y1\x22:-96,\x22x2\x22:165,\x22y2\x22:-110},{\x22x1\x22:165,\x22y1\x22:-110,\x22x2\x22:154,\x22y2\x22:-110},{\x22x1\x22:154,\x22y1\x22:-110,\x22x2\x22:142,\x22y2\x22:-98},{\x22x1\x22:142,\x22y1\x22:-98,\x22x2\x22:141,\x22y2\x22:-85},{\x22x1\x22:141,\x22y1\x22:-85,\x22x2\x22:154,\x22y2\x22:-72},{\x22x1\x22:154,\x22y1\x22:-72,\x22x2\x22:166,\x22y2\x22:-72},{\x22x1\x22:166,\x22y1\x22:-72,\x22x2\x22:179,\x22y2\x22:-85},{\x22x1\x22:179,\x22y1\x22:-85,\x22x2\x22:185,\x22y2\x22:-86},{\x22x1\x22:185,\x22y1\x22:-86,\x22x2\x22:195,\x22y2\x22:-86},{\x22x1\x22:195,\x22y1\x22:-86,\x22x2\x22:197,\x22y2\x22:-80},{\x22x1\x22:197,\x22y1\x22:-80,\x22x2\x22:197,\x22y2\x22:-70},{\x22x1\x22:197,\x22y1\x22:-70,\x22x2\x22:183,\x22y2\x22:-55},{\x22x1\x22:183,\x22y1\x22:-55,\x22x2\x22:183,\x22y2\x22:-43},{\x22x1\x22:183,\x22y1\x22:-43,\x22x2\x22:195,\x22y2\x22:-31},{\x22x1\x22:195,\x22y1\x22:-31,\x22x2\x22:208,\x22y2\x22:-30},{\x22x1\x22:208,\x22y1\x22:-30,\x22x2\x22:220,\x22y2\x22:-43},{\x22x1\x22:220,\x22y1\x22:-43,\x22x2\x22:220,\x22y2\x22:-55},{\x22x1\x22:220,\x22y1\x22:-55,\x22x2\x22:208,\x22y2\x22:-68},{\x22x1\x22:208,\x22y1\x22:-68,\x22x2\x22:207,\x22y2\x22:-74},{\x22x1\x22:207,\x22y1\x22:-74,\x22x2\x22:207,\x22y2\x22:-84},{\x22x1\x22:207,\x22y1\x22:-84,\x22x2\x22:213,\x22y2\x22:-87},{\x22x1\x22:213,\x22y1\x22:-87,\x22x2\x22:265,\x22y2\x22:-86},{\x22x1\x22:265,\x22y1\x22:-86,\x22x2\x22:267,\x22y2\x22:-80},{\x22x1\x22:267,\x22y1\x22:-80,\x22x2\x22:267,\x22y2\x22:-73},{\x22x1\x22:267,\x22y1\x22:-73,\x22x2\x22:267,\x22y2\x22:-70},{\x22x1\x22:267,\x22y1\x22:-70,\x22x2\x22:254,\x22y2\x22:-56},{\x22x1\x22:254,\x22y1\x22:-56,\x22x2\x22:253,\x22y2\x22:-43},{\x22x1\x22:253,\x22y1\x22:-43,\x22x2\x22:266,\x22y2\x22:-30},{\x22x1\x22:266,\x22y1\x22:-30,\x22x2\x22:278,\x22y2\x22:-30},{\x22x1\x22:278,\x22y1\x22:-30,\x22x2\x22:291,\x22y2\x22:-43},{\x22x1\x22:291,\x22y1\x22:-43,\x22x2\x22:290,\x22y2\x22:-55},{\x22x1\x22:290,\x22y1\x22:-55,\x22x2\x22:279,\x22y2\x22:-67},{\x22x1\x22:279,\x22y1\x22:-67,\x22x2\x22:277,\x22y2\x22:-74},{\x22x1\x22:277,\x22y1\x22:-74,\x22x2\x22:277,\x22y2\x22:-82},{\x22x1\x22:277,\x22y1\x22:-82,\x22x2\x22:277,\x22y2\x22:-83},{\x22x1\x22:277,\x22y1\x22:-83,\x22x2\x22:321,\x22y2\x22:-86},{\x22x1\x22:321,\x22y1\x22:-86,\x22x2\x22:323,\x22y2\x22:-80},{\x22x1\x22:323,\x22y1\x22:-80,\x22x2\x22:323,\x22y2\x22:-70},{\x22x1\x22:323,\x22y1\x22:-70,\x22x2\x22:310,\x22y2\x22:-56},{\x22x1\x22:310,\x22y1\x22:-56,\x22x2\x22:309,\x22y2\x22:-43},{\x22x1\x22:309,\x22y1\x22:-43,\x22x2\x22:322,\x22y2\x22:-30},{\x22x1\x22:322,\x22y1\x22:-30,\x22x2\x22:332,\x22y2\x22:-30},{\x22x1\x22:332,\x22y1\x22:-30,\x22x2\x22:347,\x22y2\x22:-43},{\x22x1\x22:347,\x22y1\x22:-43,\x22x2\x22:347,\x22y2\x22:-55},{\x22x1\x22:347,\x22y1\x22:-55,\x22x2\x22:334,\x22y2\x22:-68},{\x22x1\x22:334,\x22y1\x22:-68,\x22x2\x22:333,\x22y2\x22:-74},{\x22x1\x22:333,\x22y1\x22:-74,\x22x2\x22:333,\x22y2\x22:-84},{\x22x1\x22:333,\x22y1\x22:-84,\x22x2\x22:353,\x22y2\x22:-86},{\x22x1\x22:353,\x22y1\x22:-86,\x22x2\x22:355,\x22y2\x22:-89},{\x22x1\x22:355,\x22y1\x22:-89,\x22x2\x22:361,\x22y2\x22:-86},{\x22x1\x22:361,\x22y1\x22:-86,\x22x2\x22:379,\x22y2\x22:-72},{\x22x1\x22:379,\x22y1\x22:-72,\x22x2\x22:391,\x22y2\x22:-73},{\x22x1\x22:391,\x22y1\x22:-73,\x22x2\x22:403,\x22y2\x22:-85},{\x22x1\x22:403,\x22y1\x22:-85,\x22x2\x22:402,\x22y2\x22:-97},{\x22x1\x22:402,\x22y1\x22:-97,\x22x2\x22:391,\x22y2\x22:-109},{\x22x1\x22:391,\x22y1\x22:-109,\x22x2\x22:377,\x22y2\x22:-109},{\x22x1\x22:377,\x22y1\x22:-109,\x22x2\x22:366,\x22y2\x22:-98},{\x22x1\x22:366,\x22y1\x22:-98,\x22x2\x22:359,\x22y2\x22:-96},{\x22x1\x22:359,\x22y1\x22:-96,\x22x2\x22:352,\x22y2\x22:-93},{\x22x1\x22:352,\x22y1\x22:-93,\x22x2\x22:334,\x22y2\x22:-96},{\x22x1\x22:334,\x22y1\x22:-96,\x22x2\x22:333,\x22y2\x22:-113},{\x22x1\x22:333,\x22y1\x22:-113,\x22x2\x22:347,\x22y2\x22:-114},{\x22x1\x22:347,\x22y1\x22:-114,\x22x2\x22:347,\x22y2\x22:-125},{\x22x1\x22:347,\x22y1\x22:-125,\x22x2\x22:334,\x22y2\x22:-138},{\x22x1\x22:334,\x22y1\x22:-138,\x22x2\x22:321,\x22y2\x22:-137},{\x22x1\x22:321,\x22y1\x22:-137,\x22x2\x22:309,\x22y2\x22:-124},{\x22x1\x22:309,\x22y1\x22:-124,\x22x2\x22:309,\x22y2\x22:-117},{\x22x1\x22:309,\x22y1\x22:-117,\x22x2\x22:321,\x22y2\x22:-114},{\x22x1\x22:321,\x22y1\x22:-114,\x22x2\x22:323,\x22y2\x22:-98},{\x22x1\x22:323,\x22y1\x22:-98,\x22x2\x22:237,\x22y2\x22:-96},{\x22x1\x22:237,\x22y1\x22:-96,\x22x2\x22:238,\x22y2\x22:-128},{\x22x1\x22:319,\x22y1\x22:-391,\x22x2\x22:319,\x22y2\x22:-391},{\x22x1\x22:319,\x22y1\x22:-391,\x22x2\x22:305,\x22y2\x22:-405},{\x22x1\x22:305,\x22y1\x22:-405,\x22x2\x22:320,\x22y2\x22:-436},{\x22x1\x22:320,\x22y1\x22:-436,\x22x2\x22:335,\x22y2\x22:-436},{\x22x1\x22:335,\x22y1\x22:-436,\x22x2\x22:351,\x22y2\x22:-420},{\x22x1\x22:351,\x22y1\x22:-420,\x22x2\x22:364,\x22y2\x22:-394},{\x22x1\x22:364,\x22y1\x22:-394,\x22x2\x22:350,\x22y2\x22:-376},{\x22x1\x22:350,\x22y1\x22:-376,\x22x2\x22:336,\x22y2\x22:-376},{\x22x1\x22:336,\x22y1\x22:-376,\x22x2\x22:322,\x22y2\x22:-362},{\x22x1\x22:322,\x22y1\x22:-362,\x22x2\x22:319,\x22y2\x22:-391}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:3894,\x22x\x22:500,\x22y\x22:-177,\x22z\x22:3}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
