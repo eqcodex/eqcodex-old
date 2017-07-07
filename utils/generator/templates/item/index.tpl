@@ -63,7 +63,7 @@
                             <tbody>
                             {{ range $key, $value := .NPCs}}
                             <tr>
-                                <td>{{/*<a href="{{ $value.Url }}">*/}}{{ $value.Name }}{{/*</a>*/}}</td>
+                                <td><a href="{{ $value.Url }}">{{ $value.Name }}</a></td>
                                 <td>{{ $value.Level }}</td>
                                 <td>{{ $value.Quest }}</td>
                                 <td><a href="{{ $value.Zone_url }}">{{ $value.Zone_name }}</a></td>
