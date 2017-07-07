@@ -39,10 +39,13 @@ func main() {
 	if zones, err = db.getZones(); err != nil {
 		log.Fatal(err.Error())
 	}
-
+	//fmt.Printf("\033[H\033[2J") //clear screen
+	fmt.Printf("\033[48;5;7m") //white background
+	fmt.Printf("\033[38;5;0m") //black text
+	fmt.Printf("Loaded %d zones, processing and updating the levels field...", len(zones))
+	fmt.Printf("\033[48;5;0m\033[38;5;0m\n") //restore text
 	//iterate zones
 	for _, zone := range zones {
-		fmt.Print("\n" + zone.Short_name.String + "...")
 		spawns := []spawn.Spawn2{}
 		if spawns, err = db.getSpawns(zone.Short_name.String); err != nil {
 			log.Fatal(err.Error())
@@ -52,13 +55,16 @@ func main() {
 			continue
 		}
 		mobCounter := map[int]int{}
-
+		recordCount := 0
 		//get spawns
 		for _, spawn2 := range spawns {
 			spawnentries := []spawn.SpawnEntry{}
 			if spawnentries, err = db.getSpawnEntries(spawn2.Spawngroupid); err != nil {
 				log.Fatal("spawnentry:", err.Error())
 			}
+			recordCount++
+			showPercent(zone.Short_name.String, recordCount, len(spawns), "green")
+
 			//get npcs
 			for _, spawnentry := range spawnentries {
 				npcs := []npc.NpcTypes{}
@@ -66,6 +72,7 @@ func main() {
 					log.Fatal("npcs:", err.Error())
 				}
 				for _, npc := range npcs {
+
 					//can't kill non-class mobs
 					if npc.Class < 1 && npc.Class > 17 {
 						continue
@@ -206,8 +213,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err.Error())
 		}
-		fmt.Printf("%d", zone.Levels)
-		//fmt.Printf("(%d)", (insertCount - lastInsertCount))
+		//fmt.Printf("%d", zone.Levels)
 	}
 	log.Println("Done in", time.Since(startTime).Seconds(), "seconds")
 	return
@@ -293,4 +299,47 @@ func (db *Database) getNpcs(npctypeid int) ([]npc.NpcTypes, error) {
 		return nil, err
 	}
 	return npcs, nil
+}
+
+func showPercent(message string, cur int, max int, color string) {
+	switch color {
+	case "black":
+		color = "\033[30m"
+	case "maroon":
+		color = "\033[31m"
+	case "green":
+		color = "\033[32m"
+	case "yellow":
+		color = "\033[33m"
+	case "blue":
+		color = "\033[34m"
+	case "purple":
+		color = "\033[35m"
+	case "cyan":
+		color = "\033[36m"
+	case "white":
+		color = "\033[37m"
+	case "gray":
+		color = "\033[38m"
+	case "red":
+		color = "\033[39m"
+	default:
+		color = "\033[0m"
+	}
+
+	dotCount := 30
+	fmt.Printf("\033[60D")
+	val := float64(cur) / float64(max) * float64(dotCount)
+	fmt.Printf("%s%s - [", color, message)
+	for i := 0; i < dotCount; i++ {
+		if int(val) >= i {
+			fmt.Printf(".")
+		} else {
+			fmt.Printf(" ")
+		}
+	}
+	fmt.Printf("]\033[0m")
+	if cur == max {
+		fmt.Printf("\n")
+	}
 }
