@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>a bone crafter | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">a bone crafter</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>85</td></tr>
+                            <tr><td>HP:</td><td>8075</td></tr>
+                            <tr><td>Damage:</td><td>0-4</td></tr>
+                            <tr><td>Zone:</td><td>The Grounds</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>a bone crafter Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Aderirse-Bur-35089.html">Aderirse Bur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Consigned-Bite-of-the-Shissar-XV-44560.html">Consigned Bite of the Shissar XV</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dream-Dust-46979.html">Dream Dust</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dream-Sapphire-62582.html">Dream Sapphire</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Bow-50629.html">Elegant Defiant Bow</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Chain-Boots-50225.html">Elegant Defiant Chain Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Forked-Spear-50627.html">Elegant Defiant Forked Spear</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Knuckle-Guards-50625.html">Elegant Defiant Knuckle Guards</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Leather-Tunic-50237.html">Elegant Defiant Leather Tunic</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Nightblade-50623.html">Elegant Defiant Nightblade</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Nightstone-50618.html">Elegant Defiant Nightstone</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Boots-50217.html">Elegant Defiant Plate Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Greaves-50220.html">Elegant Defiant Plate Greaves</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Plate-Helm-50218.html">Elegant Defiant Plate Helm</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Pantaloons-50245.html">Elegant Defiant Silk Pantaloons</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Silk-Wristband-50239.html">Elegant Defiant Silk Wristband</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Animal-Pelt-34236.html">Exquisite Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Exquisite-Silk-34223.html">Exquisite Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Extraplanar-Silk-67645.html">Extraplanar Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Extruded-Underfoot-Diamond-47099.html">Extruded Underfoot Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Animal-Pelt-34235.html">Flawless Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Flawless-Silk-34222.html">Flawless Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greater-Nebulous-Dream-Fragment-53761.html">Greater Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Harmonagate-97003.html">Harmonagate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Animal-Pelt-48163.html">Immaculate Animal Pelt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Immaculate-Silk-48892.html">Immaculate Silk</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lesser-Nebulous-Dream-Fragment-53759.html">Lesser Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Liquid-Nightmare-66977.html">Liquid Nightmare</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Median-Nebulous-Dream-Fragment-53760.html">Median Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Minor-Nebulous-Dream-Fragment-53758.html">Minor Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Miragestone-81160.html">Miragestone</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nightmare-Ruby-62583.html">Nightmare Ruby</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Caladium-44950.html">Pristine Caladium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Delphinium-44976.html">Pristine Delphinium</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Laburnum-44961.html">Pristine Laburnum</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Larkspur-44939.html">Pristine Larkspur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Muscimol-44917.html">Pristine Muscimol</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Oleander-44928.html">Pristine Oleander</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Pristine-Privit-44968.html">Pristine Privit</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Choresine-Sample-44820.html">Purified Grade AA Choresine Sample</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Gormar-Venom-44775.html">Purified Grade AA Gormar Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Mamba-Venom-44790.html">Purified Grade AA Mamba Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Nigriventer-Venom-44760.html">Purified Grade AA Nigriventer Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Purified-Grade-AA-Taipan-Venom-44805.html">Purified Grade AA Taipan Venom</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Amber-Nihilite-37859.html">Raw Amber Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Crimson-Nihilite-58067.html">Raw Crimson Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Rune-Binding-Powder-36287.html">Rune Binding Powder</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scale-Ore-45891.html">Scale Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Rough-Spell-Tablet-64915.html">Smudged Rough Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Smudged-Runic-Spell-Tablet-64918.html">Smudged Runic Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Fine-Spell-Tablet-64917.html">Sooty Fine Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Sooty-Spell-Tablet-64916.html">Sooty Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Stained-Fine-Runic-Spell-Tablet-64919.html">Stained Fine Runic Spell Tablet</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staurolite-97002.html">Staurolite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Summoned-Lucid-Belt-46988.html">Summoned: Lucid Belt</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Summoned-Muzzle-of-Mowcha-46987.html">Summoned: Muzzle of Mowcha</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Summoned-Staff-of-the-North-Wind-77507.html">Summoned: Staff of the North Wind</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taaffeite-97286.html">Taaffeite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Tantalum-Ore-34249.html">Tantalum Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thulian-Linked-Boots-120523.html">Thulian Linked Boots</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thulian-Linked-Breastplate-120527.html">Thulian Linked Breastplate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thulian-Linked-Gauntlets-120522.html">Thulian Linked Gauntlets</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thulian-Linked-Helm-120524.html">Thulian Linked Helm</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Thulian-Linked-Wristguard-120521.html">Thulian Linked Wristguard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Titanium-Ore-34248.html">Titanium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Black-Sapphire-37846.html">Uncut Black Sapphire</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Combine-Star-37845.html">Uncut Combine Star</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Morganite-37849.html">Uncut Morganite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Rubellite-37852.html">Uncut Rubellite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Urticaceae-35086.html">Urticaceae</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Vanadium-Ore-48162.html">Vanadium Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:-118.7818,\x22y1\x22:10.2674,\x22x2\x22:-118.9492,\x22y2\x22:-12.4531},{\x22x1\x22:1631.4108,\x22y1\x22:962.2517,\x22x2\x22:1631.5603,\x22y2\x22:957.6304},{\x22x1\x22:1630.9156,\x22y1\x22:962.7484,\x22x2\x22:1627.4032,\x22y2\x22:966.6097},{\x22x1\x22:1640.3578,\x22y1\x22:949.3041,\x22x2\x22:1630.6484,\x22y2\x22:957.0471},{\x22x1\x22:1640.3605,\x22y1\x22:949.305,\x22x2\x22:1640.3591,\x22y2\x22:949.3045},{\x22x1\x22:1649.1373,\x22y1\x22:950.498,\x22x2\x22:1640.3605,\x22y2\x22:949.305},{\x22x1\x22:1651.8085,\x22y1\x22:958.9194,\x22x2\x22:1649.15,\x22y2\x22:950.5349},{\x22x1\x22:1654.3153,\x22y1\x22:963.957,\x22x2\x22:1651.8612,\x22y2\x22:958.9004},{\x22x1\x22:1656.4182,\x22y1\x22:976.1558,\x22x2\x22:1654.3153,\x22y2\x22:963.957},{\x22x1\x22:1656.3407,\x22y1\x22:976.4594,\x22x2\x22:1651.3301,\x22y2\x22:985.4819},{\x22x1\x22:1647.4539,\x22y1\x22:988.1333,\x22x2\x22:1653.7474,\x22y2\x22:983.6604},{\x22x1\x22:1639.6182,\x22y1\x22:989.9055,\x22x2\x22:1647.4039,\x22y2\x22:988.1469},{\x22x1\x22:1628.5598,\x22y1\x22:985.8758,\x22x2\x22:1639.6178,\x22y2\x22:989.9055},{\x22x1\x22:1626.5907,\x22y1\x22:978.3912,\x22x2\x22:1628.5598,\x22y2\x22:985.8758},{\x22x1\x22:1627.4272,\x22y1\x22:966.2362,\x22x2\x22:1626.5905,\x22y2\x22:978.3896},{\x22x1\x22:-253.6224,\x22y1\x22:-472.0318,\x22x2\x22:-253.6221,\x22y2\x22:-354.7173},{\x22x1\x22:-253.6227,\x22y1\x22:-476.5203,\x22x2\x22:37.536,\x22y2\x22:-476.508},{\x22x1\x22:37.536,\x22y1\x22:-476.508,\x22x2\x22:256.1037,\x22y2\x22:-500.4642},{\x22x1\x22:256.1041,\x22y1\x22:-500.4743,\x22x2\x22:256.0489,\x22y2\x22:-140.0842},{\x22x1\x22:256.0151,\x22y1\x22:-140.084,\x22x2\x22:183.4336,\x22y2\x22:-140.1298},{\x22x1\x22:183.4336,\x22y1\x22:-140.1298,\x22x2\x22:182.761,\x22y2\x22:-46.2234},{\x22x1\x22:182.761,\x22y1\x22:-46.2234,\x22x2\x22:110.4043,\x22y2\x22:-46.2051},{\x22x1\x22:110.4043,\x22y1\x22:-46.2051,\x22x2\x22:110.4344,\x22y2\x22:-49.2764},{\x22x1\x22:110.4347,\x22y1\x22:-49.3128,\x22x2\x22:86.3942,\x22y2\x22:-49.7562},{\x22x1\x22:86.3942,\x22y1\x22:-49.7562,\x22x2\x22:88.4273,\x22y2\x22:-28.6684},{\x22x1\x22:88.4273,\x22y1\x22:-28.6684,\x22x2\x22:196.3555,\x22y2\x22:-31.2187},{\x22x1\x22:196.3555,\x22y1\x22:-31.2187,\x22x2\x22:197.771,\x22y2\x22:-125.0802},{\x22x1\x22:197.771,\x22y1\x22:-125.0802,\x22x2\x22:330.3872,\x22y2\x22:-125.0083},{\x22x1\x22:330.8926,\x22y1\x22:-123.5445,\x22x2\x22:488.9572,\x22y2\x22:-123.6433},{\x22x1\x22:488.9572,\x22y1\x22:-123.6433,\x22x2\x22:627.7401,\x22y2\x22:-121.9851},{\x22x1\x22:627.7401,\x22y1\x22:-121.9851,\x22x2\x22:774.8387,\x22y2\x22:-123.6415},{\x22x1\x22:774.8387,\x22y1\x22:-123.6415,\x22x2\x22:906.7922,\x22y2\x22:-127.2557},{\x22x1\x22:906.7922,\x22y1\x22:-127.2557,\x22x2\x22:905.397,\x22y2\x22:-24.5629},{\x22x1\x22:905.397,\x22y1\x22:-24.5629,\x22x2\x22:1000.4655,\x22y2\x22:-26.2397},{\x22x1\x22:1000.4655,\x22y1\x22:-26.2397,\x22x2\x22:1012.9807,\x22y2\x22:-26.2673},{\x22x1\x22:1013.0355,\x22y1\x22:-26.2681,\x22x2\x22:1011.1564,\x22y2\x22:-46.2427},{\x22x1\x22:1011.1564,\x22y1\x22:-46.2427,\x22x2\x22:1040.379,\x22y2\x22:-84.749},{\x22x1\x22:1040.379,\x22y1\x22:-84.749,\x22x2\x22:1059.6454,\x22y2\x22:-125.3344},{\x22x1\x22:1059.7709,\x22y1\x22:-125.4329,\x22x2\x22:1097.8501,\x22y2\x22:-164.3515},{\x22x1\x22:1097.8502,\x22y1\x22:-164.3517,\x22x2\x22:1133.6705,\x22y2\x22:-207.0561},{\x22x1\x22:1133.7169,\x22y1\x22:-207.0728,\x22x2\x22:1176.2982,\x22y2\x22:-250.6542},{\x22x1\x22:1176.829,\x22y1\x22:-250.9141,\x22x2\x22:1248.0951,\x22y2\x22:-262.4242},{\x22x1\x22:1248.0957,\x22y1\x22:-262.4243,\x22x2\x22:1244.9705,\x22y2\x22:-279.1525},{\x22x1\x22:1244.9705,\x22y1\x22:-279.1525,\x22x2\x22:1264.9075,\x22y2\x22:-279.2146},{\x22x1\x22:1264.9075,\x22y1\x22:-279.2146,\x22x2\x22:1263.7733,\x22y2\x22:-384.431},{\x22x1\x22:1263.7733,\x22y1\x22:-384.435,\x22x2\x22:1189.6088,\x22y2\x22:-383.5307},{\x22x1\x22:1189.6049,\x22y1\x22:-383.5321,\x22x2\x22:1094.7737,\x22y2\x22:-448.3835},{\x22x1\x22:1094.6945,\x22y1\x22:-448.4378,\x22x2\x22:1010.9186,\x22y2\x22:-578.2201},{\x22x1\x22:1010.9186,\x22y1\x22:-578.2201,\x22x2\x22:1005.6981,\x22y2\x22:-633.6358},{\x22x1\x22:1005.6981,\x22y1\x22:-633.6358,\x22x2\x22:998.1884,\x22y2\x22:-636.3045},{\x22x1\x22:998.1868,\x22y1\x22:-636.3046,\x22x2\x22:982.0156,\x22y2\x22:-635.283},{\x22x1\x22:981.9818,\x22y1\x22:-635.2827,\x22x2\x22:991.61,\x22y2\x22:-563.4899},{\x22x1\x22:991.61,\x22y1\x22:-563.4899,\x22x2\x22:1088.4225,\x22y2\x22:-426.0347},{\x22x1\x22:1088.4225,\x22y1\x22:-426.0347,\x22x2\x22:1196.3662,\x22y2\x22:-364.8441},{\x22x1\x22:1196.3662,\x22y1\x22:-364.8441,\x22x2\x22:1242.8022,\x22y2\x22:-364.8865},{\x22x1\x22:1242.8022,\x22y1\x22:-364.8865,\x22x2\x22:1245.7856,\x22y2\x22:-301.1259},{\x22x1\x22:1245.7856,\x22y1\x22:-301.1259,\x22x2\x22:1242.724,\x22y2\x22:-281.1844},{\x22x1\x22:1242.724,\x22y1\x22:-281.1844,\x22x2\x22:1175.5151,\x22y2\x22:-272.7383},{\x22x1\x22:1175.3837,\x22y1\x22:-272.7312,\x22x2\x22:1056.9868,\x22y2\x22:-151.3893},{\x22x1\x22:1056.738,\x22y1\x22:-151.1833,\x22x2\x22:1020.4661,\x22y2\x22:-103.4514},{\x22x1\x22:990.514,\x22y1\x22:-46.6411,\x22x2\x22:929.1078,\x22y2\x22:-44.2665},{\x22x1\x22:990.514,\x22y1\x22:-46.6411,\x22x2\x22:1020.4661,\x22y2\x22:-103.4514},{\x22x1\x22:929.0983,\x22y1\x22:-44.2896,\x22x2\x22:925.5608,\x22y2\x22:-123.5166},{\x22x1\x22:925.5608,\x22y1\x22:-123.5084,\x22x2\x22:927.8173,\x22y2\x22:-148.8188},{\x22x1\x22:927.8173,\x22y1\x22:-148.8188,\x22x2\x22:768.6241,\x22y2\x22:-145.6355},{\x22x1\x22:768.4891,\x22y1\x22:-145.6358,\x22x2\x22:715.0352,\x22y2\x22:-143.8886},{\x22x1\x22:715.034,\x22y1\x22:-143.8886,\x22x2\x22:716.1594,\x22y2\x22:140.569},{\x22x1\x22:716.8397,\x22y1\x22:143.6447,\x22x2\x22:774.972,\x22y2\x22:145.3123},{\x22x1\x22:775.0293,\x22y1\x22:145.3122,\x22x2\x22:889.8668,\x22y2\x22:141.9367},{\x22x1\x22:889.9511,\x22y1\x22:141.9364,\x22x2\x22:930.1625,\x22y2\x22:141.2325},{\x22x1\x22:930.1625,\x22y1\x22:141.2325,\x22x2\x22:925.5591,\x22y2\x22:46.9001},{\x22x1\x22:925.5591,\x22y1\x22:46.9001,\x22x2\x22:989.3198,\x22y2\x22:43.9202},{\x22x1\x22:989.3198,\x22y1\x22:43.9202,\x22x2\x22:1007.5286,\x22y2\x22:46.8903},{\x22x1\x22:1007.5286,\x22y1\x22:46.8903,\x22x2\x22:1010.004,\x22y2\x22:91.9949},{\x22x1\x22:1010.0045,\x22y1\x22:92.0052,\x22x2\x22:1041.432,\x22y2\x22:148.892},{\x22x1\x22:1042.646,\x22y1\x22:150.0784,\x22x2\x22:1095.501,\x22y2\x22:200.1698},{\x22x1\x22:1095.5206,\x22y1\x22:200.1923,\x22x2\x22:1158.1971,\x22y2\x22:252.9229},{\x22x1\x22:1148.4808,\x22y1\x22:248.114,\x22x2\x22:1242.879,\x22y2\x22:283.1439},{\x22x1\x22:1242.879,\x22y1\x22:283.1439,\x22x2\x22:1245.8032,\x22y2\x22:361.8822},{\x22x1\x22:1245.8032,\x22y1\x22:361.8822,\x22x2\x22:1218.6376,\x22y2\x22:365.4392},{\x22x1\x22:1218.6479,\x22y1\x22:363.8786,\x22x2\x22:1197.2723,\x22y2\x22:362.0914},{\x22x1\x22:1197.2723,\x22y1\x22:362.0914,\x22x2\x22:1070.8314,\x22y2\x22:420.6501},{\x22x1\x22:1070.748,\x22y1\x22:420.6883,\x22x2\x22:910.0616,\x22y2\x22:466.2387},{\x22x1\x22:909.9078,\x22y1\x22:466.279,\x22x2\x22:770.4238,\x22y2\x22:529.0112},{\x22x1\x22:770.4193,\x22y1\x22:529.01,\x22x2\x22:755.5237,\x22y2\x22:541.9124},{\x22x1\x22:755.5504,\x22y1\x22:541.8794,\x22x2\x22:667.1979,\x22y2\x22:642.1117},{\x22x1\x22:667.1775,\x22y1\x22:642.1348,\x22x2\x22:656.4531,\x22y2\x22:654.8917},{\x22x1\x22:656.4531,\x22y1\x22:654.8917,\x22x2\x22:644.0726,\x22y2\x22:741.054},{\x22x1\x22:644.0726,\x22y1\x22:741.054,\x22x2\x22:632.4321,\x22y2\x22:787.2565},{\x22x1\x22:632.4321,\x22y1\x22:787.2565,\x22x2\x22:652.7484,\x22y2\x22:790.1733},{\x22x1\x22:652.7484,\x22y1\x22:790.1733,\x22x2\x22:671.9656,\x22y2\x22:668.7294},{\x22x1\x22:672.2365,\x22y1\x22:668.8038,\x22x2\x22:771.4349,\x22y2\x22:555.2678},{\x22x1\x22:771.4376,\x22y1\x22:555.2664,\x22x2\x22:926.6274,\x22y2\x22:484.5948},{\x22x1\x22:926.7812,\x22y1\x22:484.5537,\x22x2\x22:1072.1993,\x22y2\x22:444.2277},{\x22x1\x22:1072.2264,\x22y1\x22:444.2144,\x22x2\x22:1207.2838,\x22y2\x22:384.0369},{\x22x1\x22:1207.2876,\x22y1\x22:384.0368,\x22x2\x22:1262.568,\x22y2\x22:384.1573},{\x22x1\x22:1262.5645,\x22y1\x22:384.1604,\x22x2\x22:1263.7921,\x22y2\x22:281.0781},{\x22x1\x22:1263.7921,\x22y1\x22:281.0781,\x22x2\x22:1168.8163,\x22y2\x22:238.9615},{\x22x1\x22:1168.8163,\x22y1\x22:238.9615,\x22x2\x22:1040.7136,\x22y2\x22:118.7603},{\x22x1\x22:1040.7095,\x22y1\x22:118.7555,\x22x2\x22:1011.2617,\x22y2\x22:42.8463},{\x22x1\x22:1011.2617,\x22y1\x22:42.8463,\x22x2\x22:1011.2845,\x22y2\x22:25.6968},{\x22x1\x22:1011.2845,\x22y1\x22:25.6963,\x22x2\x22:998.7082,\x22y2\x22:25.9371},{\x22x1\x22:998.6907,\x22y1\x22:25.9369,\x22x2\x22:908.9116,\x22y2\x22:25.9497},{\x22x1\x22:907.4653,\x22y1\x22:25.9353,\x22x2\x22:910.5682,\x22y2\x22:123.368},{\x22x1\x22:910.5682,\x22y1\x22:123.368,\x22x2\x22:283.8472,\x22y2\x22:124.682},{\x22x1\x22:283.8454,\x22y1\x22:124.6819,\x22x2\x22:197.771,\x22y2\x22:124.8319},{\x22x1\x22:197.771,\x22y1\x22:124.8319,\x22x2\x22:198.4728,\x22y2\x22:31.9856},{\x22x1\x22:198.4728,\x22y1\x22:31.9856,\x22x2\x22:105.9341,\x22y2\x22:27.3266},{\x22x1\x22:105.904,\x22y1\x22:27.3367,\x22x2\x22:85.1973,\x22y2\x22:27.4971},{\x22x1\x22:85.1973,\x22y1\x22:27.4971,\x22x2\x22:88.4264,\x22y2\x22:51.1797},{\x22x1\x22:88.4264,\x22y1\x22:51.1797,\x22x2\x22:182.7576,\x22y2\x22:45.9137},{\x22x1\x22:182.7576,\x22y1\x22:45.9137,\x22x2\x22:182.778,\x22y2\x22:141.7459},{\x22x1\x22:182.7778,\x22y1\x22:141.7628,\x22x2\x22:256.0626,\x22y2\x22:139.7927},{\x22x1\x22:256.0626,\x22y1\x22:139.7927,\x22x2\x22:256.1038,\x22y2\x22:500.1783},{\x22x1\x22:256.1038,\x22y1\x22:500.1783,\x22x2\x22:166.6256,\x22y2\x22:496.8046},{\x22x1\x22:166.5005,\x22y1\x22:496.8049,\x22x2\x22:-249.6526,\x22y2\x22:479.2285},{\x22x1\x22:-249.6526,\x22y1\x22:479.2285,\x22x2\x22:-253.6937,\x22y2\x22:353.8963},{\x22x1\x22:-253.6937,\x22y1\x22:353.8963,\x22x2\x22:-228.6061,\x22y2\x22:353.9381},{\x22x1\x22:-228.6054,\x22y1\x22:353.9381,\x22x2\x22:-228.1138,\x22y2\x22:258.4866},{\x22x1\x22:-215.5175,\x22y1\x22:239.7145,\x22x2\x22:-194.7539,\x22y2\x22:224.9654},{\x22x1\x22:-194.7539,\x22y1\x22:224.9654,\x22x2\x22:-177.578,\x22y2\x22:206.7197},{\x22x1\x22:-177.5776,\x22y1\x22:206.7786,\x22x2\x22:-177.5926,\x22y2\x22:184.3116},{\x22x1\x22:-177.5926,\x22y1\x22:184.3116,\x22x2\x22:-194.757,\x22y2\x22:162.7987},{\x22x1\x22:-194.7552,\x22y1\x22:162.3842,\x22x2\x22:-197.3323,\x22y2\x22:153.8915},{\x22x1\x22:-197.3323,\x22y1\x22:153.8915,\x22x2\x22:-215.6131,\x22y2\x22:154.1134},{\x22x1\x22:-215.6131,\x22y1\x22:154.1134,\x22x2\x22:-197.3323,\x22y2\x22:153.8915},{\x22x1\x22:-197.3323,\x22y1\x22:153.8915,\x22x2\x22:-215.6135,\x22y2\x22:154.1755},{\x22x1\x22:-215.6135,\x22y1\x22:154.1755,\x22x2\x22:-215.5986,\x22y2\x22:125.7033},{\x22x1\x22:-215.5986,\x22y1\x22:125.7033,\x22x2\x22:-198.5292,\x22y2\x22:125.7439},{\x22x1\x22:-198.5292,\x22y1\x22:125.7439,\x22x2\x22:-192.3881,\x22y2\x22:106.9522},{\x22x1\x22:-192.3881,\x22y1\x22:106.9522,\x22x2\x22:-185.9849,\x22y2\x22:106.9566},{\x22x1\x22:-183.6495,\x22y1\x22:106.9704,\x22x2\x22:-184.1954,\x22y2\x22:74.6774},{\x22x1\x22:-184.1954,\x22y1\x22:74.6774,\x22x2\x22:-151.3543,\x22y2\x22:79.2078},{\x22x1\x22:-151.1295,\x22y1\x22:79.2075,\x22x2\x22:-119.4089,\x22y2\x22:73.4263},{\x22x1\x22:-119.2991,\x22y1\x22:73.2273,\x22x2\x22:-118.6107,\x22y2\x22:43.5828},{\x22x1\x22:-118.6107,\x22y1\x22:43.5828,\x22x2\x22:-111.9368,\x22y2\x22:43.5601},{\x22x1\x22:-111.9368,\x22y1\x22:43.5601,\x22x2\x22:-112.7913,\x22y2\x22:31.3764},{\x22x1\x22:-112.791,\x22y1\x22:31.342,\x22x2\x22:-118.5811,\x22y2\x22:33.5161},{\x22x1\x22:-118.5811,\x22y1\x22:33.5161,\x22x2\x22:-118.4125,\x22y2\x22:4.9916},{\x22x1\x22:-118.4125,\x22y1\x22:4.9916,\x22x2\x22:-118.0462,\x22y2\x22:-33.9724},{\x22x1\x22:-118.0316,\x22y1\x22:-33.9723,\x22x2\x22:-114.2083,\x22y2\x22:-33.9635},{\x22x1\x22:-113.149,\x22y1\x22:-47.3739,\x22x2\x22:-118.5935,\x22y2\x22:-50.6634},{\x22x1\x22:-118.5935,\x22y1\x22:-50.6635,\x22x2\x22:-118.6334,\x22y2\x22:-75.9535},{\x22x1\x22:-118.6334,\x22y1\x22:-75.9584,\x22x2\x22:-148.4454,\x22y2\x22:-73.8793},{\x22x1\x22:-148.4454,\x22y1\x22:-73.8793,\x22x2\x22:-148.4131,\x22y2\x22:-81.0387},{\x22x1\x22:-148.4131,\x22y1\x22:-81.0398,\x22x2\x22:-184.3635,\x22y2\x22:-75.1521},{\x22x1\x22:-184.3635,\x22y1\x22:-75.1521,\x22x2\x22:-184.3567,\x22y2\x22:-108.5508},{\x22x1\x22:-184.3567,\x22y1\x22:-108.5528,\x22x2\x22:-203.1108,\x22y2\x22:-107.4144},{\x22x1\x22:-203.1108,\x22y1\x22:-107.4144,\x22x2\x22:-205.4714,\x22y2\x22:-126.3931},{\x22x1\x22:-205.4754,\x22y1\x22:-126.3864,\x22x2\x22:-215.6136,\x22y2\x22:-126.1884},{\x22x1\x22:-215.6136,\x22y1\x22:-126.1884,\x22x2\x22:-215.5659,\x22y2\x22:-154.6489},{\x22x1\x22:-215.5659,\x22y1\x22:-154.6489,\x22x2\x22:-197.1856,\x22y2\x22:-154.4914},{\x22x1\x22:-194.7832,\x22y1\x22:-175.285,\x22x2\x22:-177.8392,\x22y2\x22:-185.1709},{\x22x1\x22:-177.5527,\x22y1\x22:-209.6794,\x22x2\x22:-192.772,\x22y2\x22:-225.7225},{\x22x1\x22:-194.7543,\x22y1\x22:-232.4575,\x22x2\x22:-194.784,\x22y2\x22:-236.9997},{\x22x1\x22:-194.784,\x22y1\x22:-236.9997,\x22x2\x22:-206.7882,\x22y2\x22:-240.1748},{\x22x1\x22:-206.7882,\x22y1\x22:-240.1748,\x22x2\x22:-215.2572,\x22y2\x22:-258.9},{\x22x1\x22:-215.2572,\x22y1\x22:-258.9,\x22x2\x22:-228.1132,\x22y2\x22:-260.3916},{\x22x1\x22:-228.1132,\x22y1\x22:-260.3916,\x22x2\x22:-228.1143,\x22y2\x22:-293.1604},{\x22x1\x22:-228.1143,\x22y1\x22:-293.1604,\x22x2\x22:-228.1085,\x22y2\x22:-328.0239},{\x22x1\x22:-253.5272,\x22y1\x22:-354.7122,\x22x2\x22:-228.9037,\x22y2\x22:-354.7448},{\x22x1\x22:-228.8861,\x22y1\x22:-354.7448,\x22x2\x22:-228.1145,\x22y2\x22:-302.7516},{\x22x1\x22:-194.7555,\x22y1\x22:-234.6629,\x22x2\x22:-186.6298,\x22y2\x22:-219.5807},{\x22x1\x22:-177.8131,\x22y1\x22:-209.6968,\x22x2\x22:-177.6361,\x22y2\x22:-184.5217},{\x22x1\x22:-194.5142,\x22y1\x22:-175.3044,\x22x2\x22:-198.5583,\x22y2\x22:-154.6683},{\x22x1\x22:-113.6542,\x22y1\x22:-46.4325,\x22x2\x22:-114.6289,\x22y2\x22:-33.9655},{\x22x1\x22:-188.6479,\x22y1\x22:106.9597,\x22x2\x22:-183.791,\x22y2\x22:106.5735},{\x22x1\x22:-215.2516,\x22y1\x22:239.7344,\x22x2\x22:-213.9478,\x22y2\x22:257.7004},{\x22x1\x22:-213.9478,\x22y1\x22:257.7004,\x22x2\x22:-228.1092,\x22y2\x22:258.4659},{\x22x1\x22:234.5007,\x22y1\x22:-78.1349,\x22x2\x22:235.8401,\x22y2\x22:-34.1786},{\x22x1\x22:235.8401,\x22y1\x22:-34.1782,\x22x2\x22:235.4001,\x22y2\x22:33.364},{\x22x1\x22:235.3917,\x22y1\x22:33.3178,\x22x2\x22:235.8443,\x22y2\x22:79.7246},{\x22x1\x22:235.8443,\x22y1\x22:79.7246,\x22x2\x22:291.6609,\x22y2\x22:78.6332},{\x22x1\x22:291.6704,\x22y1\x22:78.6331,\x22x2\x22:290.4411,\x22y2\x22:-79.7847},{\x22x1\x22:290.4411,\x22y1\x22:-79.8158,\x22x2\x22:234.5007,\x22y2\x22:-78.1349},{\x22x1\x22:1316.0544,\x22y1\x22:-279.3822,\x22x2\x22:1334.59,\x22y2\x22:-275.7784},{\x22x1\x22:1334.59,\x22y1\x22:-275.7784,\x22x2\x22:1335.2623,\x22y2\x22:-268.4022},{\x22x1\x22:1335.2623,\x22y1\x22:-268.4019,\x22x2\x22:1443.9088,\x22y2\x22:-209.7315},{\x22x1\x22:1443.9181,\x22y1\x22:-209.7212,\x22x2\x22:1505.2849,\x22y2\x22:-154.7588},{\x22x1\x22:1505.2938,\x22y1\x22:-154.7497,\x22x2\x22:1544.4829,\x22y2\x22:-111.6588},{\x22x1\x22:1544.4841,\x22y1\x22:-111.6519,\x22x2\x22:1555.2848,\x22y2\x22:-55.3665},{\x22x1\x22:1555.3375,\x22y1\x22:-54.4084,\x22x2\x22:1558.6254,\x22y2\x22:-43.8096},{\x22x1\x22:1558.6254,\x22y1\x22:-43.8096,\x22x2\x22:1570.4659,\x22y2\x22:-45.5319},{\x22x1\x22:1570.4659,\x22y1\x22:-45.5319,\x22x2\x22:1570.4855,\x22y2\x22:-23.9922},{\x22x1\x22:1570.4855,\x22y1\x22:-23.9917,\x22x2\x22:1673.1479,\x22y2\x22:-26.3234},{\x22x1\x22:1673.1479,\x22y1\x22:-26.3234,\x22x2\x22:1674.7762,\x22y2\x22:-85.9721},{\x22x1\x22:1674.7762,\x22y1\x22:-85.9721,\x22x2\x22:1683.4371,\x22y2\x22:-189.2761},{\x22x1\x22:1767.4243,\x22y1\x22:-306.7917,\x22x2\x22:1683.4612,\x22y2\x22:-189.8198},{\x22x1\x22:1766.6379,\x22y1\x22:-305.2747,\x22x2\x22:1914.4193,\x22y2\x22:-397.8628},{\x22x1\x22:1914.4276,\x22y1\x22:-397.8678,\x22x2\x22:2085.0352,\x22y2\x22:-458.8826},{\x22x1\x22:2085.0352,\x22y1\x22:-458.8826,\x22x2\x22:2156.0349,\x22y2\x22:-593.7019},{\x22x1\x22:2282.449,\x22y1\x22:-688.6478,\x22x2\x22:2156.3735,\x22y2\x22:-594.2992},{\x22x1\x22:2281.9417,\x22y1\x22:-688.2791,\x22x2\x22:2269.3469,\x22y2\x22:-706.8279},{\x22x1\x22:2269.3469,\x22y1\x22:-706.8279,\x22x2\x22:2138.678,\x22y2\x22:-608.9557},{\x22x1\x22:2070.1643,\x22y1\x22:-477.5305,\x22x2\x22:2140.1584,\x22y2\x22:-610.3451},{\x22x1\x22:2068.7588,\x22y1\x22:-476.3017,\x22x2\x22:1896.225,\x22y2\x22:-412.6814},{\x22x1\x22:1896.0969,\x22y1\x22:-412.608,\x22x2\x22:1752.7385,\x22y2\x22:-324.9594},{\x22x1\x22:1752.7385,\x22y1\x22:-324.9594,\x22x2\x22:1661.5839,\x22y2\x22:-191.6819},{\x22x1\x22:1661.5839,\x22y1\x22:-191.6819,\x22x2\x22:1656.7742,\x22y2\x22:-98.2562},{\x22x1\x22:1656.7721,\x22y1\x22:-98.2425,\x22x2\x22:1656.2039,\x22y2\x22:-47.3061},{\x22x1\x22:1656.2039,\x22y1\x22:-47.3061,\x22x2\x22:1575.5048,\x22y2\x22:-47.2919},{\x22x1\x22:1575.5046,\x22y1\x22:-47.2919,\x22x2\x22:1536.8243,\x22y2\x22:-152.8832},{\x22x1\x22:1536.8181,\x22y1\x22:-152.8909,\x22x2\x22:1430.4884,\x22y2\x22:-250.186},{\x22x1\x22:1430.4851,\x22y1\x22:-250.1893,\x22x2\x22:1365.1602,\x22y2\x22:-278.4352},{\x22x1\x22:1365.1602,\x22y1\x22:-278.4352,\x22x2\x22:1336.8799,\x22y2\x22:-285.5428},{\x22x1\x22:1336.8799,\x22y1\x22:-285.5428,\x22x2\x22:1333.9965,\x22y2\x22:-361.3484},{\x22x1\x22:1333.9965,\x22y1\x22:-361.3484,\x22x2\x22:1384.9219,\x22y2\x22:-361.7012},{\x22x1\x22:1384.9219,\x22y1\x22:-361.7012,\x22x2\x22:1372.6219,\x22y2\x22:-459.5968},{\x22x1\x22:1372.6219,\x22y1\x22:-459.5968,\x22x2\x22:1352.9963,\x22y2\x22:-458.5838},{\x22x1\x22:1352.9963,\x22y1\x22:-458.5838,\x22x2\x22:1209.7445,\x22y2\x22:-458.639},{\x22x1\x22:1209.7445,\x22y1\x22:-458.639,\x22x2\x22:1147.5234,\x22y2\x22:-503.5915},{\x22x1\x22:1147.4038,\x22y1\x22:-503.6741,\x22x2\x22:1074.0968,\x22y2\x22:-601.396},{\x22x1\x22:1074.0782,\x22y1\x22:-601.4278,\x22x2\x22:1073.1907,\x22y2\x22:-723.0787},{\x22x1\x22:1073.1973,\x22y1\x22:-723.0934,\x22x2\x22:1144.0618,\x22y2\x22:-826.8304},{\x22x1\x22:1144.0797,\x22y1\x22:-826.8332,\x22x2\x22:1308.7981,\x22y2\x22:-852.4977},{\x22x1\x22:1308.7981,\x22y1\x22:-852.4977,\x22x2\x22:1302.3937,\x22y2\x22:-875.8917},{\x22x1\x22:1302.3933,\x22y1\x22:-875.8929,\x22x2\x22:1130.8175,\x22y2\x22:-848.5711},{\x22x1\x22:1130.8171,\x22y1\x22:-848.5713,\x22x2\x22:1049.8649,\x22y2\x22:-725.1663},{\x22x1\x22:1049.8649,\x22y1\x22:-725.1663,\x22x2\x22:1058.554,\x22y2\x22:-581.0833},{\x22x1\x22:1058.5752,\x22y1\x22:-581.0348,\x22x2\x22:1134.5984,\x22y2\x22:-485.8026},{\x22x1\x22:1134.6754,\x22y1\x22:-485.7474,\x22x2\x22:1211.4935,\x22y2\x22:-434.1195},{\x22x1\x22:1211.4949,\x22y1\x22:-434.1235,\x22x2\x22:1350.6918,\x22y2\x22:-440.2153},{\x22x1\x22:1350.6918,\x22y1\x22:-440.2153,\x22x2\x22:1363.0673,\x22y2\x22:-383.4908},{\x22x1\x22:1363.0673,\x22y1\x22:-383.4908,\x22x2\x22:1315.1179,\x22y2\x22:-382.4552},{\x22x1\x22:1315.1168,\x22y1\x22:-382.4547,\x22x2\x22:1315.9355,\x22y2\x22:-280.0479},{\x22x1\x22:1578.8696,\x22y1\x22:26.1784,\x22x2\x22:1674.4401,\x22y2\x22:26.2154},{\x22x1\x22:1674.4401,\x22y1\x22:26.2154,\x22x2\x22:1673.8507,\x22y2\x22:71.3718},{\x22x1\x22:1673.8507,\x22y1\x22:71.3718,\x22x2\x22:1728.9996,\x22y2\x22:58.9718},{\x22x1\x22:1727.5591,\x22y1\x22:64.7702,\x22x2\x22:1728.1925,\x22y2\x22:-80.9156},{\x22x1\x22:1728.1924,\x22y1\x22:-80.9161,\x22x2\x22:1736.6329,\x22y2\x22:-179.6513},{\x22x1\x22:1736.6329,\x22y1\x22:-179.6516,\x22x2\x22:1808.344,\x22y2\x22:-284.9092},{\x22x1\x22:1808.345,\x22y1\x22:-284.911,\x22x2\x22:1934.4332,\x22y2\x22:-358.7705},{\x22x1\x22:1934.5638,\x22y1\x22:-358.8445,\x22x2\x22:2099.7585,\x22y2\x22:-418.5655},{\x22x1\x22:2099.7585,\x22y1\x22:-418.5655,\x22x2\x22:2148.5525,\x22y2\x22:-279.0071},{\x22x1\x22:2148.5525,\x22y1\x22:-279.007,\x22x2\x22:2127.5396,\x22y2\x22:-272.8334},{\x22x1\x22:2127.5396,\x22y1\x22:-272.8334,\x22x2\x22:2089.3328,\x22y2\x22:-392.1469},{\x22x1\x22:2089.3328,\x22y1\x22:-392.1469,\x22x2\x22:1943.2144,\x22y2\x22:-342.4109},{\x22x1\x22:1943.2144,\x22y1\x22:-342.4109,\x22x2\x22:1824.6344,\x22y2\x22:-274.6611},{\x22x1\x22:1824.6343,\x22y1\x22:-274.6612,\x22x2\x22:1756.165,\x22y2\x22:-178.9993},{\x22x1\x22:1756.1525,\x22y1\x22:-178.9811,\x22x2\x22:1746.2234,\x22y2\x22:-83.1176},{\x22x1\x22:1746.2234,\x22y1\x22:-83.1176,\x22x2\x22:1746.283,\x22y2\x22:60.9475},{\x22x1\x22:1746.2827,\x22y1\x22:60.9475,\x22x2\x22:1749.2427,\x22y2\x22:82.884},{\x22x1\x22:1749.2427,\x22y1\x22:82.884,\x22x2\x22:1668.9832,\x22y2\x22:92.9081},{\x22x1\x22:1653.1646,\x22y1\x22:91.8748,\x22x2\x22:1656.463,\x22y2\x22:46.4499},{\x22x1\x22:1653.1732,\x22y1\x22:88.9031,\x22x2\x22:1671.6383,\x22y2\x22:92.6715},{\x22x1\x22:1656.5448,\x22y1\x22:46.4597,\x22x2\x22:1630.7457,\x22y2\x22:43.528},{\x22x1\x22:1593.2662,\x22y1\x22:43.5677,\x22x2\x22:1571.4751,\x22y2\x22:46.3713},{\x22x1\x22:1592.8647,\x22y1\x22:43.5542,\x22x2\x22:1632.7183,\x22y2\x22:43.5506},{\x22x1\x22:1571.5098,\x22y1\x22:46.4067,\x22x2\x22:1565.4255,\x22y2\x22:81.3678},{\x22x1\x22:1565.4255,\x22y1\x22:81.3678,\x22x2\x22:1547.2389,\x22y2\x22:123.1933},{\x22x1\x22:1527.7948,\x22y1\x22:147.2533,\x22x2\x22:1486.0437,\x22y2\x22:196.5387},{\x22x1\x22:1486.0435,\x22y1\x22:196.5399,\x22x2\x22:1441.9573,\x22y2\x22:239.9154},{\x22x1\x22:1526.7797,\x22y1\x22:146.925,\x22x2\x22:1549.186,\x22y2\x22:119.0937},{\x22x1\x22:1442.6938,\x22y1\x22:238.983,\x22x2\x22:1396.5769,\x22y2\x22:274.0573},{\x22x1\x22:1396.5769,\x22y1\x22:274.0573,\x22x2\x22:1336.5815,\x22y2\x22:280.9636},{\x22x1\x22:1336.5815,\x22y1\x22:280.9636,\x22x2\x22:1333.6597,\x22y2\x22:362.2255},{\x22x1\x22:1333.6597,\x22y1\x22:362.2255,\x22x2\x22:1367.5553,\x22y2\x22:360.9449},{\x22x1\x22:1369.1697,\x22y1\x22:361.554,\x22x2\x22:1483.39,\x22y2\x22:371.3752},{\x22x1\x22:1483.39,\x22y1\x22:371.3752,\x22x2\x22:1602.4595,\x22y2\x22:458.0655},{\x22x1\x22:1602.4595,\x22y1\x22:458.0655,\x22x2\x22:1620.0261,\x22y2\x22:470.0402},{\x22x1\x22:1620.0261,\x22y1\x22:470.0402,\x22x2\x22:1692.4919,\x22y2\x22:595.7682},{\x22x1\x22:1692.8042,\x22y1\x22:595.5834,\x22x2\x22:1702.7111,\x22y2\x22:615.0012},{\x22x1\x22:1702.7111,\x22y1\x22:615.0012,\x22x2\x22:1758.1425,\x22y2\x22:767.3926},{\x22x1\x22:1758.1425,\x22y1\x22:767.3926,\x22x2\x22:1860.6335,\x22y2\x22:751.8104},{\x22x1\x22:1902.9506,\x22y1\x22:743.5626,\x22x2\x22:1923.6364,\x22y2\x22:738.3751},{\x22x1\x22:1923.6364,\x22y1\x22:738.3751,\x22x2\x22:1969.8356,\x22y2\x22:723.5618},{\x22x1\x22:1969.8356,\x22y1\x22:723.5618,\x22x2\x22:2041.0725,\x22y2\x22:697.5947},{\x22x1\x22:1923.9552,\x22y1\x22:740.2606,\x22x2\x22:1855.6769,\x22y2\x22:752.6996},{\x22x1\x22:2041.0608,\x22y1\x22:697.6364,\x22x2\x22:2059.7065,\x22y2\x22:687.6147},{\x22x1\x22:2059.7065,\x22y1\x22:687.6147,\x22x2\x22:2067.0632,\x22y2\x22:707.9436},{\x22x1\x22:2067.0632,\x22y1\x22:707.9436,\x22x2\x22:2045.9845,\x22y2\x22:711.0898},{\x22x1\x22:2045.9845,\x22y1\x22:711.0898,\x22x2\x22:1926.5679,\x22y2\x22:759.2271},{\x22x1\x22:1926.5679,\x22y1\x22:759.2271,\x22x2\x22:1767.351,\x22y2\x22:782.8184},{\x22x1\x22:1767.351,\x22y1\x22:782.8184,\x22x2\x22:1747.8975,\x22y2\x22:793.8068},{\x22x1\x22:1747.8975,\x22y1\x22:793.8068,\x22x2\x22:1689.9716,\x22y2\x22:621.7687},{\x22x1\x22:1689.9716,\x22y1\x22:621.7687,\x22x2\x22:1610.8707,\x22y2\x22:483.1129},{\x22x1\x22:1610.8707,\x22y1\x22:483.1129,\x22x2\x22:1482.2781,\x22y2\x22:391.4341},{\x22x1\x22:1482.2781,\x22y1\x22:391.4341,\x22x2\x22:1461.3142,\x22y2\x22:387.1651},{\x22x1\x22:1461.3142,\x22y1\x22:387.1651,\x22x2\x22:1383.0503,\x22y2\x22:380.2795},{\x22x1\x22:1383.0498,\x22y1\x22:380.2794,\x22x2\x22:1315.0023,\x22y2\x22:383.5024},{\x22x1\x22:1315.0023,\x22y1\x22:383.5024,\x22x2\x22:1316.312,\x22y2\x22:287.1463},{\x22x1\x22:1316.312,\x22y1\x22:287.1463,\x22x2\x22:1316.3201,\x22y2\x22:264.0503},{\x22x1\x22:1316.3201,\x22y1\x22:264.0503,\x22x2\x22:1401.3716,\x22y2\x22:250.8075},{\x22x1\x22:1401.3778,\x22y1\x22:250.7986,\x22x2\x22:1466.3944,\x22y2\x22:183.6869},{\x22x1\x22:1466.589,\x22y1\x22:183.3697,\x22x2\x22:1530.5796,\x22y2\x22:115.2335},{\x22x1\x22:1530.5814,\x22y1\x22:115.2308,\x22x2\x22:1552.6443,\x22y2\x22:53.513},{\x22x1\x22:1552.6443,\x22y1\x22:53.5126,\x22x2\x22:1558.4524,\x22y2\x22:38.438},{\x22x1\x22:1558.4524,\x22y1\x22:38.438,\x22x2\x22:1570.8107,\x22y2\x22:45.26},{\x22x1\x22:1570.8107,\x22y1\x22:45.26,\x22x2\x22:1570.8347,\x22y2\x22:25.371},{\x22x1\x22:1570.8347,\x22y1\x22:25.371,\x22x2\x22:1583.8419,\x22y2\x22:26.1647},{\x22x1\x22:2144.5076,\x22y1\x22:-441.9127,\x22x2\x22:2191.0964,\x22y2\x22:-312.1402},{\x22x1\x22:2191.0964,\x22y1\x22:-312.1402,\x22x2\x22:2193.5405,\x22y2\x22:-305.2883},{\x22x1\x22:2193.5405,\x22y1\x22:-305.2883,\x22x2\x22:2213.5823,\x22y2\x22:-313.2324},{\x22x1\x22:2213.5823,\x22y1\x22:-313.2324,\x22x2\x22:2198.7104,\x22y2\x22:-344.2011},{\x22x1\x22:2198.7104,\x22y1\x22:-344.2011,\x22x2\x22:2162.3909,\x22y2\x22:-446.3291},{\x22x1\x22:2162.3909,\x22y1\x22:-446.3291,\x22x2\x22:2201.75,\x22y2\x22:-530.444},{\x22x1\x22:2201.75,\x22y1\x22:-530.444,\x22x2\x22:2250.4031,\x22y2\x22:-575.1801},{\x22x1\x22:2250.4031,\x22y1\x22:-575.1801,\x22x2\x22:2294.3135,\x22y2\x22:-606.9516},{\x22x1\x22:2294.3135,\x22y1\x22:-606.9516,\x22x2\x22:2328.2627,\x22y2\x22:-627.298},{\x22x1\x22:2328.2627,\x22y1\x22:-627.298,\x22x2\x22:2317.4351,\x22y2\x22:-643.9106},{\x22x1\x22:2317.4351,\x22y1\x22:-643.9106,\x22x2\x22:2296.2749,\x22y2\x22:-630.1569},{\x22x1\x22:2296.2744,\x22y1\x22:-630.1566,\x22x2\x22:2198.2976,\x22y2\x22:-556.6868},{\x22x1\x22:2198.2976,\x22y1\x22:-556.6868,\x22x2\x22:2191.6165,\x22y2\x22:-551.3248},{\x22x1\x22:2191.6165,\x22y1\x22:-551.3248,\x22x2\x22:2137.7798,\x22y2\x22:-460.1562},{\x22x1\x22:2137.7798,\x22y1\x22:-460.1562,\x22x2\x22:2145.6641,\x22y2\x22:-439.8404},{\x22x1\x22:1845.3551,\x22y1\x22:494.9573,\x22x2\x22:1931.0286,\x22y2\x22:530.2104},{\x22x1\x22:1931.0286,\x22y1\x22:530.2104,\x22x2\x22:2024.1953,\x22y2\x22:520.4213},{\x22x1\x22:2024.1953,\x22y1\x22:520.4213,\x22x2\x22:2050.5898,\x22y2\x22:508.8154},{\x22x1\x22:2050.5898,\x22y1\x22:508.8154,\x22x2\x22:2098.467,\x22y2\x22:456.8122},{\x22x1\x22:2100.2749,\x22y1\x22:455.6872,\x22x2\x22:2125.0935,\x22y2\x22:387.1671},{\x22x1\x22:2125.0935,\x22y1\x22:387.1671,\x22x2\x22:2163.2915,\x22y2\x22:333.2545},{\x22x1\x22:2163.2915,\x22y1\x22:333.254,\x22x2\x22:2174.9321,\x22y2\x22:282.3966},{\x22x1\x22:2174.9331,\x22y1\x22:282.386,\x22x2\x22:2191.4253,\x22y2\x22:238.5744},{\x22x1\x22:2191.4253,\x22y1\x22:238.5744,\x22x2\x22:2220.6157,\x22y2\x22:176.7273},{\x22x1\x22:2220.7786,\x22y1\x22:176.2993,\x22x2\x22:2259.6101,\x22y2\x22:101.7712},{\x22x1\x22:2259.6101,\x22y1\x22:101.7712,\x22x2\x22:2243.3293,\x22y2\x22:18.486},{\x22x1\x22:2243.3154,\x22y1\x22:18.4284,\x22x2\x22:2233.2847,\x22y2\x22:-32.8569},{\x22x1\x22:2233.2031,\x22y1\x22:-32.9237,\x22x2\x22:2227.3333,\x22y2\x22:-62.2585},{\x22x1\x22:2227.0994,\x22y1\x22:-63.298,\x22x2\x22:2203.9395,\x22y2\x22:-81.5243},{\x22x1\x22:2203.6499,\x22y1\x22:-81.6031,\x22x2\x22:2143.0747,\x22y2\x22:-98.8758},{\x22x1\x22:2142.9041,\x22y1\x22:-98.8947,\x22x2\x22:2094.4175,\x22y2\x22:-99.9485},{\x22x1\x22:2094.4175,\x22y1\x22:-99.9485,\x22x2\x22:1988.7142,\x22y2\x22:-34.5687},{\x22x1\x22:1988.7141,\x22y1\x22:-34.5687,\x22x2\x22:1970.1952,\x22y2\x22:-11.4809},{\x22x1\x22:1970.1952,\x22y1\x22:-11.4809,\x22x2\x22:1966.3362,\x22y2\x22:23.1248},{\x22x1\x22:1966.3367,\x22y1\x22:23.1296,\x22x2\x22:1997.6025,\x22y2\x22:109.6114},{\x22x1\x22:1997.598,\x22y1\x22:108.7493,\x22x2\x22:2000.4523,\x22y2\x22:168.513},{\x22x1\x22:2000.8978,\x22y1\x22:168.5473,\x22x2\x22:2124.4231,\x22y2\x22:181.8741},{\x22x1\x22:2124.4541,\x22y1\x22:182.1847,\x22x2\x22:2122.1147,\x22y2\x22:219.0168},{\x22x1\x22:2122.1147,\x22y1\x22:219.0168,\x22x2\x22:2123.708,\x22y2\x22:221.7867},{\x22x1\x22:2123.803,\x22y1\x22:221.6096,\x22x2\x22:2000.2479,\x22y2\x22:213.8951},{\x22x1\x22:1995.1307,\x22y1\x22:213.4596,\x22x2\x22:1977.416,\x22y2\x22:281.3666},{\x22x1\x22:1977.3613,\x22y1\x22:281.4728,\x22x2\x22:1941.3901,\x22y2\x22:347.6494},{\x22x1\x22:1943.9358,\x22y1\x22:343.235,\x22x2\x22:1933.7773,\x22y2\x22:342.3427},{\x22x1\x22:1933.7773,\x22y1\x22:342.3427,\x22x2\x22:1912.1357,\x22y2\x22:360.6103},{\x22x1\x22:1912.1354,\x22y1\x22:360.6103,\x22x2\x22:1861.6497,\x22y2\x22:383.2432},{\x22x1\x22:1861.6428,\x22y1\x22:383.2461,\x22x2\x22:1831.7518,\x22y2\x22:455.3427},{\x22x1\x22:1831.7457,\x22y1\x22:455.3631,\x22x2\x22:1856.3318,\x22y2\x22:492.176},{\x22x1\x22:1856.335,\x22y1\x22:492.1805,\x22x2\x22:1845.2679,\x22y2\x22:494.9621},{\x22x1\x22:1941.3901,\x22y1\x22:347.6494,\x22x2\x22:1878.6188,\x22y2\x22:343.203},{\x22x1\x22:1851.5336,\x22y1\x22:261.4853,\x22x2\x22:1849.0142,\x22y2\x22:176.0095},{\x22x1\x22:1849.014,\x22y1\x22:176.0097,\x22x2\x22:1865.0664,\x22y2\x22:99.6853},{\x22x1\x22:1865.0664,\x22y1\x22:99.6853,\x22x2\x22:1903.2253,\x22y2\x22:23.7595},{\x22x1\x22:1903.2253,\x22y1\x22:23.7595,\x22x2\x22:1907.2588,\x22y2\x22:21.9113},{\x22x1\x22:1907.2625,\x22y1\x22:21.9095,\x22x2\x22:1968.5491,\x22y2\x22:24.2069},{\x22x1\x22:1851.9194,\x22y1\x22:261.1549,\x22x2\x22:1878.832,\x22y2\x22:343.7732},{\x22x1\x22:2083.9404,\x22y1\x22:758.8601,\x22x2\x22:2068.6155,\x22y2\x22:765.752},{\x22x1\x22:2068.613,\x22y1\x22:765.7525,\x22x2\x22:1949.4323,\x22y2\x22:810.0705},{\x22x1\x22:1949.4294,\x22y1\x22:810.0708,\x22x2\x22:1755.276,\x22y2\x22:844.4811},{\x22x1\x22:1755.0182,\x22y1\x22:844.5259,\x22x2\x22:1671.0436,\x22y2\x22:828.8385},{\x22x1\x22:1671.0436,\x22y1\x22:828.8385,\x22x2\x22:1664.0383,\x22y2\x22:848.8699},{\x22x1\x22:1664.0383,\x22y1\x22:848.8699,\x22x2\x22:1685.0647,\x22y2\x22:853.3757},{\x22x1\x22:1685.2167,\x22y1\x22:852.9592,\x22x2\x22:1742.7855,\x22y2\x22:862.7735},{\x22x1\x22:1742.7855,\x22y1\x22:862.7735,\x22x2\x22:1931.094,\x22y2\x22:831.5093},{\x22x1\x22:1931.1791,\x22y1\x22:831.4937,\x22x2\x22:1973.9496,\x22y2\x22:819.2231},{\x22x1\x22:1973.9496,\x22y1\x22:819.2231,\x22x2\x22:2072.4841,\x22y2\x22:783.4214},{\x22x1\x22:2072.4841,\x22y1\x22:783.4212,\x22x2\x22:2093.8201,\x22y2\x22:779.2496},{\x22x1\x22:2083.9363,\x22y1\x22:758.0374,\x22x2\x22:2093.2131,\x22y2\x22:778.2245},{\x22x1\x22:1889.5673,\x22y1\x22:963.0869,\x22x2\x22:1764.3693,\x22y2\x22:961.3264},{\x22x1\x22:1764.3693,\x22y1\x22:961.3264,\x22x2\x22:1740.6719,\x22y2\x22:949.5989},{\x22x1\x22:1740.6719,\x22y1\x22:949.5989,\x22x2\x22:1685.4248,\x22y2\x22:1086.2528},{\x22x1\x22:1685.2323,\x22y1\x22:1086.2506,\x22x2\x22:1602.6211,\x22y2\x22:1086.2397},{\x22x1\x22:1602.6211,\x22y1\x22:1086.2397,\x22x2\x22:1488.407,\x22y2\x22:820.3461},{\x22x1\x22:1488.4066,\x22y1\x22:820.3458,\x22x2\x22:1373.5486,\x22y2\x22:756.8897},{\x22x1\x22:1373.5392,\x22y1\x22:756.8895,\x22x2\x22:1221.5352,\x22y2\x22:756.8457},{\x22x1\x22:1221.5343,\x22y1\x22:756.8456,\x22x2\x22:1148.7212,\x22y2\x22:754.5047},{\x22x1\x22:1148.7212,\x22y1\x22:754.5047,\x22x2\x22:1137.3862,\x22y2\x22:756.4742},{\x22x1\x22:1137.3857,\x22y1\x22:756.4754,\x22x2\x22:1134.1172,\x22y2\x22:775.1331},{\x22x1\x22:1134.1172,\x22y1\x22:775.1331,\x22x2\x22:1225.756,\x22y2\x22:779.4031},{\x22x1\x22:1225.8152,\x22y1\x22:779.3948,\x22x2\x22:1356.569,\x22y2\x22:774.7303},{\x22x1\x22:1356.569,\x22y1\x22:774.7303,\x22x2\x22:1380.7163,\x22y2\x22:778.194},{\x22x1\x22:1380.7277,\x22y1\x22:778.194,\x22x2\x22:1472.9972,\x22y2\x22:831.1327},{\x22x1\x22:1472.9972,\x22y1\x22:831.1327,\x22x2\x22:1526.7223,\x22y2\x22:957.4774},{\x22x1\x22:1526.7223,\x22y1\x22:957.4774,\x22x2\x22:1419.7626,\x22y2\x22:958.2906},{\x22x1\x22:1419.7531,\x22y1\x22:958.2565,\x22x2\x22:1399.7872,\x22y2\x22:962.4575},{\x22x1\x22:1399.7823,\x22y1\x22:962.4586,\x22x2\x22:1296.9249,\x22y2\x22:1026.2985},{\x22x1\x22:1296.9249,\x22y1\x22:1026.2985,\x22x2\x22:1157.064,\x22y2\x22:1030.7089},{\x22x1\x22:1157.064,\x22y1\x22:1030.7089,\x22x2\x22:1015.4982,\x22y2\x22:1030.6179},{\x22x1\x22:1015.4982,\x22y1\x22:1030.6179,\x22x2\x22:980.0256,\x22y2\x22:1021.174},{\x22x1\x22:979.9547,\x22y1\x22:1021.1472,\x22x2\x22:881.7769,\x22y2\x22:985.2338},{\x22x1\x22:881.7769,\x22y1\x22:985.2338,\x22x2\x22:931.4116,\x22y2\x22:871.5461},{\x22x1\x22:931.4116,\x22y1\x22:871.5461,\x22x2\x22:992.1718,\x22y2\x22:741.0157},{\x22x1\x22:992.1718,\x22y1\x22:741.0157,\x22x2\x22:1082.8983,\x22y2\x22:762.6913},{\x22x1\x22:1082.8511,\x22y1\x22:762.6594,\x22x2\x22:1085.6738,\x22y2\x22:745.2984},{\x22x1\x22:1078.5321,\x22y1\x22:742.1279,\x22x2\x22:1002.8559,\x22y2\x22:726.2216},{\x22x1\x22:1002.8559,\x22y1\x22:726.2216,\x22x2\x22:998.1148,\x22y2\x22:720.3218},{\x22x1\x22:998.1039,\x22y1\x22:720.3167,\x22x2\x22:984.951,\x22y2\x22:714.1589},{\x22x1\x22:927.3557,\x22y1\x22:846.2004,\x22x2\x22:985.0739,\x22y2\x22:713.9661},{\x22x1\x22:1085.3751,\x22y1\x22:747.0511,\x22x2\x22:1078.5322,\x22y2\x22:742.128},{\x22x1\x22:927.2042,\x22y1\x22:846.1289,\x22x2\x22:866.4592,\x22y2\x22:976.4387},{\x22x1\x22:866.4592,\x22y1\x22:976.4387,\x22x2\x22:747.647,\x22y2\x22:936.4265},{\x22x1\x22:747.6553,\x22y1\x22:936.4083,\x22x2\x22:622.614,\x22y2\x22:866.3677},{\x22x1\x22:622.614,\x22y1\x22:866.3677,\x22x2\x22:583.4191,\x22y2\x22:843.6556},{\x22x1\x22:583.4191,\x22y1\x22:843.6556,\x22x2\x22:592.3464,\x22y2\x22:827.1315},{\x22x1\x22:592.3464,\x22y1\x22:827.1315,\x22x2\x22:522.3391,\x22y2\x22:787.9278},{\x22x1\x22:522.3391,\x22y1\x22:787.9278,\x22x2\x22:519.8903,\x22y2\x22:806.4673},{\x22x1\x22:519.8903,\x22y1\x22:806.4673,\x22x2\x22:504.0328,\x22y2\x22:797.184},{\x22x1\x22:504.0328,\x22y1\x22:797.184,\x22x2\x22:483.7657,\x22y2\x22:760.0366},{\x22x1\x22:483.737,\x22y1\x22:759.9784,\x22x2\x22:496.2104,\x22y2\x22:756.6883},{\x22x1\x22:496.2104,\x22y1\x22:756.6883,\x22x2\x22:487.4601,\x22y2\x22:718.0593},{\x22x1\x22:487.453,\x22y1\x22:718.0421,\x22x2\x22:474.8653,\x22y2\x22:685.8476},{\x22x1\x22:474.8631,\x22y1\x22:685.8428,\x22x2\x22:457.4019,\x22y2\x22:687.6212},{\x22x1\x22:457.4019,\x22y1\x22:687.6212,\x22x2\x22:448.9482,\x22y2\x22:659.3618},{\x22x1\x22:448.8573,\x22y1\x22:659.2357,\x22x2\x22:435.699,\x22y2\x22:645.2034},{\x22x1\x22:435.6429,\x22y1\x22:645.1823,\x22x2\x22:352.9413,\x22y2\x22:564.686},{\x22x1\x22:352.9405,\x22y1\x22:564.6852,\x22x2\x22:348.6029,\x22y2\x22:499.4144},{\x22x1\x22:348.6029,\x22y1\x22:499.4144,\x22x2\x22:356.4322,\x22y2\x22:529.6633},{\x22x1\x22:356.4322,\x22y1\x22:529.6633,\x22x2\x22:365.4121,\x22y2\x22:524.7621},{\x22x1\x22:368.2605,\x22y1\x22:460.8667,\x22x2\x22:365.4121,\x22y2\x22:524.7621},{\x22x1\x22:368.2605,\x22y1\x22:460.8667,\x22x2\x22:348.6367,\x22y2\x22:451.0634},{\x22x1\x22:348.637,\x22y1\x22:451.1203,\x22x2\x22:351.8571,\x22y2\x22:424.9703},{\x22x1\x22:351.8571,\x22y1\x22:424.9597,\x22x2\x22:348.7418,\x22y2\x22:386.6123},{\x22x1\x22:348.7418,\x22y1\x22:386.6123,\x22x2\x22:366.8744,\x22y2\x22:381.2989},{\x22x1\x22:366.8814,\x22y1\x22:381.2921,\x22x2\x22:369.8627,\x22y2\x22:311.423},{\x22x1\x22:369.8634,\x22y1\x22:311.4218,\x22x2\x22:350.1172,\x22y2\x22:307.7986},{\x22x1\x22:350.0992,\x22y1\x22:307.803,\x22x2\x22:348.758,\x22y2\x22:285.7576},{\x22x1\x22:355.1301,\x22y1\x22:282.627,\x22x2\x22:348.79,\x22y2\x22:244.0845},{\x22x1\x22:348.79,\x22y1\x22:244.0588,\x22x2\x22:366.0848,\x22y2\x22:249.4292},{\x22x1\x22:354.0519,\x22y1\x22:282.7996,\x22x2\x22:348.7076,\x22y2\x22:285.7691},{\x22x1\x22:366.0621,\x22y1\x22:250.5563,\x22x2\x22:368.333,\x22y2\x22:211.9668},{\x22x1\x22:368.333,\x22y1\x22:211.9668,\x22x2\x22:367.2227,\x22y2\x22:177.5949},{\x22x1\x22:367.2221,\x22y1\x22:177.59,\x22x2\x22:348.7687,\x22y2\x22:176.4475},{\x22x1\x22:348.7687,\x22y1\x22:176.4504,\x22x2\x22:348.8122,\x22y2\x22:144.9672},{\x22x1\x22:348.8122,\x22y1\x22:144.9672,\x22x2\x22:374.7299,\x22y2\x22:141.6091},{\x22x1\x22:374.742,\x22y1\x22:141.6092,\x22x2\x22:380.1154,\x22y2\x22:157.1767},{\x22x1\x22:380.1154,\x22y1\x22:157.1767,\x22x2\x22:417.2259,\x22y2\x22:162.9858},{\x22x1\x22:417.2377,\x22y1\x22:162.9939,\x22x2\x22:450.5438,\x22y2\x22:161.4522},{\x22x1\x22:450.5439,\x22y1\x22:161.4523,\x22x2\x22:456.8889,\x22y2\x22:141.5908},{\x22x1\x22:456.8889,\x22y1\x22:141.5908,\x22x2\x22:474.878,\x22y2\x22:141.6211},{\x22x1\x22:474.878,\x22y1\x22:141.6211,\x22x2\x22:485.7776,\x22y2\x22:145.0032},{\x22x1\x22:485.8276,\x22y1\x22:145.0035,\x22x2\x22:516.8593,\x22y2\x22:141.5929},{\x22x1\x22:516.8785,\x22y1\x22:141.5929,\x22x2\x22:521.2985,\x22y2\x22:158.4053},{\x22x1\x22:521.3071,\x22y1\x22:158.4059,\x22x2\x22:557.2297,\x22y2\x22:160.7393},{\x22x1\x22:557.2402,\x22y1\x22:160.7373,\x22x2\x22:596.3942,\x22y2\x22:162.7155},{\x22x1\x22:596.3942,\x22y1\x22:162.7155,\x22x2\x22:596.3942,\x22y2\x22:162.7155},{\x22x1\x22:596.3942,\x22y1\x22:162.7155,\x22x2\x22:594.2647,\x22y2\x22:141.5903},{\x22x1\x22:618.9661,\x22y1\x22:141.5902,\x22x2\x22:594.4651,\x22y2\x22:142.3186},{\x22x1\x22:618.9651,\x22y1\x22:141.5967,\x22x2\x22:676.6501,\x22y2\x22:141.6245},{\x22x1\x22:676.6496,\x22y1\x22:141.7082,\x22x2\x22:684.2569,\x22y2\x22:143.3103},{\x22x1\x22:684.2569,\x22y1\x22:143.3103,\x22x2\x22:683.6177,\x22y2\x22:-141.6222},{\x22x1\x22:716.5132,\x22y1\x22:144.8011,\x22x2\x22:716.5856,\x22y2\x22:136.4848},{\x22x1\x22:684.3223,\x22y1\x22:-140.9913,\x22x2\x22:597.2263,\x22y2\x22:-141.9001},{\x22x1\x22:597.2055,\x22y1\x22:-141.9001,\x22x2\x22:589.4022,\x22y2\x22:-159.4924},{\x22x1\x22:589.4022,\x22y1\x22:-159.4924,\x22x2\x22:516.3867,\x22y2\x22:-156.9483},{\x22x1\x22:516.3867,\x22y1\x22:-156.9483,\x22x2\x22:516.2224,\x22y2\x22:-143.6087},{\x22x1\x22:516.222,\x22y1\x22:-143.5957,\x22x2\x22:459.0263,\x22y2\x22:-141.8816},{\x22x1\x22:459.0767,\x22y1\x22:-142.0937,\x22x2\x22:454.4695,\x22y2\x22:-158.6305},{\x22x1\x22:454.4587,\x22y1\x22:-158.645,\x22x2\x22:381.4231,\x22y2\x22:-157.4072},{\x22x1\x22:380.7763,\x22y1\x22:-156.5397,\x22x2\x22:379.391,\x22y2\x22:-141.8892},{\x22x1\x22:379.3939,\x22y1\x22:-141.8892,\x22x2\x22:352.9898,\x22y2\x22:-142.7231},{\x22x1\x22:352.9894,\x22y1\x22:-142.7231,\x22x2\x22:348.5706,\x22y2\x22:-162.9991},{\x22x1\x22:348.5706,\x22y1\x22:-162.9991,\x22x2\x22:363.9362,\x22y2\x22:-168.2355},{\x22x1\x22:363.9362,\x22y1\x22:-168.2355,\x22x2\x22:367.5134,\x22y2\x22:-245.7283},{\x22x1\x22:367.511,\x22y1\x22:-245.7395,\x22x2\x22:351.6993,\x22y2\x22:-245.6516},{\x22x1\x22:351.6639,\x22y1\x22:-245.6494,\x22x2\x22:348.816,\x22y2\x22:-307.4938},{\x22x1\x22:348.816,\x22y1\x22:-307.4938,\x22x2\x22:365.474,\x22y2\x22:-310.8115},{\x22x1\x22:365.4756,\x22y1\x22:-310.8116,\x22x2\x22:368.4857,\x22y2\x22:-385.8837},{\x22x1\x22:368.4857,\x22y1\x22:-385.8837,\x22x2\x22:348.9255,\x22y2\x22:-389.258},{\x22x1\x22:348.9255,\x22y1\x22:-389.2575,\x22x2\x22:349.9259,\x22y2\x22:-441.2472},{\x22x1\x22:349.9237,\x22y1\x22:-441.2538,\x22x2\x22:365.1315,\x22y2\x22:-444.0338},{\x22x1\x22:365.1361,\x22y1\x22:-444.0349,\x22x2\x22:368.6103,\x22y2\x22:-518.2458},{\x22x1\x22:368.6103,\x22y1\x22:-518.2458,\x22x2\x22:352.1602,\x22y2\x22:-521.8022},{\x22x1\x22:352.1602,\x22y1\x22:-521.8022,\x22x2\x22:352.4511,\x22y2\x22:-564.7093},{\x22x1\x22:352.4511,\x22y1\x22:-564.7093,\x22x2\x22:374.5695,\x22y2\x22:-586.2551},{\x22x1\x22:374.6278,\x22y1\x22:-586.3384,\x22x2\x22:388.5294,\x22y2\x22:-576.8099},{\x22x1\x22:388.5294,\x22y1\x22:-576.8099,\x22x2\x22:411.6913,\x22y2\x22:-595.5786},{\x22x1\x22:411.6913,\x22y1\x22:-595.5786,\x22x2\x22:438.883,\x22y2\x22:-621.4272},{\x22x1\x22:434.5138,\x22y1\x22:-638.6281,\x22x2\x22:436.5801,\x22y2\x22:-620.1143},{\x22x1\x22:433.7422,\x22y1\x22:-639.3867,\x22x2\x22:459.6571,\x22y2\x22:-684.4438},{\x22x1\x22:459.6576,\x22y1\x22:-684.446,\x22x2\x22:472.4282,\x22y2\x22:-687.4085},{\x22x1\x22:472.4282,\x22y1\x22:-687.4085,\x22x2\x22:500.3723,\x22y2\x22:-755.6216},{\x22x1\x22:500.3769,\x22y1\x22:-755.8745,\x22x2\x22:487.1239,\x22y2\x22:-769.1348},{\x22x1\x22:487.1241,\x22y1\x22:-769.1352,\x22x2\x22:512.9843,\x22y2\x22:-803.3642},{\x22x1\x22:513.0011,\x22y1\x22:-803.3737,\x22x2\x22:525.1265,\x22y2\x22:-792.6187},{\x22x1\x22:525.1265,\x22y1\x22:-792.6185,\x22x2\x22:591.5417,\x22y2\x22:-829.177},{\x22x1\x22:591.5883,\x22y1\x22:-829.2571,\x22x2\x22:585.2495,\x22y2\x22:-845.0826},{\x22x1\x22:585.2474,\x22y1\x22:-845.0813,\x22x2\x22:642.4615,\x22y2\x22:-876.495},{\x22x1\x22:642.4688,\x22y1\x22:-876.5005,\x22x2\x22:651.9971,\x22y2\x22:-862.9849},{\x22x1\x22:651.9971,\x22y1\x22:-862.9849,\x22x2\x22:718.9519,\x22y2\x22:-903.9393},{\x22x1\x22:718.9534,\x22y1\x22:-903.9405,\x22x2\x22:708.345,\x22y2\x22:-916.3079},{\x22x1\x22:708.345,\x22y1\x22:-916.3079,\x22x2\x22:756.1538,\x22y2\x22:-938.9229},{\x22x1\x22:756.1585,\x22y1\x22:-938.9258,\x22x2\x22:767.1508,\x22y2\x22:-926.9913},{\x22x1\x22:767.1516,\x22y1\x22:-926.9892,\x22x2\x22:838.7054,\x22y2\x22:-949.5181},{\x22x1\x22:838.7068,\x22y1\x22:-949.5182,\x22x2\x22:838.3862,\x22y2\x22:-969.7464},{\x22x1\x22:856.9028,\x22y1\x22:-976.3969,\x22x2\x22:837.1751,\x22y2\x22:-969.3121},{\x22x1\x22:856.9028,\x22y1\x22:-976.3969,\x22x2\x22:1000.6379,\x22y2\x22:-977.0975},{\x22x1\x22:1144.5458,\x22y1\x22:-977.2478,\x22x2\x22:1287.8749,\x22y2\x22:-977.4517},{\x22x1\x22:1287.8749,\x22y1\x22:-977.4517,\x22x2\x22:1412.4,\x22y2\x22:-975.8862},{\x22x1\x22:1412.4064,\x22y1\x22:-975.8433,\x22x2\x22:1436.6143,\x22y2\x22:-976.9793},{\x22x1\x22:1436.6158,\x22y1\x22:-976.9796,\x22x2\x22:1522.5625,\x22y2\x22:-1030.585},{\x22x1\x22:1522.5625,\x22y1\x22:-1030.585,\x22x2\x22:1643.2627,\x22y2\x22:-1026.3314},{\x22x1\x22:1643.6664,\x22y1\x22:-1026.2928,\x22x2\x22:1787.3617,\x22y2\x22:-1036.8656},{\x22x1\x22:1787.3617,\x22y1\x22:-1036.8656,\x22x2\x22:1922.1267,\x22y2\x22:-1004.1838},{\x22x1\x22:1165.8094,\x22y1\x22:-977.2595,\x22x2\x22:1000.6297,\x22y2\x22:-977.1154},{\x22x1\x22:1922.1268,\x22y1\x22:-1004.1839,\x22x2\x22:1952.7719,\x22y2\x22:-986.9633},{\x22x1\x22:1952.7719,\x22y1\x22:-986.9633,\x22x2\x22:1950.4233,\x22y2\x22:-968.7598},{\x22x1\x22:1950.4308,\x22y1\x22:-968.764,\x22x2\x22:1983.3185,\x22y2\x22:-944.106},{\x22x1\x22:1983.3223,\x22y1\x22:-944.1035,\x22x2\x22:2008.9108,\x22y2\x22:-927.6135},{\x22x1\x22:2008.9282,\x22y1\x22:-927.6078,\x22x2\x22:2021.1224,\x22y2\x22:-937.6364},{\x22x1\x22:2021.1637,\x22y1\x22:-937.7253,\x22x2\x22:2044.9153,\x22y2\x22:-917.0228},{\x22x1\x22:2044.9153,\x22y1\x22:-917.0228,\x22x2\x22:2083.2131,\x22y2\x22:-895.2525},{\x22x1\x22:2083.2253,\x22y1\x22:-895.2429,\x22x2\x22:2157.2725,\x22y2\x22:-843.1287},{\x22x1\x22:2157.2664,\x22y1\x22:-843.1144,\x22x2\x22:2178.1448,\x22y2\x22:-831.6097},{\x22x1\x22:2178.1458,\x22y1\x22:-831.6091,\x22x2\x22:2298.6912,\x22y2\x22:-825.8945},{\x22x1\x22:2298.6912,\x22y1\x22:-825.8945,\x22x2\x22:2335.6897,\x22y2\x22:-818.2061},{\x22x1\x22:2335.6943,\x22y1\x22:-818.2046,\x22x2\x22:2337.8464,\x22y2\x22:-797.7239},{\x22x1\x22:2337.8469,\x22y1\x22:-797.7253,\x22x2\x22:2408.6448,\x22y2\x22:-780.1873},{\x22x1\x22:2408.9333,\x22y1\x22:-781.8422,\x22x2\x22:2412.8918,\x22y2\x22:-797.4929},{\x22x1\x22:2412.8743,\x22y1\x22:-797.4969,\x22x2\x22:2471.7305,\x22y2\x22:-780.6971},{\x22x1\x22:2471.7375,\x22y1\x22:-780.6961,\x22x2\x22:2476.623,\x22y2\x22:-765.2651},{\x22x1\x22:2476.6216,\x22y1\x22:-765.261,\x22x2\x22:2547.353,\x22y2\x22:-744.0773},{\x22x1\x22:2547.353,\x22y1\x22:-744.0773,\x22x2\x22:2555.1509,\x22y2\x22:-759.0361},{\x22x1\x22:2555.1509,\x22y1\x22:-759.0361,\x22x2\x22:2571.03,\x22y2\x22:-754.7411},{\x22x1\x22:2571.03,\x22y1\x22:-754.7411,\x22x2\x22:2597.0845,\x22y2\x22:-731.4318},{\x22x1\x22:2595.4531,\x22y1\x22:-733.3993,\x22x2\x22:2588.6367,\x22y2\x22:-713.8079},{\x22x1\x22:2588.6367,\x22y1\x22:-713.8079,\x22x2\x22:2633.2295,\x22y2\x22:-660.7028},{\x22x1\x22:2634.8577,\x22y1\x22:-660.8192,\x22x2\x22:2649.5247,\x22y2\x22:-668.5171},{\x22x1\x22:2649.5242,\x22y1\x22:-668.5174,\x22x2\x22:2662.3125,\x22y2\x22:-653.1021},{\x22x1\x22:2662.3145,\x22y1\x22:-653.0988,\x22x2\x22:2682.1333,\x22y2\x22:-609.1489},{\x22x1\x22:2682.1445,\x22y1\x22:-609.1111,\x22x2\x22:2664.7107,\x22y2\x22:-602.8752},{\x22x1\x22:2664.7102,\x22y1\x22:-602.8751,\x22x2\x22:2691.6973,\x22y2\x22:-533.146},{\x22x1\x22:2691.8044,\x22y1\x22:-533.0343,\x22x2\x22:2708.1567,\x22y2\x22:-534.9523},{\x22x1\x22:2708.1624,\x22y1\x22:-534.954,\x22x2\x22:2716.001,\x22y2\x22:-513.1934},{\x22x1\x22:2716.001,\x22y1\x22:-513.1934,\x22x2\x22:2720.1467,\x22y2\x22:-479.2979},{\x22x1\x22:2720.1467,\x22y1\x22:-479.2832,\x22x2\x22:2720.2344,\x22y2\x22:-359.1639},{\x22x1\x22:2720.2344,\x22y1\x22:-359.1639,\x22x2\x22:2683.9216,\x22y2\x22:-188.1496},{\x22x1\x22:2683.7234,\x22y1\x22:-188.1509,\x22x2\x22:2685.5879,\x22y2\x22:-83.257},{\x22x1\x22:2685.5879,\x22y1\x22:-83.2581,\x22x2\x22:2682.146,\x22y2\x22:-61.3976},{\x22x1\x22:2682.146,\x22y1\x22:-61.3973,\x22x2\x22:2670.0034,\x22y2\x22:-61.7652},{\x22x1\x22:2670.0034,\x22y1\x22:-61.7652,\x22x2\x22:2665.7781,\x22y2\x22:87.9005},{\x22x1\x22:2665.7922,\x22y1\x22:87.9973,\x22x2\x22:2676.51,\x22y2\x22:94.1118},{\x22x1\x22:2676.51,\x22y1\x22:94.1118,\x22x2\x22:2669.0547,\x22y2\x22:135.7647},{\x22x1\x22:2668.9929,\x22y1\x22:135.991,\x22x2\x22:2648.3225,\x22y2\x22:134.9548},{\x22x1\x22:2648.3193,\x22y1\x22:134.9554,\x22x2\x22:2634.7603,\x22y2\x22:208.6256},{\x22x1\x22:2647.2908,\x22y1\x22:212.563,\x22x2\x22:2597.9338,\x22y2\x22:396.5024},{\x22x1\x22:2609.623,\x22y1\x22:437.0539,\x22x2\x22:2597.9338,\x22y2\x22:396.5024},{\x22x1\x22:2648.0193,\x22y1\x22:212.9119,\x22x2\x22:2634.7603,\x22y2\x22:208.6256},{\x22x1\x22:2609.623,\x22y1\x22:437.0539,\x22x2\x22:2597.3135,\x22y2\x22:449.239},{\x22x1\x22:2609.3215,\x22y1\x22:488.9633,\x22x2\x22:2595.9092,\x22y2\x22:454.3447},{\x22x1\x22:2595.7368,\x22y1\x22:454.107,\x22x2\x22:2598.0505,\x22y2\x22:449.171},{\x22x1\x22:2608.4709,\x22y1\x22:487.6073,\x22x2\x22:2623.4673,\x22y2\x22:520.9073},{\x22x1\x22:2623.4673,\x22y1\x22:520.9073,\x22x2\x22:2637.6938,\x22y2\x22:516.7222},{\x22x1\x22:2637.6938,\x22y1\x22:516.7222,\x22x2\x22:2637.7671,\x22y2\x22:562.76},{\x22x1\x22:2637.7595,\x22y1\x22:562.7772,\x22x2\x22:2614.364,\x22y2\x22:562.6761},{\x22x1\x22:2614.364,\x22y1\x22:562.6761,\x22x2\x22:2595.5776,\x22y2\x22:634.4456},{\x22x1\x22:2609.5461,\x22y1\x22:641.0623,\x22x2\x22:2595.7476,\x22y2\x22:633.2869},{\x22x1\x22:2608.7854,\x22y1\x22:640.8836,\x22x2\x22:2589.467,\x22y2\x22:693.024},{\x22x1\x22:2570.2207,\x22y1\x22:694.2367,\x22x2\x22:2582.1875,\x22y2\x22:697.0035},{\x22x1\x22:2582.1875,\x22y1\x22:697.0035,\x22x2\x22:2589.467,\x22y2\x22:693.024},{\x22x1\x22:2542.4353,\x22y1\x22:755.743,\x22x2\x22:2570.2207,\x22y2\x22:694.2367},{\x22x1\x22:2542.4353,\x22y1\x22:755.743,\x22x2\x22:2553.1545,\x22y2\x22:768.2073},{\x22x1\x22:2553.1633,\x22y1\x22:768.2096,\x22x2\x22:2518.989,\x22y2\x22:807.8845},{\x22x1\x22:2518.979,\x22y1\x22:807.8894,\x22x2\x22:2505.3777,\x22y2\x22:796.5845},{\x22x1\x22:2505.3777,\x22y1\x22:796.5845,\x22x2\x22:2442.7402,\x22y2\x22:834.871},{\x22x1\x22:2442.7402,\x22y1\x22:834.871,\x22x2\x22:2441.7349,\x22y2\x22:852.4338},{\x22x1\x22:2441.7173,\x22y1\x22:852.4428,\x22x2\x22:2428.824,\x22y2\x22:859.7881},{\x22x1\x22:2428.7742,\x22y1\x22:859.7007,\x22x2\x22:2306.4792,\x22y2\x22:930.7924},{\x22x1\x22:2306.4792,\x22y1\x22:930.7924,\x22x2\x22:2269.3164,\x22y2\x22:941.4365},{\x22x1\x22:2269.3093,\x22y1\x22:941.4376,\x22x2\x22:2261.8633,\x22y2\x22:925.6252},{\x22x1\x22:2261.856,\x22y1\x22:925.6132,\x22x2\x22:2184.916,\x22y2\x22:941.9734},{\x22x1\x22:2184.916,\x22y1\x22:941.9734,\x22x2\x22:2190.2815,\x22y2\x22:955.4174},{\x22x1\x22:2190.2815,\x22y1\x22:955.4174,\x22x2\x22:2028.7389,\x22y2\x22:983.7412},{\x22x1\x22:2028.7389,\x22y1\x22:983.7412,\x22x2\x22:1889.5834,\x22y2\x22:963.09},{\x22x1\x22:2391.0276,\x22y1\x22:-212.765,\x22x2\x22:2379.303,\x22y2\x22:-225.8109},{\x22x1\x22:2379.3027,\x22y1\x22:-225.811,\x22x2\x22:2361.053,\x22y2\x22:-213.3621},{\x22x1\x22:2393.124,\x22y1\x22:-213.0634,\x22x2\x22:2374.5466,\x22y2\x22:-196.5034},{\x22x1\x22:2374.5466,\x22y1\x22:-196.5034,\x22x2\x22:2361.0413,\x22y2\x22:-214.7506},{\x22x1\x22:1289.6997,\x22y1\x22:-945.2662,\x22x2\x22:1101.6908,\x22y2\x22:-914.6567},{\x22x1\x22:1101.5245,\x22y1\x22:-914.7717,\x22x2\x22:995.3301,\x22y2\x22:-764.1453},{\x22x1\x22:984.2244,\x22y1\x22:-740.7847,\x22x2\x22:983.8054,\x22y2\x22:-690.5046},{\x22x1\x22:987.5987,\x22y1\x22:-742.7386,\x22x2\x22:997.0881,\x22y2\x22:-767.5287},{\x22x1\x22:984.0882,\x22y1\x22:-688.9796,\x22x2\x22:1005.4175,\x22y2\x22:-688.5937},{\x22x1\x22:1005.4175,\x22y1\x22:-688.5937,\x22x2\x22:1001.91,\x22y2\x22:-737.6094},{\x22x1\x22:1102.2115,\x22y1\x22:-888.3265,\x22x2\x22:1001.9102,\x22y2\x22:-737.6094},{\x22x1\x22:1102.2047,\x22y1\x22:-888.3268,\x22x2\x22:1292.9966,\x22y2\x22:-923.7662},{\x22x1\x22:1292.9966,\x22y1\x22:-923.7662,\x22x2\x22:1289.6997,\x22y2\x22:-945.2662},{\x22x1\x22:1640.2319,\x22y1\x22:-693.3722,\x22x2\x22:1634.1084,\x22y2\x22:-678.5297},{\x22x1\x22:1760.1265,\x22y1\x22:-624.8887,\x22x2\x22:1720.7555,\x22y2\x22:-527.4537},{\x22x1\x22:1720.7555,\x22y1\x22:-527.4537,\x22x2\x22:1732.4049,\x22y2\x22:-520.5561},{\x22x1\x22:1732.4053,\x22y1\x22:-520.5561,\x22x2\x22:1786.5781,\x22y2\x22:-638.4561},{\x22x1\x22:1786.5781,\x22y1\x22:-638.4561,\x22x2\x22:1845.2855,\x22y2\x22:-609.9156},{\x22x1\x22:1845.2845,\x22y1\x22:-609.9141,\x22x2\x22:1824.34,\x22y2\x22:-556.9341},{\x22x1\x22:1824.34,\x22y1\x22:-556.9341,\x22x2\x22:1841.093,\x22y2\x22:-552.6056},{\x22x1\x22:1841.093,\x22y1\x22:-552.6056,\x22x2\x22:1855.7399,\x22y2\x22:-584.4085},{\x22x1\x22:1855.7413,\x22y1\x22:-584.4094,\x22x2\x22:1871.0686,\x22y2\x22:-618.6891},{\x22x1\x22:1870.3947,\x22y1\x22:-620.2095,\x22x2\x22:1781.8262,\x22y2\x22:-662.8357},{\x22x1\x22:1781.8242,\x22y1\x22:-662.836,\x22x2\x22:1768.051,\x22y2\x22:-639.2556},{\x22x1\x22:1768.051,\x22y1\x22:-639.2556,\x22x2\x22:1733.2496,\x22y2\x22:-655.8253},{\x22x1\x22:1733.2179,\x22y1\x22:-655.8351,\x22x2\x22:1650.8883,\x22y2\x22:-688.8657},{\x22x1\x22:1650.8846,\x22y1\x22:-688.8673,\x22x2\x22:1640.3132,\x22y2\x22:-692.7358},{\x22x1\x22:1632.6409,\x22y1\x22:-677.9879,\x22x2\x22:1638.3536,\x22y2\x22:-674.7297},{\x22x1\x22:1638.3536,\x22y1\x22:-674.7297,\x22x2\x22:1673.2798,\x22y2\x22:-658.3221},{\x22x1\x22:1673.3545,\x22y1\x22:-658.2849,\x22x2\x22:1736.6444,\x22y2\x22:-632.0099},{\x22x1\x22:1736.6447,\x22y1\x22:-632.0098,\x22x2\x22:1759.7173,\x22y2\x22:-624.3638},{\x22x1\x22:1692.598,\x22y1\x22:-621.1061,\x22x2\x22:1619.9772,\x22y2\x22:-660.7516},{\x22x1\x22:1619.9772,\x22y1\x22:-660.7516,\x22x2\x22:1588.2498,\x22y2\x22:-610.282},{\x22x1\x22:1588.2498,\x22y1\x22:-610.282,\x22x2\x22:1541.0209,\x22y2\x22:-641.0282},{\x22x1\x22:1541.0455,\x22y1\x22:-640.979,\x22x2\x22:1569.6477,\x22y2\x22:-694.7669},{\x22x1\x22:1569.6473,\x22y1\x22:-694.7689,\x22x2\x22:1558.3363,\x22y2\x22:-700.4458},{\x22x1\x22:1558.3358,\x22y1\x22:-700.446,\x22x2\x22:1526.4263,\x22y2\x22:-650.6614},{\x22x1\x22:1526.4263,\x22y1\x22:-650.6614,\x22x2\x22:1475.9868,\x22y2\x22:-690.902},{\x22x1\x22:1475.994,\x22y1\x22:-690.9088,\x22x2\x22:1500.9888,\x22y2\x22:-725.9725},{\x22x1\x22:1500.9888,\x22y1\x22:-725.9725,\x22x2\x22:1490.5959,\x22y2\x22:-736.1264},{\x22x1\x22:1490.5959,\x22y1\x22:-736.1264,\x22x2\x22:1441.3411,\x22y2\x22:-675.5369},{\x22x1\x22:1441.3383,\x22y1\x22:-675.5318,\x22x2\x22:1456.2539,\x22y2\x22:-666.0802},{\x22x1\x22:1456.2833,\x22y1\x22:-666.0649,\x22x2\x22:1461.5663,\x22y2\x22:-673.6683},{\x22x1\x22:1461.5663,\x22y1\x22:-673.6683,\x22x2\x22:1516.79,\x22y2\x22:-637.429},{\x22x1\x22:1516.79,\x22y1\x22:-637.429,\x22x2\x22:1480.9254,\x22y2\x22:-578.1862},{\x22x1\x22:1480.9254,\x22y1\x22:-578.1862,\x22x2\x22:1434.381,\x22y2\x22:-610.4762},{\x22x1\x22:1433.3287,\x22y1\x22:-608.8978,\x22x2\x22:1423.4088,\x22y2\x22:-595.133},{\x22x1\x22:1423.4088,\x22y1\x22:-595.133,\x22x2\x22:1458.4634,\x22y2\x22:-570.56},{\x22x1\x22:1458.4688,\x22y1\x22:-570.5554,\x22x2\x22:1489.0757,\x22y2\x22:-554.5027},{\x22x1\x22:1529.0997,\x22y1\x22:-626.5462,\x22x2\x22:1591.2832,\x22y2\x22:-586.8471},{\x22x1\x22:1591.2832,\x22y1\x22:-586.8471,\x22x2\x22:1621.6532,\x22y2\x22:-635.119},{\x22x1\x22:1528.5873,\x22y1\x22:-625.4837,\x22x2\x22:1489.9144,\x22y2\x22:-555.7455},{\x22x1\x22:1621.653,\x22y1\x22:-635.1188,\x22x2\x22:1686.6229,\x22y2\x22:-608.0864},{\x22x1\x22:1686.6405,\x22y1\x22:-608.0939,\x22x2\x22:1692.6552,\x22y2\x22:-620.9193},{\x22x1\x22:1708.786,\x22y1\x22:-603.3417,\x22x2\x22:1696.4073,\x22y2\x22:-580.2878},{\x22x1\x22:1696.4073,\x22y1\x22:-580.2878,\x22x2\x22:1635.884,\x22y2\x22:-609.1155},{\x22x1\x22:1635.884,\x22y1\x22:-609.1155,\x22x2\x22:1626.5219,\x22y2\x22:-594.4913},{\x22x1\x22:1626.5219,\x22y1\x22:-594.4913,\x22x2\x22:1688.8138,\x22y2\x22:-565.5461},{\x22x1\x22:1688.8136,\x22y1\x22:-565.5461,\x22x2\x22:1676.8363,\x22y2\x22:-530.3625},{\x22x1\x22:1676.8363,\x22y1\x22:-530.3625,\x22x2\x22:1692.0884,\x22y2\x22:-527.2973},{\x22x1\x22:1692.0887,\x22y1\x22:-527.2972,\x22x2\x22:1723.1825,\x22y2\x22:-595.8644},{\x22x1\x22:1721.8842,\x22y1\x22:-596.8817,\x22x2\x22:1711.1237,\x22y2\x22:-602.9912},{\x22x1\x22:1744.7755,\x22y1\x22:-482.7885,\x22x2\x22:1675.9811,\x22y2\x22:-511.743},{\x22x1\x22:1675.9791,\x22y1\x22:-511.7435,\x22x2\x22:1645.7548,\x22y2\x22:-433.9922},{\x22x1\x22:1646.7446,\x22y1\x22:-432.8042,\x22x2\x22:1658.197,\x22y2\x22:-427.1634},{\x22x1\x22:1658.1986,\x22y1\x22:-427.1636,\x22x2\x22:1666.1537,\x22y2\x22:-429.946},{\x22x1\x22:1666.1537,\x22y1\x22:-429.946,\x22x2\x22:1691.976,\x22y2\x22:-487.3014},{\x22x1\x22:1692.0122,\x22y1\x22:-487.2776,\x22x2\x22:1750.6694,\x22y2\x22:-458.3703},{\x22x1\x22:1781.1467,\x22y1\x22:-522.9964,\x22x2\x22:1750.3512,\x22y2\x22:-459.0957},{\x22x1\x22:1781.1469,\x22y1\x22:-522.9966,\x22x2\x22:1801.6194,\x22y2\x22:-512.4858},{\x22x1\x22:1801.6381,\x22y1\x22:-512.4762,\x22x2\x22:1755.0347,\x22y2\x22:-392.4181},{\x22x1\x22:1754.9432,\x22y1\x22:-392.3507,\x22x2\x22:1702.174,\x22y2\x22:-385.9838},{\x22x1\x22:1702.174,\x22y1\x22:-385.9838,\x22x2\x22:1725.7004,\x22y2\x22:-447.4948},{\x22x1\x22:1725.7004,\x22y1\x22:-447.4948,\x22x2\x22:1709.7224,\x22y2\x22:-452.6407},{\x22x1\x22:1709.7178,\x22y1\x22:-452.6422,\x22x2\x22:1680.7811,\x22y2\x22:-389.0983},{\x22x1\x22:1680.7555,\x22y1\x22:-389.1073,\x22x2\x22:1600.1876,\x22y2\x22:-428.341},{\x22x1\x22:1600.1876,\x22y1\x22:-428.341,\x22x2\x22:1628.6095,\x22y2\x22:-484.8078},{\x22x1\x22:1628.6097,\x22y1\x22:-484.8079,\x22x2\x22:1658.2743,\x22y2\x22:-551.5778},{\x22x1\x22:1649.1788,\x22y1\x22:-558.5703,\x22x2\x22:1641.5326,\x22y2\x22:-555.9355},{\x22x1\x22:1641.5326,\x22y1\x22:-555.9355,\x22x2\x22:1635.8146,\x22y2\x22:-540.7441},{\x22x1\x22:1650.5358,\x22y1\x22:-557.5082,\x22x2\x22:1656.8336,\x22y2\x22:-547.9763},{\x22x1\x22:1635.8149,\x22y1\x22:-540.7433,\x22x2\x22:1570.671,\x22y2\x22:-574.0289},{\x22x1\x22:1570.1171,\x22y1\x22:-572.4255,\x22x2\x22:1563.1798,\x22y2\x22:-558.6327},{\x22x1\x22:1563.1705,\x22y1\x22:-558.6147,\x22x2\x22:1625.4962,\x22y2\x22:-525.1918},{\x22x1\x22:1599.4211,\x22y1\x22:-468.3958,\x22x2\x22:1625.6132,\x22y2\x22:-525.3802},{\x22x1\x22:1599.421,\x22y1\x22:-468.3963,\x22x2\x22:1536.3076,\x22y2\x22:-501.8199},{\x22x1\x22:1536.3076,\x22y1\x22:-501.8199,\x22x2\x22:1530.705,\x22y2\x22:-490.4283},{\x22x1\x22:1588.3062,\x22y1\x22:-452.788,\x22x2\x22:1530.415,\x22y2\x22:-487.3895},{\x22x1\x22:1591.4103,\x22y1\x22:-451.6173,\x22x2\x22:1582.9779,\x22y2\x22:-434.0653},{\x22x1\x22:1582.9779,\x22y1\x22:-434.0653,\x22x2\x22:1441.5044,\x22y2\x22:-515.5193},{\x22x1\x22:1441.5044,\x22y1\x22:-515.5193,\x22x2\x22:1434.0774,\x22y2\x22:-500.5966},{\x22x1\x22:1434.0774,\x22y1\x22:-500.5948,\x22x2\x22:1661.1251,\x22y2\x22:-377.5333},{\x22x1\x22:1661.1251,\x22y1\x22:-377.5333,\x22x2\x22:1759.8003,\x22y2\x22:-373.7321},{\x22x1\x22:1759.8003,\x22y1\x22:-373.7321,\x22x2\x22:1821.4423,\x22y2\x22:-507.4395},{\x22x1\x22:1837.0713,\x22y1\x22:-503.4821,\x22x2\x22:1821.4424,\x22y2\x22:-507.4388},{\x22x1\x22:1836.3904,\x22y1\x22:-504.8109,\x22x2\x22:1840.8563,\x22y2\x22:-519.2809},{\x22x1\x22:1840.8563,\x22y1\x22:-519.2809,\x22x2\x22:1788.4143,\x22y2\x22:-537.8137},{\x22x1\x22:1788.4135,\x22y1\x22:-537.8132,\x22x2\x22:1817.4252,\x22y2\x22:-605.21},{\x22x1\x22:1817.4248,\x22y1\x22:-605.2118,\x22x2\x22:1801.9165,\x22y2\x22:-610.6427},{\x22x1\x22:1801.9073,\x22y1\x22:-610.6458,\x22x2\x22:1744.7754,\x22y2\x22:-482.7884},{\x22x1\x22:1532.6835,\x22y1\x22:-549.8014,\x22x2\x22:1547.92,\x22y2\x22:-578.6514},{\x22x1\x22:1547.92,\x22y1\x22:-578.6514,\x22x2\x22:1533.2264,\x22y2\x22:-584.7665},{\x22x1\x22:1533.2145,\x22y1\x22:-584.769,\x22x2\x22:1494.5532,\x22y2\x22:-521.4296},{\x22x1\x22:1494.5531,\x22y1\x22:-521.4295,\x22x2\x22:1508.3566,\x22y2\x22:-511.5068},{\x22x1\x22:1508.3566,\x22y1\x22:-511.5068,\x22x2\x22:1524.3578,\x22y2\x22:-535.4946},{\x22x1\x22:1524.3569,\x22y1\x22:-535.4941,\x22x2\x22:1582.6998,\x22y2\x22:-500.1608},{\x22x1\x22:1582.704,\x22y1\x22:-500.1595,\x22x2\x22:1592.9263,\x22y2\x22:-515.8158},{\x22x1\x22:1592.9271,\x22y1\x22:-515.8202,\x22x2\x22:1533.057,\x22y2\x22:-550.7425},{\x22x1\x22:1441.9707,\x22y1\x22:-554.0997,\x22x2\x22:1392.9152,\x22y2\x22:-593.1572},{\x22x1\x22:1392.9717,\x22y1\x22:-593.2458,\x22x2\x22:1427.1251,\x22y2\x22:-637.576},{\x22x1\x22:1427.2224,\x22y1\x22:-637.5262,\x22x2\x22:1452.8101,\x22y2\x22:-621.3777},{\x22x1\x22:1452.8101,\x22y1\x22:-621.3777,\x22x2\x22:1462.9476,\x22y2\x22:-630.597},{\x22x1\x22:1462.9465,\x22y1\x22:-630.6013,\x22x2\x22:1409.5051,\x22y2\x22:-675.9834},{\x22x1\x22:1409.5594,\x22y1\x22:-676.0348,\x22x2\x22:1476.7426,\x22y2\x22:-762.3985},{\x22x1\x22:1476.7426,\x22y1\x22:-762.3985,\x22x2\x22:1538.1128,\x22y2\x22:-737.3538},{\x22x1\x22:1538.1128,\x22y1\x22:-737.3538,\x22x2\x22:1502.7231,\x22y2\x22:-689.3645},{\x22x1\x22:1518.3303,\x22y1\x22:-683.2476,\x22x2\x22:1504.4017,\x22y2\x22:-690.6399},{\x22x1\x22:1517.2118,\x22y1\x22:-681.9412,\x22x2\x22:1551.7391,\x22y2\x22:-727.5215},{\x22x1\x22:1595.91,\x22y1\x22:-698.7247,\x22x2\x22:1550.8688,\x22y2\x22:-727.9953},{\x22x1\x22:1595.8912,\x22y1\x22:-699.0664,\x22x2\x22:1566.6594,\x22y2\x22:-647.5295},{\x22x1\x22:1566.6526,\x22y1\x22:-647.5742,\x22x2\x22:1581.0692,\x22y2\x22:-638.2155},{\x22x1\x22:1581.0828,\x22y1\x22:-638.2096,\x22x2\x22:1617.4064,\x22y2\x22:-705.6864},{\x22x1\x22:1479.9303,\x22y1\x22:-785.1595,\x22x2\x22:1617.1172,\x22y2\x22:-707.242},{\x22x1\x22:1477.0184,\x22y1\x22:-785.5678,\x22x2\x22:1444.9152,\x22y2\x22:-756.1242},{\x22x1\x22:1444.9152,\x22y1\x22:-756.1242,\x22x2\x22:1386.2615,\x22y2\x22:-675.6815},{\x22x1\x22:1386.2615,\x22y1\x22:-675.6815,\x22x2\x22:1388.1703,\x22y2\x22:-661.5175},{\x22x1\x22:1388.1703,\x22y1\x22:-661.5175,\x22x2\x22:1412.4633,\x22y2\x22:-648.7951},{\x22x1\x22:1412.4633,\x22y1\x22:-648.7951,\x22x2\x22:1390.6769,\x22y2\x22:-625.132},{\x22x1\x22:1390.6693,\x22y1\x22:-625.1272,\x22x2\x22:1370.4324,\x22y2\x22:-593.4285},{\x22x1\x22:1370.4324,\x22y1\x22:-593.4285,\x22x2\x22:1372.7078,\x22y2\x22:-579.0521},{\x22x1\x22:1372.7078,\x22y1\x22:-579.0521,\x22x2\x22:1437.1648,\x22y2\x22:-539.9379},{\x22x1\x22:1437.1648,\x22y1\x22:-539.9379,\x22x2\x22:1442.7975,\x22y2\x22:-554.5901},{\x22x1\x22:1273.0345,\x22y1\x22:-610.4756,\x22x2\x22:1259.5743,\x22y2\x22:-626.4178},{\x22x1\x22:1259.5743,\x22y1\x22:-626.4178,\x22x2\x22:1243.1283,\x22y2\x22:-612.0022},{\x22x1\x22:1243.1146,\x22y1\x22:-611.983,\x22x2\x22:1258.1312,\x22y2\x22:-595.5967},{\x22x1\x22:1258.1378,\x22y1\x22:-595.5882,\x22x2\x22:1274.553,\x22y2\x22:-610.105},{\x22x1\x22:2044.6849,\x22y1\x22:-918.1929,\x22x2\x22:1928.5291,\x22y2\x22:-740.0197},{\x22x1\x22:1868.2552,\x22y1\x22:-742.2317,\x22x2\x22:1708.6567,\x22y2\x22:-783.2139},{\x22x1\x22:1708.6362,\x22y1\x22:-783.2211,\x22x2\x22:1456.6655,\x22y2\x22:-888.6693},{\x22x1\x22:1456.6543,\x22y1\x22:-888.6772,\x22x2\x22:1435.4845,\x22y2\x22:-910.64},{\x22x1\x22:1435.4806,\x22y1\x22:-910.6491,\x22x2\x22:1421.6908,\x22y2\x22:-974.3835},{\x22x1\x22:1868.2552,\x22y1\x22:-742.2317,\x22x2\x22:1929.5923,\x22y2\x22:-741.2913},{\x22x1\x22:1866.0352,\x22y1\x22:-825.2361,\x22x2\x22:1864.0798,\x22y2\x22:-811.09},{\x22x1\x22:1864.079,\x22y1\x22:-811.0864,\x22x2\x22:1877.5699,\x22y2\x22:-799.4534},{\x22x1\x22:1877.5701,\x22y1\x22:-799.453,\x22x2\x22:1883.0441,\x22y2\x22:-796.9436},{\x22x1\x22:1883.0441,\x22y1\x22:-796.9436,\x22x2\x22:1903.8215,\x22y2\x22:-799.2156},{\x22x1\x22:1903.8215,\x22y1\x22:-799.2156,\x22x2\x22:1910.3678,\x22y2\x22:-794.5317},{\x22x1\x22:1910.3678,\x22y1\x22:-794.5317,\x22x2\x22:1916.6868,\x22y2\x22:-800.0507},{\x22x1\x22:1916.6879,\x22y1\x22:-800.0513,\x22x2\x22:1917.4712,\x22y2\x22:-804.2245},{\x22x1\x22:1917.4712,\x22y1\x22:-804.2245,\x22x2\x22:1913.6578,\x22y2\x22:-811.9556},{\x22x1\x22:1913.6578,\x22y1\x22:-811.9556,\x22x2\x22:1915.8168,\x22y2\x22:-820.6632},{\x22x1\x22:1915.8165,\x22y1\x22:-820.6651,\x22x2\x22:1914.0691,\x22y2\x22:-836.9367},{\x22x1\x22:1914.0685,\x22y1\x22:-836.9388,\x22x2\x22:1900.8972,\x22y2\x22:-847.8331},{\x22x1\x22:1900.8855,\x22y1\x22:-847.8401,\x22x2\x22:1889.1661,\x22y2\x22:-847.6701},{\x22x1\x22:1889.1661,\x22y1\x22:-847.6701,\x22x2\x22:1880.7593,\x22y2\x22:-845.7191},{\x22x1\x22:1880.7588,\x22y1\x22:-845.719,\x22x2\x22:1873.8499,\x22y2\x22:-850.9732},{\x22x1\x22:1873.8494,\x22y1\x22:-850.9735,\x22x2\x22:1862.7468,\x22y2\x22:-837.1022},{\x22x1\x22:1862.7404,\x22y1\x22:-837.094,\x22x2\x22:1867.2183,\x22y2\x22:-832.561},{\x22x1\x22:1867.2183,\x22y1\x22:-832.561,\x22x2\x22:1866.0349,\x22y2\x22:-824.1665},{\x22x1\x22:2471.2795,\x22y1\x22:-295.5437,\x22x2\x22:2496.0066,\x22y2\x22:-308.8875},{\x22x1\x22:2496.0066,\x22y1\x22:-308.8871,\x22x2\x22:2519.7214,\x22y2\x22:-342.4012},{\x22x1\x22:2519.7273,\x22y1\x22:-342.4033,\x22x2\x22:2547.5251,\x22y2\x22:-352.4052},{\x22x1\x22:2547.5256,\x22y1\x22:-352.4054,\x22x2\x22:2544.0784,\x22y2\x22:-361.4933},{\x22x1\x22:2544.0784,\x22y1\x22:-361.4933,\x22x2\x22:2608.791,\x22y2\x22:-361.4521},{\x22x1\x22:2608.791,\x22y1\x22:-361.4521,\x22x2\x22:2608.2661,\x22y2\x22:-523.6417},{\x22x1\x22:2608.2661,\x22y1\x22:-523.6417,\x22x2\x22:2544.0366,\x22y2\x22:-524.3805},{\x22x1\x22:2544.0366,\x22y1\x22:-524.3805,\x22x2\x22:2544.0691,\x22y2\x22:-535.4777},{\x22x1\x22:2544.0691,\x22y1\x22:-535.4777,\x22x2\x22:2518.9106,\x22y2\x22:-543.6909},{\x22x1\x22:2518.9106,\x22y1\x22:-543.6909,\x22x2\x22:2509.5037,\x22y2\x22:-563.2617},{\x22x1\x22:2509.5037,\x22y1\x22:-563.2617,\x22x2\x22:2479.0596,\x22y2\x22:-587.2827},{\x22x1\x22:2479.0596,\x22y1\x22:-587.2827,\x22x2\x22:2466.2556,\x22y2\x22:-589.3909},{\x22x1\x22:2466.2556,\x22y1\x22:-589.3909,\x22x2\x22:2466.4661,\x22y2\x22:-585.0254},{\x22x1\x22:2466.4661,\x22y1\x22:-585.0236,\x22x2\x22:2493.7268,\x22y2\x22:-570.3228},{\x22x1\x22:2493.7268,\x22y1\x22:-570.3228,\x22x2\x22:2508.8201,\x22y2\x22:-548.7073},{\x22x1\x22:2508.8206,\x22y1\x22:-548.7056,\x22x2\x22:2514.6187,\x22y2\x22:-536.8177},{\x22x1\x22:2514.6228,\x22y1\x22:-536.8073,\x22x2\x22:2535.658,\x22y2\x22:-530.3142},{\x22x1\x22:2535.6624,\x22y1\x22:-530.3127,\x22x2\x22:2536.3064,\x22y2\x22:-503.7427},{\x22x1\x22:2536.3064,\x22y1\x22:-503.7219,\x22x2\x22:2514.8252,\x22y2\x22:-501.5548},{\x22x1\x22:2514.8196,\x22y1\x22:-501.5546,\x22x2\x22:2520.0483,\x22y2\x22:-496.8587},{\x22x1\x22:2520.0483,\x22y1\x22:-496.8587,\x22x2\x22:2520.063,\x22y2\x22:-453.0075},{\x22x1\x22:2520.063,\x22y1\x22:-453.0075,\x22x2\x22:2545.5549,\x22y2\x22:-454.0908},{\x22x1\x22:2545.5549,\x22y1\x22:-454.0908,\x22x2\x22:2545.4539,\x22y2\x22:-459.5081},{\x22x1\x22:2545.4502,\x22y1\x22:-459.5155,\x22x2\x22:2527.2832,\x22y2\x22:-458.8227},{\x22x1\x22:2527.2832,\x22y1\x22:-458.8227,\x22x2\x22:2531.1375,\x22y2\x22:-494.1074},{\x22x1\x22:2531.2317,\x22y1\x22:-494.1068,\x22x2\x22:2544.114,\x22y2\x22:-494.1185},{\x22x1\x22:2544.1384,\x22y1\x22:-494.1186,\x22x2\x22:2540.4426,\x22y2\x22:-515.0114},{\x22x1\x22:2540.4426,\x22y1\x22:-515.0114,\x22x2\x22:2590.9631,\x22y2\x22:-515.0117},{\x22x1\x22:2590.9631,\x22y1\x22:-515.0117,\x22x2\x22:2587.9236,\x22y2\x22:-458.8246},{\x22x1\x22:2587.9326,\x22y1\x22:-458.8246,\x22x2\x22:2586.3662,\x22y2\x22:-450.6656},{\x22x1\x22:2588.0171,\x22y1\x22:-450.9712,\x22x2\x22:2600.3591,\x22y2\x22:-454.0972},{\x22x1\x22:2600.3591,\x22y1\x22:-454.0972,\x22x2\x22:2600.3755,\x22y2\x22:-431.7476},{\x22x1\x22:2600.3755,\x22y1\x22:-431.7476,\x22x2\x22:2582.7563,\x22y2\x22:-431.7187},{\x22x1\x22:2582.7561,\x22y1\x22:-431.7186,\x22x2\x22:2590.9631,\x22y2\x22:-370.8503},{\x22x1\x22:2590.9631,\x22y1\x22:-370.8503,\x22x2\x22:2540.4189,\x22y2\x22:-370.8304},{\x22x1\x22:2540.4189,\x22y1\x22:-370.8304,\x22x2\x22:2540.4011,\x22y2\x22:-392.1943},{\x22x1\x22:2540.4009,\x22y1\x22:-392.1947,\x22x2\x22:2527.2764,\x22y2\x22:-391.7593},{\x22x1\x22:2527.2764,\x22y1\x22:-391.7593,\x22x2\x22:2531.1875,\x22y2\x22:-427.0109},{\x22x1\x22:2531.2056,\x22y1\x22:-427.0107,\x22x2\x22:2547.1785,\x22y2\x22:-427.0442},{\x22x1\x22:2547.2605,\x22y1\x22:-427.0453,\x22x2\x22:2546.0383,\x22y2\x22:-433.9615},{\x22x1\x22:2546.0383,\x22y1\x22:-433.9615,\x22x2\x22:2521.3435,\x22y2\x22:-431.7556},{\x22x1\x22:2521.3379,\x22y1\x22:-431.7556,\x22x2\x22:2520.0486,\x22y2\x22:-388.9867},{\x22x1\x22:2520.0486,\x22y1\x22:-388.9867,\x22x2\x22:2513.7039,\x22y2\x22:-386.3248},{\x22x1\x22:2513.7039,\x22y1\x22:-386.3248,\x22x2\x22:2516.3047,\x22y2\x22:-383.9087},{\x22x1\x22:2516.3057,\x22y1\x22:-383.9031,\x22x2\x22:2536.4336,\x22y2\x22:-384.2579},{\x22x1\x22:2536.4336,\x22y1\x22:-384.2579,\x22x2\x22:2538.0056,\x22y2\x22:-354.7722},{\x22x1\x22:2538.0056,\x22y1\x22:-354.7722,\x22x2\x22:2513.2283,\x22y2\x22:-347.5598},{\x22x1\x22:2513.2212,\x22y1\x22:-347.5523,\x22x2\x22:2502.5444,\x22y2\x22:-328.1694},{\x22x1\x22:2502.5413,\x22y1\x22:-328.1649,\x22x2\x22:2486.2632,\x22y2\x22:-313.0492},{\x22x1\x22:2486.2632,\x22y1\x22:-313.0492,\x22x2\x22:2469.709,\x22y2\x22:-297.5898},{\x22x1\x22:2469.7087,\x22y1\x22:-297.5898,\x22x2\x22:2471.2415,\x22y2\x22:-293.4553},{\x22x1\x22:2460.1162,\x22y1\x22:-557.5016,\x22x2\x22:2479.2251,\x22y2\x22:-543.0974},{\x22x1\x22:2479.2712,\x22y1\x22:-543.059,\x22x2\x22:2485.8672,\x22y2\x22:-521.4064},{\x22x1\x22:2485.8672,\x22y1\x22:-521.4064,\x22x2\x22:2485.9683,\x22y2\x22:-503.8621},{\x22x1\x22:2485.9683,\x22y1\x22:-503.8621,\x22x2\x22:2473.9292,\x22y2\x22:-503.8666},{\x22x1\x22:2473.9185,\x22y1\x22:-503.8666,\x22x2\x22:2471.6604,\x22y2\x22:-470.025},{\x22x1\x22:2471.6604,\x22y1\x22:-470.025,\x22x2\x22:2482.8311,\x22y2\x22:-471.0552},{\x22x1\x22:2482.8311,\x22y1\x22:-471.0552,\x22x2\x22:2482.8201,\x22y2\x22:-414.7507},{\x22x1\x22:2482.8201,\x22y1\x22:-414.7507,\x22x2\x22:2470.6926,\x22y2\x22:-415.0103},{\x22x1\x22:2470.6926,\x22y1\x22:-415.0103,\x22x2\x22:2469.97,\x22y2\x22:-395.4731},{\x22x1\x22:2469.97,\x22y1\x22:-395.4731,\x22x2\x22:2473.0854,\x22y2\x22:-391.2805},{\x22x1\x22:2473.0842,\x22y1\x22:-391.265,\x22x2\x22:2473.0769,\x22y2\x22:-383.3774},{\x22x1\x22:2473.0764,\x22y1\x22:-383.3759,\x22x2\x22:2485.968,\x22y2\x22:-381.9801},{\x22x1\x22:2485.968,\x22y1\x22:-381.9801,\x22x2\x22:2482.1057,\x22y2\x22:-348.5033},{\x22x1\x22:2482.105,\x22y1\x22:-348.5027,\x22x2\x22:2471.8362,\x22y2\x22:-334.707},{\x22x1\x22:2471.8357,\x22y1\x22:-334.7068,\x22x2\x22:2460.7168,\x22y2\x22:-327.4759},{\x22x1\x22:2460.7117,\x22y1\x22:-327.473,\x22x2\x22:2462.9524,\x22y2\x22:-318.9518},{\x22x1\x22:2462.9524,\x22y1\x22:-318.9518,\x22x2\x22:2477.7158,\x22y2\x22:-328.5512},{\x22x1\x22:2477.7158,\x22y1\x22:-328.5512,\x22x2\x22:2491.813,\x22y2\x22:-348.5229},{\x22x1\x22:2494.3784,\x22y1\x22:-391.1819,\x22x2\x22:2491.813,\x22y2\x22:-348.5229},{\x22x1\x22:2494.3784,\x22y1\x22:-391.1819,\x22x2\x22:2481.4399,\x22y2\x22:-389.0229},{\x22x1\x22:2481.4399,\x22y1\x22:-389.0229,\x22x2\x22:2481.0305,\x22y2\x22:-407.8123},{\x22x1\x22:2481.0305,\x22y1\x22:-407.8123,\x22x2\x22:2493.2271,\x22y2\x22:-410.9351},{\x22x1\x22:2493.3313,\x22y1\x22:-411.0472,\x22x2\x22:2490.2988,\x22y2\x22:-477.7915},{\x22x1\x22:2490.3035,\x22y1\x22:-477.789,\x22x2\x22:2480.9951,\x22y2\x22:-478.0419},{\x22x1\x22:2480.9951,\x22y1\x22:-478.0419,\x22x2\x22:2481.0627,\x22y2\x22:-496.8593},{\x22x1\x22:2481.0627,\x22y1\x22:-496.8593,\x22x2\x22:2492.48,\x22y2\x22:-496.8452},{\x22x1\x22:2492.48,\x22y1\x22:-496.8452,\x22x2\x22:2492.3396,\x22y2\x22:-537.0851},{\x22x1\x22:2492.3396,\x22y1\x22:-537.0851,\x22x2\x22:2484.8821,\x22y2\x22:-548.043},{\x22x1\x22:2484.8784,\x22y1\x22:-548.0468,\x22x2\x22:2473.5332,\x22y2\x22:-561.5347},{\x22x1\x22:2463.9768,\x22y1\x22:-563.4294,\x22x2\x22:2474.7773,\x22y2\x22:-560.9797},{\x22x1\x22:2463.9768,\x22y1\x22:-563.4294,\x22x2\x22:2462.6228,\x22y2\x22:-561.3501},{\x22x1\x22:2462.6184,\x22y1\x22:-561.3443,\x22x2\x22:2460.1162,\x22y2\x22:-557.5016},{\x22x1\x22:701.7264,\x22y1\x22:798.4384,\x22x2\x22:725.4625,\x22y2\x22:798.5981},{\x22x1\x22:725.4625,\x22y1\x22:798.5981,\x22x2\x22:736.8058,\x22y2\x22:714.4476},{\x22x1\x22:736.8058,\x22y1\x22:714.4476,\x22x2\x22:817.2867,\x22y2\x22:615.1958},{\x22x1\x22:817.2867,\x22y1\x22:615.1958,\x22x2\x22:944.3553,\x22y2\x22:553.679},{\x22x1\x22:944.3553,\x22y1\x22:553.679,\x22x2\x22:1083.8707,\x22y2\x22:517.6878},{\x22x1\x22:1083.8723,\x22y1\x22:517.6919,\x22x2\x22:1207.4653,\x22y2\x22:457.1735},{\x22x1\x22:1207.4653,\x22y1\x22:457.1735,\x22x2\x22:1351.5299,\x22y2\x22:455.4204},{\x22x1\x22:1351.5299,\x22y1\x22:455.4204,\x22x2\x22:1447.6165,\x22y2\x22:461.9794},{\x22x1\x22:1447.6165,\x22y1\x22:461.9794,\x22x2\x22:1547.368,\x22y2\x22:520.4767},{\x22x1\x22:1547.4116,\x22y1\x22:520.9998,\x22x2\x22:1622.0486,\x22y2\x22:633.7167},{\x22x1\x22:1622.0486,\x22y1\x22:633.7167,\x22x2\x22:1671.4683,\x22y2\x22:770.2375},{\x22x1\x22:1671.4685,\x22y1\x22:770.2384,\x22x2\x22:1691.3445,\x22y2\x22:761.8095},{\x22x1\x22:1691.3445,\x22y1\x22:761.8095,\x22x2\x22:1645.3729,\x22y2\x22:644.8015},{\x22x1\x22:1645.381,\x22y1\x22:644.7963,\x22x2\x22:1577.0516,\x22y2\x22:515.8017},{\x22x1\x22:1577.0647,\x22y1\x22:515.7821,\x22x2\x22:1470.2389,\x22y2\x22:447.3696},{\x22x1\x22:1470.239,\x22y1\x22:447.3669,\x22x2\x22:1372.7854,\x22y2\x22:441.093},{\x22x1\x22:1372.7854,\x22y1\x22:441.093,\x22x2\x22:1230.3965,\x22y2\x22:441.0639},{\x22x1\x22:1230.396,\x22y1\x22:441.0639,\x22x2\x22:1208.3535,\x22y2\x22:437.4729},{\x22x1\x22:1208.3535,\x22y1\x22:437.4729,\x22x2\x22:1096.0026,\x22y2\x22:493.366},{\x22x1\x22:966.6528,\x22y1\x22:532.2127,\x22x2\x22:1096.0023,\x22y2\x22:493.372},{\x22x1\x22:961.0612,\x22y1\x22:533.7582,\x22x2\x22:829.6375,\x22y2\x22:591.3874},{\x22x1\x22:829.6375,\x22y1\x22:591.3874,\x22x2\x22:801.8594,\x22y2\x22:611.3083},{\x22x1\x22:801.8594,\x22y1\x22:611.3083,\x22x2\x22:739.6568,\x22y2\x22:685.4068},{\x22x1\x22:739.5588,\x22y1\x22:685.5218,\x22x2\x22:720.6469,\x22y2\x22:702.4714},{\x22x1\x22:720.6367,\x22y1\x22:702.483,\x22x2\x22:703.8439,\x22y2\x22:798.5823},{\x22x1\x22:1291.6763,\x22y1\x22:889.0911,\x22x2\x22:1258.4969,\x22y2\x22:889.1549},{\x22x1\x22:1258.4924,\x22y1\x22:889.1551,\x22x2\x22:1258.4924,\x22y2\x22:889.1551},{\x22x1\x22:1258.0695,\x22y1\x22:888.8734,\x22x2\x22:1265.5426,\x22y2\x22:893.3792},{\x22x1\x22:1265.5695,\x22y1\x22:893.3947,\x22x2\x22:1278.8812,\x22y2\x22:894.3958},{\x22x1\x22:1278.8812,\x22y1\x22:894.3958,\x22x2\x22:1290.0314,\x22y2\x22:913.0462},{\x22x1\x22:1290.0381,\x22y1\x22:913.0581,\x22x2\x22:1309.0465,\x22y2\x22:922.8477},{\x22x1\x22:1309.0465,\x22y1\x22:922.8477,\x22x2\x22:1330.7758,\x22y2\x22:922.0693},{\x22x1\x22:1330.7777,\x22y1\x22:922.0692,\x22x2\x22:1349.5793,\x22y2\x22:910.4548},{\x22x1\x22:1359.1661,\x22y1\x22:891.9499,\x22x2\x22:1348.4719,\x22y2\x22:910.4799},{\x22x1\x22:1359.4659,\x22y1\x22:891.5104,\x22x2\x22:1358.8452,\x22y2\x22:865.3244},{\x22x1\x22:1358.8452,\x22y1\x22:865.292,\x22x2\x22:1345.6387,\x22y2\x22:848.1324},{\x22x1\x22:1345.6306,\x22y1\x22:848.119,\x22x2\x22:1329.5813,\x22y2\x22:840.7669},{\x22x1\x22:1329.5779,\x22y1\x22:840.7653,\x22x2\x22:1307.5585,\x22y2\x22:841.4556},{\x22x1\x22:1307.5551,\x22y1\x22:841.4554,\x22x2\x22:1288.4751,\x22y2\x22:852.5541},{\x22x1\x22:1288.4642,\x22y1\x22:852.5599,\x22x2\x22:1278.3816,\x22y2\x22:869.1874},{\x22x1\x22:1278.3799,\x22y1\x22:869.1874,\x22x2\x22:1260.9565,\x22y2\x22:871.8565},{\x22x1\x22:1259.9838,\x22y1\x22:876.1777,\x22x2\x22:1293.5503,\x22y2\x22:874.6691},{\x22x1\x22:1299.0258,\x22y1\x22:861.3811,\x22x2\x22:1293.7522,\x22y2\x22:876.4641},{\x22x1\x22:1299.1903,\x22y1\x22:861.2878,\x22x2\x22:1314.6199,\x22y2\x22:854.3867},{\x22x1\x22:1314.6199,\x22y1\x22:854.3867,\x22x2\x22:1325.7999,\x22y2\x22:854.3757},{\x22x1\x22:1325.8035,\x22y1\x22:854.3757,\x22x2\x22:1339.9312,\x22y2\x22:864.1235},{\x22x1\x22:1339.9368,\x22y1\x22:864.1338,\x22x2\x22:1345.8613,\x22y2\x22:878.6448},{\x22x1\x22:1345.8606,\x22y1\x22:878.6713,\x22x2\x22:1344.6239,\x22y2\x22:891.2889},{\x22x1\x22:1344.6234,\x22y1\x22:891.2895,\x22x2\x22:1337.4988,\x22y2\x22:902.4359},{\x22x1\x22:1337.4988,\x22y1\x22:902.4359,\x22x2\x22:1325.967,\x22y2\x22:909.08},{\x22x1\x22:1310.7849,\x22y1\x22:908.9559,\x22x2\x22:1327.4822,\x22y2\x22:908.2095},{\x22x1\x22:1312.1748,\x22y1\x22:909.1684,\x22x2\x22:1298.7371,\x22y2\x22:901.9686},{\x22x1\x22:1298.7346,\x22y1\x22:901.9672,\x22x2\x22:1294.6971,\x22y2\x22:890.706},{\x22x1\x22:1294.6971,\x22y1\x22:890.7059,\x22x2\x22:1286.9561,\x22y2\x22:889.1875},{\x22x1\x22:1262.6984,\x22y1\x22:871.9442,\x22x2\x22:1262.14,\x22y2\x22:876.9925},{\x22x1\x22:1490.3878,\x22y1\x22:706.3012,\x22x2\x22:1509.5145,\x22y2\x22:716.4688},{\x22x1\x22:1509.5321,\x22y1\x22:716.4701,\x22x2\x22:1520.8942,\x22y2\x22:697.5383},{\x22x1\x22:1520.9789,\x22y1\x22:697.4109,\x22x2\x22:1501.8326,\x22y2\x22:686.2521},{\x22x1\x22:1501.8182,\x22y1\x22:686.2437,\x22x2\x22:1501.8182,\x22y2\x22:686.2437},{\x22x1\x22:1501.8182,\x22y1\x22:686.2437,\x22x2\x22:1490.3196,\x22y2\x22:704.7792},{\x22x1\x22:684.4884,\x22y1\x22:515.6581,\x22x2\x22:905.3071,\x22y2\x22:415.9211},{\x22x1\x22:905.3071,\x22y1\x22:415.9211,\x22x2\x22:823.2103,\x22y2\x22:272.9597},{\x22x1\x22:823.2083,\x22y1\x22:272.9568,\x22x2\x22:610.38,\x22y2\x22:362.5434},{\x22x1\x22:610.3779,\x22y1\x22:362.5432,\x22x2\x22:683.3989,\x22y2\x22:515.643},{\x22x1\x22:-118.7818,\x22y1\x22:10.2674,\x22x2\x22:-118.9492,\x22y2\x22:-12.4531}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:100639,\x22x\x22:2393.875,\x22y\x22:-192.625,\x22z\x22:-231.875},{\x22spawn_group_id\x22:100640,\x22x\x22:2361.375,\x22y\x22:-465.375,\x22z\x22:-228},{\x22spawn_group_id\x22:100645,\x22x\x22:2321.125,\x22y\x22:-775.875,\x22z\x22:-232.875},{\x22spawn_group_id\x22:100652,\x22x\x22:2471.375,\x22y\x22:-321.75,\x22z\x22:-224.25},{\x22spawn_group_id\x22:100656,\x22x\x22:2474.25,\x22y\x22:-571.125,\x22z\x22:-224.25},{\x22spawn_group_id\x22:100657,\x22x\x22:2504.75,\x22y\x22:-450,\x22z\x22:-216.25},{\x22spawn_group_id\x22:100664,\x22x\x22:2555.75,\x22y\x22:-424.25,\x22z\x22:-216.25},{\x22spawn_group_id\x22:100667,\x22x\x22:2581.25,\x22y\x22:-396.125,\x22z\x22:-216.25},{\x22spawn_group_id\x22:100670,\x22x\x22:2624.5,\x22y\x22:8.875,\x22z\x22:-232.875},{\x22spawn_group_id\x22:100671,\x22x\x22:2609.75,\x22y\x22:-315.375,\x22z\x22:-230},{\x22spawn_group_id\x22:100672,\x22x\x22:2584.375,\x22y\x22:-497.625,\x22z\x22:-216.25},{\x22spawn_group_id\x22:100674,\x22x\x22:2567.875,\x22y\x22:-592.125,\x22z\x22:-228.75},{\x22spawn_group_id\x22:100675,\x22x\x22:2586.875,\x22y\x22:-574.125,\x22z\x22:-228.25},{\x22spawn_group_id\x22:100676,\x22x\x22:2632,\x22y\x22:-309.5,\x22z\x22:-230.375},{\x22spawn_group_id\x22:100689,\x22x\x22:2441.75,\x22y\x22:573.625,\x22z\x22:-231.875},{\x22spawn_group_id\x22:100724,\x22x\x22:2393.875,\x22y\x22:-192.625,\x22z\x22:-230.875},{\x22spawn_group_id\x22:100729,\x22x\x22:2624.5,\x22y\x22:8.875,\x22z\x22:-231.875},{\x22spawn_group_id\x22:100768,\x22x\x22:2399.25,\x22y\x22:-199.75,\x22z\x22:-231.125}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

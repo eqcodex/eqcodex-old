@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>an enraged shiverback | EQCodex</title>
+    
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Everquest Codex</a>
+            </div>
+            
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> ProjectEQ <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> Classic
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Kunark
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Velious
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Luclin
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> ProjectEQ
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form action="https://www.google.com/search" method="get">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" method="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="/zone.html"><i class="fa fa-dashboard fa-fw"></i> Zone Level Chart</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        
+<link href="/css/icons.css" rel="stylesheet">
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">an enraged shiverback</h1>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+
+                            <table>
+                            <tr><td>Level:</td><td>89</td></tr>
+                            <tr><td>HP:</td><td>8811</td></tr>
+                            <tr><td>Damage:</td><td>0-4</td></tr>
+                            <tr><td>Zone:</td><td>Fear Itself</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                    <div id="map_container" style="width: 100%; height: 200px; border:1px solid black; ">
+                        <svg id="map_svg" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"></svg>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+
+             
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="panel panel-default">
+                        <div class="panel-body">                            
+                            <p>an enraged shiverback Drops</p>
+                            <input type="button" value="Filter" id="advanced">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" id="item-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Category</th>
+                                            <th>Era</th>
+                                            <th>Quest</th>
+                                        </tr>                                
+                                        </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td><a href="/item/Aderirse-Bur-35089.html">Aderirse Bur</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Blue-Diamond-22503.html">Blue Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Diamond-10037.html">Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dream-Dust-46979.html">Dream Dust</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dream-Meat-61242.html">Dream Meat</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Dream-Sapphire-62582.html">Dream Sapphire</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Adepts-Shard-50459.html">Elegant Adept&#39;s Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Buckler-50631.html">Elegant Defiant Buckler</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Goshenite-50617.html">Elegant Defiant Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Knuckle-Guards-50625.html">Elegant Defiant Knuckle Guards</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Elegant-Defiant-Square-Hammer-50619.html">Elegant Defiant Square Hammer</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Extruded-Underfoot-Diamond-47099.html">Extruded Underfoot Diamond</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Fleshborn-Wristband-120920.html">Fleshborn Wristband</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Glowing-Nebulous-Dream-Fragment-53762.html">Glowing Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Greater-Nebulous-Dream-Fragment-53761.html">Greater Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Harmonagate-97003.html">Harmonagate</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Lesser-Nebulous-Dream-Fragment-53759.html">Lesser Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Liquid-Nightmare-66977.html">Liquid Nightmare</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Median-Nebulous-Dream-Fragment-53760.html">Median Nebulous Dream Fragment</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Miragestone-81160.html">Miragestone</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nightmare-Ruby-62583.html">Nightmare Ruby</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Nightmarish-Leather-Coat-120927.html">Nightmarish Leather Coat</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Petite-Dark-Fear-Shard-72349.html">Petite Dark Fear Shard</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Prestidigitase-97001.html">Prestidigitase</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Amber-Nihilite-37859.html">Raw Amber Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Crimson-Nihilite-58067.html">Raw Crimson Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Indigo-Nihilite-37858.html">Raw Indigo Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Raw-Shimmering-Nihilite-58068.html">Raw Shimmering Nihilite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Scale-Ore-45891.html">Scale Ore</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Skeletal-Remains-50798.html">Skeletal Remains</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Staurolite-97002.html">Staurolite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Taaffeite-97286.html">Taaffeite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Twisted-Gorilla-Hand-61356.html">Twisted Gorilla Hand</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Alexandrite-37847.html">Uncut Alexandrite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Amethyst-37844.html">Uncut Amethyst</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Black-Sapphire-37846.html">Uncut Black Sapphire</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Combine-Star-37845.html">Uncut Combine Star</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Demantoid-37851.html">Uncut Demantoid</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Goshenite-37848.html">Uncut Goshenite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Jacinth-37850.html">Uncut Jacinth</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Morganite-37849.html">Uncut Morganite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Uncut-Rubellite-37852.html">Uncut Rubellite</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            <tr>
+                                <td><a href="/item/Urticaceae-35086.html">Urticaceae</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </div>
+                            
+                            </tbody>
+                            </table>
+                                   
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <script type="text/javascript" src="/js/map/svg-pan-zoom.js"></script>
+    <script type="text/javascript" src="/js/map/snap.svg.js"></script>
+            <script>
+$(document).ready(function() {
+    $('#filtermob').click(function() {
+        $('#item-table').DataTable({
+            responsive: true
+        });
+        $('#advanced').hide();
+    });
+
+
+    var spawn_points;
+    var s = Snap("#map_svg");
+    var map_group;
+
+    var spawnData = unescape("{\x22lines\x22:[{\x22x1\x22:-1264.7682,\x22y1\x22:137.6824,\x22x2\x22:-1279.3199,\x22y2\x22:123.1703},{\x22x1\x22:-1326.5989,\x22y1\x22:199.5152,\x22x2\x22:-1264.7682,\x22y2\x22:137.6824},{\x22x1\x22:-1374.9822,\x22y1\x22:150.9864,\x22x2\x22:-1326.5989,\x22y2\x22:199.5152},{\x22x1\x22:-1313.2219,\x22y1\x22:89.1778,\x22x2\x22:-1374.9822,\x22y2\x22:150.9864},{\x22x1\x22:-1298.7168,\x22y1\x22:103.713,\x22x2\x22:-1313.2219,\x22y2\x22:89.1778},{\x22x1\x22:-561.0129,\x22y1\x22:-647.821,\x22x2\x22:-240.1541,\x22y2\x22:-647.7227},{\x22x1\x22:-240.1541,\x22y1\x22:-647.7227,\x22x2\x22:-241.7334,\x22y2\x22:-968.0273},{\x22x1\x22:-211.9358,\x22y1\x22:-774.2644,\x22x2\x22:-334.3671,\x22y2\x22:-774.2698},{\x22x1\x22:-561.0129,\x22y1\x22:-647.821,\x22x2\x22:-561.0035,\x22y2\x22:-968.0327},{\x22x1\x22:-561.0035,\x22y1\x22:-968.0327,\x22x2\x22:-241.7334,\x22y2\x22:-968.0273},{\x22x1\x22:-211.9335,\x22y1\x22:-841.565,\x22x2\x22:-334.3863,\x22y2\x22:-841.5668},{\x22x1\x22:-211.9335,\x22y1\x22:-841.565,\x22x2\x22:-211.9358,\x22y2\x22:-774.2644},{\x22x1\x22:-333.2124,\x22y1\x22:-874.2121,\x22x2\x22:-334.3863,\x22y2\x22:-841.5668},{\x22x1\x22:-333.2124,\x22y1\x22:-874.2121,\x22x2\x22:-467.2494,\x22y2\x22:-874.2768},{\x22x1\x22:-467.2494,\x22y1\x22:-874.2768,\x22x2\x22:-467.2372,\x22y2\x22:-741.5881},{\x22x1\x22:-467.2372,\x22y1\x22:-741.5881,\x22x2\x22:-333.5677,\x22y2\x22:-741.5995},{\x22x1\x22:-333.5677,\x22y1\x22:-741.5995,\x22x2\x22:-334.3671,\x22y2\x22:-774.2698},{\x22x1\x22:-302.5206,\x22y1\x22:-774.2628,\x22x2\x22:-302.5094,\x22y2\x22:-709.8026},{\x22x1\x22:-302.5094,\x22y1\x22:-709.8026,\x22x2\x22:-499.2347,\x22y2\x22:-709.7653},{\x22x1\x22:-499.3348,\x22y1\x22:-769.2663,\x22x2\x22:-499.2347,\x22y2\x22:-709.7653},{\x22x1\x22:-499.3329,\x22y1\x22:-780.065,\x22x2\x22:-499.2909,\x22y2\x22:-906.082},{\x22x1\x22:-499.2909,\x22y1\x22:-906.082,\x22x2\x22:-302.5354,\x22y2\x22:-905.9915},{\x22x1\x22:-302.5354,\x22y1\x22:-905.9915,\x22x2\x22:-302.5133,\x22y2\x22:-841.5656},{\x22x1\x22:-302.5133,\x22y1\x22:-841.5656,\x22x2\x22:-282.9394,\x22y2\x22:-841.5718},{\x22x1\x22:-302.5278,\x22y1\x22:-774.2644,\x22x2\x22:-289.2917,\x22y2\x22:-774.2629},{\x22x1\x22:-289.2917,\x22y1\x22:-774.2629,\x22x2\x22:-276.9987,\x22y2\x22:-774.2198},{\x22x1\x22:-452.0363,\x22y1\x22:-780.5753,\x22x2\x22:-452.1054,\x22y2\x22:-799.1786},{\x22x1\x22:-452.1054,\x22y1\x22:-799.1786,\x22x2\x22:-464.0708,\x22y2\x22:-799.3515},{\x22x1\x22:-464.0708,\x22y1\x22:-799.3515,\x22x2\x22:-464.0337,\x22y2\x22:-820.266},{\x22x1\x22:-452.0756,\x22y1\x22:-820.2883,\x22x2\x22:-464.0337,\x22y2\x22:-820.266},{\x22x1\x22:-441.0305,\x22y1\x22:-820.4245,\x22x2\x22:-429.0434,\x22y2\x22:-820.1992},{\x22x1\x22:-429.0434,\x22y1\x22:-820.1992,\x22x2\x22:-429.0306,\x22y2\x22:-799.2512},{\x22x1\x22:-441.0335,\x22y1\x22:-799.2697,\x22x2\x22:-429.0306,\x22y2\x22:-799.2512},{\x22x1\x22:-441.0335,\x22y1\x22:-799.2697,\x22x2\x22:-441.067,\x22y2\x22:-752.2719},{\x22x1\x22:-452.0756,\x22y1\x22:-820.2883,\x22x2\x22:-452.0556,\x22y2\x22:-867.8543},{\x22x1\x22:-441.0305,\x22y1\x22:-820.4245,\x22x2\x22:-441.0499,\x22y2\x22:-839.2473},{\x22x1\x22:-441.0499,\x22y1\x22:-839.2473,\x22x2\x22:-396.067,\x22y2\x22:-839.2647},{\x22x1\x22:-366.0732,\x22y1\x22:-853.2493,\x22x2\x22:-385.0421,\x22y2\x22:-853.2556},{\x22x1\x22:-366.069,\x22y1\x22:-864.1673,\x22x2\x22:-366.0706,\x22y2\x22:-876.2805},{\x22x1\x22:-366.0732,\x22y1\x22:-853.2493,\x22x2\x22:-366.0732,\x22y2\x22:-827.2551},{\x22x1\x22:-452.0665,\x22y1\x22:-769.2476,\x22x2\x22:-499.3348,\x22y2\x22:-769.2663},{\x22x1\x22:-452.0665,\x22y1\x22:-769.2476,\x22x2\x22:-452.0723,\x22y2\x22:-741.2522},{\x22x1\x22:-452.0723,\x22y1\x22:-741.2522,\x22x2\x22:-421.7961,\x22y2\x22:-741.2578},{\x22x1\x22:-441.067,\x22y1\x22:-752.2719,\x22x2\x22:-422.5125,\x22y2\x22:-752.2889},{\x22x1\x22:-359.0427,\x22y1\x22:-764.2814,\x22x2\x22:-359.0433,\x22y2\x22:-752.2515},{\x22x1\x22:-359.0434,\x22y1\x22:-729.2518,\x22x2\x22:-359.0441,\x22y2\x22:-741.3644},{\x22x1\x22:-359.0433,\x22y1\x22:-752.2515,\x22x2\x22:-326.4696,\x22y2\x22:-752.2781},{\x22x1\x22:-340.0646,\x22y1\x22:-827.2542,\x22x2\x22:-340.0757,\x22y2\x22:-769.367},{\x22x1\x22:-329.045,\x22y1\x22:-780.5247,\x22x2\x22:-329.049,\x22y2\x22:-827.3652},{\x22x1\x22:-270.7463,\x22y1\x22:-885.8826,\x22x2\x22:-270.3094,\x22y2\x22:-938.1056},{\x22x1\x22:-270.7011,\x22y1\x22:-870.0984,\x22x2\x22:-270.6347,\x22y2\x22:-841.5665},{\x22x1\x22:-270.6347,\x22y1\x22:-841.5665,\x22x2\x22:-245.9037,\x22y2\x22:-841.5767},{\x22x1\x22:-270.3094,\x22y1\x22:-938.1056,\x22x2\x22:-530.9724,\x22y2\x22:-938.0061},{\x22x1\x22:-530.9724,\x22y1\x22:-938.0061,\x22x2\x22:-530.9307,\x22y2\x22:-677.8443},{\x22x1\x22:-530.9307,\x22y1\x22:-677.8443,\x22x2\x22:-270.8551,\x22y2\x22:-677.7294},{\x22x1\x22:-270.8551,\x22y1\x22:-677.7294,\x22x2\x22:-270.6354,\x22y2\x22:-774.2402},{\x22x1\x22:-270.6354,\x22y1\x22:-774.2402,\x22x2\x22:-245.3019,\x22y2\x22:-774.2416},{\x22x1\x22:-1300.6586,\x22y1\x22:-1267.4698,\x22x2\x22:-1300.6581,\x22y2\x22:-1175.8656},{\x22x1\x22:-1275.8784,\x22y1\x22:-1267.066,\x22x2\x22:-1300.6584,\x22y2\x22:-1267.4698},{\x22x1\x22:-1275.6971,\x22y1\x22:-1264.6418,\x22x2\x22:-1275.9198,\x22y2\x22:-1267.1843},{\x22x1\x22:-1280.1935,\x22y1\x22:-1259.9862,\x22x2\x22:-1275.6971,\x22y2\x22:-1264.6418},{\x22x1\x22:-1282.9045,\x22y1\x22:-1257.1479,\x22x2\x22:-1280.1935,\x22y2\x22:-1259.9862},{\x22x1\x22:-1282.4967,\x22y1\x22:-1253.451,\x22x2\x22:-1282.9045,\x22y2\x22:-1257.1479},{\x22x1\x22:-1282.6693,\x22y1\x22:-1248.1346,\x22x2\x22:-1282.4967,\x22y2\x22:-1253.451},{\x22x1\x22:-1283.0604,\x22y1\x22:-1242.9164,\x22x2\x22:-1282.6693,\x22y2\x22:-1248.1346},{\x22x1\x22:-1280.4432,\x22y1\x22:-1238.5441,\x22x2\x22:-1283.0604,\x22y2\x22:-1242.9164},{\x22x1\x22:-1283.1287,\x22y1\x22:-1233.9574,\x22x2\x22:-1280.4432,\x22y2\x22:-1238.5441},{\x22x1\x22:-1282.8955,\x22y1\x22:-1224.1755,\x22x2\x22:-1283.1287,\x22y2\x22:-1233.9574},{\x22x1\x22:-1279.4332,\x22y1\x22:-1218.5011,\x22x2\x22:-1282.8955,\x22y2\x22:-1224.1755},{\x22x1\x22:-1270.8474,\x22y1\x22:-1218.5011,\x22x2\x22:-1279.4332,\x22y2\x22:-1218.5011},{\x22x1\x22:-1270.8964,\x22y1\x22:-1214.8107,\x22x2\x22:-1270.8474,\x22y2\x22:-1218.5011},{\x22x1\x22:-1268.9789,\x22y1\x22:-1211.9384,\x22x2\x22:-1270.8964,\x22y2\x22:-1214.8107},{\x22x1\x22:-1268.3669,\x22y1\x22:-1209.4901,\x22x2\x22:-1268.9789,\x22y2\x22:-1211.9384},{\x22x1\x22:-1266.3326,\x22y1\x22:-1205.1857,\x22x2\x22:-1268.3669,\x22y2\x22:-1209.4901},{\x22x1\x22:-1259.8352,\x22y1\x22:-1205.0952,\x22x2\x22:-1266.3326,\x22y2\x22:-1205.1857},{\x22x1\x22:-1254.6327,\x22y1\x22:-1206.137,\x22x2\x22:-1259.8352,\x22y2\x22:-1205.0952},{\x22x1\x22:-1247.5961,\x22y1\x22:-1208.6642,\x22x2\x22:-1254.6327,\x22y2\x22:-1206.137},{\x22x1\x22:-1240.8923,\x22y1\x22:-1210.1779,\x22x2\x22:-1247.5961,\x22y2\x22:-1208.6642},{\x22x1\x22:-1232.7194,\x22y1\x22:-1209.6888,\x22x2\x22:-1240.8923,\x22y2\x22:-1210.1779},{\x22x1\x22:-1227.0659,\x22y1\x22:-1212.9926,\x22x2\x22:-1232.7194,\x22y2\x22:-1209.6888},{\x22x1\x22:-1223.298,\x22y1\x22:-1212.9926,\x22x2\x22:-1227.0659,\x22y2\x22:-1212.9926},{\x22x1\x22:-1223.2997,\x22y1\x22:-1213.7299,\x22x2\x22:-1223.298,\x22y2\x22:-1212.9926},{\x22x1\x22:-1223.2609,\x22y1\x22:-1175.8668,\x22x2\x22:-1223.2997,\x22y2\x22:-1213.7299},{\x22x1\x22:-1249.7081,\x22y1\x22:-1175.8833,\x22x2\x22:-1223.2598,\x22y2\x22:-1175.8657},{\x22x1\x22:-1279.4296,\x22y1\x22:-1175.891,\x22x2\x22:-1273.4901,\x22y2\x22:-1175.859},{\x22x1\x22:-1300.6539,\x22y1\x22:-1175.8635,\x22x2\x22:-1279.4296,\x22y2\x22:-1175.891},{\x22x1\x22:-911.9957,\x22y1\x22:-963.6155,\x22x2\x22:-900.5682,\x22y2\x22:-955.3608},{\x22x1\x22:-921.6873,\x22y1\x22:-972.0553,\x22x2\x22:-911.9957,\x22y2\x22:-963.6155},{\x22x1\x22:-935.9042,\x22y1\x22:-970.4807,\x22x2\x22:-921.6873,\x22y2\x22:-972.0553},{\x22x1\x22:-945.1921,\x22y1\x22:-974.6666,\x22x2\x22:-935.9042,\x22y2\x22:-970.4807},{\x22x1\x22:-955.3823,\x22y1\x22:-974.4162,\x22x2\x22:-945.1921,\x22y2\x22:-974.6666},{\x22x1\x22:-962.9716,\x22y1\x22:-972.7305,\x22x2\x22:-955.3823,\x22y2\x22:-974.4162},{\x22x1\x22:-977.624,\x22y1\x22:-970.6425,\x22x2\x22:-962.9716,\x22y2\x22:-972.7305},{\x22x1\x22:-989.0406,\x22y1\x22:-975.1868,\x22x2\x22:-977.624,\x22y2\x22:-970.6425},{\x22x1\x22:-998.9779,\x22y1\x22:-985.2347,\x22x2\x22:-989.0406,\x22y2\x22:-975.1868},{\x22x1\x22:-1009.186,\x22y1\x22:-998.2003,\x22x2\x22:-998.9779,\x22y2\x22:-985.2347},{\x22x1\x22:-1009.3917,\x22y1\x22:-1006.5384,\x22x2\x22:-1009.186,\x22y2\x22:-998.2003},{\x22x1\x22:-996.3906,\x22y1\x22:-1017.842,\x22x2\x22:-1009.3917,\x22y2\x22:-1006.5384},{\x22x1\x22:-1001.345,\x22y1\x22:-1023.5388,\x22x2\x22:-996.3906,\x22y2\x22:-1017.842},{\x22x1\x22:-1006.9014,\x22y1\x22:-1039.1375,\x22x2\x22:-1001.345,\x22y2\x22:-1023.5388},{\x22x1\x22:-1013.9155,\x22y1\x22:-1055.9017,\x22x2\x22:-1006.9014,\x22y2\x22:-1039.1375},{\x22x1\x22:-1024.7483,\x22y1\x22:-1066.3752,\x22x2\x22:-1013.9326,\x22y2\x22:-1055.9017},{\x22x1\x22:-1038.8171,\x22y1\x22:-1066.0682,\x22x2\x22:-1024.7483,\x22y2\x22:-1066.3752},{\x22x1\x22:-1051.6793,\x22y1\x22:-1066.8547,\x22x2\x22:-1038.8171,\x22y2\x22:-1066.0682},{\x22x1\x22:-1061.4995,\x22y1\x22:-1080.7173,\x22x2\x22:-1051.6793,\x22y2\x22:-1066.8547},{\x22x1\x22:-1058.9894,\x22y1\x22:-1093.0458,\x22x2\x22:-1061.4995,\x22y2\x22:-1080.7173},{\x22x1\x22:-1055.6033,\x22y1\x22:-1105.9352,\x22x2\x22:-1058.9894,\x22y2\x22:-1093.0458},{\x22x1\x22:-1045.3339,\x22y1\x22:-1116.9998,\x22x2\x22:-1055.6033,\x22y2\x22:-1105.9352},{\x22x1\x22:-1039.4296,\x22y1\x22:-1121.8938,\x22x2\x22:-1045.3339,\x22y2\x22:-1116.9998},{\x22x1\x22:-1032.9039,\x22y1\x22:-1129.5726,\x22x2\x22:-1039.4296,\x22y2\x22:-1121.8938},{\x22x1\x22:-1032.1914,\x22y1\x22:-1135.34,\x22x2\x22:-1032.9039,\x22y2\x22:-1129.5726},{\x22x1\x22:-1030.457,\x22y1\x22:-1143.6101,\x22x2\x22:-1032.1914,\x22y2\x22:-1135.34},{\x22x1\x22:-1033.7372,\x22y1\x22:-1152.877,\x22x2\x22:-1030.457,\x22y2\x22:-1143.6101},{\x22x1\x22:-1041.9148,\x22y1\x22:-1160.3782,\x22x2\x22:-1033.7372,\x22y2\x22:-1152.877},{\x22x1\x22:-1050.2589,\x22y1\x22:-1168.2207,\x22x2\x22:-1041.9148,\x22y2\x22:-1160.3782},{\x22x1\x22:-1063.952,\x22y1\x22:-1171.6633,\x22x2\x22:-1050.2589,\x22y2\x22:-1168.2207},{\x22x1\x22:-1079.3728,\x22y1\x22:-1178.9365,\x22x2\x22:-1063.952,\x22y2\x22:-1171.6633},{\x22x1\x22:-1091.2507,\x22y1\x22:-1177.3291,\x22x2\x22:-1079.3728,\x22y2\x22:-1178.9365},{\x22x1\x22:-1101.6604,\x22y1\x22:-1176.1862,\x22x2\x22:-1091.2507,\x22y2\x22:-1177.3282},{\x22x1\x22:-1116.9313,\x22y1\x22:-1171.6997,\x22x2\x22:-1101.6604,\x22y2\x22:-1176.1862},{\x22x1\x22:-1121.6134,\x22y1\x22:-1162.7191,\x22x2\x22:-1116.9313,\x22y2\x22:-1171.6997},{\x22x1\x22:-1127.7664,\x22y1\x22:-1150.7083,\x22x2\x22:-1121.6134,\x22y2\x22:-1162.7191},{\x22x1\x22:-1133.9485,\x22y1\x22:-1156.5747,\x22x2\x22:-1127.7664,\x22y2\x22:-1150.7083},{\x22x1\x22:-1145.8781,\x22y1\x22:-1159.879,\x22x2\x22:-1133.9485,\x22y2\x22:-1156.5747},{\x22x1\x22:-1156.0387,\x22y1\x22:-1171.1995,\x22x2\x22:-1145.8781,\x22y2\x22:-1159.879},{\x22x1\x22:-1159.8774,\x22y1\x22:-1183.3064,\x22x2\x22:-1156.0387,\x22y2\x22:-1171.1995},{\x22x1\x22:-1166.3317,\x22y1\x22:-1188.4762,\x22x2\x22:-1159.8774,\x22y2\x22:-1183.3064},{\x22x1\x22:-1176.0216,\x22y1\x22:-1187.4063,\x22x2\x22:-1166.3317,\x22y2\x22:-1188.4762},{\x22x1\x22:-1185.5215,\x22y1\x22:-1188.9291,\x22x2\x22:-1176.0216,\x22y2\x22:-1187.4063},{\x22x1\x22:-1190.7113,\x22y1\x22:-1185.1163,\x22x2\x22:-1185.5215,\x22y2\x22:-1188.9291},{\x22x1\x22:-1202.2168,\x22y1\x22:-1176.2018,\x22x2\x22:-1190.7113,\x22y2\x22:-1185.1163},{\x22x1\x22:-1217.5199,\x22y1\x22:-1175.7954,\x22x2\x22:-1202.2168,\x22y2\x22:-1176.2018},{\x22x1\x22:-1232.972,\x22y1\x22:-1175.6536,\x22x2\x22:-1217.5199,\x22y2\x22:-1175.7954},{\x22x1\x22:-1247.3811,\x22y1\x22:-1179.0862,\x22x2\x22:-1232.972,\x22y2\x22:-1175.6536},{\x22x1\x22:-1260.1017,\x22y1\x22:-1170.0405,\x22x2\x22:-1247.3811,\x22y2\x22:-1179.0862},{\x22x1\x22:-1272.1953,\x22y1\x22:-1171.144,\x22x2\x22:-1260.1017,\x22y2\x22:-1170.0405},{\x22x1\x22:-1284.2042,\x22y1\x22:-1178.9574,\x22x2\x22:-1272.1953,\x22y2\x22:-1171.144},{\x22x1\x22:-1294.1436,\x22y1\x22:-1196.0035,\x22x2\x22:-1284.2042,\x22y2\x22:-1178.9574},{\x22x1\x22:-1295.1377,\x22y1\x22:-1207.007,\x22x2\x22:-1294.1436,\x22y2\x22:-1196.0035},{\x22x1\x22:-1292.4857,\x22y1\x22:-1227.8259,\x22x2\x22:-1295.1377,\x22y2\x22:-1207.007},{\x22x1\x22:-1289.2098,\x22y1\x22:-1236.8374,\x22x2\x22:-1292.4857,\x22y2\x22:-1227.8259},{\x22x1\x22:-1293.5729,\x22y1\x22:-1249.5093,\x22x2\x22:-1289.2098,\x22y2\x22:-1236.8374},{\x22x1\x22:-1294.4739,\x22y1\x22:-1262.2739,\x22x2\x22:-1293.5729,\x22y2\x22:-1249.5093},{\x22x1\x22:-1285.7771,\x22y1\x22:-1274.6501,\x22x2\x22:-1294.4739,\x22y2\x22:-1262.2739},{\x22x1\x22:-1278.875,\x22y1\x22:-1282.1019,\x22x2\x22:-1285.7771,\x22y2\x22:-1274.6501},{\x22x1\x22:-1274.5752,\x22y1\x22:-1289.9927,\x22x2\x22:-1278.875,\x22y2\x22:-1282.1019},{\x22x1\x22:-1274.5752,\x22y1\x22:-1289.9927,\x22x2\x22:-1274.5752,\x22y2\x22:-1289.9927},{\x22x1\x22:-1268.9755,\x22y1\x22:-1294.9594,\x22x2\x22:-1274.5752,\x22y2\x22:-1289.9927},{\x22x1\x22:-1268.9755,\x22y1\x22:-1294.9594,\x22x2\x22:-1268.9755,\x22y2\x22:-1294.9594},{\x22x1\x22:-1256.9879,\x22y1\x22:-1294.8224,\x22x2\x22:-1268.9755,\x22y2\x22:-1294.9594},{\x22x1\x22:-1247.7936,\x22y1\x22:-1291.0171,\x22x2\x22:-1256.9879,\x22y2\x22:-1294.8224},{\x22x1\x22:-1237.674,\x22y1\x22:-1277.7178,\x22x2\x22:-1247.7936,\x22y2\x22:-1291.0171},{\x22x1\x22:-1231.5219,\x22y1\x22:-1264.7009,\x22x2\x22:-1237.674,\x22y2\x22:-1277.7178},{\x22x1\x22:-1231.2563,\x22y1\x22:-1253.572,\x22x2\x22:-1231.5219,\x22y2\x22:-1264.7009},{\x22x1\x22:-1235.2031,\x22y1\x22:-1238.4124,\x22x2\x22:-1231.2563,\x22y2\x22:-1253.572},{\x22x1\x22:-1233.5332,\x22y1\x22:-1235.6194,\x22x2\x22:-1235.2031,\x22y2\x22:-1238.4124},{\x22x1\x22:-1223.2855,\x22y1\x22:-1239.8389,\x22x2\x22:-1233.5332,\x22y2\x22:-1235.6194},{\x22x1\x22:-1220.066,\x22y1\x22:-1245.3793,\x22x2\x22:-1223.2855,\x22y2\x22:-1239.8389},{\x22x1\x22:-1218.0468,\x22y1\x22:-1248.7413,\x22x2\x22:-1220.066,\x22y2\x22:-1245.3793},{\x22x1\x22:-1210.8151,\x22y1\x22:-1259.3896,\x22x2\x22:-1218.0468,\x22y2\x22:-1248.7413},{\x22x1\x22:-1200.092,\x22y1\x22:-1255.7739,\x22x2\x22:-1210.8151,\x22y2\x22:-1259.3896},{\x22x1\x22:-1192.9913,\x22y1\x22:-1252.2273,\x22x2\x22:-1200.092,\x22y2\x22:-1255.7739},{\x22x1\x22:-1188.1171,\x22y1\x22:-1251.9316,\x22x2\x22:-1192.9913,\x22y2\x22:-1252.2273},{\x22x1\x22:-1188.1171,\x22y1\x22:-1251.9316,\x22x2\x22:-1188.1171,\x22y2\x22:-1251.9316},{\x22x1\x22:-1176.0195,\x22y1\x22:-1251.9015,\x22x2\x22:-1188.1171,\x22y2\x22:-1251.9316},{\x22x1\x22:-1168.177,\x22y1\x22:-1255.0461,\x22x2\x22:-1176.0195,\x22y2\x22:-1251.9015},{\x22x1\x22:-1161.1826,\x22y1\x22:-1259.1169,\x22x2\x22:-1168.177,\x22y2\x22:-1255.0461},{\x22x1\x22:-1152.3359,\x22y1\x22:-1271.6273,\x22x2\x22:-1161.1826,\x22y2\x22:-1259.1169},{\x22x1\x22:-1141.5398,\x22y1\x22:-1269.359,\x22x2\x22:-1152.3359,\x22y2\x22:-1271.6273},{\x22x1\x22:-1123.5797,\x22y1\x22:-1263.4347,\x22x2\x22:-1141.5398,\x22y2\x22:-1269.359},{\x22x1\x22:-1113.0222,\x22y1\x22:-1257.7893,\x22x2\x22:-1123.5797,\x22y2\x22:-1263.4347},{\x22x1\x22:-1098.5007,\x22y1\x22:-1244.3069,\x22x2\x22:-1113.0222,\x22y2\x22:-1257.7893},{\x22x1\x22:-1089.2765,\x22y1\x22:-1235.5955,\x22x2\x22:-1098.5007,\x22y2\x22:-1244.3069},{\x22x1\x22:-1079.6172,\x22y1\x22:-1235.4836,\x22x2\x22:-1089.2765,\x22y2\x22:-1235.5955},{\x22x1\x22:-1068.9058,\x22y1\x22:-1228.239,\x22x2\x22:-1079.6172,\x22y2\x22:-1235.4836},{\x22x1\x22:-1059.0901,\x22y1\x22:-1216.7544,\x22x2\x22:-1068.9058,\x22y2\x22:-1228.239},{\x22x1\x22:-1046.2003,\x22y1\x22:-1213.0231,\x22x2\x22:-1059.0901,\x22y2\x22:-1216.7544},{\x22x1\x22:-1039.0043,\x22y1\x22:-1211.317,\x22x2\x22:-1046.2003,\x22y2\x22:-1213.0231},{\x22x1\x22:-1029.6127,\x22y1\x22:-1215.15,\x22x2\x22:-1039.0043,\x22y2\x22:-1211.317},{\x22x1\x22:-1020.479,\x22y1\x22:-1217.8335,\x22x2\x22:-1029.6127,\x22y2\x22:-1215.15},{\x22x1\x22:-1014.2632,\x22y1\x22:-1226.985,\x22x2\x22:-1020.479,\x22y2\x22:-1217.8335},{\x22x1\x22:-1014.2632,\x22y1\x22:-1226.985,\x22x2\x22:-1014.2632,\x22y2\x22:-1226.985},{\x22x1\x22:-1003.4667,\x22y1\x22:-1234.4491,\x22x2\x22:-1014.2632,\x22y2\x22:-1226.985},{\x22x1\x22:-989.1592,\x22y1\x22:-1230.167,\x22x2\x22:-1003.4667,\x22y2\x22:-1234.4491},{\x22x1\x22:-985.0774,\x22y1\x22:-1225.7738,\x22x2\x22:-989.1592,\x22y2\x22:-1230.167},{\x22x1\x22:-970.0372,\x22y1\x22:-1227.2655,\x22x2\x22:-985.0774,\x22y2\x22:-1225.7738},{\x22x1\x22:-960.7642,\x22y1\x22:-1225.548,\x22x2\x22:-970.0372,\x22y2\x22:-1227.2655},{\x22x1\x22:-960.7642,\x22y1\x22:-1225.548,\x22x2\x22:-960.7642,\x22y2\x22:-1225.548},{\x22x1\x22:-951.9844,\x22y1\x22:-1215.2458,\x22x2\x22:-960.7642,\x22y2\x22:-1225.548},{\x22x1\x22:-949.2791,\x22y1\x22:-1212.5934,\x22x2\x22:-951.9844,\x22y2\x22:-1215.2458},{\x22x1\x22:-944.7664,\x22y1\x22:-1208.8918,\x22x2\x22:-949.2791,\x22y2\x22:-1212.5934},{\x22x1\x22:-937.259,\x22y1\x22:-1199.9647,\x22x2\x22:-944.7664,\x22y2\x22:-1208.8918},{\x22x1\x22:-939.9172,\x22y1\x22:-1193.7772,\x22x2\x22:-937.259,\x22y2\x22:-1199.9647},{\x22x1\x22:-943.3099,\x22y1\x22:-1185.8778,\x22x2\x22:-939.9172,\x22y2\x22:-1193.7772},{\x22x1\x22:-955.9144,\x22y1\x22:-1176.512,\x22x2\x22:-943.3099,\x22y2\x22:-1185.8778},{\x22x1\x22:-960.4617,\x22y1\x22:-1158.6064,\x22x2\x22:-955.9144,\x22y2\x22:-1176.512},{\x22x1\x22:-956.6509,\x22y1\x22:-1147.6084,\x22x2\x22:-960.4617,\x22y2\x22:-1158.6064},{\x22x1\x22:-945.9458,\x22y1\x22:-1132.595,\x22x2\x22:-956.6509,\x22y2\x22:-1147.6084},{\x22x1\x22:-926.1785,\x22y1\x22:-1121.3831,\x22x2\x22:-945.9458,\x22y2\x22:-1132.595},{\x22x1\x22:-906.8665,\x22y1\x22:-1119.3131,\x22x2\x22:-926.1785,\x22y2\x22:-1121.3831},{\x22x1\x22:-885.5789,\x22y1\x22:-1108.1519,\x22x2\x22:-906.8665,\x22y2\x22:-1119.3131},{\x22x1\x22:-876.9981,\x22y1\x22:-1095.248,\x22x2\x22:-885.5789,\x22y2\x22:-1108.1519},{\x22x1\x22:-875.5641,\x22y1\x22:-1082.6595,\x22x2\x22:-876.9965,\x22y2\x22:-1095.2534},{\x22x1\x22:-880.5782,\x22y1\x22:-1070.6943,\x22x2\x22:-875.5641,\x22y2\x22:-1082.6595},{\x22x1\x22:-878.7439,\x22y1\x22:-1059.1558,\x22x2\x22:-880.5782,\x22y2\x22:-1070.6943},{\x22x1\x22:-874.0189,\x22y1\x22:-1043.6506,\x22x2\x22:-878.7439,\x22y2\x22:-1059.1558},{\x22x1\x22:-1464.436,\x22y1\x22:-1479.0298,\x22x2\x22:-1464.4353,\x22y2\x22:1002.3561},{\x22x1\x22:-1299.6128,\x22y1\x22:-1479.0297,\x22x2\x22:-1464.436,\x22y2\x22:-1479.0298},{\x22x1\x22:1476.6829,\x22y1\x22:-1479.0295,\x22x2\x22:-1299.6128,\x22y2\x22:-1479.0297},{\x22x1\x22:1476.6831,\x22y1\x22:1463.6737,\x22x2\x22:1476.6829,\x22y2\x22:-1479.0295},{\x22x1\x22:-1464.4359,\x22y1\x22:1463.6736,\x22x2\x22:1476.6831,\x22y2\x22:1463.6737},{\x22x1\x22:-1464.436,\x22y1\x22:990.4836,\x22x2\x22:-1464.4359,\x22y2\x22:1463.6736},{\x22x1\x22:779.8124,\x22y1\x22:-314.715,\x22x2\x22:832.9324,\x22y2\x22:-268.9749},{\x22x1\x22:739.5812,\x22y1\x22:-268.0907,\x22x2\x22:779.8124,\x22y2\x22:-314.715},{\x22x1\x22:783.6927,\x22y1\x22:-229.327,\x22x2\x22:739.5812,\x22y2\x22:-268.0907},{\x22x1\x22:895.9814,\x22y1\x22:-362.3286,\x22x2\x22:783.6927,\x22y2\x22:-229.327},{\x22x1\x22:914.7401,\x22y1\x22:-398.2692,\x22x2\x22:895.9814,\x22y2\x22:-362.3286},{\x22x1\x22:911.3871,\x22y1\x22:-439.206,\x22x2\x22:914.7401,\x22y2\x22:-398.2692},{\x22x1\x22:934.0984,\x22y1\x22:-467.6417,\x22x2\x22:911.3871,\x22y2\x22:-439.206},{\x22x1\x22:972.9843,\x22y1\x22:-468.9376,\x22x2\x22:934.0984,\x22y2\x22:-467.6417},{\x22x1\x22:1007.5927,\x22y1\x22:-495.0653,\x22x2\x22:972.9843,\x22y2\x22:-468.9376},{\x22x1\x22:1131.3403,\x22y1\x22:-645.5389,\x22x2\x22:1007.5927,\x22y2\x22:-495.0653},{\x22x1\x22:1208.0559,\x22y1\x22:-581.8709,\x22x2\x22:1131.3403,\x22y2\x22:-645.5389},{\x22x1\x22:1148.0396,\x22y1\x22:-502.4955,\x22x2\x22:1208.0559,\x22y2\x22:-581.8709},{\x22x1\x22:1070.4968,\x22y1\x22:-565.843,\x22x2\x22:1148.0396,\x22y2\x22:-502.4955},{\x22x1\x22:1141.1515,\x22y1\x22:-530.1442,\x22x2\x22:1078.8893,\x22y2\x22:-582.4924},{\x22x1\x22:1178.6243,\x22y1\x22:-576.5423,\x22x2\x22:1141.1515,\x22y2\x22:-530.1442},{\x22x1\x22:1136.625,\x22y1\x22:-615.6024,\x22x2\x22:1178.6243,\x22y2\x22:-576.5423},{\x22x1\x22:1028.85,\x22y1\x22:-487.9887,\x22x2\x22:1136.625,\x22y2\x22:-615.6024},{\x22x1\x22:1004.2974,\x22y1\x22:-442.8073,\x22x2\x22:1028.85,\x22y2\x22:-487.9887},{\x22x1\x22:1009.7839,\x22y1\x22:-404.9649,\x22x2\x22:1004.2974,\x22y2\x22:-442.8073},{\x22x1\x22:986.1826,\x22y1\x22:-376.5578,\x22x2\x22:1009.7839,\x22y2\x22:-404.9649},{\x22x1\x22:948.1205,\x22y1\x22:-375.4451,\x22x2\x22:986.1826,\x22y2\x22:-376.5578},{\x22x1\x22:914.8324,\x22y1\x22:-350.2917,\x22x2\x22:948.1205,\x22y2\x22:-375.4451},{\x22x1\x22:787.6042,\x22y1\x22:-200.0862,\x22x2\x22:914.8324,\x22y2\x22:-350.2917},{\x22x1\x22:709.8784,\x22y1\x22:-265.5612,\x22x2\x22:787.6042,\x22y2\x22:-200.0862},{\x22x1\x22:773.7061,\x22y1\x22:-339.8356,\x22x2\x22:709.8784,\x22y2\x22:-265.5612},{\x22x1\x22:844.4254,\x22y1\x22:-281.679,\x22x2\x22:773.7061,\x22y2\x22:-339.8356},{\x22x1\x22:1113.3135,\x22y1\x22:535.3604,\x22x2\x22:1180.5125,\x22y2\x22:536.4601},{\x22x1\x22:1100.0931,\x22y1\x22:548.3815,\x22x2\x22:1113.3135,\x22y2\x22:535.3604},{\x22x1\x22:1099.8917,\x22y1\x22:724.1162,\x22x2\x22:1100.0931,\x22y2\x22:548.3815},{\x22x1\x22:1113.3131,\x22y1\x22:737.6563,\x22x2\x22:1099.8917,\x22y2\x22:724.1162},{\x22x1\x22:1288.6244,\x22y1\x22:737.6558,\x22x2\x22:1113.3131,\x22y2\x22:737.6563},{\x22x1\x22:1302.0521,\x22y1\x22:724.2432,\x22x2\x22:1288.6244,\x22y2\x22:737.6558},{\x22x1\x22:1302.0231,\x22y1\x22:723.7593,\x22x2\x22:1302.0521,\x22y2\x22:724.2432},{\x22x1\x22:1301.9263,\x22y1\x22:548.3369,\x22x2\x22:1302.0231,\x22y2\x22:723.7593},{\x22x1\x22:1288.8848,\x22y1\x22:535.4918,\x22x2\x22:1301.9263,\x22y2\x22:548.3369},{\x22x1\x22:1221.4244,\x22y1\x22:536.46,\x22x2\x22:1288.8848,\x22y2\x22:535.4918},{\x22x1\x22:1221.4249,\x22y1\x22:519.9907,\x22x2\x22:1221.4244,\x22y2\x22:536.46},{\x22x1\x22:1217.8068,\x22y1\x22:519.9584,\x22x2\x22:1221.4249,\x22y2\x22:519.9907},{\x22x1\x22:1217.8065,\x22y1\x22:524.7444,\x22x2\x22:1217.8068,\x22y2\x22:519.9584},{\x22x1\x22:1217.8075,\x22y1\x22:543.4478,\x22x2\x22:1217.8065,\x22y2\x22:524.7444},{\x22x1\x22:1217.7729,\x22y1\x22:593.6317,\x22x2\x22:1217.8075,\x22y2\x22:543.4478},{\x22x1\x22:1217.5256,\x22y1\x22:596.9086,\x22x2\x22:1217.7729,\x22y2\x22:593.6317},{\x22x1\x22:1236.6538,\x22y1\x22:597.1479,\x22x2\x22:1217.5256,\x22y2\x22:596.9086},{\x22x1\x22:1236.9314,\x22y1\x22:675.2802,\x22x2\x22:1236.6538,\x22y2\x22:597.1479},{\x22x1\x22:1165.5275,\x22y1\x22:675.1702,\x22x2\x22:1236.9314,\x22y2\x22:675.2802},{\x22x1\x22:1165.4724,\x22y1\x22:596.5386,\x22x2\x22:1165.5275,\x22y2\x22:675.1702},{\x22x1\x22:1184.1101,\x22y1\x22:596.5788,\x22x2\x22:1165.4724,\x22y2\x22:596.5386},{\x22x1\x22:1184.1476,\x22y1\x22:591.6689,\x22x2\x22:1184.1101,\x22y2\x22:596.5788},{\x22x1\x22:1184.1339,\x22y1\x22:579.9551,\x22x2\x22:1184.1476,\x22y2\x22:591.6689},{\x22x1\x22:1184.1284,\x22y1\x22:553.5562,\x22x2\x22:1184.1339,\x22y2\x22:579.9551},{\x22x1\x22:1184.13,\x22y1\x22:535.0084,\x22x2\x22:1184.1284,\x22y2\x22:553.5562},{\x22x1\x22:1184.1309,\x22y1\x22:518.7854,\x22x2\x22:1184.13,\x22y2\x22:535.0084},{\x22x1\x22:1180.5121,\x22y1\x22:518.7641,\x22x2\x22:1184.1309,\x22y2\x22:518.7854},{\x22x1\x22:1180.5121,\x22y1\x22:522.1218,\x22x2\x22:1180.5121,\x22y2\x22:518.7641},{\x22x1\x22:1180.5126,\x22y1\x22:536.46,\x22x2\x22:1180.5121,\x22y2\x22:522.1218},{\x22x1\x22:520.2565,\x22y1\x22:96.3739,\x22x2\x22:520.2708,\x22y2\x22:88.7291},{\x22x1\x22:522.2707,\x22y1\x22:96.5895,\x22x2\x22:520.2565,\x22y2\x22:96.3739},{\x22x1\x22:522.2606,\x22y1\x22:121.4055,\x22x2\x22:522.2707,\x22y2\x22:96.5895},{\x22x1\x22:520.1986,\x22y1\x22:121.376,\x22x2\x22:522.2606,\x22y2\x22:121.4055},{\x22x1\x22:520.2625,\x22y1\x22:129.2629,\x22x2\x22:520.1986,\x22y2\x22:121.376},{\x22x1\x22:512.4197,\x22y1\x22:129.4341,\x22x2\x22:520.2625,\x22y2\x22:129.2629},{\x22x1\x22:512.6078,\x22y1\x22:138.1514,\x22x2\x22:512.4197,\x22y2\x22:129.4341},{\x22x1\x22:529.2881,\x22y1\x22:138.3584,\x22x2\x22:512.6078,\x22y2\x22:138.1514},{\x22x1\x22:529.0911,\x22y1\x22:121.6504,\x22x2\x22:529.2881,\x22y2\x22:138.3584},{\x22x1\x22:526.3864,\x22y1\x22:121.4098,\x22x2\x22:529.0911,\x22y2\x22:121.6504},{\x22x1\x22:527.2162,\x22y1\x22:96.5898,\x22x2\x22:526.4593,\x22y2\x22:121.4099},{\x22x1\x22:529.4689,\x22y1\x22:96.5967,\x22x2\x22:527.2161,\x22y2\x22:96.5898},{\x22x1\x22:528.5011,\x22y1\x22:80.8119,\x22x2\x22:529.4689,\x22y2\x22:96.5967},{\x22x1\x22:512.0911,\x22y1\x22:80.6407,\x22x2\x22:528.5011,\x22y2\x22:80.8119},{\x22x1\x22:512.41,\x22y1\x22:82.4911,\x22x2\x22:512.0911,\x22y2\x22:80.6407},{\x22x1\x22:487.5896,\x22y1\x22:82.3139,\x22x2\x22:512.41,\x22y2\x22:82.491},{\x22x1\x22:487.5663,\x22y1\x22:80.3729,\x22x2\x22:487.5897,\x22y2\x22:82.3138},{\x22x1\x22:471.8777,\x22y1\x22:81.2117,\x22x2\x22:487.5663,\x22y2\x22:80.3729},{\x22x1\x22:471.4512,\x22y1\x22:96.7892,\x22x2\x22:471.8777,\x22y2\x22:81.2117},{\x22x1\x22:473.4027,\x22y1\x22:96.5899,\x22x2\x22:471.4512,\x22y2\x22:96.7892},{\x22x1\x22:473.9394,\x22y1\x22:121.4113,\x22x2\x22:473.4027,\x22y2\x22:96.5899},{\x22x1\x22:471.6003,\x22y1\x22:121.9225,\x22x2\x22:473.9394,\x22y2\x22:121.4113},{\x22x1\x22:471.5477,\x22y1\x22:136.8057,\x22x2\x22:471.6003,\x22y2\x22:121.9225},{\x22x1\x22:487.8651,\x22y1\x22:138.3952,\x22x2\x22:471.5477,\x22y2\x22:136.8057},{\x22x1\x22:487.5916,\x22y1\x22:130.239,\x22x2\x22:487.8651,\x22y2\x22:138.3952},{\x22x1\x22:479.7318,\x22y1\x22:129.2679,\x22x2\x22:487.5916,\x22y2\x22:130.239},{\x22x1\x22:479.6339,\x22y1\x22:121.4542,\x22x2\x22:479.7318,\x22y2\x22:129.2679},{\x22x1\x22:477.7313,\x22y1\x22:121.409,\x22x2\x22:479.6339,\x22y2\x22:121.4542},{\x22x1\x22:477.7318,\x22y1\x22:96.5912,\x22x2\x22:477.7313,\x22y2\x22:121.409},{\x22x1\x22:479.9175,\x22y1\x22:96.5421,\x22x2\x22:477.7318,\x22y2\x22:96.5912},{\x22x1\x22:479.7319,\x22y1\x22:88.7319,\x22x2\x22:479.9175,\x22y2\x22:96.5421},{\x22x1\x22:486.2193,\x22y1\x22:88.7316,\x22x2\x22:479.7319,\x22y2\x22:88.7319},{\x22x1\x22:487.5917,\x22y1\x22:86.7319,\x22x2\x22:486.2193,\x22y2\x22:88.7316},{\x22x1\x22:512.41,\x22y1\x22:86.7291,\x22x2\x22:487.5917,\x22y2\x22:86.7319},{\x22x1\x22:512.6898,\x22y1\x22:88.7579,\x22x2\x22:512.41,\x22y2\x22:86.7291},{\x22x1\x22:520.2708,\x22y1\x22:88.7292,\x22x2\x22:512.6898,\x22y2\x22:88.7579},{\x22x1\x22:265.1285,\x22y1\x22:543.7651,\x22x2\x22:278.5416,\x22y2\x22:530.3376},{\x22x1\x22:265.128,\x22y1\x22:719.0761,\x22x2\x22:265.1285,\x22y2\x22:543.7651},{\x22x1\x22:278.5416,\x22y1\x22:732.5053,\x22x2\x22:265.128,\x22y2\x22:719.0761},{\x22x1\x22:453.9962,\x22y1\x22:732.4891,\x22x2\x22:278.5422,\x22y2\x22:732.5039},{\x22x1\x22:467.4242,\x22y1\x22:719.0748,\x22x2\x22:453.9962,\x22y2\x22:732.4891},{\x22x1\x22:466.3245,\x22y1\x22:651.8765,\x22x2\x22:467.4242,\x22y2\x22:719.0748},{\x22x1\x22:482.1932,\x22y1\x22:651.8769,\x22x2\x22:466.3245,\x22y2\x22:651.8765},{\x22x1\x22:482.1549,\x22y1\x22:648.2581,\x22x2\x22:482.1932,\x22y2\x22:651.8769},{\x22x1\x22:470.6703,\x22y1\x22:648.258,\x22x2\x22:482.1549,\x22y2\x22:648.2581},{\x22x1\x22:427.4611,\x22y1\x22:648.2588,\x22x2\x22:470.6703,\x22y2\x22:648.258},{\x22x1\x22:405.9488,\x22y1\x22:648.3193,\x22x2\x22:427.4611,\x22y2\x22:648.2588},{\x22x1\x22:406.0291,\x22y1\x22:666.3771,\x22x2\x22:405.9488,\x22y2\x22:648.3193},{\x22x1\x22:331.3875,\x22y1\x22:666.3226,\x22x2\x22:406.0291,\x22y2\x22:666.3771},{\x22x1\x22:331.3906,\x22y1\x22:595.9513,\x22x2\x22:331.3875,\x22y2\x22:666.3226},{\x22x1\x22:406.2589,\x22y1\x22:595.9217,\x22x2\x22:331.3906,\x22y2\x22:595.9513},{\x22x1\x22:406.1811,\x22y1\x22:614.1719,\x22x2\x22:406.2589,\x22y2\x22:595.9217},{\x22x1\x22:408.4597,\x22y1\x22:614.6205,\x22x2\x22:406.1811,\x22y2\x22:614.1719},{\x22x1\x22:408.4597,\x22y1\x22:614.6205,\x22x2\x22:408.4597,\x22y2\x22:614.6205},{\x22x1\x22:432.7425,\x22y1\x22:614.5814,\x22x2\x22:408.4597,\x22y2\x22:614.6205},{\x22x1\x22:458.0281,\x22y1\x22:614.5811,\x22x2\x22:432.7425,\x22y2\x22:614.5814},{\x22x1\x22:481.6854,\x22y1\x22:614.5829,\x22x2\x22:458.0281,\x22y2\x22:614.5811},{\x22x1\x22:481.6842,\x22y1\x22:610.9636,\x22x2\x22:481.6854,\x22y2\x22:614.5829},{\x22x1\x22:480.8123,\x22y1\x22:610.963,\x22x2\x22:481.6842,\x22y2\x22:610.9636},{\x22x1\x22:477.8303,\x22y1\x22:610.9628,\x22x2\x22:480.8123,\x22y2\x22:610.963},{\x22x1\x22:466.3242,\x22y1\x22:610.9641,\x22x2\x22:477.8303,\x22y2\x22:610.9628},{\x22x1\x22:467.0354,\x22y1\x22:542.259,\x22x2\x22:466.3247,\x22y2\x22:610.9641},{\x22x1\x22:456.3495,\x22y1\x22:530.7682,\x22x2\x22:467.0354,\x22y2\x22:542.259},{\x22x1\x22:278.5433,\x22y1\x22:530.3375,\x22x2\x22:456.3495,\x22y2\x22:530.7682},{\x22x1\x22:-17.4777,\x22y1\x22:674.776,\x22x2\x22:22.0533,\x22y2\x22:674.7742},{\x22x1\x22:-16.1093,\x22y1\x22:714.8856,\x22x2\x22:-17.4777,\x22y2\x22:674.776},{\x22x1\x22:22.0577,\x22y1\x22:713.7667,\x22x2\x22:-16.1093,\x22y2\x22:714.8856},{\x22x1\x22:22.0533,\x22y1\x22:674.7742,\x22x2\x22:22.0577,\x22y2\x22:713.7667},{\x22x1\x22:-251.1206,\x22y1\x22:1249.8575,\x22x2\x22:-254.1234,\x22y2\x22:1249.646},{\x22x1\x22:-247.8925,\x22y1\x22:1249.8048,\x22x2\x22:-251.1206,\x22y2\x22:1249.8575},{\x22x1\x22:-247.8925,\x22y1\x22:1274.1129,\x22x2\x22:-247.8925,\x22y2\x22:1249.8048},{\x22x1\x22:-272.113,\x22y1\x22:1274.113,\x22x2\x22:-247.8925,\x22y2\x22:1274.1129},{\x22x1\x22:-272.1131,\x22y1\x22:1249.8868,\x22x2\x22:-272.113,\x22y2\x22:1274.113},{\x22x1\x22:-265.8991,\x22y1\x22:1249.8208,\x22x2\x22:-272.1131,\x22y2\x22:1249.8868},{\x22x1\x22:-357.4276,\x22y1\x22:1138.5098,\x22x2\x22:-359.2323,\x22y2\x22:1117.8839},{\x22x1\x22:-427.965,\x22y1\x22:1144.6809,\x22x2\x22:-357.4276,\x22y2\x22:1138.5098},{\x22x1\x22:-433.1248,\x22y1\x22:1085.707,\x22x2\x22:-427.965,\x22y2\x22:1144.6809},{\x22x1\x22:-362.5871,\x22y1\x22:1079.5359,\x22x2\x22:-433.1248,\x22y2\x22:1085.707},{\x22x1\x22:-359.3158,\x22y1\x22:1100.2732,\x22x2\x22:-362.5871,\x22y2\x22:1079.5359},{\x22x1\x22:-619.3415,\x22y1\x22:1349.8752,\x22x2\x22:-619.3415,\x22y2\x22:1349.8752},{\x22x1\x22:18.2649,\x22y1\x22:-10.9168,\x22x2\x22:26.4268,\x22y2\x22:-10.0395},{\x22x1\x22:18.4218,\x22y1\x22:-8.7321,\x22x2\x22:18.2649,\x22y2\x22:-10.9168},{\x22x1\x22:-6.3017,\x22y1\x22:-10.8996,\x22x2\x22:18.4218,\x22y2\x22:-8.7321},{\x22x1\x22:-6.0907,\x22y1\x22:-12.4507,\x22x2\x22:-6.3017,\x22y2\x22:-10.8996},{\x22x1\x22:-13.9571,\x22y1\x22:-13.5759,\x22x2\x22:-6.0907,\x22y2\x22:-12.4507},{\x22x1\x22:-13.2579,\x22y1\x22:-21.2565,\x22x2\x22:-13.9571,\x22y2\x22:-13.5759},{\x22x1\x22:-21.302,\x22y1\x22:-20.8685,\x22x2\x22:-13.2579,\x22y2\x22:-21.2565},{\x22x1\x22:-21.7674,\x22y1\x22:-6.531,\x22x2\x22:-21.302,\x22y2\x22:-20.8685},{\x22x1\x22:-6.7268,\x22y1\x22:-5.0947,\x22x2\x22:-21.7674,\x22y2\x22:-6.531},{\x22x1\x22:-7.7221,\x22y1\x22:-8.6009,\x22x2\x22:-6.7766,\x22y2\x22:-5.2192},{\x22x1\x22:18.5904,\x22y1\x22:-5.3277,\x22x2\x22:-7.7221,\x22y2\x22:-8.6009},{\x22x1\x22:18.21,\x22y1\x22:-2.4883,\x22x2\x22:18.5904,\x22y2\x22:-5.3277},{\x22x1\x22:33.3057,\x22y1\x22:-2.811,\x22x2\x22:18.21,\x22y2\x22:-2.4883},{\x22x1\x22:35.6181,\x22y1\x22:-17.7262,\x22x2\x22:33.3057,\x22y2\x22:-2.811},{\x22x1\x22:32.8701,\x22y1\x22:-17.2844,\x22x2\x22:35.6181,\x22y2\x22:-17.7262},{\x22x1\x22:35.1084,\x22y1\x22:-42.2283,\x22x2\x22:32.8701,\x22y2\x22:-17.2844},{\x22x1\x22:37.5827,\x22y1\x22:-41.9377,\x22x2\x22:35.1084,\x22y2\x22:-42.2283},{\x22x1\x22:39.1032,\x22y1\x22:-57.9716,\x22x2\x22:37.5827,\x22y2\x22:-41.9377},{\x22x1\x22:22.5278,\x22y1\x22:-60.0645,\x22x2\x22:39.1032,\x22y2\x22:-57.9716},{\x22x1\x22:22.7074,\x22y1\x22:-57.7248,\x22x2\x22:22.5278,\x22y2\x22:-60.0645},{\x22x1\x22:-2.0238,\x22y1\x22:-59.7947,\x22x2\x22:22.7074,\x22y2\x22:-57.7248},{\x22x1\x22:-2.2339,\x22y1\x22:-62.206,\x22x2\x22:-2.0238,\x22y2\x22:-59.7947},{\x22x1\x22:-18.4893,\x22y1\x22:-62.6613,\x22x2\x22:-2.2339,\x22y2\x22:-62.206},{\x22x1\x22:-20.1033,\x22y1\x22:-46.3975,\x22x2\x22:-18.4893,\x22y2\x22:-62.6613},{\x22x1\x22:-11.7844,\x22y1\x22:-46.1866,\x22x2\x22:-20.1033,\x22y2\x22:-46.3975},{\x22x1\x22:-10.4227,\x22y1\x22:-53.9557,\x22x2\x22:-11.7844,\x22y2\x22:-46.1866},{\x22x1\x22:-2.5214,\x22y1\x22:-54.1002,\x22x2\x22:-10.4227,\x22y2\x22:-53.9557},{\x22x1\x22:-2.419,\x22y1\x22:-55.2604,\x22x2\x22:-2.5214,\x22y2\x22:-54.1002},{\x22x1\x22:22.3,\x22y1\x22:-53.0978,\x22x2\x22:-2.419,\x22y2\x22:-55.2604},{\x22x1\x22:22.1638,\x22y1\x22:-51.5079,\x22x2\x22:22.3,\x22y2\x22:-53.0978},{\x22x1\x22:29.9552,\x22y1\x22:-50.4226,\x22x2\x22:22.1638,\x22y2\x22:-51.5079},{\x22x1\x22:29.0193,\x22y1\x22:-41.7783,\x22x2\x22:29.9552,\x22y2\x22:-50.4226},{\x22x1\x22:31.2618,\x22y1\x22:-42.4195,\x22x2\x22:29.0193,\x22y2\x22:-41.7783},{\x22x1\x22:29.1043,\x22y1\x22:-17.6959,\x22x2\x22:31.2618,\x22y2\x22:-42.4195},{\x22x1\x22:27.0384,\x22y1\x22:-17.2449,\x22x2\x22:29.1043,\x22y2\x22:-17.6959},{\x22x1\x22:26.4265,\x22y1\x22:-10.0396,\x22x2\x22:27.0384,\x22y2\x22:-17.2449},{\x22x1\x22:38.3169,\x22y1\x22:187.2788,\x22x2\x22:42.8845,\x22y2\x22:193.9813},{\x22x1\x22:29.8328,\x22y1\x22:163.9557,\x22x2\x22:38.3169,\x22y2\x22:187.2788},{\x22x1\x22:31.5385,\x22y1\x22:163.3342,\x22x2\x22:29.8328,\x22y2\x22:163.9557},{\x22x1\x22:29.0225,\x22y1\x22:155.8866,\x22x2\x22:31.5385,\x22y2\x22:163.3342},{\x22x1\x22:36.4462,\x22y1\x22:152.9046,\x22x2\x22:29.0225,\x22y2\x22:155.8866},{\x22x1\x22:33.3939,\x22y1\x22:145.186,\x22x2\x22:36.4462,\x22y2\x22:152.9046},{\x22x1\x22:18.5403,\x22y1\x22:151.0818,\x22x2\x22:33.3939,\x22y2\x22:145.186},{\x22x1\x22:24.6829,\x22y1\x22:165.8272,\x22x2\x22:18.5403,\x22y2\x22:151.0818},{\x22x1\x22:25.9163,\x22y1\x22:165.3795,\x22x2\x22:24.6829,\x22y2\x22:165.8272},{\x22x1\x22:34.1673,\x22y1\x22:185.987,\x22x2\x22:25.9163,\x22y2\x22:165.3795},{\x22x1\x22:38.3967,\x22y1\x22:202.3289,\x22x2\x22:34.1673,\x22y2\x22:185.987},{\x22x1\x22:46.2669,\x22y1\x22:199.1189,\x22x2\x22:38.3967,\x22y2\x22:202.3289},{\x22x1\x22:48.3202,\x22y1\x22:196.4733,\x22x2\x22:46.2669,\x22y2\x22:199.1189},{\x22x1\x22:73.6886,\x22y1\x22:189.2832,\x22x2\x22:48.3202,\x22y2\x22:196.4733},{\x22x1\x22:76.359,\x22y1\x22:190.5869,\x22x2\x22:73.6886,\x22y2\x22:189.2832},{\x22x1\x22:90.9059,\x22y1\x22:184.0905,\x22x2\x22:76.359,\x22y2\x22:190.5869},{\x22x1\x22:86.7002,\x22y1\x22:170.9902,\x22x2\x22:90.9059,\x22y2\x22:184.0905},{\x22x1\x22:84.2895,\x22y1\x22:170.5455,\x22x2\x22:86.7002,\x22y2\x22:170.9902},{\x22x1\x22:76.9475,\x22y1\x22:145.9074,\x22x2\x22:84.2895,\x22y2\x22:170.5455},{\x22x1\x22:70.5395,\x22y1\x22:132.3039,\x22x2\x22:76.9475,\x22y2\x22:145.9074},{\x22x1\x22:57.0248,\x22y1\x22:137.526,\x22x2\x22:70.5395,\x22y2\x22:132.3039},{\x22x1\x22:60.4895,\x22y1\x22:144.4306,\x22x2\x22:57.0248,\x22y2\x22:137.526},{\x22x1\x22:67.1129,\x22y1\x22:142.0239,\x22x2\x22:60.4895,\x22y2\x22:144.4306},{\x22x1\x22:69.8162,\x22y1\x22:149.7078,\x22x2\x22:67.1129,\x22y2\x22:142.0239},{\x22x1\x22:71.6785,\x22y1\x22:148.726,\x22x2\x22:69.8162,\x22y2\x22:149.7078},{\x22x1\x22:79.2494,\x22y1\x22:169.5119,\x22x2\x22:71.6785,\x22y2\x22:148.726},{\x22x1\x22:78.6605,\x22y1\x22:173.7457,\x22x2\x22:79.2494,\x22y2\x22:169.5119},{\x22x1\x22:80.9742,\x22y1\x22:180.112,\x22x2\x22:78.6605,\x22y2\x22:173.7457},{\x22x1\x22:73.7281,\x22y1\x22:182.7771,\x22x2\x22:80.9742,\x22y2\x22:180.112},{\x22x1\x22:74.2719,\x22y1\x22:184.6766,\x22x2\x22:73.7281,\x22y2\x22:182.7771},{\x22x1\x22:55.7629,\x22y1\x22:191.4213,\x22x2\x22:74.2719,\x22y2\x22:184.6766},{\x22x1\x22:49.752,\x22y1\x22:191.4756,\x22x2\x22:55.7629,\x22y2\x22:191.4213},{\x22x1\x22:42.8846,\x22y1\x22:193.9812,\x22x2\x22:49.752,\x22y2\x22:191.4756},{\x22x1\x22:-80.7681,\x22y1\x22:81.6973,\x22x2\x22:-120.3564,\x22y2\x22:82.5019},{\x22x1\x22:-80.4667,\x22y1\x22:42.3605,\x22x2\x22:-80.7681,\x22y2\x22:81.6973},{\x22x1\x22:-120.9718,\x22y1\x22:42.9336,\x22x2\x22:-80.4667,\x22y2\x22:42.3605},{\x22x1\x22:-121.0118,\x22y1\x22:48.4957,\x22x2\x22:-120.9718,\x22y2\x22:42.9336},{\x22x1\x22:-120.6901,\x22y1\x22:82.4747,\x22x2\x22:-121.0118,\x22y2\x22:48.4957},{\x22x1\x22:-745.2245,\x22y1\x22:392.8849,\x22x2\x22:-670.0215,\x22y2\x22:392.8419},{\x22x1\x22:-745.1695,\x22y1\x22:455.4532,\x22x2\x22:-745.2245,\x22y2\x22:392.8849},{\x22x1\x22:-685.1901,\x22y1\x22:455.6309,\x22x2\x22:-745.1695,\x22y2\x22:455.4532},{\x22x1\x22:-685.2431,\x22y1\x22:284.6116,\x22x2\x22:-685.1901,\x22y2\x22:455.6309},{\x22x1\x22:-695.0238,\x22y1\x22:239.4367,\x22x2\x22:-685.2431,\x22y2\x22:284.6116},{\x22x1\x22:-723.4158,\x22y1\x22:213.0397,\x22x2\x22:-695.0238,\x22y2\x22:239.4367},{\x22x1\x22:-723.518,\x22y1\x22:176.45,\x22x2\x22:-723.4158,\x22y2\x22:213.0397},{\x22x1\x22:-694.8271,\x22y1\x22:150.289,\x22x2\x22:-723.518,\x22y2\x22:176.45},{\x22x1\x22:-686.9676,\x22y1\x22:106.0973,\x22x2\x22:-694.8271,\x22y2\x22:150.289},{\x22x1\x22:-687.0389,\x22y1\x22:-86.6784,\x22x2\x22:-686.9676,\x22y2\x22:106.0973},{\x22x1\x22:-584.2159,\x22y1\x22:-86.6739,\x22x2\x22:-687.0389,\x22y2\x22:-86.6784},{\x22x1\x22:-584.1964,\x22y1\x22:12.2,\x22x2\x22:-584.2159,\x22y2\x22:-86.6739},{\x22x1\x22:-683.2524,\x22y1\x22:12.2555,\x22x2\x22:-584.1964,\x22y2\x22:12.2},{\x22x1\x22:-605.954,\x22y1\x22:-4.0314,\x22x2\x22:-684.5942,\x22y2\x22:-4.0816},{\x22x1\x22:-605.9856,\x22y1\x22:-67.0802,\x22x2\x22:-605.954,\x22y2\x22:-4.0314},{\x22x1\x22:-664.6705,\x22y1\x22:-67.1319,\x22x2\x22:-605.9856,\x22y2\x22:-67.0802},{\x22x1\x22:-664.8386,\x22y1\x22:103.6903,\x22x2\x22:-664.6705,\x22y2\x22:-67.1319},{\x22x1\x22:-654.7807,\x22y1\x22:150.1587,\x22x2\x22:-664.8386,\x22y2\x22:103.6903},{\x22x1\x22:-625.9373,\x22y1\x22:175.7977,\x22x2\x22:-654.7807,\x22y2\x22:150.1587},{\x22x1\x22:-625.8601,\x22y1\x22:210.9634,\x22x2\x22:-625.9373,\x22y2\x22:175.7977},{\x22x1\x22:-653.8436,\x22y1\x22:237.4188,\x22x2\x22:-625.8601,\x22y2\x22:210.9634},{\x22x1\x22:-664.9453,\x22y1\x22:283.7042,\x22x2\x22:-653.8436,\x22y2\x22:237.4188},{\x22x1\x22:-664.9498,\x22y1\x22:290.1963,\x22x2\x22:-664.9453,\x22y2\x22:283.7042},{\x22x1\x22:-665.1685,\x22y1\x22:477.0555,\x22x2\x22:-664.9498,\x22y2\x22:290.1963},{\x22x1\x22:-765.0427,\x22y1\x22:477.1253,\x22x2\x22:-665.1685,\x22y2\x22:477.0555},{\x22x1\x22:-764.9453,\x22y1\x22:376.5662,\x22x2\x22:-765.0427,\x22y2\x22:477.1253},{\x22x1\x22:-671.7479,\x22y1\x22:376.5144,\x22x2\x22:-764.9453,\x22y2\x22:376.5662},{\x22x1\x22:-928.5924,\x22y1\x22:1029.7784,\x22x2\x22:-921.8265,\x22y2\x22:1026.5264},{\x22x1\x22:-928.3472,\x22y1\x22:1031.1321,\x22x2\x22:-928.5924,\x22y2\x22:1029.7784},{\x22x1\x22:-924.2701,\x22y1\x22:1038.2825,\x22x2\x22:-928.3472,\x22y2\x22:1031.1321},{\x22x1\x22:-919.7747,\x22y1\x22:1036.1337,\x22x2\x22:-924.2701,\x22y2\x22:1038.2825},{\x22x1\x22:-909.397,\x22y1\x22:1030.2593,\x22x2\x22:-919.7747,\x22y2\x22:1036.1337},{\x22x1\x22:-911.7622,\x22y1\x22:1025.2037,\x22x2\x22:-909.397,\x22y2\x22:1030.2593},{\x22x1\x22:-918.2087,\x22y1\x22:1016.1641,\x22x2\x22:-911.7622,\x22y2\x22:1025.2037},{\x22x1\x22:-926.6646,\x22y1\x22:998.2931,\x22x2\x22:-918.2087,\x22y2\x22:1016.1641},{\x22x1\x22:-926.6757,\x22y1\x22:994.1981,\x22x2\x22:-926.6646,\x22y2\x22:998.2931},{\x22x1\x22:-933.3928,\x22y1\x22:980.6011,\x22x2\x22:-926.6757,\x22y2\x22:994.1981},{\x22x1\x22:-936.9695,\x22y1\x22:980.3318,\x22x2\x22:-933.3928,\x22y2\x22:980.6011},{\x22x1\x22:-948.4565,\x22y1\x22:987.7922,\x22x2\x22:-936.9695,\x22y2\x22:980.3318},{\x22x1\x22:-967.4,\x22y1\x22:996.5043,\x22x2\x22:-948.4565,\x22y2\x22:987.7922},{\x22x1\x22:-972.2149,\x22y1\x22:996.5477,\x22x2\x22:-967.4,\x22y2\x22:996.5043},{\x22x1\x22:-982.6754,\x22y1\x22:1001.3016,\x22x2\x22:-972.2149,\x22y2\x22:996.5477},{\x22x1\x22:-985.9719,\x22y1\x22:1003.9913,\x22x2\x22:-982.6754,\x22y2\x22:1001.3016},{\x22x1\x22:-981.8198,\x22y1\x22:1012.8846,\x22x2\x22:-985.9719,\x22y2\x22:1003.9913},{\x22x1\x22:-977.3694,\x22y1\x22:1017.6313,\x22x2\x22:-981.8198,\x22y2\x22:1012.8846},{\x22x1\x22:-970.1378,\x22y1\x22:1033.3405,\x22x2\x22:-977.3694,\x22y2\x22:1017.6313},{\x22x1\x22:-969.1062,\x22y1\x22:1040.2756,\x22x2\x22:-970.1378,\x22y2\x22:1033.3405},{\x22x1\x22:-968.1604,\x22y1\x22:1042.5264,\x22x2\x22:-969.1062,\x22y2\x22:1040.2756},{\x22x1\x22:-965.2595,\x22y1\x22:1049.0055,\x22x2\x22:-968.1604,\x22y2\x22:1042.5264},{\x22x1\x22:-963.4995,\x22y1\x22:1052.9021,\x22x2\x22:-965.2595,\x22y2\x22:1049.0055},{\x22x1\x22:-957.0963,\x22y1\x22:1053.4967,\x22x2\x22:-963.4995,\x22y2\x22:1052.9021},{\x22x1\x22:-956.413,\x22y1\x22:1053.1852,\x22x2\x22:-957.0963,\x22y2\x22:1053.4967},{\x22x1\x22:-946.6699,\x22y1\x22:1048.3706,\x22x2\x22:-956.413,\x22y2\x22:1053.1852},{\x22x1\x22:-949.9987,\x22y1\x22:1040.6924,\x22x2\x22:-946.6699,\x22y2\x22:1048.3706},{\x22x1\x22:-957.5268,\x22y1\x22:1043.1746,\x22x2\x22:-949.9987,\x22y2\x22:1040.6924},{\x22x1\x22:-962.6601,\x22y1\x22:1036.8965,\x22x2\x22:-957.5268,\x22y2\x22:1043.1746},{\x22x1\x22:-972.667,\x22y1\x22:1015.4409,\x22x2\x22:-962.6601,\x22y2\x22:1036.8965},{\x22x1\x22:-974.1766,\x22y1\x22:1007.4723,\x22x2\x22:-972.667,\x22y2\x22:1015.4409},{\x22x1\x22:-967.8984,\x22y1\x22:1002.3382,\x22x2\x22:-974.1766,\x22y2\x22:1007.4723},{\x22x1\x22:-938.4709,\x22y1\x22:990.8204,\x22x2\x22:-967.8984,\x22y2\x22:1002.3382},{\x22x1\x22:-937.0239,\x22y1\x22:993.9251,\x22x2\x22:-938.4709,\x22y2\x22:990.8204},{\x22x1\x22:-933.3365,\x22y1\x22:997.0992,\x22x2\x22:-937.0239,\x22y2\x22:993.9251},{\x22x1\x22:-929.7744,\x22y1\x22:1004.7475,\x22x2\x22:-933.3365,\x22y2\x22:997.0992},{\x22x1\x22:-923.3364,\x22y1\x22:1018.5589,\x22x2\x22:-929.7744,\x22y2\x22:1004.7475},{\x22x1\x22:-921.8265,\x22y1\x22:1026.5262,\x22x2\x22:-923.3364,\x22y2\x22:1018.5589},{\x22x1\x22:-605.0581,\x22y1\x22:1357.2274,\x22x2\x22:-612.2167,\x22y2\x22:1350.1205},{\x22x1\x22:-604.9978,\x22y1\x22:1366.1993,\x22x2\x22:-605.0581,\x22y2\x22:1357.2274},{\x22x1\x22:-612.0702,\x22y1\x22:1373.1804,\x22x2\x22:-604.9978,\x22y2\x22:1366.1993},{\x22x1\x22:-619.9396,\x22y1\x22:1373.1769,\x22x2\x22:-612.0702,\x22y2\x22:1373.1804},{\x22x1\x22:-627.0054,\x22y1\x22:1366.2255,\x22x2\x22:-619.9396,\x22y2\x22:1373.1769},{\x22x1\x22:-626.9478,\x22y1\x22:1357.2249,\x22x2\x22:-627.0054,\x22y2\x22:1366.2255},{\x22x1\x22:-619.493,\x22y1\x22:1349.2848,\x22x2\x22:-626.9478,\x22y2\x22:1357.2249},{\x22x1\x22:-620.7292,\x22y1\x22:1351.053,\x22x2\x22:-620.7292,\x22y2\x22:1351.053},{\x22x1\x22:-649.6299,\x22y1\x22:-497.4631,\x22x2\x22:-677.6899,\x22y2\x22:-520.7646},{\x22x1\x22:-677.6899,\x22y1\x22:-520.7646,\x22x2\x22:-704.9025,\x22y2\x22:-549.2278},{\x22x1\x22:-704.9025,\x22y1\x22:-549.2278,\x22x2\x22:-718.659,\x22y2\x22:-564.8638},{\x22x1\x22:-718.659,\x22y1\x22:-564.8638,\x22x2\x22:-738.0634,\x22y2\x22:-592.2842},{\x22x1\x22:-738.0634,\x22y1\x22:-592.2842,\x22x2\x22:-759.5193,\x22y2\x22:-630.1693},{\x22x1\x22:-759.5193,\x22y1\x22:-630.1693,\x22x2\x22:-768.7294,\x22y2\x22:-649.0736},{\x22x1\x22:-768.7294,\x22y1\x22:-649.0736,\x22x2\x22:-782.8866,\x22y2\x22:-687.1716},{\x22x1\x22:-782.8866,\x22y1\x22:-687.1716,\x22x2\x22:-793.9274,\x22y2\x22:-726.5684},{\x22x1\x22:-793.9274,\x22y1\x22:-726.5684,\x22x2\x22:-798.0357,\x22y2\x22:-747.2468},{\x22x1\x22:-798.0357,\x22y1\x22:-747.2468,\x22x2\x22:-800.9667,\x22y2\x22:-781.4053},{\x22x1\x22:-800.9667,\x22y1\x22:-781.4053,\x22x2\x22:-800.145,\x22y2\x22:-846.9608},{\x22x1\x22:-800.145,\x22y1\x22:-846.9608,\x22x2\x22:-794.0281,\x22y2\x22:-884.8999},{\x22x1\x22:-794.0281,\x22y1\x22:-884.8999,\x22x2\x22:-776.119,\x22y2\x22:-946.5746},{\x22x1\x22:-776.119,\x22y1\x22:-946.5746,\x22x2\x22:-744.2872,\x22y2\x22:-1011.7515},{\x22x1\x22:-744.2872,\x22y1\x22:-1011.7515,\x22x2\x22:-724.0058,\x22y2\x22:-1041.1171},{\x22x1\x22:-724.0058,\x22y1\x22:-1041.1171,\x22x2\x22:-702.7899,\x22y2\x22:-1066.506},{\x22x1\x22:-702.7899,\x22y1\x22:-1066.506,\x22x2\x22:-679.3939,\x22y2\x22:-1090.5132},{\x22x1\x22:-679.3939,\x22y1\x22:-1090.5132,\x22x2\x22:-656.7484,\x22y2\x22:-1110.5726},{\x22x1\x22:-656.7484,\x22y1\x22:-1110.5726,\x22x2\x22:-626.0688,\x22y2\x22:-1132.536},{\x22x1\x22:-626.0688,\x22y1\x22:-1132.536,\x22x2\x22:-575.6833,\x22y2\x22:-1160.9305},{\x22x1\x22:-575.6833,\x22y1\x22:-1160.9305,\x22x2\x22:-528.9338,\x22y2\x22:-1178.6227},{\x22x1\x22:-528.9338,\x22y1\x22:-1178.6227,\x22x2\x22:-486.9933,\x22y2\x22:-1189.8148},{\x22x1\x22:-486.9933,\x22y1\x22:-1189.8148,\x22x2\x22:-449.4019,\x22y2\x22:-1195.2943},{\x22x1\x22:-449.4019,\x22y1\x22:-1195.2943,\x22x2\x22:-396.1669,\x22y2\x22:-1196.5995},{\x22x1\x22:-396.1669,\x22y1\x22:-1196.5995,\x22x2\x22:-350.2512,\x22y2\x22:-1191.5525},{\x22x1\x22:-350.2512,\x22y1\x22:-1191.5525,\x22x2\x22:-292.0831,\x22y2\x22:-1176.499},{\x22x1\x22:-292.0831,\x22y1\x22:-1176.499,\x22x2\x22:-233.8984,\x22y2\x22:-1151.3313},{\x22x1\x22:-233.8984,\x22y1\x22:-1151.3313,\x22x2\x22:-190.2934,\x22y2\x22:-1125.3354},{\x22x1\x22:-190.2934,\x22y1\x22:-1125.3354,\x22x2\x22:-150.7125,\x22y2\x22:-1091.8422},{\x22x1\x22:-150.7125,\x22y1\x22:-1091.8422,\x22x2\x22:-111.3908,\x22y2\x22:-1051.6605},{\x22x1\x22:-111.3908,\x22y1\x22:-1051.6605,\x22x2\x22:-72.778,\x22y2\x22:-994.2005},{\x22x1\x22:-72.778,\x22y1\x22:-994.2005,\x22x2\x22:-54.1564,\x22y2\x22:-956.1645},{\x22x1\x22:-54.1564,\x22y1\x22:-956.1645,\x22x2\x22:-37.6804,\x22y2\x22:-906.9178},{\x22x1\x22:-37.6804,\x22y1\x22:-906.9178,\x22x2\x22:-28.091,\x22y2\x22:-851.2056},{\x22x1\x22:-28.091,\x22y1\x22:-851.2056,\x22x2\x22:-24.7642,\x22y2\x22:-795.0869},{\x22x1\x22:-24.7642,\x22y1\x22:-795.0869,\x22x2\x22:-29.144,\x22y2\x22:-743.155},{\x22x1\x22:-29.144,\x22y1\x22:-743.155,\x22x2\x22:-44.8478,\x22y2\x22:-683.5579},{\x22x1\x22:-44.8478,\x22y1\x22:-683.5579,\x22x2\x22:-64.4805,\x22y2\x22:-634.8008},{\x22x1\x22:-64.4805,\x22y1\x22:-634.8008,\x22x2\x22:-94.9264,\x22y2\x22:-582.2526},{\x22x1\x22:-94.9264,\x22y1\x22:-582.2526,\x22x2\x22:-140.866,\x22y2\x22:-529.7664},{\x22x1\x22:-140.866,\x22y1\x22:-529.7664,\x22x2\x22:-190.3222,\x22y2\x22:-490.3973},{\x22x1\x22:-190.3222,\x22y1\x22:-490.3973,\x22x2\x22:-227.3414,\x22y2\x22:-465.3356},{\x22x1\x22:-227.3414,\x22y1\x22:-465.3356,\x22x2\x22:-279.8833,\x22y2\x22:-443.6551},{\x22x1\x22:-279.8833,\x22y1\x22:-443.6551,\x22x2\x22:-335.8114,\x22y2\x22:-427.5162},{\x22x1\x22:-335.8114,\x22y1\x22:-427.5162,\x22x2\x22:-394.719,\x22y2\x22:-420.6928},{\x22x1\x22:-394.719,\x22y1\x22:-420.6928,\x22x2\x22:-442.3929,\x22y2\x22:-420.8061},{\x22x1\x22:-442.3929,\x22y1\x22:-420.8061,\x22x2\x22:-492.9034,\x22y2\x22:-427.182},{\x22x1\x22:-492.9034,\x22y1\x22:-427.182,\x22x2\x22:-543.3914,\x22y2\x22:-443.0143},{\x22x1\x22:-543.3914,\x22y1\x22:-443.0143,\x22x2\x22:-594.1437,\x22y2\x22:-465.1824},{\x22x1\x22:-594.1437,\x22y1\x22:-465.1824,\x22x2\x22:-633.7997,\x22y2\x22:-487.662},{\x22x1\x22:-633.7997,\x22y1\x22:-487.662,\x22x2\x22:-649.6299,\x22y2\x22:-497.4631},{\x22x1\x22:-271.4938,\x22y1\x22:-885.1924,\x22x2\x22:-277.1861,\x22y2\x22:-885.1932},{\x22x1\x22:-277.1861,\x22y1\x22:-885.193,\x22x2\x22:-277.1859,\x22y2\x22:-886.2161},{\x22x1\x22:-277.1859,\x22y1\x22:-886.2161,\x22x2\x22:-299.8138,\x22y2\x22:-886.2159},{\x22x1\x22:-299.8138,\x22y1\x22:-886.2162,\x22x2\x22:-299.8139,\x22y2\x22:-885.1278},{\x22x1\x22:-299.8136,\x22y1\x22:-885.1351,\x22x2\x22:-307.1856,\x22y2\x22:-884.3143},{\x22x1\x22:-307.1856,\x22y1\x22:-884.3144,\x22x2\x22:-325.8142,\x22y2\x22:-884.3137},{\x22x1\x22:-325.8142,\x22y1\x22:-884.3137,\x22x2\x22:-333.1862,\x22y2\x22:-885.2361},{\x22x1\x22:-333.1866,\x22y1\x22:-885.2015,\x22x2\x22:-333.1862,\x22y2\x22:-910.3145},{\x22x1\x22:-333.1862,\x22y1\x22:-910.3145,\x22x2\x22:-369.8132,\x22y2\x22:-910.3147},{\x22x1\x22:-369.8139,\x22y1\x22:-910.3145,\x22x2\x22:-369.814,\x22y2\x22:-899.1649},{\x22x1\x22:-369.814,\x22y1\x22:-899.1645,\x22x2\x22:-377.186,\x22y2\x22:-898.3155},{\x22x1\x22:-377.186,\x22y1\x22:-898.3155,\x22x2\x22:-395.81,\x22y2\x22:-898.3156},{\x22x1\x22:-395.81,\x22y1\x22:-898.3156,\x22x2\x22:-403.1819,\x22y2\x22:-899.1656},{\x22x1\x22:-403.182,\x22y1\x22:-899.1666,\x22x2\x22:-403.1816,\x22y2\x22:-924.3162},{\x22x1\x22:-403.1818,\x22y1\x22:-924.3162,\x22x2\x22:-467.8098,\x22y2\x22:-924.316},{\x22x1\x22:-467.8098,\x22y1\x22:-924.3161,\x22x2\x22:-467.81,\x22y2\x22:-924.3162},{\x22x1\x22:-467.81,\x22y1\x22:-924.3162,\x22x2\x22:-467.8091,\x22y2\x22:-918.9113},{\x22x1\x22:-467.8091,\x22y1\x22:-918.9113,\x22x2\x22:-467.8098,\x22y2\x22:-913.0452},{\x22x1\x22:-467.8098,\x22y1\x22:-913.0452,\x22x2\x22:-468.055,\x22y2\x22:-912.3145},{\x22x1\x22:-467.9766,\x22y1\x22:-912.5483,\x22x2\x22:-468.0808,\x22y2\x22:-912.4078},{\x22x1\x22:-468.055,\x22y1\x22:-912.3145,\x22x2\x22:-497.8172,\x22y2\x22:-912.3149},{\x22x1\x22:-497.817,\x22y1\x22:-912.3152,\x22x2\x22:-497.8138,\x22y2\x22:-836.1836},{\x22x1\x22:-497.8138,\x22y1\x22:-836.1836,\x22x2\x22:-497.8139,\x22y2\x22:-829.2354},{\x22x1\x22:-497.8139,\x22y1\x22:-829.2354,\x22x2\x22:-497.7471,\x22y2\x22:-829.2278},{\x22x1\x22:-497.7471,\x22y1\x22:-829.2278,\x22x2\x22:-497.9128,\x22y2\x22:-828.6175},{\x22x1\x22:-497.9128,\x22y1\x22:-828.6175,\x22x2\x22:-498.266,\x22y2\x22:-828.3542},{\x22x1\x22:-498.266,\x22y1\x22:-828.3542,\x22x2\x22:-511.8144,\x22y2\x22:-828.2886},{\x22x1\x22:-511.8144,\x22y1\x22:-828.2886,\x22x2\x22:-511.8138,\x22y2\x22:-787.6873},{\x22x1\x22:-511.8138,\x22y1\x22:-787.6873,\x22x2\x22:-484.5929,\x22y2\x22:-787.6891},{\x22x1\x22:-484.5929,\x22y1\x22:-787.6891,\x22x2\x22:-484.3568,\x22y2\x22:-787.6764},{\x22x1\x22:-484.3568,\x22y1\x22:-787.6764,\x22x2\x22:-483.8152,\x22y2\x22:-787.0602},{\x22x1\x22:-483.8152,\x22y1\x22:-787.0602,\x22x2\x22:-483.8126,\x22y2\x22:-763.6892},{\x22x1\x22:-483.8126,\x22y1\x22:-763.6892,\x22x2\x22:-483.8126,\x22y2\x22:-763.6892},{\x22x1\x22:-483.8126,\x22y1\x22:-763.6892,\x22x2\x22:-484.6636,\x22y2\x22:-756.3173},{\x22x1\x22:-484.6636,\x22y1\x22:-756.3174,\x22x2\x22:-495.813,\x22y2\x22:-756.3168},{\x22x1\x22:-495.8129,\x22y1\x22:-756.3172,\x22x2\x22:-495.8128,\x22y2\x22:-719.689},{\x22x1\x22:-495.813,\x22y1\x22:-719.6893,\x22x2\x22:-484.6632,\x22y2\x22:-719.689},{\x22x1\x22:-484.6633,\x22y1\x22:-719.689,\x22x2\x22:-483.8137,\x22y2\x22:-712.3168},{\x22x1\x22:-483.8137,\x22y1\x22:-712.3168,\x22x2\x22:-483.8135,\x22y2\x22:-689.6887},{\x22x1\x22:-483.8135,\x22y1\x22:-689.6887,\x22x2\x22:-462.769,\x22y2\x22:-689.6923},{\x22x1\x22:-462.769,\x22y1\x22:-689.6923,\x22x2\x22:-445.1858,\x22y2\x22:-689.6899},{\x22x1\x22:-445.1858,\x22y1\x22:-689.6899,\x22x2\x22:-415.9107,\x22y2\x22:-689.6909},{\x22x1\x22:-415.9107,\x22y1\x22:-689.6909,\x22x2\x22:-391.0508,\x22y2\x22:-689.6911},{\x22x1\x22:-391.0508,\x22y1\x22:-689.6911,\x22x2\x22:-373.1855,\x22y2\x22:-689.6895},{\x22x1\x22:-373.1855,\x22y1\x22:-689.6895,\x22x2\x22:-373.1857,\x22y2\x22:-744.3176},{\x22x1\x22:-373.1857,\x22y1\x22:-744.3176,\x22x2\x22:-387.8499,\x22y2\x22:-744.3158},{\x22x1\x22:-387.8499,\x22y1\x22:-744.3158,\x22x2\x22:-399.4884,\x22y2\x22:-744.3156},{\x22x1\x22:-399.4884,\x22y1\x22:-744.3156,\x22x2\x22:-399.4884,\x22y2\x22:-744.3156},{\x22x1\x22:-399.4884,\x22y1\x22:-744.3156,\x22x2\x22:-400.3925,\x22y2\x22:-744.3165},{\x22x1\x22:-400.3925,\x22y1\x22:-744.3165,\x22x2\x22:-401.1515,\x22y2\x22:-744.7258},{\x22x1\x22:-401.1515,\x22y1\x22:-744.7258,\x22x2\x22:-401.1852,\x22y2\x22:-754.3173},{\x22x1\x22:-401.1852,\x22y1\x22:-754.3173,\x22x2\x22:-400.3347,\x22y2\x22:-761.6894},{\x22x1\x22:-400.3347,\x22y1\x22:-761.6894,\x22x2\x22:-375.1847,\x22y2\x22:-761.6889},{\x22x1\x22:-375.1847,\x22y1\x22:-761.6889,\x22x2\x22:-375.1853,\x22y2\x22:-785.0727},{\x22x1\x22:-375.1853,\x22y1\x22:-785.0727,\x22x2\x22:-375.1854,\x22y2\x22:-786.8157},{\x22x1\x22:-375.1854,\x22y1\x22:-786.8157,\x22x2\x22:-374.4944,\x22y2\x22:-787.6893},{\x22x1\x22:-374.4944,\x22y1\x22:-787.6893,\x22x2\x22:-363.1057,\x22y2\x22:-787.6931},{\x22x1\x22:-363.1057,\x22y1\x22:-787.6931,\x22x2\x22:-359.3091,\x22y2\x22:-787.6909},{\x22x1\x22:-359.3091,\x22y1\x22:-787.6909,\x22x2\x22:-357.1553,\x22y2\x22:-787.6905},{\x22x1\x22:-357.1553,\x22y1\x22:-787.6905,\x22x2\x22:-356.5383,\x22y2\x22:-787.6902},{\x22x1\x22:-356.5383,\x22y1\x22:-787.6902,\x22x2\x22:-355.8127,\x22y2\x22:-786.954},{\x22x1\x22:-355.8127,\x22y1\x22:-786.954,\x22x2\x22:-355.8132,\x22y2\x22:-775.69},{\x22x1\x22:-355.8132,\x22y1\x22:-775.69,\x22x2\x22:-355.8132,\x22y2\x22:-775.69},{\x22x1\x22:-355.8132,\x22y1\x22:-775.69,\x22x2\x22:-319.1853,\x22y2\x22:-775.6899},{\x22x1\x22:-319.1853,\x22y1\x22:-775.6899,\x22x2\x22:-319.1853,\x22y2\x22:-786.8386},{\x22x1\x22:-319.1853,\x22y1\x22:-786.8458,\x22x2\x22:-311.8133,\x22y2\x22:-787.689},{\x22x1\x22:-311.8133,\x22y1\x22:-787.689,\x22x2\x22:-291.0262,\x22y2\x22:-787.6907},{\x22x1\x22:-294.5895,\x22y1\x22:-787.6894,\x22x2\x22:-288.8126,\x22y2\x22:-787.6896},{\x22x1\x22:-288.8126,\x22y1\x22:-787.6896,\x22x2\x22:-289.132,\x22y2\x22:-787.6904},{\x22x1\x22:-289.132,\x22y1\x22:-787.6904,\x22x2\x22:-287.8127,\x22y2\x22:-786.9333},{\x22x1\x22:-287.8127,\x22y1\x22:-786.9333,\x22x2\x22:-287.8112,\x22y2\x22:-774.8163},{\x22x1\x22:-287.8112,\x22y1\x22:-774.8163,\x22x2\x22:-287.8105,\x22y2\x22:-760.696},{\x22x1\x22:-287.8105,\x22y1\x22:-760.696,\x22x2\x22:-287.8091,\x22y2\x22:-741.5806},{\x22x1\x22:-287.8091,\x22y1\x22:-741.5806,\x22x2\x22:-287.8083,\x22y2\x22:-725.0115},{\x22x1\x22:-287.8083,\x22y1\x22:-725.0115,\x22x2\x22:-287.8118,\x22y2\x22:-705.1357},{\x22x1\x22:-287.8118,\x22y1\x22:-705.1357,\x22x2\x22:-287.8124,\x22y2\x22:-702.9141},{\x22x1\x22:-287.8124,\x22y1\x22:-702.9141,\x22x2\x22:-288.4194,\x22y2\x22:-702.3196},{\x22x1\x22:-288.4194,\x22y1\x22:-702.3196,\x22x2\x22:-297.8146,\x22y2\x22:-702.3173},{\x22x1\x22:-297.8146,\x22y1\x22:-702.3173,\x22x2\x22:-305.1866,\x22y2\x22:-703.1686},{\x22x1\x22:-305.1866,\x22y1\x22:-703.1678,\x22x2\x22:-305.1863,\x22y2\x22:-714.3182},{\x22x1\x22:-305.1863,\x22y1\x22:-714.3182,\x22x2\x22:-397.8144,\x22y2\x22:-714.3179},{\x22x1\x22:-397.8144,\x22y1\x22:-714.3179,\x22x2\x22:-397.8145,\x22y2\x22:-703.1684},{\x22x1\x22:-397.8144,\x22y1\x22:-703.1683,\x22x2\x22:-405.1865,\x22y2\x22:-702.3188},{\x22x1\x22:-405.1865,\x22y1\x22:-702.3188,\x22x2\x22:-423.8148,\x22y2\x22:-702.319},{\x22x1\x22:-423.8148,\x22y1\x22:-702.319,\x22x2\x22:-431.1868,\x22y2\x22:-703.1696},{\x22x1\x22:-431.2104,\x22y1\x22:-703.1631,\x22x2\x22:-431.1863,\x22y2\x22:-728.3196},{\x22x1\x22:-431.1865,\x22y1\x22:-728.3197,\x22x2\x22:-495.8149,\x22y2\x22:-728.3198},{\x22x1\x22:-495.8149,\x22y1\x22:-728.3198,\x22x2\x22:-495.8148,\x22y2\x22:-717.1714},{\x22x1\x22:-495.8146,\x22y1\x22:-717.1797,\x22x2\x22:-503.1868,\x22y2\x22:-716.3207},{\x22x1\x22:-503.1868,\x22y1\x22:-716.3207,\x22x2\x22:-510.5947,\x22y2\x22:-716.3196},{\x22x1\x22:-510.5947,\x22y1\x22:-716.3196,\x22x2\x22:-512.7794,\x22y2\x22:-716.3452},{\x22x1\x22:-512.7794,\x22y1\x22:-716.3452,\x22x2\x22:-513.1874,\x22y2\x22:-717.1663},{\x22x1\x22:-513.1874,\x22y1\x22:-717.1663,\x22x2\x22:-513.1893,\x22y2\x22:-741.3944},{\x22x1\x22:-513.1893,\x22y1\x22:-741.3944,\x22x2\x22:-513.1876,\x22y2\x22:-745.3348},{\x22x1\x22:-513.1876,\x22y1\x22:-745.3348,\x22x2\x22:-512.6932,\x22y2\x22:-745.678},{\x22x1\x22:-512.6932,\x22y1\x22:-745.678,\x22x2\x22:-499.1877,\x22y2\x22:-745.6924},{\x22x1\x22:-499.1877,\x22y1\x22:-745.6926,\x22x2\x22:-499.1879,\x22y2\x22:-768.3209},{\x22x1\x22:-499.1879,\x22y1\x22:-768.3209,\x22x2\x22:-498.3376,\x22y2\x22:-775.693},{\x22x1\x22:-498.3376,\x22y1\x22:-775.6929,\x22x2\x22:-473.1872,\x22y2\x22:-775.6928},{\x22x1\x22:-473.1873,\x22y1\x22:-775.6929,\x22x2\x22:-473.1874,\x22y2\x22:-840.321},{\x22x1\x22:-473.1874,\x22y1\x22:-840.321,\x22x2\x22:-484.3314,\x22y2\x22:-840.3208},{\x22x1\x22:-484.3367,\x22y1\x22:-840.3208,\x22x2\x22:-485.1865,\x22y2\x22:-847.6931},{\x22x1\x22:-485.1865,\x22y1\x22:-847.6931,\x22x2\x22:-485.1877,\x22y2\x22:-860.22},{\x22x1\x22:-485.1877,\x22y1\x22:-860.22,\x22x2\x22:-485.1886,\x22y2\x22:-874.1787},{\x22x1\x22:-485.1886,\x22y1\x22:-874.1787,\x22x2\x22:-485.1886,\x22y2\x22:-886.3076},{\x22x1\x22:-485.1886,\x22y1\x22:-886.3076,\x22x2\x22:-485.1892,\x22y2\x22:-898.2929},{\x22x1\x22:-485.1892,\x22y1\x22:-898.2929,\x22x2\x22:-485.1895,\x22y2\x22:-926.1282},{\x22x1\x22:-485.1895,\x22y1\x22:-926.1282,\x22x2\x22:-485.1871,\x22y2\x22:-927.1209},{\x22x1\x22:-485.1871,\x22y1\x22:-927.1209,\x22x2\x22:-484.6726,\x22y2\x22:-927.6759},{\x22x1\x22:-484.6726,\x22y1\x22:-927.6759,\x22x2\x22:-461.1882,\x22y2\x22:-927.6938},{\x22x1\x22:-461.1882,\x22y1\x22:-927.6938,\x22x2\x22:-453.8169,\x22y2\x22:-926.847},{\x22x1\x22:-453.8169,\x22y1\x22:-926.847,\x22x2\x22:-453.8162,\x22y2\x22:-873.693},{\x22x1\x22:-453.8162,\x22y1\x22:-873.693,\x22x2\x22:-410.1882,\x22y2\x22:-873.6929},{\x22x1\x22:-410.189,\x22y1\x22:-873.6929,\x22x2\x22:-410.344,\x22y2\x22:-898.7589},{\x22x1\x22:-410.344,\x22y1\x22:-898.7589,\x22x2\x22:-404.8083,\x22y2\x22:-898.6559},{\x22x1\x22:-404.8159,\x22y1\x22:-898.6351,\x22x2\x22:-404.8162,\x22y2\x22:-873.6931},{\x22x1\x22:-404.8162,\x22y1\x22:-873.6931,\x22x2\x22:-361.1884,\x22y2\x22:-873.6931},{\x22x1\x22:-361.1884,\x22y1\x22:-873.6931,\x22x2\x22:-361.1965,\x22y2\x22:-884.848},{\x22x1\x22:-361.1965,\x22y1\x22:-884.848,\x22x2\x22:-353.8163,\x22y2\x22:-885.6926},{\x22x1\x22:-353.8163,\x22y1\x22:-885.6926,\x22x2\x22:-331.1883,\x22y2\x22:-885.6927},{\x22x1\x22:-331.1884,\x22y1\x22:-885.6929,\x22x2\x22:-331.1881,\x22y2\x22:-903.3202},{\x22x1\x22:-331.1881,\x22y1\x22:-903.3202,\x22x2\x22:-331.1904,\x22y2\x22:-932.3384},{\x22x1\x22:-331.1904,\x22y1\x22:-932.3384,\x22x2\x22:-331.1903,\x22y2\x22:-940.1751},{\x22x1\x22:-331.1903,\x22y1\x22:-940.1751,\x22x2\x22:-331.1735,\x22y2\x22:-941.185},{\x22x1\x22:-331.1735,\x22y1\x22:-941.185,\x22x2\x22:-330.5607,\x22y2\x22:-941.6926},{\x22x1\x22:-330.5607,\x22y1\x22:-941.6926,\x22x2\x22:-324.0448,\x22y2\x22:-941.6934},{\x22x1\x22:-324.0448,\x22y1\x22:-941.6934,\x22x2\x22:-316.4974,\x22y2\x22:-941.6934},{\x22x1\x22:-316.4974,\x22y1\x22:-941.6934,\x22x2\x22:-315.8169,\x22y2\x22:-940.9641},{\x22x1\x22:-315.8169,\x22y1\x22:-940.9641,\x22x2\x22:-315.8156,\x22y2\x22:-930.8819},{\x22x1\x22:-315.8156,\x22y1\x22:-930.8819,\x22x2\x22:-315.8143,\x22y2\x22:-899.1556},{\x22x1\x22:-315.8143,\x22y1\x22:-899.1556,\x22x2\x22:-315.8124,\x22y2\x22:-890.7932},{\x22x1\x22:-315.8124,\x22y1\x22:-890.7932,\x22x2\x22:-315.8116,\x22y2\x22:-875.6891},{\x22x1\x22:-315.8116,\x22y1\x22:-875.6891,\x22x2\x22:-316.6585,\x22y2\x22:-868.3171},{\x22x1\x22:-316.6669,\x22y1\x22:-868.317,\x22x2\x22:-341.8119,\x22y2\x22:-868.3171},{\x22x1\x22:-341.8119,\x22y1\x22:-868.3171,\x22x2\x22:-341.8122,\x22y2\x22:-843.1653},{\x22x1\x22:-341.8123,\x22y1\x22:-843.1677,\x22x2\x22:-349.1839,\x22y2\x22:-842.3181},{\x22x1\x22:-349.1839,\x22y1\x22:-842.3181,\x22x2\x22:-357.8089,\x22y2\x22:-842.317},{\x22x1\x22:-357.8089,\x22y1\x22:-842.317,\x22x2\x22:-359.1845,\x22y2\x22:-843.0692},{\x22x1\x22:-359.1845,\x22y1\x22:-843.0692,\x22x2\x22:-359.1842,\x22y2\x22:-856.3182},{\x22x1\x22:-359.1842,\x22y1\x22:-856.3182,\x22x2\x22:-373.7699,\x22y2\x22:-856.3166},{\x22x1\x22:-373.7699,\x22y1\x22:-856.3166,\x22x2\x22:-373.7699,\x22y2\x22:-856.3166},{\x22x1\x22:-373.7699,\x22y1\x22:-856.3166,\x22x2\x22:-380.2562,\x22y2\x22:-856.3157},{\x22x1\x22:-380.2562,\x22y1\x22:-856.3157,\x22x2\x22:-388.4078,\x22y2\x22:-856.3143},{\x22x1\x22:-388.4078,\x22y1\x22:-856.3143,\x22x2\x22:-399.8122,\x22y2\x22:-856.3172},{\x22x1\x22:-399.8122,\x22y1\x22:-856.3172,\x22x2\x22:-399.812,\x22y2\x22:-833.6891},{\x22x1\x22:-399.812,\x22y1\x22:-833.6891,\x22x2\x22:-400.6636,\x22y2\x22:-826.3172},{\x22x1\x22:-400.6626,\x22y1\x22:-826.3173,\x22x2\x22:-453.8127,\x22y2\x22:-826.3173},{\x22x1\x22:-453.8127,\x22y1\x22:-826.3173,\x22x2\x22:-453.8132,\x22y2\x22:-801.0159},{\x22x1\x22:-453.8132,\x22y1\x22:-801.0159,\x22x2\x22:-453.8125,\x22y2\x22:-761.689},{\x22x1\x22:-453.8127,\x22y1\x22:-761.6891,\x22x2\x22:-437.7436,\x22y2\x22:-761.6899},{\x22x1\x22:-437.7436,\x22y1\x22:-761.6899,\x22x2\x22:-414.7422,\x22y2\x22:-761.6891},{\x22x1\x22:-414.7422,\x22y1\x22:-761.6891,\x22x2\x22:-413.8137,\x22y2\x22:-754.3172},{\x22x1\x22:-413.8137,\x22y1\x22:-754.3172,\x22x2\x22:-413.8134,\x22y2\x22:-731.6886},{\x22x1\x22:-413.8134,\x22y1\x22:-731.6886,\x22x2\x22:-390.4749,\x22y2\x22:-731.6914},{\x22x1\x22:-390.4749,\x22y1\x22:-731.6914,\x22x2\x22:-386.844,\x22y2\x22:-731.6891},{\x22x1\x22:-386.844,\x22y1\x22:-731.6891,\x22x2\x22:-386.2066,\x22y2\x22:-731.6406},{\x22x1\x22:-386.2066,\x22y1\x22:-731.6406,\x22x2\x22:-385.8131,\x22y2\x22:-730.8393},{\x22x1\x22:-385.8131,\x22y1\x22:-730.8393,\x22x2\x22:-385.813,\x22y2\x22:-716.7206},{\x22x1\x22:-385.813,\x22y1\x22:-716.7206,\x22x2\x22:-385.8135,\x22y2\x22:-703.2477},{\x22x1\x22:-385.8135,\x22y1\x22:-703.2477,\x22x2\x22:-385.8739,\x22y2\x22:-702.6628},{\x22x1\x22:-385.8739,\x22y1\x22:-702.6628,\x22x2\x22:-386.1533,\x22y2\x22:-702.3857},{\x22x1\x22:-386.1533,\x22y1\x22:-702.3857,\x22x2\x22:-388.2086,\x22y2\x22:-702.316},{\x22x1\x22:-388.2086,\x22y1\x22:-702.316,\x22x2\x22:-405.4354,\x22y2\x22:-702.3143},{\x22x1\x22:-405.4354,\x22y1\x22:-702.3143,\x22x2\x22:-436.3138,\x22y2\x22:-702.3162},{\x22x1\x22:-436.3138,\x22y1\x22:-702.3162,\x22x2\x22:-467.1629,\x22y2\x22:-702.3154},{\x22x1\x22:-467.1629,\x22y1\x22:-702.3154,\x22x2\x22:-469.6189,\x22y2\x22:-702.3168},{\x22x1\x22:-469.6189,\x22y1\x22:-702.3168,\x22x2\x22:-469.9425,\x22y2\x22:-702.3165},{\x22x1\x22:-469.9425,\x22y1\x22:-702.3165,\x22x2\x22:-470.6521,\x22y2\x22:-702.3271},{\x22x1\x22:-470.6521,\x22y1\x22:-702.3271,\x22x2\x22:-471.0497,\x22y2\x22:-702.5035},{\x22x1\x22:-471.0497,\x22y1\x22:-702.5035,\x22x2\x22:-471.1867,\x22y2\x22:-703.0134},{\x22x1\x22:-471.1867,\x22y1\x22:-703.0134,\x22x2\x22:-471.1858,\x22y2\x22:-712.3167},{\x22x1\x22:-471.1858,\x22y1\x22:-712.3167,\x22x2\x22:-470.3342,\x22y2\x22:-719.689},{\x22x1\x22:-470.3346,\x22y1\x22:-719.689,\x22x2\x22:-459.1848,\x22y2\x22:-719.689},{\x22x1\x22:-459.1848,\x22y1\x22:-719.689,\x22x2\x22:-459.1852,\x22y2\x22:-730.8383},{\x22x1\x22:-459.1848,\x22y1\x22:-730.8401,\x22x2\x22:-451.813,\x22y2\x22:-731.6883},{\x22x1\x22:-451.813,\x22y1\x22:-731.6883,\x22x2\x22:-405.185,\x22y2\x22:-731.6885},{\x22x1\x22:-405.185,\x22y1\x22:-731.6885,\x22x2\x22:-397.8137,\x22y2\x22:-730.8452},{\x22x1\x22:-397.8129,\x22y1\x22:-730.8387,\x22x2\x22:-397.813,\x22y2\x22:-705.6874},{\x22x1\x22:-397.813,\x22y1\x22:-705.6874,\x22x2\x22:-386.0588,\x22y2\x22:-705.6877},{\x22x1\x22:-386.0588,\x22y1\x22:-705.6877,\x22x2\x22:-361.1848,\x22y2\x22:-705.6877},{\x22x1\x22:-361.1851,\x22y1\x22:-705.6876,\x22x2\x22:-361.1847,\x22y2\x22:-716.8434},{\x22x1\x22:-361.1855,\x22y1\x22:-716.8505,\x22x2\x22:-353.813,\x22y2\x22:-717.687},{\x22x1\x22:-353.813,\x22y1\x22:-717.687,\x22x2\x22:-331.1848,\x22y2\x22:-717.6878},{\x22x1\x22:-331.1846,\x22y1\x22:-717.6879,\x22x2\x22:-331.1855,\x22y2\x22:-729.0084},{\x22x1\x22:-331.1855,\x22y1\x22:-729.0084,\x22x2\x22:-331.1862,\x22y2\x22:-730.579},{\x22x1\x22:-331.1862,\x22y1\x22:-730.579,\x22x2\x22:-331.1857,\x22y2\x22:-730.0173},{\x22x1\x22:-331.1857,\x22y1\x22:-730.0173,\x22x2\x22:-331.1848,\x22y2\x22:-731.1074},{\x22x1\x22:-331.1848,\x22y1\x22:-731.1074,\x22x2\x22:-331.1547,\x22y2\x22:-731.2379},{\x22x1\x22:-331.1547,\x22y1\x22:-731.2379,\x22x2\x22:-330.5607,\x22y2\x22:-731.6875},{\x22x1\x22:-330.5607,\x22y1\x22:-731.6875,\x22x2\x22:-303.1854,\x22y2\x22:-731.688},{\x22x1\x22:-303.1855,\x22y1\x22:-731.6881,\x22x2\x22:-303.1864,\x22y2\x22:-828.316},{\x22x1\x22:-303.1864,\x22y1\x22:-828.316,\x22x2\x22:-340.0843,\x22y2\x22:-828.3125},{\x22x1\x22:-340.0843,\x22y1\x22:-828.3125,\x22x2\x22:-344.3781,\x22y2\x22:-828.3135},{\x22x1\x22:-344.3781,\x22y1\x22:-828.3135,\x22x2\x22:-344.1546,\x22y2\x22:-828.3138},{\x22x1\x22:-344.1546,\x22y1\x22:-828.3138,\x22x2\x22:-344.6625,\x22y2\x22:-828.3136},{\x22x1\x22:-344.6625,\x22y1\x22:-828.3136,\x22x2\x22:-345.129,\x22y2\x22:-828.6567},{\x22x1\x22:-345.129,\x22y1\x22:-828.6567,\x22x2\x22:-345.1874,\x22y2\x22:-829.0186},{\x22x1\x22:-345.1874,\x22y1\x22:-829.0186,\x22x2\x22:-345.1868,\x22y2\x22:-852.3143},{\x22x1\x22:-345.1868,\x22y1\x22:-852.3143,\x22x2\x22:-344.3368,\x22y2\x22:-859.6867},{\x22x1\x22:-344.3365,\x22y1\x22:-859.6865,\x22x2\x22:-333.1863,\x22y2\x22:-859.6862},{\x22x1\x22:-333.1864,\x22y1\x22:-859.6863,\x22x2\x22:-333.1859,\x22y2\x22:-870.8367},{\x22x1\x22:-333.1862,\x22y1\x22:-870.8397,\x22x2\x22:-325.8143,\x22y2\x22:-871.6856},{\x22x1\x22:-325.8143,\x22y1\x22:-871.6856,\x22x2\x22:-307.1859,\x22y2\x22:-871.6868},{\x22x1\x22:-307.1861,\x22y1\x22:-871.6865,\x22x2\x22:-299.814,\x22y2\x22:-870.8073},{\x22x1\x22:-299.814,\x22y1\x22:-870.8073,\x22x2\x22:-299.8141,\x22y2\x22:-869.7842},{\x22x1\x22:-299.8139,\x22y1\x22:-869.7842,\x22x2\x22:-277.1865,\x22y2\x22:-869.784},{\x22x1\x22:-277.1859,\x22y1\x22:-869.7841,\x22x2\x22:-277.1867,\x22y2\x22:-870.808},{\x22x1\x22:-277.186,\x22y1\x22:-870.808,\x22x2\x22:-271.4467,\x22y2\x22:-870.8068},{\x22x1\x22:-369.8141,\x22y1\x22:-859.6863,\x22x2\x22:-358.6641,\x22y2\x22:-859.6865},{\x22x1\x22:-358.684,\x22y1\x22:-859.6868,\x22x2\x22:-357.8152,\x22y2\x22:-852.3144},{\x22x1\x22:-357.8152,\x22y1\x22:-852.3144,\x22x2\x22:-357.8142,\x22y2\x22:-815.6862},{\x22x1\x22:-357.8143,\x22y1\x22:-815.6867,\x22x2\x22:-319.7868,\x22y2\x22:-815.6873},{\x22x1\x22:-319.7868,\x22y1\x22:-815.6873,\x22x2\x22:-316.6656,\x22y2\x22:-815.688},{\x22x1\x22:-316.6656,\x22y1\x22:-815.688,\x22x2\x22:-316.9686,\x22y2\x22:-815.6879},{\x22x1\x22:-316.9686,\x22y1\x22:-815.6879,\x22x2\x22:-316.5798,\x22y2\x22:-815.6879},{\x22x1\x22:-316.5798,\x22y1\x22:-815.6879,\x22x2\x22:-316.3036,\x22y2\x22:-815.6653},{\x22x1\x22:-316.3036,\x22y1\x22:-815.6653,\x22x2\x22:-315.8134,\x22y2\x22:-814.9663},{\x22x1\x22:-315.8134,\x22y1\x22:-814.9663,\x22x2\x22:-315.8108,\x22y2\x22:-807.111},{\x22x1\x22:-315.8108,\x22y1\x22:-807.111,\x22x2\x22:-315.8131,\x22y2\x22:-801.4476},{\x22x1\x22:-315.8131,\x22y1\x22:-801.4476,\x22x2\x22:-316.0926,\x22y2\x22:-800.4009},{\x22x1\x22:-316.0926,\x22y1\x22:-800.4009,\x22x2\x22:-317.4896,\x22y2\x22:-800.3156},{\x22x1\x22:-317.4896,\x22y1\x22:-800.3156,\x22x2\x22:-343.8133,\x22y2\x22:-800.3159},{\x22x1\x22:-343.8129,\x22y1\x22:-800.316,\x22x2\x22:-343.8115,\x22y2\x22:-783.468},{\x22x1\x22:-343.8115,\x22y1\x22:-783.468,\x22x2\x22:-343.8114,\x22y2\x22:-773.3881},{\x22x1\x22:-343.8114,\x22y1\x22:-773.3881,\x22x2\x22:-343.8109,\x22y2\x22:-773.0515},{\x22x1\x22:-343.8109,\x22y1\x22:-773.0515,\x22x2\x22:-344.3867,\x22y2\x22:-772.3145},{\x22x1\x22:-344.3867,\x22y1\x22:-772.3145,\x22x2\x22:-351.567,\x22y2\x22:-772.3129},{\x22x1\x22:-351.567,\x22y1\x22:-772.3129,\x22x2\x22:-385.8127,\x22y2\x22:-772.3153},{\x22x1\x22:-385.8126,\x22y1\x22:-772.3155,\x22x2\x22:-385.8123,\x22y2\x22:-759.6874},{\x22x1\x22:-385.8123,\x22y1\x22:-759.6874,\x22x2\x22:-374.8092,\x22y2\x22:-759.6907},{\x22x1\x22:-374.8092,\x22y1\x22:-759.6907,\x22x2\x22:-331.1844,\x22y2\x22:-759.6882},{\x22x1\x22:-331.1844,\x22y1\x22:-759.6882,\x22x2\x22:-331.1872,\x22y2\x22:-783.5403},{\x22x1\x22:-331.1872,\x22y1\x22:-783.5403,\x22x2\x22:-331.187,\x22y2\x22:-787.046},{\x22x1\x22:-331.187,\x22y1\x22:-787.046,\x22x2\x22:-330.9976,\x22y2\x22:-787.5178},{\x22x1\x22:-330.9976,\x22y1\x22:-787.5178,\x22x2\x22:-330.4886,\x22y2\x22:-787.6882},{\x22x1\x22:-330.4886,\x22y1\x22:-787.6882,\x22x2\x22:-317.388,\x22y2\x22:-787.6899},{\x22x1\x22:-317.388,\x22y1\x22:-787.6899,\x22x2\x22:-316.6392,\x22y2\x22:-787.6883},{\x22x1\x22:-316.6392,\x22y1\x22:-787.6883,\x22x2\x22:-316.4217,\x22y2\x22:-787.6887},{\x22x1\x22:-316.4217,\x22y1\x22:-787.6887,\x22x2\x22:-315.813,\x22y2\x22:-786.8463},{\x22x1\x22:-315.813,\x22y1\x22:-786.8463,\x22x2\x22:-315.8119,\x22y2\x22:-776.2919},{\x22x1\x22:-315.8119,\x22y1\x22:-776.2919,\x22x2\x22:-315.812,\x22y2\x22:-745.2969},{\x22x1\x22:-315.812,\x22y1\x22:-745.2969,\x22x2\x22:-315.8207,\x22y2\x22:-744.8409},{\x22x1\x22:-315.8207,\x22y1\x22:-744.8409,\x22x2\x22:-316.2715,\x22y2\x22:-744.3394},{\x22x1\x22:-316.2715,\x22y1\x22:-744.3394,\x22x2\x22:-343.8131,\x22y2\x22:-744.3152},{\x22x1\x22:-343.8137,\x22y1\x22:-744.3152,\x22x2\x22:-343.8122,\x22y2\x22:-737.2675},{\x22x1\x22:-343.8122,\x22y1\x22:-737.2675,\x22x2\x22:-343.8124,\x22y2\x22:-731.8849},{\x22x1\x22:-343.8124,\x22y1\x22:-731.8849,\x22x2\x22:-343.8123,\x22y2\x22:-731.2729},{\x22x1\x22:-343.8123,\x22y1\x22:-731.2729,\x22x2\x22:-343.8104,\x22y2\x22:-731.7672},{\x22x1\x22:-343.8104,\x22y1\x22:-731.7672,\x22x2\x22:-343.8127,\x22y2\x22:-731.0344},{\x22x1\x22:-343.8127,\x22y1\x22:-731.0344,\x22x2\x22:-343.8207,\x22y2\x22:-730.8776},{\x22x1\x22:-343.8207,\x22y1\x22:-730.8776,\x22x2\x22:-343.9576,\x22y2\x22:-730.5786},{\x22x1\x22:-343.9576,\x22y1\x22:-730.5786,\x22x2\x22:-344.3148,\x22y2\x22:-730.3148},{\x22x1\x22:-344.3148,\x22y1\x22:-730.3148,\x22x2\x22:-353.813,\x22y2\x22:-730.3145},{\x22x1\x22:-353.8124,\x22y1\x22:-730.3149,\x22x2\x22:-361.1855,\x22y2\x22:-731.2337},{\x22x1\x22:-361.1853,\x22y1\x22:-731.1663,\x22x2\x22:-361.1846,\x22y2\x22:-756.3159},{\x22x1\x22:-361.1846,\x22y1\x22:-756.3159,\x22x2\x22:-397.8127,\x22y2\x22:-756.3159},{\x22x1\x22:-397.8131,\x22y1\x22:-756.3159,\x22x2\x22:-397.8127,\x22y2\x22:-745.1662},{\x22x1\x22:-397.8126,\x22y1\x22:-745.1845,\x22x2\x22:-405.1849,\x22y2\x22:-744.3165},{\x22x1\x22:-405.1849,\x22y1\x22:-744.3165,\x22x2\x22:-418.484,\x22y2\x22:-744.3154},{\x22x1\x22:-418.484,\x22y1\x22:-744.3154,\x22x2\x22:-428.9439,\x22y2\x22:-744.3288},{\x22x1\x22:-428.9439,\x22y1\x22:-744.3288,\x22x2\x22:-429.1851,\x22y2\x22:-744.9818},{\x22x1\x22:-429.1851,\x22y1\x22:-744.9818,\x22x2\x22:-429.1857,\x22y2\x22:-760.2234},{\x22x1\x22:-429.1857,\x22y1\x22:-760.2234,\x22x2\x22:-429.1844,\x22y2\x22:-772.6976},{\x22x1\x22:-429.1844,\x22y1\x22:-772.6976,\x22x2\x22:-429.1813,\x22y2\x22:-773.1052},{\x22x1\x22:-429.1813,\x22y1\x22:-773.1052,\x22x2\x22:-428.2107,\x22y2\x22:-773.6885},{\x22x1\x22:-428.2107,\x22y1\x22:-773.6885,\x22x2\x22:-401.184,\x22y2\x22:-773.6884},{\x22x1\x22:-401.184,\x22y1\x22:-773.6884,\x22x2\x22:-401.1854,\x22y2\x22:-787.2234},{\x22x1\x22:-401.1854,\x22y1\x22:-787.2234,\x22x2\x22:-401.1858,\x22y2\x22:-801.0207},{\x22x1\x22:-401.1858,\x22y1\x22:-801.0207,\x22x2\x22:-401.1755,\x22y2\x22:-801.1428},{\x22x1\x22:-401.1755,\x22y1\x22:-801.1428,\x22x2\x22:-400.8818,\x22y2\x22:-801.572},{\x22x1\x22:-400.8818,\x22y1\x22:-801.572,\x22x2\x22:-400.2634,\x22y2\x22:-801.6898},{\x22x1\x22:-400.2634,\x22y1\x22:-801.6898,\x22x2\x22:-387.1848,\x22y2\x22:-801.6889},{\x22x1\x22:-387.1848,\x22y1\x22:-801.6889,\x22x2\x22:-387.1855,\x22y2\x22:-829.0404},{\x22x1\x22:-387.1855,\x22y1\x22:-829.0404,\x22x2\x22:-387.186,\x22y2\x22:-831.0421},{\x22x1\x22:-387.186,\x22y1\x22:-831.0421,\x22x2\x22:-387.0316,\x22y2\x22:-831.5396},{\x22x1\x22:-387.0316,\x22y1\x22:-831.5396,\x22x2\x22:-386.5773,\x22y2\x22:-831.6932},{\x22x1\x22:-386.5773,\x22y1\x22:-831.6932,\x22x2\x22:-375.1858,\x22y2\x22:-831.696},{\x22x1\x22:-375.1858,\x22y1\x22:-831.696,\x22x2\x22:-375.1852,\x22y2\x22:-843.5073},{\x22x1\x22:-375.1852,\x22y1\x22:-843.5073,\x22x2\x22:-375.1855,\x22y2\x22:-868.3242},{\x22x1\x22:-375.1855,\x22y1\x22:-868.3242,\x22x2\x22:-411.8137,\x22y2\x22:-868.3242},{\x22x1\x22:-411.8138,\x22y1\x22:-868.3245,\x22x2\x22:-411.8145,\x22y2\x22:-856.4106},{\x22x1\x22:-411.8145,\x22y1\x22:-856.4106,\x22x2\x22:-411.8136,\x22y2\x22:-831.6965},{\x22x1\x22:-411.8136,\x22y1\x22:-831.6959,\x22x2\x22:-404.1703,\x22y2\x22:-831.6962},{\x22x1\x22:-404.1703,\x22y1\x22:-831.6962,\x22x2\x22:-400.473,\x22y2\x22:-831.6968},{\x22x1\x22:-400.473,\x22y1\x22:-831.6968,\x22x2\x22:-400.3451,\x22y2\x22:-831.6853},{\x22x1\x22:-400.3451,\x22y1\x22:-831.6853,\x22x2\x22:-399.9201,\x22y2\x22:-831.4363},{\x22x1\x22:-399.9201,\x22y1\x22:-831.4363,\x22x2\x22:-399.813,\x22y2\x22:-830.845},{\x22x1\x22:-399.813,\x22y1\x22:-830.845,\x22x2\x22:-399.81,\x22y2\x22:-822.9991},{\x22x1\x22:-399.81,\x22y1\x22:-822.9991,\x22x2\x22:-399.8118,\x22y2\x22:-816.4145},{\x22x1\x22:-399.8118,\x22y1\x22:-816.4145,\x22x2\x22:-399.8098,\x22y2\x22:-815.8419},{\x22x1\x22:-399.8098,\x22y1\x22:-815.8419,\x22x2\x22:-399.8736,\x22y2\x22:-814.6464},{\x22x1\x22:-399.8736,\x22y1\x22:-814.6464,\x22x2\x22:-400.3487,\x22y2\x22:-814.3154},{\x22x1\x22:-400.3487,\x22y1\x22:-814.3154,\x22x2\x22:-413.8124,\x22y2\x22:-814.3162},{\x22x1\x22:-413.8124,\x22y1\x22:-814.3161,\x22x2\x22:-413.8096,\x22y2\x22:-800.7236},{\x22x1\x22:-413.8096,\x22y1\x22:-800.7236,\x22x2\x22:-413.8108,\x22y2\x22:-786.8171},{\x22x1\x22:-413.8108,\x22y1\x22:-786.8171,\x22x2\x22:-414.1441,\x22y2\x22:-786.3663},{\x22x1\x22:-414.1441,\x22y1\x22:-786.3663,\x22x2\x22:-415.8117,\x22y2\x22:-786.3159},{\x22x1\x22:-415.8117,\x22y1\x22:-786.3159,\x22x2\x22:-435.0053,\x22y2\x22:-786.313},{\x22x1\x22:-435.0053,\x22y1\x22:-786.313,\x22x2\x22:-441.8489,\x22y2\x22:-786.3145},{\x22x1\x22:-441.8489,\x22y1\x22:-786.3145,\x22x2\x22:-442.6002,\x22y2\x22:-786.3213},{\x22x1\x22:-442.6002,\x22y1\x22:-786.3213,\x22x2\x22:-443.0103,\x22y2\x22:-786.5347},{\x22x1\x22:-443.0103,\x22y1\x22:-786.5347,\x22x2\x22:-443.1846,\x22y2\x22:-786.8149},{\x22x1\x22:-443.1846,\x22y1\x22:-786.8149,\x22x2\x22:-443.1843,\x22y2\x22:-796.3159},{\x22x1\x22:-443.1843,\x22y1\x22:-796.3159,\x22x2\x22:-442.3337,\x22y2\x22:-803.6878},{\x22x1\x22:-442.3332,\x22y1\x22:-803.6878,\x22x2\x22:-431.1839,\x22y2\x22:-803.6874},{\x22x1\x22:-431.1839,\x22y1\x22:-803.6874,\x22x2\x22:-431.1838,\x22y2\x22:-840.3162},{\x22x1\x22:-431.1839,\x22y1\x22:-840.316,\x22x2\x22:-442.3295,\x22y2\x22:-840.3159},{\x22x1\x22:-442.3343,\x22y1\x22:-840.3157,\x22x2\x22:-443.1828,\x22y2\x22:-847.688},{\x22x1\x22:-443.1828,\x22y1\x22:-847.688,\x22x2\x22:-443.1828,\x22y2\x22:-866.3162},{\x22x1\x22:-443.1832,\x22y1\x22:-866.3162,\x22x2\x22:-442.332,\x22y2\x22:-873.6883},{\x22x1\x22:-442.3325,\x22y1\x22:-873.6884,\x22x2\x22:-403.1821,\x22y2\x22:-873.6881},{\x22x1\x22:-403.1821,\x22y1\x22:-873.6881,\x22x2\x22:-403.1822,\x22y2\x22:-884.816},{\x22x1\x22:-403.1823,\x22y1\x22:-884.8376,\x22x2\x22:-395.8099,\x22y2\x22:-885.687},{\x22x1\x22:-395.8099,\x22y1\x22:-885.687,\x22x2\x22:-377.186,\x22y2\x22:-885.6875},{\x22x1\x22:-377.186,\x22y1\x22:-885.6875,\x22x2\x22:-369.8141,\x22y2\x22:-884.7641},{\x22x1\x22:-369.8135,\x22y1\x22:-884.8115,\x22x2\x22:-369.8142,\x22y2\x22:-859.6866},{\x22x1\x22:-467.7814,\x22y1\x22:-873.6885,\x22x2\x22:-456.6567,\x22y2\x22:-873.6883},{\x22x1\x22:-456.6605,\x22y1\x22:-873.6882,\x22x2\x22:-455.811,\x22y2\x22:-866.3163},{\x22x1\x22:-455.811,\x22y1\x22:-866.3163,\x22x2\x22:-455.8112,\x22y2\x22:-847.688},{\x22x1\x22:-455.8112,\x22y1\x22:-847.688,\x22x2\x22:-456.7344,\x22y2\x22:-840.3152},{\x22x1\x22:-456.6776,\x22y1\x22:-840.3159,\x22x2\x22:-467.8117,\x22y2\x22:-840.316},{\x22x1\x22:-467.8118,\x22y1\x22:-840.3161,\x22x2\x22:-467.8126,\x22y2\x22:-827.5463},{\x22x1\x22:-467.8126,\x22y1\x22:-827.5463,\x22x2\x22:-467.8117,\x22y2\x22:-803.6874},{\x22x1\x22:-467.8117,\x22y1\x22:-803.6874,\x22x2\x22:-456.6686,\x22y2\x22:-803.688},{\x22x1\x22:-456.6698,\x22y1\x22:-803.688,\x22x2\x22:-455.8127,\x22y2\x22:-796.3157},{\x22x1\x22:-455.8127,\x22y1\x22:-796.3157,\x22x2\x22:-455.812,\x22y2\x22:-773.6876},{\x22x1\x22:-455.812,\x22y1\x22:-773.6876,\x22x2\x22:-443.7308,\x22y2\x22:-773.6884},{\x22x1\x22:-443.7308,\x22y1\x22:-773.6884,\x22x2\x22:-442.5705,\x22y2\x22:-773.6885},{\x22x1\x22:-442.5705,\x22y1\x22:-773.6885,\x22x2\x22:-441.8115,\x22y2\x22:-772.9257},{\x22x1\x22:-441.8115,\x22y1\x22:-772.9257,\x22x2\x22:-441.8115,\x22y2\x22:-756.5435},{\x22x1\x22:-441.8115,\x22y1\x22:-756.5435,\x22x2\x22:-441.8117,\x22y2\x22:-747.4688},{\x22x1\x22:-441.8117,\x22y1\x22:-747.4688,\x22x2\x22:-441.8119,\x22y2\x22:-745.0003},{\x22x1\x22:-441.8119,\x22y1\x22:-745.0003,\x22x2\x22:-442.0886,\x22y2\x22:-744.3895},{\x22x1\x22:-442.0886,\x22y1\x22:-744.3895,\x22x2\x22:-451.8128,\x22y2\x22:-744.3165},{\x22x1\x22:-451.8128,\x22y1\x22:-744.3165,\x22x2\x22:-459.1854,\x22y2\x22:-745.2399},{\x22x1\x22:-459.1851,\x22y1\x22:-745.24,\x22x2\x22:-459.185,\x22y2\x22:-756.3172},{\x22x1\x22:-459.1851,\x22y1\x22:-756.3173,\x22x2\x22:-470.2759,\x22y2\x22:-756.3166},{\x22x1\x22:-470.315,\x22y1\x22:-756.3165,\x22x2\x22:-471.1842,\x22y2\x22:-763.6892},{\x22x1\x22:-471.1842,\x22y1\x22:-763.6892,\x22x2\x22:-471.1863,\x22y2\x22:-800.3162},{\x22x1\x22:-471.1861,\x22y1\x22:-800.3162,\x22x2\x22:-483.6793,\x22y2\x22:-800.3139},{\x22x1\x22:-483.6793,\x22y1\x22:-800.3139,\x22x2\x22:-496.9721,\x22y2\x22:-800.3141},{\x22x1\x22:-496.9721,\x22y1\x22:-800.3141,\x22x2\x22:-498.4227,\x22y2\x22:-800.315},{\x22x1\x22:-498.4227,\x22y1\x22:-800.315,\x22x2\x22:-499.0645,\x22y2\x22:-800.5245},{\x22x1\x22:-499.0645,\x22y1\x22:-800.5245,\x22x2\x22:-499.1872,\x22y2\x22:-801.3301},{\x22x1\x22:-499.1872,\x22y1\x22:-801.3301,\x22x2\x22:-499.1887,\x22y2\x22:-812.577},{\x22x1\x22:-499.1887,\x22y1\x22:-812.577,\x22x2\x22:-499.1868,\x22y2\x22:-814.522},{\x22x1\x22:-499.1868,\x22y1\x22:-814.522,\x22x2\x22:-499.1868,\x22y2\x22:-814.9688},{\x22x1\x22:-499.1868,\x22y1\x22:-814.9688,\x22x2\x22:-499.1761,\x22y2\x22:-815.1395},{\x22x1\x22:-499.1761,\x22y1\x22:-815.1395,\x22x2\x22:-498.5642,\x22y2\x22:-815.6877},{\x22x1\x22:-498.5642,\x22y1\x22:-815.6877,\x22x2\x22:-485.1862,\x22y2\x22:-815.6876},{\x22x1\x22:-485.1862,\x22y1\x22:-815.6876,\x22x2\x22:-485.1898,\x22y2\x22:-849.3326},{\x22x1\x22:-485.1898,\x22y1\x22:-849.3326,\x22x2\x22:-485.1906,\x22y2\x22:-890.6547},{\x22x1\x22:-485.1906,\x22y1\x22:-890.6547,\x22x2\x22:-485.1898,\x22y2\x22:-894.7826},{\x22x1\x22:-485.1898,\x22y1\x22:-894.7826,\x22x2\x22:-485.1897,\x22y2\x22:-898.3878},{\x22x1\x22:-485.1897,\x22y1\x22:-898.3878,\x22x2\x22:-485.1344,\x22y2\x22:-899.3344},{\x22x1\x22:-485.1344,\x22y1\x22:-899.3344,\x22x2\x22:-484.6634,\x22y2\x22:-899.6819},{\x22x1\x22:-484.6634,\x22y1\x22:-899.6819,\x22x2\x22:-471.8008,\x22y2\x22:-899.6885},{\x22x1\x22:-471.8008,\x22y1\x22:-899.6885,\x22x2\x22:-468.7758,\x22y2\x22:-899.69},{\x22x1\x22:-468.7758,\x22y1\x22:-899.69,\x22x2\x22:-468.1995,\x22y2\x22:-899.6675},{\x22x1\x22:-468.1995,\x22y1\x22:-899.6675,\x22x2\x22:-467.8096,\x22y2\x22:-898.895},{\x22x1\x22:-467.8096,\x22y1\x22:-898.895,\x22x2\x22:-467.8078,\x22y2\x22:-897.0106},{\x22x1\x22:-467.8078,\x22y1\x22:-897.0106,\x22x2\x22:-467.8101,\x22y2\x22:-873.6882},{\x22x1\x22:-375.1845,\x22y1\x22:-826.3173,\x22x2\x22:-386.3334,\x22y2\x22:-826.3174},{\x22x1\x22:-386.3336,\x22y1\x22:-826.3171,\x22x2\x22:-387.1839,\x22y2\x22:-833.6891},{\x22x1\x22:-387.1839,\x22y1\x22:-833.6891,\x22x2\x22:-387.1847,\x22y2\x22:-840.058},{\x22x1\x22:-387.1847,\x22y1\x22:-840.058,\x22x2\x22:-387.1841,\x22y2\x22:-842.7118},{\x22x1\x22:-387.1841,\x22y1\x22:-842.7118,\x22x2\x22:-387.2189,\x22y2\x22:-842.9066},{\x22x1\x22:-387.2189,\x22y1\x22:-842.9066,\x22x2\x22:-386.933,\x22y2\x22:-843.5721},{\x22x1\x22:-386.933,\x22y1\x22:-843.5721,\x22x2\x22:-386.5386,\x22y2\x22:-843.6899},{\x22x1\x22:-386.5386,\x22y1\x22:-843.6899,\x22x2\x22:-377.9955,\x22y2\x22:-843.6912},{\x22x1\x22:-377.9955,\x22y1\x22:-843.6912,\x22x2\x22:-373.0054,\x22y2\x22:-843.6909},{\x22x1\x22:-373.0054,\x22y1\x22:-843.6909,\x22x2\x22:-372.8415,\x22y2\x22:-843.6895},{\x22x1\x22:-372.8415,\x22y1\x22:-843.6895,\x22x2\x22:-372.3214,\x22y2\x22:-843.6755},{\x22x1\x22:-372.3214,\x22y1\x22:-843.6755,\x22x2\x22:-371.8111,\x22y2\x22:-842.8766},{\x22x1\x22:-371.8111,\x22y1\x22:-842.8766,\x22x2\x22:-371.8121,\x22y2\x22:-829.6897},{\x22x1\x22:-371.8121,\x22y1\x22:-829.6897,\x22x2\x22:-349.1839,\x22y2\x22:-829.6899},{\x22x1\x22:-349.1839,\x22y1\x22:-829.6899,\x22x2\x22:-341.8119,\x22y2\x22:-828.7663},{\x22x1\x22:-341.8119,\x22y1\x22:-828.7663,\x22x2\x22:-341.812,\x22y2\x22:-817.6891},{\x22x1\x22:-341.812,\x22y1\x22:-817.6891,\x22x2\x22:-302.6623,\x22y2\x22:-817.6891},{\x22x1\x22:-302.663,\x22y1\x22:-817.6893,\x22x2\x22:-301.8128,\x22y2\x22:-810.3173},{\x22x1\x22:-301.8128,\x22y1\x22:-810.3173,\x22x2\x22:-301.8116,\x22y2\x22:-805.5829},{\x22x1\x22:-301.8116,\x22y1\x22:-805.5829,\x22x2\x22:-301.8116,\x22y2\x22:-805.5829},{\x22x1\x22:-301.8116,\x22y1\x22:-805.5829,\x22x2\x22:-301.8122,\x22y2\x22:-803.2452},{\x22x1\x22:-301.8122,\x22y1\x22:-803.2452,\x22x2\x22:-301.8122,\x22y2\x22:-802.5156},{\x22x1\x22:-301.8122,\x22y1\x22:-802.5156,\x22x2\x22:-301.8122,\x22y2\x22:-801.3132},{\x22x1\x22:-301.8122,\x22y1\x22:-801.3132,\x22x2\x22:-301.9279,\x22y2\x22:-800.5664},{\x22x1\x22:-301.9279,\x22y1\x22:-800.5664,\x22x2\x22:-302.2002,\x22y2\x22:-800.3235},{\x22x1\x22:-302.2002,\x22y1\x22:-800.3235,\x22x2\x22:-311.8133,\x22y2\x22:-800.3173},{\x22x1\x22:-311.8133,\x22y1\x22:-800.3173,\x22x2\x22:-319.1853,\x22y2\x22:-801.2411},{\x22x1\x22:-319.1859,\x22y1\x22:-801.2402,\x22x2\x22:-319.1853,\x22y2\x22:-812.3183},{\x22x1\x22:-319.1853,\x22y1\x22:-812.3183,\x22x2\x22:-355.8131,\x22y2\x22:-812.3183},{\x22x1\x22:-355.8127,\x22y1\x22:-812.3182,\x22x2\x22:-355.8124,\x22y2\x22:-804.4473},{\x22x1\x22:-355.8124,\x22y1\x22:-804.4473,\x22x2\x22:-355.8123,\x22y2\x22:-802.3938},{\x22x1\x22:-355.8123,\x22y1\x22:-802.3938,\x22x2\x22:-355.8124,\x22y2\x22:-801.2806},{\x22x1\x22:-355.8124,\x22y1\x22:-801.2806,\x22x2\x22:-355.8367,\x22y2\x22:-800.7983},{\x22x1\x22:-355.8367,\x22y1\x22:-800.7983,\x22x2\x22:-356.1707,\x22y2\x22:-800.3244},{\x22x1\x22:-356.1707,\x22y1\x22:-800.3244,\x22x2\x22:-361.1154,\x22y2\x22:-800.3167},{\x22x1\x22:-361.1154,\x22y1\x22:-800.3167,\x22x2\x22:-366.4431,\x22y2\x22:-800.3168},{\x22x1\x22:-366.4431,\x22y1\x22:-800.3168,\x22x2\x22:-366.4431,\x22y2\x22:-800.3168},{\x22x1\x22:-366.4431,\x22y1\x22:-800.3168,\x22x2\x22:-370.3339,\x22y2\x22:-800.3152},{\x22x1\x22:-370.3339,\x22y1\x22:-800.3152,\x22x2\x22:-373.5313,\x22y2\x22:-800.3168},{\x22x1\x22:-373.5313,\x22y1\x22:-800.3168,\x22x2\x22:-374.3798,\x22y2\x22:-800.3168},{\x22x1\x22:-374.3798,\x22y1\x22:-800.3168,\x22x2\x22:-374.8097,\x22y2\x22:-800.3701},{\x22x1\x22:-374.8097,\x22y1\x22:-800.3701,\x22x2\x22:-375.1126,\x22y2\x22:-800.6237},{\x22x1\x22:-375.1126,\x22y1\x22:-800.6237,\x22x2\x22:-375.1854,\x22y2\x22:-801.0766},{\x22x1\x22:-375.1854,\x22y1\x22:-801.0766,\x22x2\x22:-375.1844,\x22y2\x22:-826.3172},{\x22x1\x22:-275.1851,\x22y1\x22:-800.3176,\x22x2\x22:-284.7155,\x22y2\x22:-800.3164},{\x22x1\x22:-284.7155,\x22y1\x22:-800.3164,\x22x2\x22:-287.5283,\x22y2\x22:-800.3168},{\x22x1\x22:-287.5283,\x22y1\x22:-800.3168,\x22x2\x22:-288.613,\x22y2\x22:-800.3177},{\x22x1\x22:-288.613,\x22y1\x22:-800.3177,\x22x2\x22:-286.5836,\x22y2\x22:-800.1978},{\x22x1\x22:-286.5836,\x22y1\x22:-800.1978,\x22x2\x22:-288.5166,\x22y2\x22:-800.317},{\x22x1\x22:-288.5166,\x22y1\x22:-800.317,\x22x2\x22:-289.1858,\x22y2\x22:-800.9276},{\x22x1\x22:-289.1858,\x22y1\x22:-800.9276,\x22x2\x22:-289.1845,\x22y2\x22:-810.3173},{\x22x1\x22:-289.1845,\x22y1\x22:-810.3173,\x22x2\x22:-288.3322,\x22y2\x22:-817.6893},{\x22x1\x22:-288.3313,\x22y1\x22:-817.6891,\x22x2\x22:-277.184,\x22y2\x22:-817.6895},{\x22x1\x22:-277.1848,\x22y1\x22:-817.689,\x22x2\x22:-277.1836,\x22y2\x22:-868.3171},{\x22x1\x22:-277.1836,\x22y1\x22:-868.3171,\x22x2\x22:-302.3048,\x22y2\x22:-868.3167},{\x22x1\x22:-302.3361,\x22y1\x22:-868.317,\x22x2\x22:-303.1833,\x22y2\x22:-875.689},{\x22x1\x22:-303.1833,\x22y1\x22:-875.689,\x22x2\x22:-303.1896,\x22y2\x22:-900.6939},{\x22x1\x22:-303.1896,\x22y1\x22:-900.6939,\x22x2\x22:-303.1909,\x22y2\x22:-927.8226},{\x22x1\x22:-303.1909,\x22y1\x22:-927.8226,\x22x2\x22:-303.1916,\x22y2\x22:-945.2162},{\x22x1\x22:-303.1916,\x22y1\x22:-945.2162,\x22x2\x22:-303.1896,\x22y2\x22:-954.3211},{\x22x1\x22:-303.1896,\x22y1\x22:-954.3211,\x22x2\x22:-325.9886,\x22y2\x22:-954.3173},{\x22x1\x22:-325.9886,\x22y1\x22:-954.3173,\x22x2\x22:-343.8167,\x22y2\x22:-954.3203},{\x22x1\x22:-343.8174,\x22y1\x22:-954.3109,\x22x2\x22:-343.8144,\x22y2\x22:-937.353},{\x22x1\x22:-343.8144,\x22y1\x22:-937.353,\x22x2\x22:-343.8151,\x22y2\x22:-913.1476},{\x22x1\x22:-343.8151,\x22y1\x22:-913.1476,\x22x2\x22:-343.8139,\x22y2\x22:-903.2214},{\x22x1\x22:-343.8139,\x22y1\x22:-903.2214,\x22x2\x22:-343.8161,\x22y2\x22:-899.5551},{\x22x1\x22:-343.8161,\x22y1\x22:-899.5551,\x22x2\x22:-343.7791,\x22y2\x22:-899.1913},{\x22x1\x22:-343.7791,\x22y1\x22:-899.1913,\x22x2\x22:-344.7866,\x22y2\x22:-898.3203},{\x22x1\x22:-344.7866,\x22y1\x22:-898.3203,\x22x2\x22:-353.8163,\x22y2\x22:-898.3207},{\x22x1\x22:-353.8163,\x22y1\x22:-898.3207,\x22x2\x22:-361.1875,\x22y2\x22:-899.1699},{\x22x1\x22:-361.1874,\x22y1\x22:-899.1697,\x22x2\x22:-361.188,\x22y2\x22:-952.3214},{\x22x1\x22:-361.188,\x22y1\x22:-952.3214,\x22x2\x22:-404.8162,\x22y2\x22:-952.3214},{\x22x1\x22:-404.8162,\x22y1\x22:-952.3215,\x22x2\x22:-404.8158,\x22y2\x22:-927.3842},{\x22x1\x22:-404.8158,\x22y1\x22:-927.3842,\x22x2\x22:-410.196,\x22y2\x22:-927.3531},{\x22x1\x22:-410.196,\x22y1\x22:-927.3531,\x22x2\x22:-410.188,\x22y2\x22:-952.3212},{\x22x1\x22:-410.188,\x22y1\x22:-952.3212,\x22x2\x22:-453.8161,\x22y2\x22:-952.3212},{\x22x1\x22:-453.8161,\x22y1\x22:-952.3212,\x22x2\x22:-453.8157,\x22y2\x22:-941.1646},{\x22x1\x22:-453.8161,\x22y1\x22:-941.1695,\x22x2\x22:-461.1883,\x22y2\x22:-940.3219},{\x22x1\x22:-461.1883,\x22y1\x22:-940.3219,\x22x2\x22:-497.8164,\x22y2\x22:-940.321},{\x22x1\x22:-497.8164,\x22y1\x22:-940.321,\x22x2\x22:-497.8128,\x22y2\x22:-884.1279},{\x22x1\x22:-497.8128,\x22y1\x22:-884.1279,\x22x2\x22:-497.8126,\x22y2\x22:-856.3698},{\x22x1\x22:-497.8126,\x22y1\x22:-856.3698,\x22x2\x22:-497.8145,\x22y2\x22:-847.6929},{\x22x1\x22:-497.8145,\x22y1\x22:-847.6929,\x22x2\x22:-498.665,\x22y2\x22:-840.3209},{\x22x1\x22:-498.6689,\x22y1\x22:-840.3209,\x22x2\x22:-523.8152,\x22y2\x22:-840.3212},{\x22x1\x22:-523.8152,\x22y1\x22:-840.3212,\x22x2\x22:-523.8151,\x22y2\x22:-775.6931},{\x22x1\x22:-523.8151,\x22y1\x22:-775.6931,\x22x2\x22:-512.6655,\x22y2\x22:-775.6929},{\x22x1\x22:-512.6655,\x22y1\x22:-775.6929,\x22x2\x22:-511.8162,\x22y2\x22:-768.3211},{\x22x1\x22:-511.8162,\x22y1\x22:-768.3211,\x22x2\x22:-511.8137,\x22y2\x22:-761.3448},{\x22x1\x22:-511.8137,\x22y1\x22:-761.3448,\x22x2\x22:-511.8153,\x22y2\x22:-759.1459},{\x22x1\x22:-511.8153,\x22y1\x22:-759.1459,\x22x2\x22:-511.7645,\x22y2\x22:-758.9133},{\x22x1\x22:-511.7645,\x22y1\x22:-758.9133,\x22x2\x22:-512.1597,\x22y2\x22:-758.3779},{\x22x1\x22:-512.1597,\x22y1\x22:-758.3779,\x22x2\x22:-525.8156,\x22y2\x22:-758.3205},{\x22x1\x22:-525.8156,\x22y1\x22:-758.3205,\x22x2\x22:-525.8137,\x22y2\x22:-741.0525},{\x22x1\x22:-525.8137,\x22y1\x22:-741.0525,\x22x2\x22:-525.8132,\x22y2\x22:-723.6225},{\x22x1\x22:-525.8132,\x22y1\x22:-723.6225,\x22x2\x22:-525.8135,\x22y2\x22:-715.7112},{\x22x1\x22:-525.8135,\x22y1\x22:-715.7112,\x22x2\x22:-525.8149,\x22y2\x22:-703.6922},{\x22x1\x22:-525.8149,\x22y1\x22:-703.6922,\x22x2\x22:-525.8149,\x22y2\x22:-703.6922},{\x22x1\x22:-525.8149,\x22y1\x22:-703.6922,\x22x2\x22:-503.1868,\x22y2\x22:-703.6925},{\x22x1\x22:-503.1868,\x22y1\x22:-703.6925,\x22x2\x22:-495.8155,\x22y2\x22:-702.8517},{\x22x1\x22:-495.8155,\x22y1\x22:-702.8169,\x22x2\x22:-495.8148,\x22y2\x22:-677.6917},{\x22x1\x22:-495.8148,\x22y1\x22:-677.6917,\x22x2\x22:-431.1866,\x22y2\x22:-677.6917},{\x22x1\x22:-431.1869,\x22y1\x22:-677.6918,\x22x2\x22:-431.1867,\x22y2\x22:-688.7684},{\x22x1\x22:-431.1867,\x22y1\x22:-688.7686,\x22x2\x22:-423.8148,\x22y2\x22:-689.6906},{\x22x1\x22:-423.8148,\x22y1\x22:-689.6906,\x22x2\x22:-405.1866,\x22y2\x22:-689.6907},{\x22x1\x22:-405.1866,\x22y1\x22:-689.6907,\x22x2\x22:-397.8145,\x22y2\x22:-688.7672},{\x22x1\x22:-397.8145,\x22y1\x22:-688.7672,\x22x2\x22:-397.8145,\x22y2\x22:-677.6898},{\x22x1\x22:-397.8145,\x22y1\x22:-677.6898,\x22x2\x22:-305.1867,\x22y2\x22:-677.6899},{\x22x1\x22:-305.1867,\x22y1\x22:-677.6899,\x22x2\x22:-305.1868,\x22y2\x22:-688.839},{\x22x1\x22:-305.1866,\x22y1\x22:-688.8463,\x22x2\x22:-297.8146,\x22y2\x22:-689.689},{\x22x1\x22:-297.8146,\x22y1\x22:-689.689,\x22x2\x22:-275.1866,\x22y2\x22:-689.6893},{\x22x1\x22:-275.1866,\x22y1\x22:-689.6893,\x22x2\x22:-275.1844,\x22y2\x22:-723.6326},{\x22x1\x22:-275.1844,\x22y1\x22:-723.6326,\x22x2\x22:-275.1841,\x22y2\x22:-741.1543},{\x22x1\x22:-275.1841,\x22y1\x22:-741.1543,\x22x2\x22:-275.1854,\x22y2\x22:-754.2488},{\x22x1\x22:-275.1854,\x22y1\x22:-754.2488,\x22x2\x22:-275.1856,\x22y2\x22:-773.7637},{\x22x1\x22:-275.1856,\x22y1\x22:-773.7637,\x22x2\x22:-275.1873,\x22y2\x22:-792.4785},{\x22x1\x22:-275.1873,\x22y1\x22:-792.4785,\x22x2\x22:-275.1852,\x22y2\x22:-800.3176},{\x22x1\x22:-447.657,\x22y1\x22:-849.9925,\x22x2\x22:-447.6568,\x22y2\x22:-765.8386},{\x22x1\x22:-447.6568,\x22y1\x22:-765.8386,\x22x2\x22:-388.3809,\x22y2\x22:-765.8386},{\x22x1\x22:-388.3809,\x22y1\x22:-765.8386,\x22x2\x22:-388.3808,\x22y2\x22:-787.2656},{\x22x1\x22:-388.3816,\x22y1\x22:-787.2218,\x22x2\x22:-383.8281,\x22y2\x22:-787.2173},{\x22x1\x22:-383.828,\x22y1\x22:-787.2261,\x22x2\x22:-383.829,\x22y2\x22:-776.965},{\x22x1\x22:-383.829,\x22y1\x22:-776.965,\x22x2\x22:-379.1567,\x22y2\x22:-776.9526},{\x22x1\x22:-379.1567,\x22y1\x22:-776.9526,\x22x2\x22:-379.1278,\x22y2\x22:-749.8531},{\x22x1\x22:-379.1278,\x22y1\x22:-749.8531,\x22x2\x22:-459.71,\x22y2\x22:-749.7855},{\x22x1\x22:-459.71,\x22y1\x22:-749.7855,\x22x2\x22:-459.7293,\x22y2\x22:-776.436},{\x22x1\x22:-459.7293,\x22y1\x22:-776.436,\x22x2\x22:-454.3037,\x22y2\x22:-776.9647},{\x22x1\x22:-454.3037,\x22y1\x22:-776.9647,\x22x2\x22:-454.3033,\x22y2\x22:-838.8661},{\x22x1\x22:-454.3033,\x22y1\x22:-838.8661,\x22x2\x22:-459.1003,\x22y2\x22:-838.8765},{\x22x1\x22:-459.1003,\x22y1\x22:-838.8765,\x22x2\x22:-459.0583,\x22y2\x22:-865.6399},{\x22x1\x22:-459.0583,\x22y1\x22:-865.6399,\x22x2\x22:-379.1618,\x22y2\x22:-865.6583},{\x22x1\x22:-379.1618,\x22y1\x22:-865.6583,\x22x2\x22:-379.1847,\x22y2\x22:-838.5964},{\x22x1\x22:-379.1847,\x22y1\x22:-838.5964,\x22x2\x22:-383.8285,\x22y2\x22:-838.6508},{\x22x1\x22:-383.8285,\x22y1\x22:-838.6508,\x22x2\x22:-383.8286,\x22y2\x22:-828.8521},{\x22x1\x22:-388.3811,\x22y1\x22:-828.8519,\x22x2\x22:-388.3803,\x22y2\x22:-849.9924},{\x22x1\x22:-388.3803,\x22y1\x22:-849.9924,\x22x2\x22:-447.657,\x22y2\x22:-849.9926},{\x22x1\x22:-388.3816,\x22y1\x22:-828.5787,\x22x2\x22:-383.8282,\x22y2\x22:-828.6021},{\x22x1\x22:265.0213,\x22y1\x22:-308.7988,\x22x2\x22:278.4507,\x22y2\x22:-322.212},{\x22x1\x22:278.45,\x22y1\x22:-322.2129,\x22x2\x22:421.9715,\x22y2\x22:-321.3009},{\x22x1\x22:421.9715,\x22y1\x22:-321.3009,\x22x2\x22:453.1965,\x22y2\x22:-322.1426},{\x22x1\x22:453.1965,\x22y1\x22:-322.1426,\x22x2\x22:466.9145,\x22y2\x22:-309.844},{\x22x1\x22:466.9145,\x22y1\x22:-309.844,\x22x2\x22:466.7515,\x22y2\x22:-148.1193},{\x22x1\x22:466.7515,\x22y1\x22:-148.1193,\x22x2\x22:467.1741,\x22y2\x22:-133.3446},{\x22x1\x22:467.1741,\x22y1\x22:-133.3446,\x22x2\x22:453.7513,\x22y2\x22:-119.9164},{\x22x1\x22:453.7513,\x22y1\x22:-119.9164,\x22x2\x22:386.5618,\x22y2\x22:-121.0157},{\x22x1\x22:386.5618,\x22y1\x22:-121.0157,\x22x2\x22:386.5618,\x22y2\x22:-121.0157},{\x22x1\x22:386.5618,\x22y1\x22:-121.0157,\x22x2\x22:386.5622,\x22y2\x22:-110.7764},{\x22x1\x22:386.5622,\x22y1\x22:-110.7764,\x22x2\x22:386.5622,\x22y2\x22:-109.4718},{\x22x1\x22:386.5622,\x22y1\x22:-109.4718,\x22x2\x22:386.5626,\x22y2\x22:-103.4328},{\x22x1\x22:386.5626,\x22y1\x22:-103.4328,\x22x2\x22:382.943,\x22y2\x22:-103.3709},{\x22x1\x22:382.943,\x22y1\x22:-103.3709,\x22x2\x22:382.9432,\x22y2\x22:-124.3793},{\x22x1\x22:382.9432,\x22y1\x22:-124.3793,\x22x2\x22:382.9447,\x22y2\x22:-137.9274},{\x22x1\x22:382.9447,\x22y1\x22:-137.9274,\x22x2\x22:382.9432,\x22y2\x22:-157.0141},{\x22x1\x22:382.9432,\x22y1\x22:-157.0141,\x22x2\x22:382.924,\x22y2\x22:-172.2235},{\x22x1\x22:382.924,\x22y1\x22:-172.2235,\x22x2\x22:382.8975,\x22y2\x22:-179.6788},{\x22x1\x22:382.8975,\x22y1\x22:-179.6788,\x22x2\x22:382.9032,\x22y2\x22:-182.6054},{\x22x1\x22:382.9032,\x22y1\x22:-182.6054,\x22x2\x22:402.1077,\x22y2\x22:-182.6769},{\x22x1\x22:402.1077,\x22y1\x22:-182.6769,\x22x2\x22:402.1225,\x22y2\x22:-254.9258},{\x22x1\x22:402.1225,\x22y1\x22:-254.9258,\x22x2\x22:330.8371,\x22y2\x22:-255.0592},{\x22x1\x22:330.8371,\x22y1\x22:-255.0592,\x22x2\x22:330.7773,\x22y2\x22:-181.3528},{\x22x1\x22:330.7773,\x22y1\x22:-181.3528,\x22x2\x22:348.9925,\x22y2\x22:-181.4545},{\x22x1\x22:348.9925,\x22y1\x22:-181.4545,\x22x2\x22:349.3088,\x22y2\x22:-180.6538},{\x22x1\x22:349.3088,\x22y1\x22:-180.6538,\x22x2\x22:349.2843,\x22y2\x22:-175.3166},{\x22x1\x22:349.2843,\x22y1\x22:-175.3166,\x22x2\x22:349.2708,\x22y2\x22:-164.4407},{\x22x1\x22:349.2708,\x22y1\x22:-164.4407,\x22x2\x22:349.2658,\x22y2\x22:-151.2792},{\x22x1\x22:349.2658,\x22y1\x22:-151.2792,\x22x2\x22:349.2651,\x22y2\x22:-143.1948},{\x22x1\x22:349.2651,\x22y1\x22:-143.1948,\x22x2\x22:349.2663,\x22y2\x22:-131.6891},{\x22x1\x22:349.2663,\x22y1\x22:-131.6891,\x22x2\x22:349.2676,\x22y2\x22:-120.7105},{\x22x1\x22:349.2676,\x22y1\x22:-120.7105,\x22x2\x22:349.2679,\x22y2\x22:-109.1506},{\x22x1\x22:349.2679,\x22y1\x22:-109.1506,\x22x2\x22:349.2675,\x22y2\x22:-104.8651},{\x22x1\x22:349.2675,\x22y1\x22:-104.8651,\x22x2\x22:345.6487,\x22y2\x22:-104.8944},{\x22x1\x22:345.6487,\x22y1\x22:-104.8944,\x22x2\x22:345.649,\x22y2\x22:-121.0156},{\x22x1\x22:345.6491,\x22y1\x22:-121.0156,\x22x2\x22:278.4505,\x22y2\x22:-119.9161},{\x22x1\x22:278.4505,\x22y1\x22:-119.9161,\x22x2\x22:265.0502,\x22y2\x22:-133.3234},{\x22x1\x22:265.0502,\x22y1\x22:-133.3234,\x22x2\x22:265.0872,\x22y2\x22:-135.1481},{\x22x1\x22:265.0872,\x22y1\x22:-135.1481,\x22x2\x22:265.0223,\x22y2\x22:-308.7985},{\x22x1\x22:-427.1562,\x22y1\x22:-878.1663,\x22x2\x22:-427.1564,\x22y2\x22:-867.3654},{\x22x1\x22:-427.1564,\x22y1\x22:-867.3654,\x22x2\x22:-440.4998,\x22y2\x22:-867.1158},{\x22x1\x22:-440.4998,\x22y1\x22:-867.1158,\x22x2\x22:-441.1597,\x22y2\x22:-850.9548},{\x22x1\x22:-441.1597,\x22y1\x22:-850.9548,\x22x2\x22:-396.0698,\x22y2\x22:-850.3137},{\x22x1\x22:-395.9585,\x22y1\x22:-864.1669,\x22x2\x22:-366.069,\x22y2\x22:-864.1673},{\x22x1\x22:-365.9582,\x22y1\x22:-876.1661,\x22x2\x22:-317.1574,\x22y2\x22:-876.1662},{\x22x1\x22:-317.1574,\x22y1\x22:-876.1662,\x22x2\x22:-317.1574,\x22y2\x22:-827.3652},{\x22x1\x22:-317.1574,\x22y1\x22:-827.3652,\x22x2\x22:-329.049,\x22y2\x22:-827.3652},{\x22x1\x22:-329.045,\x22y1\x22:-780.5247,\x22x2\x22:-315.1575,\x22y2\x22:-780.1662},{\x22x1\x22:-315.1575,\x22y1\x22:-780.1662,\x22x2\x22:-315.1564,\x22y2\x22:-741.3657},{\x22x1\x22:-315.1564,\x22y1\x22:-741.3657,\x22x2\x22:-359.0441,\x22y2\x22:-741.3644},{\x22x1\x22:-359.1568,\x22y1\x22:-729.3659,\x22x2\x22:-421.9582,\x22y2\x22:-729.3649},{\x22x1\x22:-421.9582,\x22y1\x22:-729.3649,\x22x2\x22:-421.7961,\x22y2\x22:-741.2578},{\x22x1\x22:-499.3329,\x22y1\x22:-780.065,\x22x2\x22:-452.0363,\x22y2\x22:-780.5753},{\x22x1\x22:-452.0556,\x22y1\x22:-867.8543,\x22x2\x22:-469.0342,\x22y2\x22:-867.2336},{\x22x1\x22:-469.0342,\x22y1\x22:-867.2336,\x22x2\x22:-469.1585,\x22y2\x22:-857.0317},{\x22x1\x22:-479.9559,\x22y1\x22:-858.2248,\x22x2\x22:-479.9566,\x22y2\x22:-878.1655},{\x22x1\x22:-479.9566,\x22y1\x22:-878.1655,\x22x2\x22:-427.1563,\x22y2\x22:-878.1664},{\x22x1\x22:-407.959,\x22y1\x22:-820.1667,\x22x2\x22:-407.9574,\x22y2\x22:-785.3663},{\x22x1\x22:-407.9574,\x22y1\x22:-785.3663,\x22x2\x22:-373.1581,\x22y2\x22:-785.3662},{\x22x1\x22:-373.1581,\x22y1\x22:-785.3662,\x22x2\x22:-373.1583,\x22y2\x22:-820.1671},{\x22x1\x22:-340.0757,\x22y1\x22:-769.367,\x22x2\x22:-326.4369,\x22y2\x22:-769.1204},{\x22x1\x22:-326.4369,\x22y1\x22:-769.1204,\x22x2\x22:-326.4696,\x22y2\x22:-752.2781},{\x22x1\x22:-359.1567,\x22y1\x22:-764.166,\x22x2\x22:-421.958,\x22y2\x22:-764.1662},{\x22x1\x22:-421.958,\x22y1\x22:-764.1662,\x22x2\x22:-422.5125,\x22y2\x22:-752.2889},{\x22x1\x22:-479.9535,\x22y1\x22:-858.0504,\x22x2\x22:-479.9563,\x22y2\x22:-839.3648},{\x22x1\x22:-479.9563,\x22y1\x22:-839.3648,\x22x2\x22:-469.1572,\x22y2\x22:-839.3693},{\x22x1\x22:-469.1572,\x22y1\x22:-839.3693,\x22x2\x22:-469.1594,\x22y2\x22:-857.515},{\x22x1\x22:283.7686,\x22y1\x22:-138.8973,\x22x2\x22:344.3662,\x22y2\x22:-138.7645},{\x22x1\x22:283.8482,\x22y1\x22:-303.335,\x22x2\x22:283.7686,\x22y2\x22:-138.8973},{\x22x1\x22:448.3687,\x22y1\x22:-303.4594,\x22x2\x22:283.8482,\x22y2\x22:-303.335},{\x22x1\x22:448.4364,\x22y1\x22:-138.7043,\x22x2\x22:448.3687,\x22y2\x22:-303.4594},{\x22x1\x22:390.9731,\x22y1\x22:-138.7694,\x22x2\x22:448.4364,\x22y2\x22:-138.7043},{\x22x1\x22:-366.0732,\x22y1\x22:-827.2551,\x22x2\x22:-340.0646,\x22y2\x22:-827.2542},{\x22x1\x22:-396.0727,\x22y1\x22:-864.2811,\x22x2\x22:-396.0698,\x22y2\x22:-850.3137},{\x22x1\x22:-385.0443,\x22y1\x22:-820.2764,\x22x2\x22:-373.0613,\x22y2\x22:-820.2816},{\x22x1\x22:-396.0765,\x22y1\x22:-820.2777,\x22x2\x22:-408.0735,\x22y2\x22:-820.2816},{\x22x1\x22:-396.0765,\x22y1\x22:-820.2777,\x22x2\x22:-396.067,\x22y2\x22:-839.2647},{\x22x1\x22:-385.0443,\x22y1\x22:-820.2764,\x22x2\x22:-385.0421,\x22y2\x22:-853.2556},{\x22x1\x22:303.767,\x22y1\x22:693.7072,\x22x2\x22:428.796,\x22y2\x22:693.6848},{\x22x1\x22:428.796,\x22y1\x22:693.6848,\x22x2\x22:428.7113,\x22y2\x22:653.6348},{\x22x1\x22:303.767,\x22y1\x22:693.7072,\x22x2\x22:303.7539,\x22y2\x22:569.1333},{\x22x1\x22:303.7539,\x22y1\x22:569.1333,\x22x2\x22:428.7744,\x22y2\x22:569.1586},{\x22x1\x22:428.7744,\x22y1\x22:569.1586,\x22x2\x22:428.6314,\x22y2\x22:609.7078},{\x22x1\x22:448.6917,\x22y1\x22:609.7071,\x22x2\x22:448.5641,\x22y2\x22:548.9812},{\x22x1\x22:448.5641,\x22y1\x22:548.9812,\x22x2\x22:283.7703,\x22y2\x22:549.0155},{\x22x1\x22:283.7703,\x22y1\x22:549.0155,\x22x2\x22:283.9395,\x22y2\x22:713.7751},{\x22x1\x22:283.9395,\x22y1\x22:713.7751,\x22x2\x22:448.6936,\x22y2\x22:713.9197},{\x22x1\x22:448.6936,\x22y1\x22:713.9197,\x22x2\x22:448.6922,\x22y2\x22:653.1336},{\x22x1\x22:1214.7889,\x22y1\x22:629.7722,\x22x2\x22:1226.3755,\x22y2\x22:629.7711},{\x22x1\x22:1226.3755,\x22y1\x22:629.7711,\x22x2\x22:1226.3754,\x22y2\x22:664.9397},{\x22x1\x22:1226.3754,\x22y1\x22:664.9397,\x22x2\x22:1175.562,\x22y2\x22:664.9398},{\x22x1\x22:1175.562,\x22y1\x22:664.9398,\x22x2\x22:1175.5637,\x22y2\x22:629.7714},{\x22x1\x22:1175.5637,\x22y1\x22:629.7714,\x22x2\x22:1187.1482,\x22y2\x22:629.7735},{\x22x1\x22:1179.2545,\x22y1\x22:574.26,\x22x2\x22:1139.0748,\x22y2\x22:573.3387},{\x22x1\x22:1139.0748,\x22y1\x22:573.3387,\x22x2\x22:1138.5712,\x22y2\x22:699.3134},{\x22x1\x22:1138.5712,\x22y1\x22:699.3134,\x22x2\x22:1263.1382,\x22y2\x22:698.8877},{\x22x1\x22:1263.1382,\x22y1\x22:698.8877,\x22x2\x22:1263.1399,\x22y2\x22:574.0293},{\x22x1\x22:1222.6812,\x22y1\x22:574.2518,\x22x2\x22:1263.1399,\x22y2\x22:574.0293},{\x22x1\x22:1222.6816,\x22y1\x22:554.2081,\x22x2\x22:1283.2616,\x22y2\x22:554.0712},{\x22x1\x22:1283.2616,\x22y1\x22:554.0712,\x22x2\x22:1283.3073,\x22y2\x22:718.7874},{\x22x1\x22:1283.3073,\x22y1\x22:718.7874,\x22x2\x22:1118.676,\x22y2\x22:718.8913},{\x22x1\x22:1118.676,\x22y1\x22:718.8913,\x22x2\x22:1118.6521,\x22y2\x22:554.3401},{\x22x1\x22:1118.6521,\x22y1\x22:554.3401,\x22x2\x22:1179.2556,\x22y2\x22:554.2097},{\x22x1\x22:373.002,\x22y1\x22:645.2552,\x22x2\x22:373.0116,\x22y2\x22:656.8275},{\x22x1\x22:373.0116,\x22y1\x22:656.8275,\x22x2\x22:337.8444,\x22y2\x22:656.8253},{\x22x1\x22:337.8444,\x22y1\x22:656.8253,\x22x2\x22:337.8445,\x22y2\x22:606.0148},{\x22x1\x22:337.8445,\x22y1\x22:606.0148,\x22x2\x22:373.0133,\x22y2\x22:606.0135},{\x22x1\x22:373.0133,\x22y1\x22:606.0135,\x22x2\x22:373.0077,\x22y2\x22:617.5861},{\x22x1\x22:379.9317,\x22y1\x22:-214.33,\x22x2\x22:391.5125,\x22y2\x22:-214.3278},{\x22x1\x22:391.5125,\x22y1\x22:-214.3278,\x22x2\x22:391.5122,\x22y2\x22:-249.4949},{\x22x1\x22:391.5122,\x22y1\x22:-249.4949,\x22x2\x22:340.6997,\x22y2\x22:-249.3621},{\x22x1\x22:340.6997,\x22y1\x22:-249.3621,\x22x2\x22:340.6987,\x22y2\x22:-214.3269},{\x22x1\x22:340.6987,\x22y1\x22:-214.3269,\x22x2\x22:352.285,\x22y2\x22:-214.3303},{\x22x1\x22:344.3922,\x22y1\x22:-158.8012,\x22x2\x22:303.9389,\x22y2\x22:-158.5139},{\x22x1\x22:303.9389,\x22y1\x22:-158.5139,\x22x2\x22:303.92,\x22y2\x22:-283.5874},{\x22x1\x22:303.92,\x22y1\x22:-283.5874,\x22x2\x22:428.2387,\x22y2\x22:-283.5821},{\x22x1\x22:428.2387,\x22y1\x22:-283.5821,\x22x2\x22:428.2913,\x22y2\x22:-158.6366},{\x22x1\x22:428.2913,\x22y1\x22:-158.6366,\x22x2\x22:387.8178,\x22y2\x22:-158.8148}],\x22spawn_points\x22:[{\x22spawn_group_id\x22:101999,\x22x\x22:1176.25,\x22y\x22:-980.75,\x22z\x22:0.625}]}");
+    
+    var json = jQuery.parseJSON(spawnData);
+    map_group = s.g();
+
+    if (json.spawn_points === null) {
+        s.text(0,0,"No spawn data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+    if (json.lines === null) {
+        s.text(0,0,"No map data");
+        panZoomInstance = svgPanZoom('#map_svg', {
+             zoomEnabled: true,
+             controlIconsEnabled: true,
+             fit: true,
+             center: true,
+             
+             
+           
+         });
+
+        panZoomInstance.zoom(0.1)
+        return
+    }
+
+   
+
+
+
+    if (json.lines !== null && json.lines.length > 0) {
+        for (var i = 0; i < json.lines.length; i++ ) {
+            var curLine = json.lines[i];
+            
+            curLine.x1 = (curLine.x1 + 2000) / 5;
+            curLine.y1 = (curLine.y1 + 2000) / 5;
+            curLine.x2 = (curLine.x2 + 2000) / 5;
+            curLine.y2 = (curLine.y2 + 2000) / 5;
+
+            var line = s.line(curLine.x1, curLine.y1, curLine.x2, curLine.y2).attr({strokeWidth:1, stroke:"green"});
+            map_group.add(line);
+        }
+    }
+
+    if (json.spawn_points !== null &&  json.spawn_points.length > 0) {
+        for (var i = 0; i < json.spawn_points.length; i++) {
+            var spawn = json.spawn_points[i];
+            
+            spawn.x = (spawn.x + 2000) / 5;
+            spawn.y = (spawn.y + 2000) / 5;
+
+            var circle = s.circle(spawn.x, spawn.y, 2).attr({fill: 'maroon', stroke: 'red', strokeWidth: 1});
+            map_group.add(circle);
+            circle.spawn = spawn;
+            circle.click(function(event) {
+                    console.log(this);
+            });
+        }
+        
+        
+    }
+
+    panZoomInstance = svgPanZoom('#map_svg', {
+         zoomEnabled: true,
+         controlIconsEnabled: true,
+         fit: true,
+         center: true,
+         
+         
+       
+     });
+    
+     
+    
+});
+
+            </script>
+
+
+        </div>
+        
+
+    </div>
+    
+
+    
+
+    
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+
+    
+    <script src="/dist/js/sb-admin-2.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101842900-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
